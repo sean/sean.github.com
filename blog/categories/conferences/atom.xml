@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Conferences | Sean Mountcastle]]></title>
   <link href="http://sean.github.com/blog/categories/conferences/atom.xml" rel="self"/>
   <link href="http://sean.github.com/"/>
-  <updated>2012-08-16T00:11:34-04:00</updated>
+  <updated>2012-08-16T00:16:28-04:00</updated>
   <id>http://sean.github.com/</id>
   <author>
     <name><![CDATA[Sean Mountcastle]]></name>
@@ -76,7 +76,7 @@
 </ul>
 
 
-<p>During his keynote, Neal suggested learning from the lore of our past by reading classics like 0201835959, 013476904X, 020161622X.</p>
+<p>During his keynote, Neal suggested learning from the lore of our past by reading classics like Liquid error: Your AccessKey Id is not registered for Product Advertising API. Please use the AccessKey Id obtained after registering at https://affiliate-program.amazon.com/gp/flex/advertising/api/sign-in.html., Liquid error: HTTP response code 503, Liquid error: Your AccessKey Id is not registered for Product Advertising API. Please use the AccessKey Id obtained after registering at https://affiliate-program.amazon.com/gp/flex/advertising/api/sign-in.html..</p>
 
 <p>Next up was Russ Olsen who gave a talk about DSLs, both external and internal. Domain specific languages continue to be a hot topic in Ruby and the developer community in general. Ruby is very well suited to both external DSLs (involving a parser) and internal DSLs (use the Ruby parser and build language infrastructure). Ruby is great for DSLs because it doesn't require parenthesis or semi-colons, it supports procs, the reflection capabilities (method_missing, instance_eval, etc), etc. Rich Kilmer called DSL building, syntax driven development.</p>
 
