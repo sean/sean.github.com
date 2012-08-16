@@ -1,0 +1,38 @@
+---
+author: admin
+date: '2006-07-30 00:59:00'
+layout: post
+slug: oscon-2006-wrap-up
+status: publish
+title: OSCON 2006 Wrap-up
+wordpress_id: '6'
+categories:
+- Conferences
+- OSCON
+- Programming
+---
+
+Now that [OSCON](http://conferences.oreillynet.com/os2006/) is over, I
+like to make an attempt at distilling my thoughts on the conference.
+Last year I wrote a lengthy
+[post](http://seanmountcastle.com/articles/2005/08/07/oscon-observations)
+on my observations; this year it’s going to be short. I was a bit
+disappointed by this year’s OSCON – not that I didn’t have a good time
+and learn a bit – but the mood seemed more subdued, there wasn’t the
+excitement that was felt last year. In fact, many of the attendees I
+spoke to in the halls felt the difference too and several said that this
+would be their last OSCON. I can’t pin it down to a single change in the
+conference – in fact, prior to the conference I had expected it to be
+even better than last year as I had so many conflicting sessions that I
+wanted to attend. The absence of [Paul
+Graham](http://www.paulgraham.com/) at the Tuesday night keynotes was
+disappointing but [Kathy Sierra](http://headrush.typepad.com/) gave an
+excellent talk. The quality of speakers was roughly the same as last
+year and the topics were similar (lots of Perl, Python, Ruby, Ajax,
+etc). The variety of keynotes was good, though last year I left many of
+the keynotes feeling inspired and excited, this year I really didn’t
+feel that. So on the surface, this year’s OSCON should’ve been just as
+good as last year’s – but in some intangible way it wasn’t – if I didn’t
+receive agreement on this from others, I would simply chock it up to my
+imagination or melancholy. So 2006 might be the last year I attend OSCON
+as well … I guess we’ll see what happens next year.

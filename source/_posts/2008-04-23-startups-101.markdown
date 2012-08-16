@@ -1,0 +1,81 @@
+---
+author: admin
+date: '2008-04-23 23:58:26'
+layout: post
+slug: startups-101
+status: publish
+title: Startups 101
+wordpress_id: '140'
+categories:
+- Entrepreneurship
+tags:
+- startup
+---
+
+[![Refresh
+DC](http://seanmountcastle.com/wp-content/uploads/2008/04/refreshdc.png)](http://refresh-dc.org/)
+
+Tonight I had the opportunity to attend a special [Refresh
+DC](http://refresh-dc.org/) meeting on the challenges of starting your
+own business. The format was a panel of folks from the DC startup scene
+moderated by [Jackson
+Wilkinson](http://www.viget.com/about/team/jwilkinson) of [Viget
+Labs](http://www.viget.com). The panel consisted of [Brian
+Williams](http://www.viget.com/about/team/bwilliams) of Viget Labs,
+[Andrew Lee](http://andrewlee.com/) of [Publi.us](http://publi.us/),
+Eric Rupert from [Odeo](http://odeo.com/), [Eddie
+Frederick](http://blog.hungrymachine.com/)of [Hungry
+Machine](http://hungrymachine.com/), and [Sean
+Greene](http://www.launchboxdigital.com/blog.html) of [LaunchBox
+Digital](http://www.launchboxdigital.com/).
+
+These were the main points I took away:
+
+1.  **Be passionate.** The most important quality for startup founders
+    is to be passionate about their product or service. Starting a
+    company can be exhilarating but the setbacks can be really
+    difficult. If you're not passionate about what you're doing each of
+    these roadblocks will be an excuse for you to quit. Figure out what
+    you're passionate about and work on that.
+2.  **Focus on your product.** Don't focus on the pie-in-the-sky
+    potential valuations of your company or worry about leasing office
+    space, hiring an attorney, finding an accountant, etc. Instead you
+    should focus on the product or service you're going to sell. Get
+    something out there quickly -- pick the most important feature and
+    get it out there in front of your customers quickly.
+3.  **Have your customers influence your product.** If you follow the
+    previous advice and get your product out there quickly you can use
+    customer feedback to iterate your product. You may not know all of
+    the difference ways customers will use your product, so this
+    feedback is critical in charting your product roadmap.
+4.  **Equity is control, don't surrender it easily.** One of the
+    attendees asked about using equity to pay for services if money was
+    tight. Brian said to avoid giving out equity as you make that person
+    a partner in your business. While they may not have a controlling
+    interest, they are still an owner and have some influence.
+5.  **Don't overfund.** All of the panelists warned of the dangers of
+    taking too much money as it does more than dilute the founders'
+    ownership. Venture capitalists are looking to make a large return o
+    their capital for themselves and their limited partners. If you need
+    to pay a vendor or contractor find another way -- defer payment, use
+    credit, etc.
+6.  **Hire slow, fire fast.** Early employees can make or break your
+    company. You will be working long hours aside these folks so you
+    must ensure they're a good fit. If you make a bad hire, you need to
+    resolve the situation quickly, don't let emotion get in the way.
+
+Some of the books recommended were: [Art of the
+Start](http://www.amazon.com/Art-Start-Time-Tested-Battle-Hardened-Starting/dp/1591840562/ref=pd_bbs_sr_1?ie=UTF8&s=books&qid=1209008603&sr=8-1),
+[Getting to
+Yes](http://www.amazon.com/Getting-Yes-Negotiating-Agreement-Without/dp/0140157352/ref=pd_bbs_2?ie=UTF8&s=books&qid=1209008634&sr=8-2),
+and [Founders at
+Work](http://www.amazon.com/Founders-Work-Stories-Startups-Early/dp/1590597141/ref=pd_bbs_3?ie=UTF8&s=books&qid=1209008603&sr=8-3).
+Andrew also recommended [Startup School](http://startupschool.org/) run
+by [Y Combinator](http://ycombinator.com/) (YC). I've been reading [Paul
+Graham](http://www.paulgraham.com)'s essays for around seven years now
+and following YC's investments. I'm glad to see an early stage investor
+like YC in the DC area (LaunchBox Digital) and hope that the startup
+scene in DC and suburbs becomes more vibrant.
+
+Thanks to [Strategic Analysis](http://www.sainc.com/) for hosting this.
+It was a great venue and hope they'll offer to host Refresh DC again.

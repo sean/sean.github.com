@@ -1,0 +1,18 @@
+---
+layout: post
+title: "iOSDevCamp DC 2012"
+date: 2012-08-14 22:49
+comments: true
+categories: 
+- Conferences
+- iOS
+---
+This past weekend, [Luis de la Rosa](http://www.luisdelarosa.com/) and I ran [iOSDevCamp DC 2012](http://iosdevcampdc.com/), hosted by [Verisign](http://www.verisigninc.com/). This year our sponsors were: [Savvy Apps](http://getappsavvy.com/), [Millenial Media](http://mmedia.com/), [Verisign](http://www.verisigninc.com), and [Happy Apps](http://happyapps.com/). All of the talks were very well received and it was a great opportunity to network with other iOS developers in the mid-Atlantic region. For those talks where the slides were made available, I've linked to them below. I'll come back and update this post as more slides become available.
+
+* 10am - Ken Yarmosh Stop Pinching Me: Getting Gestures Right in Your Application
+* 11am - Jon Blocksom [iOS Concurrency: NSOperationQueue and Grand Central Dispatch](https://www.dropbox.com/s/dm01q9fg14vkjtg/iOSDevCamp2012%20iOS%20Concurrency.key)
+* 1pm  - Mark Gerl [Recipe for Dynamic Content](https://dl.dropbox.com/u/336260/POLITICO_DynamicContentDelivery_20120811.pdf)
+* 2pm  - Mark Pospesel [Enter the Matrix](https://dl.dropbox.com/u/1353697/iOSDevCampDC%202012/Enter%20The%20Matrix.pdf)
+* 3:30pm - Chris Brown Improving App Monetization Through Data
+* 4:30pm - James Norton Embedding Lua Script in iOS
+

@@ -1,0 +1,21 @@
+---
+author: admin
+date: '2007-03-02 21:44:41'
+layout: post
+slug: sweet
+status: publish
+title: Sweet!
+wordpress_id: '106'
+categories:
+- Erlang
+- Programming
+---
+
+[![image](http://seanmountcastle.com/wp-content/uploads/2007/03/jaerlang_medium.thumbnail.jpg)](http://pragmaticprogrammer.com/titles/jaerlang/index.html)
+I've been looking for a good introductory book on
+[Erlang](http://www.erlang.org/) for quite awhile now. Unfortunately,
+the Concurrent Programming in Erlang book just doesn't do it for me
+(plus only the first part is available online). Thankfully, it looks
+like the [Pragmatic Programmers](http://pragmaticprogrammer.com/) have
+come through with [Programming
+Erlang](http://pragmaticprogrammer.com/titles/jaerlang/index.html).

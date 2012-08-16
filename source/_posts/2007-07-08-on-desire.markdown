@@ -1,0 +1,114 @@
+---
+author: admin
+date: '2007-07-08 22:14:49'
+layout: post
+slug: on-desire
+status: publish
+title: On Desire
+wordpress_id: '119'
+categories:
+- Entertainment
+---
+
+[![Paul
+Barnett](http://seanmountcastle.com/wp-content/uploads/2007/07/pbarnett.thumbnail.png)](http://seanmountcastle.com/wp-content/uploads/2007/07/pbarnett.png "Paul Barnett")
+
+Last week, I was fortunate enough to be one of the few folks who
+attended the [Northern
+VA](http://games.groups.yahoo.com/group/igda_dc_chapter/)
+[IGDA](http://www.idga.org/cgi-bin/templates/single.html?topic=329)
+meeting where [Paul
+Barnett](http://www.warhammeronline.com/english/behindTheScenes/meetTheTeam/paulBarnett.php)
+spoke to us about *desire*. Specifically what you can and cannot control
+to influence your customers into buying your product (in his case a
+subscription to a MMORPG). That is, to make them *desire* your product.
+To warm up he spoke about the utility of mind maps and suggested reading
+Tony Buzan's book on Mind Maps. While speaking about mind maps, he
+hinted at the mind map he drew on the board in preparation for his talk.
+As background, for those who may not know what [Warhammer: Age of
+Reckoning](http://www.warhammeronline.com/) (WAR) is, Paul explained
+that it is **not** a computer game. As Paul sees it, computer games are
+like "washing powder" (laundry detergent) in that it is a product which
+is made, shipped and forgotten about. Next week there is always a better
+version of washing powder on the market (new, improved, etc), to the
+point where it seems like just weeks ago we were essentially washing our
+clothes in dirt. WAR, in contrast, is a hobby game. As a hobby game it
+requires skill, commitment and imagination. Hobbies are
+self-obsessed/self-indulgent; a very personal endeavor. And WAR is not
+just a game that is shipped and forgotten. Since it is a massively
+multiplayer online game, the developers must constantly work to improve
+the game while the customer service team resolves issues and others work
+to lead in-game special events. EA Mythic is providing an experience
+with WAR (as is Blizzard with World of Warcraft, aka WoW). Getting back
+to the topic of the evening, Paul spoke of the three thwarts to your
+product:
+
+1.  **Acts of God**. These are causes that you have no control over, so
+    you shouldn't try to overcome them. Examples included loss of
+    internet, loss of life, bankruptcy, etc.
+2.  **Your own fault**. These are causes that you have total control
+    over which you can mitigate with planning, investment and training.
+    Examples included unstable code/servers, bad download experience,
+    bad customer service, bad install experience, etc.
+3.  **Not any good**. These are causes that you have control over which
+    are extremely difficult to mitigate. You cannot just plan to have a
+    good game or invest in a good game. This is extremely subjective,
+    what one person thinks is great someone else may believe to be total
+    crap. Examples included balancing the game, making it engaging,
+    building a sense of community, etc.
+
+[![board.jpg](http://seanmountcastle.com/wp-content/uploads/2007/07/board.thumbnail.jpg)](http://seanmountcastle.com/wp-content/uploads/2007/07/board.jpg "board.jpg")
+
+Once you've built-up desire for your product you have to maintain it.
+Paul stated that desire is eroded at audit points. Audit points are
+times when the customer takes stock of their experience and consciously
+chooses to continue paying you money or not. He compared audit points to
+the form of interrogation where-by a person's head is held under water
+for a period of time and then pulled out -- those points when the person
+comes up gasping for air are audit points. You have to keep people away
+from audit points. Each of the thwarts mentioned above cause audit
+points. Thus when you balance (or nerf) the game, you've just changed
+the user's experience and thus inserted an audit point. In addition,
+when you release an expansion pack or a patch, it causes an audit point
+as the user must choose whether or not to go out and purchase the
+expansion pack which allows them access to new locations/adventures
+taking them out of their comfort zone within the game. That's all well
+and good, but how do you actually build desire for your product in the
+first place? Paul believes that you must plan and invest in several
+areas prior to the launch of your product. You should have transparent
+communication from the very beginning (see [Paul's video
+blog](http://www.warhammeronline.com/english/behindTheScenes/vidPhoneDiaries/index.php)
+along with [developer
+interviews/podcasts](http://www.warhammeronline.com/english/behindTheScenes/developmentDiaries/index.php)
+and other behind the scenes material). You also need to build a sense of
+community so that your customers and prospective customers feel part of
+a greater whole. In this regard, EA Mythic has created [kits for fan
+sites](http://www.warhammeronline.com/english/community/fansiteKit/),
+[forums](http://www.warhammeronline.com/english/community/forumsFansites/)
+on their website, special [promotional
+events](http://www.warhammeronline.com/english/community/eventsCalendar/)
+and materials, etc. Another way to build desire is to ensure that your
+product provides a sense of progression. This is very similar to the
+notions espoused by [Kathy
+Sierra](http://headrush.typepad.com/creating_passionate_users/) around
+helping your users kick ass. At the end of his talk, Paul mentioned the
+'innovator's dilemma', specifically evolution vs. revolution. He
+estimated that new products can only support 2-3 innovations per
+release, any more would simply overwhelm the market. For a product like
+his, he gave examples like a unique HUD, unique control scheme,
+completely different questing system, etc. In a related vein, he spoke
+about 'crossing the chasm', loosely related to Geoffrey Moore's book
+which discusses bridging the gap between the early adopters and the
+early majority (the pragmatists). Paul's example was that of setting for
+the game, fantsy vs. science fiction. His argument was that people can
+relate to better to a fantasy world as everyone knows about cutting
+enemies down with swords or clubbing them but shooting blaster cannons
+or instaneous space travel, which don't exist in real life, take more of
+a leap. Personally, I'm not sure that's the reason why most Sci-Fi MMOs
+are having a difficult time but he's certainly entitled to his opinion.
+Overall, Paul's talk was quite enjoyable (in no small part to his
+bitingly sarcastic British humor) and he has definitely made some
+interesting observations, though it would seem that many are widely
+known outside of the "game development" community. I look forward to
+hearing more from Paul and the team at EA Mythic and will be keeping an
+eye on the development of WAR.

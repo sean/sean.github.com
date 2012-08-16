@@ -1,0 +1,19 @@
+---
+author: admin
+date: '2006-07-23 22:00:00'
+layout: post
+slug: oscon-2006
+status: publish
+title: OSCON 2006
+wordpress_id: '16'
+categories:
+- Conferences
+- OSCON
+- Programming
+- Telecom
+---
+
+I’ve made it to [OSCON ‘06](http://conferences.oreillynet.com/oscon/)
+after being stuck in a plane sitting at the gate for almost two hours at
+Dulles airport. I’m dead tired so stay tune for coverage over the course
+of the conference.

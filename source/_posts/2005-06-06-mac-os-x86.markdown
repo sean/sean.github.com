@@ -1,0 +1,37 @@
+---
+author: admin
+date: '2005-06-06 10:01:00'
+layout: post
+slug: mac-os-x86
+status: publish
+title: Mac OS X86?
+wordpress_id: '67'
+categories:
+- Mac
+- Software
+---
+
+Wow, this is a bit of a shocker: [Apple to Use Intel Microprocessors
+Beginning in
+2006](http://www.apple.com/pr/library/2005/jun/06intel.html). This rumor
+has been floating around the web for a while now and thus far I've
+chosen to ignore it since I, mistakenly, thought that it was false. But
+Steve just confirmed it at his [WWDC](http://developer.apple.com/wwdc/)
+keynote. Personally, I'm not too happy about the switch, but if [Leander
+Kahney](http://wiredblogs.tripod.com/cultofmac/index.blog?entry_id=1125226)
+is right then this could be a good thing for Apple.
+Now that I think of it, more folks with Mac OS X installed will be much
+better for all of us -- though with Apple presenting a bigger target to
+the virus writers and haxors, they'll need to continue to focus on
+security. Obviously, Apple doesn't want to see their HW revenues dry-up,
+so I suspect that Mac OS X86 will only run on Apple HW (it's just that
+the Apple HW will have an Intel CPU inside instead of a PowerPC one).
+Thanks to NextStep's support for fat binaries (the executables for
+multiple platforms stored in a single bundle), Mac OS X applications
+will have a single instance which runs on both PPC and x86, making it
+easier on Apple's current customers (not sure yet how troublesome this
+will be for developers -- Steve says that XCode will take care of it).
+Overall, this could be a monumental mistake or an amazing (and risky)
+gamble for Apple. I guess we'll just have to wait and see. Interestingly
+enough, Apple's stock is only slightly down after the announcement;
+atleast the investors aren't spooked by the switch.

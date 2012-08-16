@@ -1,0 +1,77 @@
+---
+date: '2008-08-08 08:11:35'
+layout: post
+slug: rubynation-2008
+status: publish
+title: RubyNation 2008
+wordpress_id: '152'
+categories:
+- Conferences
+- Ruby
+---
+
+{% img left http://www.rubynation.org/images/conference/badges/ruby_attendee.png %}
+
+Last weekend (Friday and Saturday), I attended [RubyNation](http://www.rubynation.org/) 2008, the first regional Ruby conference in my area. The speakers were excellent and it was great to meet up with folks from the Ruby community who I haven't seen in awhile. As always, I left feeling energized and excited about my Ruby projects.
+
+There were two main themes of the conference: the 'official' one was *Ceremony vs. Essence*, while the 'unofficial' one was *Test all the fucking time*. The first theme was the subject of the opening and closing keynotes. The second came from Bryan Liles lighting talk on the first day and kept coming up afterwards (audience 'hecklers' would ask presenters how often they should test).
+
+## Agenda ##
+
+***
+
+<table>
+<tr><td>Welcome to RubyNation</td><td>Gray Herter</td></tr>
+<tr><td>Opening Keynote: Ceremony vs. Essence</td><td>Neal Ford</td></tr>
+<tr><td>DSLs and Ruby: Blurring the Lines Between Programs And Data</td><td>Russ Olsen</td></tr>
+<tr><td>The Culture of Innovation in Ruby</td><td>Glenn Vanderburg</td></tr>
+<tr><td>Living on the Edge</td><td>Yehuda Katz</td></tr>
+<tr><td>Lightning Talks</td><td>Chris Bucherre, Bryan Liles</td></tr>
+<tr><td>Archaeopteryx: A Ruby MIDI Generator</td><td>Giles Bowkett</td></tr>
+<tr><td>Welcome, Day 2</td><td>David Keener</td></tr>
+<tr><td>Keynote: Ruby, A Retrospective</td><td>Rich Kilmer</td></tr>
+<tr><td>Ruby Puzzlers</td><td>Mike Furr</td></tr>
+<tr><td>Pratical JRuby</td><td>David Keener</td></tr>
+<tr><td>Tools for Your Ruby Toolbox</td><td>Dave Bock</td></tr>
+<tr><td>Lightning Talks</td><td>Soren Burkhart, Glenn West, Jesse Shock, Yehuda Katz, Bryan Liles</td></tr>
+<tr><td>Closing Keynote: Bad Ruby</td><td>Stuart Halloway</td></tr>
+</table>
+***
+
+Neal Ford's talk on *Ceremony vs Essence* was one of the best talks of the conference and a great way to kick it off. He criticized our industry for failing to look backwards and leveraging the lore of the past. Then he proceeded to look even further back discussing [Plato's](http://en.wikipedia.org/wiki/Plato) doctrine of ideas, [Aristotle's](http://en.wikipedia.org/wiki/Aristotle) essential properties vs accidental properties, [Galileo's](http://en.wikipedia.org/wiki/Galileo) use of experimentation to verify ideas, and [William Occam's](http://en.wikipedia.org/wiki/William_Occam) principle that the explanation of any phenomenon should make as few assumptions as possible (KISS). Don't confuse essential complexity (we have a hard problem to solve) vs accidental complexity (we've made the problem hard to solve). Some of the new patterns he presented were:
+
+-   Chicken Cognition: no memory, can't learn from your mistakes
+-   Frozen Caveman: burned by something and was flash frozen at that point in time, everything revolves around that issue
+-   Rubik's Cubicle: love to solve puzzles, not real issues
+
+During his keynote, Neal suggested learning from the lore of our past by reading classics like {{ "0201835959" | amazon_link }}, {{ "013476904X" | amazon_link }}, {{ "020161622X" | amazon_link }}.
+
+Next up was Russ Olsen who gave a talk about DSLs, both external and internal. Domain specific languages continue to be a hot topic in Ruby and the developer community in general. Ruby is very well suited to both external DSLs (involving a parser) and internal DSLs (use the Ruby parser and build language infrastructure). Ruby is great for DSLs because it doesn't require parenthesis or semi-colons, it supports procs, the reflection capabilities (method\_missing, instance\_eval, etc), etc. Rich Kilmer called DSL building, syntax driven development.
+
+Glenn Vanderburg presented on the culture of innovation within the Ruby community. The Ruby community is seeing so much innovation because Rubyists are novelty junkies, the languages opens possibilities that deserve to be explored, the requirement to integrate with IDEs is hampering innovation in Java (Java developers won't use it until it's integrated within their IDE), and things are just easier to accomplish in Ruby (low ceremony). He said that sometimes its good to start over as being forced to reinvent can be an opportunity. To close out his talk he did have a warning: **When learning new things costs are easier to spot than benefits, but when inventing new things benefits are easier to spot than costs.**
+
+Yehuda Katz from Engine Yard spoke about living on the edge. As an aside, it appears that [Engine Yard](http://engineyard.com/) is trying to be a mini-Google in that they appear to have hired many of the top Rubyists as well as some very savvy operations folks. Yehuda said that we should expect [Merb](http://merbivore.com/) 1.0 by the end of summer, introduced the [DataMapper](http://datamapper.org/) ORM, [YARD](http://www.infoq.com/news/2008/07/yard-documentation-generator) (a replacement for rdoc), and [Johnson](http://github.com/jbarnette/johnson/tree/master) (a JavaScript/Ruby bridge). **He urged those present to take the time to think things through and not rush an API (or software) out.**
+
+During the Lightning Talks we heard from Chris Bucchere about [BDG](http://www.thebdgway.com/)'s social network for conferences; David James of Community Goals about state machines, Simon Kaczar of Prognosoft about libncurses-ruby, and [Bryan Liles](http://smartic.us/) about testing (where the meme *test all the fucking time* appeared). Bryan's was one of the best talks of the conference, I highly recommend seeing him present.
+
+The first day closed with [Giles Bowkett's](http://gilesbowkett.blogspot.com/) presentation on Archaeopteryx (a Ruby MIDI generator). The music it generated (through [Reason](http://www.propellerheads.se/products/reason/)) was pretty good. The software makes heavy use of lambda functions and so Giles has aliased lambda to L to reduce typing. His talk covered a wide range of topics and there's no way I can do it justice. Hopefully he'll have it recorded (since he's given the presentation a few times now) and post it on the 'net.
+
+The second day opened with Rich Kilmer of [InfoEther](http://www.infoether.com/InfoEther/Home.html) who provided a look back at the early days of Ruby (from his involvement in 2001), the conferences, and all of the various projects he's worked on with Ruby. Rich always has fun stories to tell and I enjoyed his talk immensely. I won't go through the entire chronology, but he ended by stating that the community needs to develop tools to deal with the dynamic nature of Ruby in order for wider adoption of the language, though he did note that Ruby is becoming mainstream. He also announced [HotCocoa](http://www.macruby.org/trac/wiki/HotCocoa), a DSL for Cocoa application development.
+
+Mike Furr spoke about issues he encountered when writing a Ruby parser for his [DRuby](http://www.cs.umd.edu/~jfoster/ruby.pdf) project. These were somewhat interesting traps, pitfals, and corner cases for where the language is ambiguous. His slides are available [here](http://rubynation.nowgetsocial.com/images/material/11M5676.pdf) so you can see specific code examples.
+
+David Keener walked through installing, configuring and running JRuby. Unfortunately, I have no interest in JRuby. I started working with it at my previous job to add Ruby scripting to a Java application, but since I no longer program in Java nor have an operational environment that is setup to deploy Java, I just don't care.
+
+Tools for your Ruby toolbox by [David Bock](http://codesherpas.com/) was an interesting tour of three Ruby projects: [StaticMatic](http://staticmatic.rubyforge.org/), [Sinatra](http://sinatra.rubyforge.org/), and [GServer](http://www.ruby-doc.org/stdlib/libdoc/gserver/rdoc/index.html). StaticMatic looked interested for static website development, but then Mike Clark [wrote](http://clarkware.com/cgi/blosxom/2008/08/06#Webby) about [Webby](http://webby.rubyforge.org/) and it looks even better. Sinatra appears to be a very light weight alternative to Rails and in combination with a static web site tool like StaticMatic or Webby could be extremely useful. GServer is a generic server which takes some of the pain out of setting them up. Dave's an engaging speaker and I always enjoy his presentations as well as speaking with him in the hallways at conferences.
+
+The second day of Lightning Talks was even better than the first. Soren Burkhard from [Hawaii Business Consulting](http://hawaiibcllc.com/) had a great overview of starting your own business. [Glenn West](http://mentalpagingspace.blogspot.com/) spoke about several Rails plugins that he uses on a regular basis: ActiveScaffold, Role Requirement, ActiveAuthentication, File\_column, PDFtoRuby, DotR, and Tabnav. Jesse Shock from Engine Yard spoke about high availability planning: multiple sites, geographic diversity, data partitioning, sharding, etc. He said you need to establish costs up front so the customer knows which availability techniques they can afford. Yehuda Katz, also from Engine Yard, spoke about testing (in the context of Merb) and how you should use BDD for internal as well as external interfaces. The last of the lightning talks was by Bryan Liles on how to be a manager, his slides are available [here](http://smartic.us/assets/2008/8/5/smarticus_guide_to_being_the_boss.pdf).
+
+Finally, Stu closed out the conference with a talk on bad Ruby. Overall, Ruby is good but that there are some bad practices/decisions that could come back to bite us later as Ruby adoption grows. Some of the examples he provided were: constants (you can't change them so testing becomes difficult), class attributes (prefer instance attributes on the eigenclass), direct access of instance variables, and proc workarounds (e.g. passing more than one block to a method). The code examples from his talk are available [here](http://github.com/stuarthalloway/bad-ruby/tree).
+
+[Luis de la Rosa](http://www.luisdelarosa.com/) was kind enough keep track of all of the URLs that folks were throwing around and has posted them here:
+- delicious:
+  [http://delicious.com/tag/rubynation](http://delicious.com/tag/rubynation)
+- magnolia:
+  [http://ma.gnolia.com/tags/rubynation](http://ma.gnolia.com/tags/rubynation)
+
+Overall, it was a great conference and I look forward to next year's RubyNation in June 2009.

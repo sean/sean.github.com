@@ -1,0 +1,14 @@
+---
+author: admin
+date: '2005-03-23 02:13:26'
+layout: post
+slug: finally
+status: publish
+title: Finally
+wordpress_id: '82'
+categories:
+- Meta
+---
+
+I've finally gotten around to setting up a blog, it only took me four
+years.

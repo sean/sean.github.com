@@ -1,0 +1,27 @@
+---
+date: '2008-06-12 22:31:20'
+layout: post
+slug: inaugural-cocoaheads-reston-meeting
+status: publish
+title: Inaugural CocoaHeads Reston Meeting
+wordpress_id: '144'
+categories:
+- Mac
+- Miscellaneous
+- Programming
+- Software
+---
+
+Tonight the first [CocoaHeads Reston](http://cocoaheads.org/us/RestonVirginia/index.html) meeting was held at [Near Infinity Corporation](http://www.nearinfinity.com/index.html). [Jason Harwig](http://pinepointsoftware.com/) gave an excellent presentation on [WebKit](http://webkit.org/), starting with a simple browser created completely in Interface Builder (it consisted of a text field linked to a web view). I've recreated it and included a snapshot below.
+
+{% img left /assets/basicbrowser.png An Extremely Basic Web Browser %}
+
+Next he demonstrated how to interact with the DOM and JavaScript. The JavaScript integration was in both directions, first he demonstrated calling JavaScript functions from Objective-C and then calling Objective-C from JavaScript. It should be noted that for JavaScript to call Objective-C you need to implement the `+ (BOOL)isSelectorExcludedFromWebScript:(SEL)aSelector;` method and return `NO` for each of the methods you wish to call.
+
+Finally, Jason walked through various uses of WebKit an demonstrated an application specific, full-screen browser he wrote for a game as well as a del.icio.us Cocoa application he wrote called [Delish](http://pinepointsoftware.com/delish/site/). Several other webkit based applications were also covered such as [Fluid](http://fluidapp.com/) - a freely available site-specific browser creator, [PackRat](http://infinitenil.com/packrat/) - a commercial site-specific browser for Backpack, and another application which I've forgotten (I guess I should've taken notes). As an aside, Jason brought up the interesting work that the [280North](http://280north.com/) folks have done for their [280Slides](http://280slides.com/) web-based presentation called [Objective-J](http://objective-j.org/). Objective-J (code named Cappuccino), is an Objective-C like language built on JavaScript.
+
+Matt Wizeman stepped up next to demo a WebKit application he's developing to wrap a troublesome time tracking web application. It was interesting the machinations he had to go through to know when the page had finished loading and to transition between pages since the application was JavaScript heavy, using tricks like clickable divs.
+
+I learned quite a bit about WebKit. As soon as I got home I was energized to play with it.
+
+Be sure to come to the next meeting on July 10th (day before iPhone 3G day)!

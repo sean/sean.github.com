@@ -1,0 +1,19 @@
+---
+author: admin
+date: '2010-01-21 22:07:39'
+layout: post
+slug: skribit
+status: publish
+title: Skribit
+wordpress_id: '165'
+categories:
+- Miscellaneous
+---
+
+Wow! It's been over a year since I last updated my blog. How sad. To
+help jump start my blogging again I've signed up for
+[Skribit](http://skribit.com/blogs/sean-mountcastle). You can use the
+suggestions link on the right to propose blog posts you'd like me to
+write. By the way, if you haven't been following [Paul Stamatiou's
+blog](http://paulstamatiou.com/) which covers the development of
+Skribit, I recommend it.

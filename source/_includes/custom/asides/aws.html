@@ -1,0 +1,22 @@
+<section>
+  <h1>Currently Reading</h1>
+  <p> 
+    {{ site.amazon_reading | amazon_medium_image }}
+    <br />
+    {{ site.amazon_reading | amazon_link }} by
+    {{ site.amazon_reading | amazon_authors }}
+  </p>
+  <h1>Recent Reads</h1>
+  <ul id="recent_reads">
+    {% for book in site.amazon_reads limit: site.amazon_limit %}
+      <li class="post">
+	<p> 
+	  {{ book | amazon_medium_image }}
+	  <br />
+	  {{ book | amazon_link }} by
+	  {{ book | amazon_authors }}
+	</p>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
