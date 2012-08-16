@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Telecom | Sean Mountcastle]]></title>
+  <link href="http://sean.github.com/blog/categories/telecom/atom.xml" rel="self"/>
+  <link href="http://sean.github.com/"/>
+  <updated>2012-08-16T00:11:34-04:00</updated>
+  <id>http://sean.github.com/</id>
+  <author>
+    <name><![CDATA[Sean Mountcastle]]></name>
+    <email><![CDATA[smountcastle@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Finally Awarded a Patent!]]></title>
+    <link href="http://sean.github.com/blog/2007/12/27/finally-awarded-a-patent/"/>
+    <updated>2007-12-27T10:32:05-05:00</updated>
+    <id>http://sean.github.com/blog/2007/12/27/finally-awarded-a-patent</id>
+    <content type="html"><![CDATA[<p>After almost seven years, I was finally awarded a patent:
+<a href="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&amp;Sect2=HITOFF&amp;d=PALL&amp;p=1&amp;u=/netahtml/PTO/srchnum.htm&amp;r=1&amp;f=G&amp;l=50&amp;s1=7,170,862.PN.&amp;OS=PN/7,170,862&amp;RS=PN/7,170,862" title="Partitioning a network element into multiple virtual network elements"><strong>7,170,862</strong></a>.
+It's assigned to my previous employer, <a href="http://cisco.com/">Cisco Systems,
+Inc</a>. Until I started this process, I never imagined
+how long the <a href="http://www.uspto.gov/index.html">USP&amp;TO</a> could take to
+finally assign a patent. Now I'm waiting to see if any of my other
+patents filed by Cisco will be awarded.</p>
+
+<p>This actually happened back in January, but since I was never notified,
+I researched it myself after the recent news of Cisco opening up IOS to
+3rd party developers.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[AT&T Insanity]]></title>
+    <link href="http://sean.github.com/blog/2007/07/14/att-insanity/"/>
+    <updated>2007-07-14T15:18:06-04:00</updated>
+    <id>http://sean.github.com/blog/2007/07/14/att-insanity</id>
+    <content type="html"><![CDATA[<p>My friend <a href="http://blacka.com/david/">Dave</a> <del>is</del> was looking to get an
+<a href="http://www.apple.com/iphone/">iPhone</a> now that his <a href="http://blacka.com/david/archives/2007/07/the-irony/">Treo
+died</a>. I already
+have AT&amp;T service and I'd love to upgrade to an iPhone as well. Being an
+old AT&amp;T Wireless customer from before they were purchased by Cingular
+and renamed (and now back to the old name) does not appear to be an
+asset. I've had the service before I was married, consequently if I'm
+going to upgrade my phone, consolidating my service with my wife's
+through <a href="http://www.apple.com/iphone/easysetup/rateplans.html">AT&amp;T's family
+plan</a> would
+probably be best for us. Thus I called up AT&amp;T to see if they could
+assist me. Unfortunately, my service is through the national business
+accounts arm of the company and the family plan is not an option there.
+I have no problem being switched off of the national business accounts
+(and forgoing my monthly discount), but their system won't let them
+convert my account. I can leave AT&amp;T and go to another service provider,
+taking my number with me but I cannot stay with AT&amp;T and switch to the
+family plan. If I leave to go to another carrier, taking my number with
+me, and then go back to AT&amp;T, I'll still be stuck on the national
+business accounts side of the house. The service representative said she
+could set me up with a completely new account (i.e. new phone numbers)
+with the family plan. I explained that I've had my cell number for a
+decade now and I'm not going to change it. I'm willing to pay them more
+money (almost double what I pay now) and purchase one (possibly even
+two) expensive handsets and they cannot help me out at all. This is
+completely insane! AT&amp;T really needs to get its act together and
+integrate its back office systems.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Goodbye Cisco]]></title>
+    <link href="http://sean.github.com/blog/2006/10/30/goodbye-cisco/"/>
+    <updated>2006-10-30T21:19:18-05:00</updated>
+    <id>http://sean.github.com/blog/2006/10/30/goodbye-cisco</id>
+    <content type="html"><![CDATA[<p>My previous employer, <a href="http://www.cisco.com">Cisco Systems</a>, has decided
+to restructure my business unit and as a result my choices were to
+either move or leave and since my family is quite happy in Northern
+Virginia, I decided to find employment elsewhere. The restructuring was
+necessary for Cisco, and personally I thought they should've taken
+action much sooner than they did. The company made a series of bad
+business decisions in the optical business, not the least of which was
+paying $6.9 billion for the start-up at which I worked. The world is
+moving to ethernet and IP and the focus should've been on leveraging the
+team's existing experience in telecom (and SONET/SDH, in particular) to
+move to an IP-based platform. I was eager to see Cisco's shift its image
+to a consumer-focused company--even though I think the new logo looks
+considerably worse than the old one. Even though I'm planning to get rid
+of my cable service in favor of FiOS TV, it would've been nice to see
+the Cisco enhancements to the SciAtl set-top boxes. And as a Cisco
+share-holder, the fact that consumer companies seem to have higher
+multiples has given the stock a nice little rise since early August.
+I'll continue to keep my eye on Cisco and now that I'm no longer an
+employee I can blog about them much more freely.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[OSCON: Asterisk Inside and Out]]></title>
+    <link href="http://sean.github.com/blog/2006/07/24/oscon-asterisk-inside-and-out/"/>
+    <updated>2006-07-24T21:26:00-04:00</updated>
+    <id>http://sean.github.com/blog/2006/07/24/oscon-asterisk-inside-and-out</id>
+    <content type="html"><![CDATA[<p>This afternoon I attended <a href="http://conferences.oreillynet.com/cs/os2006/view/e_sess/8936">Asterisk Inside and
+Out</a> by
+<a href="http://www.saintjoe.edu/faculty/specific/cs.html">Brian Capouch</a>. His
+presentation is available
+<a href="http://www.network-voice.com/oscon/tutorial.pdf">here</a> while all of the
+<a href="http://www.asterisk.org/">Asterisk</a> configuration files can be obtained
+<a href="http://www.network-voice.com/oscon/">here</a>. The tutorial was based on
+his forthcoming book, <em>Asterisk Inside and Out: Do-it-yourself Open
+Source Telephony</em>, from Addison-Wesley.</p>
+
+<p>Following the slides, Brian performed several demos which displayed the
+power of Asterisk. He started with a simple ‘Hello World’ example where
+the caller was played a short message. Next he demonstrated the server
+calling you back (and playing a pre-recorded message). Then he called an
+inside extension, an outside of the system (on to the PSTN via the FXO),
+and called an inside extension from outside (via the PSTN and FXO).
+After that he showed a ‘road warrior’ who ran a local instance of
+Asterisk on their laptop which registered with the home office and then
+called the office number of the ‘road warrior’ and the call was
+automatically redirected to the laptop. Following that, he configured
+the laptop as a remote office and dialed an extension at the ‘remote
+office’ from the ‘local office’, which was properly routed through the
+system. Finally, he demonstrated an intra-office transfer of an incoming
+POTS call.</p>
+
+<p>Asterisk appears to be an amazing application and there is quite a bit
+more that I need to learn about it. It seems like it would be a fun
+project to setup at home (if my wife will agree to it – which is
+doubtful).</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[OSCON: JavaScript Boot Camp]]></title>
+    <link href="http://sean.github.com/blog/2006/07/24/oscon-javascript-boot-camp/"/>
+    <updated>2006-07-24T20:11:00-04:00</updated>
+    <id>http://sean.github.com/blog/2006/07/24/oscon-javascript-boot-camp</id>
+    <content type="html"><![CDATA[<p>This morning I attended <a href="http://www.slash7.com/">Amy Hoy’s</a> <a href="http://conferences.oreillynet.com/cs/os2006/view/e_sess/8933">JavaScript
+Boot Camp</a>
+tutorial. The slides should be available online shortly at Amy’s website
+– I’ll update this post once she publishes them. She provided a good
+overview of JavaScript as a language, some of the issues with the
+various implementations, how to debug it and some of the libraries
+available for use. <strong>Updated</strong>: The slides are located
+<a href="http://www.slash7.com/articles/2006/07/26/javascript-boot-camp-tutorial">here</a>.
+Unfortunately, the material was a little too introductory for me, I
+thought she’d spend less time on the JavaScript basics and more on the
+intermediate/advanced techniques of the language and libraries. I guess
+I misunderstood what I had signed-up for. Anyway, she started out with
+the history of the JavaScript language (briefly mentioning the
+LiveScript name … which Rich Kilmer quizzed me on at <a href="http://seanmountcastle.com/articles/2006/07/20/july-novarug-meeting">my RJS
+talk</a>)
+and the ECMAScript process which spawned several different releases of
+JavaScript – basically most browsers implement JavaScript 1.5 with the
+exception of <a href="http://www.mozilla.com/firefox/">Firefox</a> which gives us
+JavaScript 1.6. At this point we lost power to everything but the
+projector, but Amy took it in stride and continued her presentation. She
+went through the syntax of the JavaScript language, keywords, etc. After
+getting through the language quirks, she discussed how to use
+<a href="http://www.joehewitt.com/software/firebug/">FireBug</a> and the
+<a href="http://www.squarefree.com/shell/">JavaScript shell</a> to test and debug
+your JavaScript code. Some of the libraries which were mentioned
+include: <a href="http://www.json.org">JSON</a>, <a href="http://mochikit.com/">MochiKit</a>,
+<a href="http://script.aculo.us/">Script.aculo.us</a>,
+<a href="http://moofx.mad4milk.net/">moo.fx</a>,
+<a href="http://bennolan.com/behaviour/">Behavior</a>, and
+<a href="http://prototype.conio.net/">Prototype</a>. When asked for her favorite
+JavaScript related sites she gave her top three:</p>
+
+<ul>
+<li><a href="http://www.quirksmode.org/">QuirksMode</a></li>
+<li><a href="http://www.mozilla.org/">Mozilla</a></li>
+<li><a href="http://www.ajaxian.com/">Ajaxian</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

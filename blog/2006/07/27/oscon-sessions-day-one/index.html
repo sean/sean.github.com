@@ -1,0 +1,407 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>OSCON: Sessions Day One - Sean Mountcastle</title>
+  <meta name="author" content="Sean Mountcastle">
+
+  
+  <meta name="description" content="Below are my notes from the first day of sessions here atOSCON. The talks I attendedwere:Using Ruby on Rails to Build a Massive Multiplayer GameEasy &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://sean.github.com/blog/2006/07/27/oscon-sessions-day-one/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="http://feeds.feedburner.com/SeanMountcastle" rel="alternate" title="Sean Mountcastle" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Sean Mountcastle</a></h1>
+  
+    <h2>Thoughts on technology and engineering.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://feeds.feedburner.com/SeanMountcastle" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:sean.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">OSCON: Sessions Day One</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2006-07-27T20:34:00-04:00" pubdate  data-updated="true" >Jul 27<span>th</span>, 2006</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Below are my notes from the first day of sessions here at
+<a href="http://conferences.oreillynet.com/os2006/">OSCON</a>. The talks I attended
+were:</p>
+
+<ul>
+<li>Using Ruby on Rails to Build a Massive Multiplayer Game</li>
+<li>Easy AI with Python</li>
+<li>Driving Rails Deep into the Back Office</li>
+<li>Streamlined</li>
+<li>Ruby for Java Programmers</li>
+<li>Coding Wizard, Savvy Trader</li>
+</ul>
+
+
+<p>In the morning, I attended <a href="http://www.michaelbuffington.com/">Michael
+Buffingtonâ€™s</a> talk on <a href="http://conferences.oreillynet.com/cs/os2006/view/e_sess/8390">â€œUsing
+Ruby on Rails to Build a Massive Multiplayer
+Gameâ€?</a>.
+He gave a nice overview of the development of <a href="http://llor.nu">unroll</a>
+discussing isometric art, game design and briefly mentioning
+Ajax/JavaScript/script.aculo.us. Hopefully his slides will be available
+online shortly. The code for unroll can be downloaded
+<a href="http://dev.llor.nu">here</a>. At 11:35am, I was torn between <a href="http://clarkware.com/cgi/blosxom">Mike
+Clarkâ€™s</a> <a href="http://conferences.oreillynet.com/cs/os2006/view/e_sess/8396">Deploying Rails Apps with
+Capistrano</a>
+and Raymond Hettingerâ€™s <a href="http://conferences.oreillynet.com/cs/os2006/view/e_sess/9577">Easy AI with
+Python</a>.
+Since Iâ€™ve already deployed a couple of Rails apps using Capistrano, I
+decided to sneak into the Python camp (I ended up sitting right in front
+of Guido). I found the presentation quite interesting and will be
+looking into similar libraries for Ruby. Raymond covered the following
+topics: neural networks for datamining, solving the mastermind game,
+solving sudoku, a Bayesian classifer and, finally, a generic puzzle
+solver. Though the slides do not appear to be online yet, the Python
+code is available
+<a href="http://aspn.activestate.com/ASPN/Cookbook/Python?author=178123">here</a>.
+After lunch I attended <a href="http://www.jroller.com/page/obie">Obie
+Fernandezâ€™s</a> <a href="http://conferences.oreillynet.com/cs/os2006/view/e_sess/8674">Driving Rails Deep
+into the Back
+Office</a>.
+Obie discussed the PCS project for Barclays Bank in Willmington, DE that
+Thoughtworks was involved in. He discussed the various ways in which to
+get new technology into the very conservative back office of companies,
+such as: Trojan horse (sneaking it in), the race (two parallel
+development teams using different technologies), the pilot project, the
+rescue (for a failed/failing project) and finally undercutting (but he
+cautioned that this de-values the work youâ€™re doing). The three key
+points of his talk were:</p>
+
+<ol>
+<li>Optimize and raise your level of abstraction (by creating custom
+DSLs and capturing the requirements in Ruby)</li>
+<li>Rails really breathes life into extreme programming (they had one
+week iterations on their project)</li>
+<li>Donâ€™t sweat performance and scaling (they had their custom DSL
+generate SQL directly instead of Ruby to keep the performance up â€“
+so you canâ€™t completely ignore performance issues, but theyâ€™re
+usually not as bad as you think)</li>
+</ol>
+
+
+<p><a href="http://www.relevancellc.com">Stuart Halloway</a> demoed the
+<a href="http://conferences.oreillynet.com/cs/os2006/view/e_sess/9535">Streamlined</a>
+generator for Ruby on Rails â€˜backendâ€™ admin interfaces. Stuart
+described Streamlined as:</p>
+
+<ol>
+<li>Product ready backend scaffolding</li>
+<li>Generic enterprise CRUD</li>
+<li>The simplicity of ActiveRecord brought to views and controllers</li>
+</ol>
+
+
+<p>Heâ€™s not going to put the material present online since it is all
+basically available via the <a href="http://www.streamlinedframework.org/">Streamlined
+blog</a>. Ugo Cei gave a talk
+entitled <a href="http://conferences.oreillynet.com/cs/os2006/view/e_sess/8636">Ruby for Java
+Programmers</a>
+â€“ which confused many folks who thought it was an introduction to Ruby
+for those coming from a Java programming background â€“ instead it
+covered how to call Ruby from Java and how to call Java from Ruby. All
+of the material is covered in his slides, which are available
+<a href="http://www.sourcesense.com/transfer/ruby_for_java_programmers.pdf">here</a>.
+At the end of his talk he demoâ€™ed Rails running inside of JRuby which
+was pretty neat (though very slow and a bit buggy â€“ sometimes
+controllers wouldnâ€™t respond). Since Iâ€™ve already written a C
+extension for Ruby, I decided to attend a different kind of talk,
+<a href="http://conferences.oreillynet.com/cs/os2006/view/e_sess/8755">Coding Wizard, Savvy
+Trader</a> by
+Kartik Subbarao of HP. It was a whirlwind talk covering stocks and
+options trading and how to get access to financial information as well
+as how to process it using Perl, GreaseMonkey, etc. When the slides are
+posted, Iâ€™ll link back to them but here are several of the sites which
+were recommended:</p>
+
+<ul>
+<li><a href="http://finance.yahoo.com">Yahoo! Finance</a></li>
+<li><a href="http://www.stockcharts.com/education">StockCharts Learning Center</a></li>
+<li><a href="http://www.cboe.com/LearnCenter">Chicago Board of Exchange Learning
+Center</a></li>
+<li><a href="http://www.optionsxpress.com">OptionsXpress</a></li>
+<li><a href="http://www.wealthlab.com">WealthLab</a></li>
+<li><a href="http://www.elitetrader.com">EliteTrader</a></li>
+<li><a href="http://www.opentick.com">OpenTick</a></li>
+<li><a href="http://www.stocktickr.com">StockTickr</a></li>
+<li><a href="http://www.socialpicks.com">SocialPicks</a></li>
+<li><a href="http://www.marketocracy.com">Marketocracy</a></li>
+</ul>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">admin</span></span>
+
+      
+
+
+
+
+
+  
+
+
+
+<time datetime="2006-07-27T20:34:00-04:00" pubdate  data-updated="true" >Jul 27<span>th</span>, 2006</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/conferences/'>Conferences</a>, <a class='category' href='/blog/categories/oscon/'>OSCON</a>, <a class='category' href='/blog/categories/programming/'>Programming</a>, <a class='category' href='/blog/categories/python/'>Python</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/software/'>Software</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://sean.github.com/blog/2006/07/27/oscon-sessions-day-one/" data-via="smountcastle" data-counturl="http://sean.github.com/blog/2006/07/27/oscon-sessions-day-one/" >Tweet</a>
+  
+  
+</div>
+
+    
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/08/14/iosdevcamp-dc-2012/">iOSDevCamp DC 2012</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/09/26/moved-to-github-pages-and-octopress/">Moved to GitHub Pages and Octopress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2010/01/21/skribit/">Skribit</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2008/11/25/invented-quality-metric-feltz-levels/">Invented Quality Metric: Feltz Levels</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2008/08/08/rubynation-2008/">RubyNation 2008</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Github Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/sean">@sean</a> on Github
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'sean',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("smountcastle", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/smountcastle" class="twitter-follow-button" data-width="208px" data-show-count="false">Follow @smountcastle</a>
+  
+</section>
+
+
+<section>
+  <h1>Currently Reading</h1>
+  <p> 
+    1451648537
+    <br />
+    1451648537 by
+    1451648537
+  </p>
+  <h1>Recent Reads</h1>
+  <ul id="recent_reads">
+    
+      <li class="post">
+	<p> 
+	  055357342X
+	  <br />
+	  055357342X by
+	  055357342X
+	</p>
+      </li>
+    
+      <li class="post">
+	<p> 
+	  0553381695
+	  <br />
+	  0553381695 by
+	  0553381695
+	</p>
+      </li>
+    
+      <li class="post">
+	<p> 
+	  0553386794
+	  <br />
+	  0553386794 by
+	  0553386794
+	</p>
+      </li>
+    
+  </ul>
+</section>
+
+Included file 'asides/googleplus.html' not found in _includes directory
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Sean Mountcastle -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+  <br />
+  <a href="https://twitter.com/smountcastle" class="twitter-follow-button">You should follow me on Twitter</a>
+</p>
+
+<script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
+
+</footer>
+  
+
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-378484-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+  
+
+  
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+</body>
+</html>

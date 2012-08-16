@@ -1,0 +1,504 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Protecting Your Ruby Source Code for End User Applications - Sean Mountcastle</title>
+  <meta name="author" content="Sean Mountcastle">
+
+  
+  <meta name="description" content="If you want to distribute your Ruby applications while still protectingyour intellectual property you could use an obfuscation tools such &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://sean.github.com/blog/2007/12/15/protecting-your-ruby-source-code-for-end-user-applications/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="http://feeds.feedburner.com/SeanMountcastle" rel="alternate" title="Sean Mountcastle" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Sean Mountcastle</a></h1>
+  
+    <h2>Thoughts on technology and engineering.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://feeds.feedburner.com/SeanMountcastle" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:sean.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Protecting Your Ruby Source Code for End User Applications</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2007-12-15T17:54:41-05:00" pubdate  data-updated="true" >Dec 15<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>If you want to distribute your Ruby applications while still protecting
+your intellectual property you could use an obfuscation tools such as
+<a href="http://blog.zenspider.com/archives/2006/07/zenobfuscate_no.html">ZenObfuscate</a>
+or try to write your own. But in this article, I&#8217;m going to show a
+different approach that&#8217;s been used by several different companies
+producing commercial products written in Ruby. The method is not
+specific to Ruby and should work for any interpreted language in which
+you need to distribute your source code with the application.</p>
+
+<p>The secret is to encrypt your Ruby source, store it in a database and
+then modify the Ruby interpreter to look for your code in the database
+and decrypt it on the fly. I should note that there is no way to
+completely protect a product which is distributed to your
+customers&#8211;with enough diligence any security measures can be broken.</p>
+
+<p>These instructions are for Unix operating systems (include MacOS X).
+Unfortunately (or fortunately, for me), I don&#8217;t own a Windows machine.</p>
+
+<p>If you don&#8217;t already have Berkeley DB (BDB) installed on your system you
+can download it
+<a href="http://www.oracle.com/technology/software/products/berkeley-db/index.html">here</a>.
+You will need to follow the instructions which come with BDB which
+explain how to build and install it. Originally, I was going to use
+<a href="http://openssl.org/">OpenSSL</a> to encrypt our Ruby source code before
+inserting it into the database and decrypt it after retrieving it from
+the database. Thankfully, the latest version of BDB includes
+<a href="http://en.wikipedia.org/wiki/Advanced_Encryption_Standard">AES</a> support
+which allows you to maintain an encrypted database very easily.</p>
+
+<p>You will also need to obtain a fresh copy of the <a href="http://www.ruby-lang.org/en">Ruby source
+code</a> so that we can build our own private
+version which knows how to pull classes out of our BDB instance. So
+let&#8217;s start by creating a directory for us to work in:</p>
+
+<pre><code>mkdir -p ~/RubyProject/deploy
+</code></pre>
+
+<p>You should unpack the Ruby source in the <em>\~/RubyProject</em> directory
+(this should create directory which looks like
+<em>\~/RubyProject/ruby-1.8.6-p111</em>). Go into that directory and run the
+configure script as follows:</p>
+
+<pre><code>./configure --prefix=~/RubyProject/deploy --with-static-linked-ext
+</code></pre>
+
+<p>This will enable us to build a stand alone Ruby interpreter which has
+everything it needs statically linked in.</p>
+
+<p>To find out where we need to hook in our handler which loads missing
+classes from the database, you can <em>grep</em> through the source code
+looking for const_missing like this:</p>
+
+<pre><code>grep const_missing *.c
+</code></pre>
+
+<p>This turned up two files <em>object.c</em> and <em>variable.c</em>. Looking at the
+output, I could see that the <strong><em>const_missing</em></strong> function is actually
+defined in <em>variable.c</em>. Jumping in, I searched for the code executed
+when a constant cannot be found. This led me to the
+<strong><em>rb_const_get_0</em></strong> function which walks up the class hierarchy
+looking for the specified constant. If it cannot be found, it returns
+the result of the <strong><em>const_missing</em></strong> function. So right before that
+final return, I added the following hook:</p>
+
+<pre><code>    /* At this point we haven't found the class so we must look
+       inside of the BerkeleyDB for it, see dbloader.c */
+    value = load_from_db(id);
+    if (value != Qundef) return value;
+</code></pre>
+
+<p>Now I just had to implement the load_from_db function which should
+look inside of the encrypted BDB instance for the file. Looking at how
+the <strong><em>rb_const_get_0</em></strong> function works, I knew my new method had to
+return a Ruby <em>VALUE</em>:</p>
+
+<pre><code>VALUE
+load_from_db(id)
+     ID id;
+{
+    DBT k;
+    DBT d;
+
+    memset(&amp;k, 0, sizeof(DBT));
+    memset(&amp;d, 0, sizeof(DBT));
+
+    verify_database_state();
+
+    k.data = rb_id2name(id);
+    k.size = strlen(k.data);
+
+    d.flags = DB_DBT_MALLOC;
+
+    if (bdb-&gt;get(bdb, NULL, &amp;k, &amp;d, 0) == 0) {
+      rb_eval_string((const char *)d.data);
+      free(d.data);
+      return rb_eval_string(rb_id2name(id));
+    }
+    return Qundef;
+}
+</code></pre>
+
+<p>You&#8217;ll note that if we find the class in the database, we first evaluate
+it using <strong><em>rb_eval_string</em></strong>. Since this returns <em>nil</em>, we need
+evaluate the class name so that we can pass back a Ruby <em>VALUE</em>. If the
+class doesn&#8217;t exist in the database, we return <em>Qundef</em> and
+<strong><em>const_missing</em></strong> gets called as usual.</p>
+
+<p>The <strong><em>verify_database_state</em></strong> function ensures that the password for
+the BDB instance was passed and the database opened so that the
+<strong><em>get</em></strong> call can access it. It is implemented like so:</p>
+
+<pre><code>/* a simple way to obfuscate the password in memory */
+#define A(c)             (c) - 0x1d
+#define ENCRYPT_PWD(str) do { char * p = str; while (*p) *p++ -= 0x1d; } while (0)
+#define DECRYPT_PWD(str) do { char * p = str; while (*p) *p++ += 0x1d; } while (0)
+
+static void
+verify_database_state()
+{
+  /* don't forget to NULL terminate this array! */
+  static char info[] =
+    { A('1'), A('2'), A('3'), A('4'), A('5'),
+       A('6'), A('7'), A('8'), A('9'), A('0'),
+       0 };
+
+  const char * database_file = "data.db";
+
+  if (bdb == NULL) {
+    db_env_create(&amp;bdbenv, 0);
+    db_create(&amp;bdb, bdbenv, 0);
+
+    DECRYPT_PWD(info);
+    bdbenv-&gt;set_encrypt(bdbenv, info, DB_ENCRYPT_AES);
+    ENCRYPT_PWD(info);
+    bdbenv-&gt;open(bdbenv, ".", DB_INIT_MPOOL | DB_CREATE | DB_PRIVATE, 0600);
+    bdb-&gt;set_flags(bdb, DB_ENCRYPT);
+    bdb-&gt;open(bdb, NULL, database_file, NULL, DB_BTREE, 0, 0644);
+  }
+}
+</code></pre>
+
+<p>You&#8217;ll notice that the password is hard coded into the binary along with
+the location of the BDB instance. If you are going use this code, you&#8217;ll
+want to change the default password (which needs to match the password
+you used when storing your Ruby source in the database) and perhaps the
+location of the database. To deter those looking to decrypt our Ruby
+source, I&#8217;ve written C macros which performs a transformation on the
+password. It is fairly simple to circumvent, so you should research
+other methods of securely storing passwords within applications.</p>
+
+<p>Finally, you&#8217;ll need to remember to close the BDB instance before the
+Ruby interpreter exits. To do this we simply open up <em>main.c</em> and add
+the following line immediately following the call to <strong><em>ruby_run</em></strong>:</p>
+
+<pre><code>close_database();
+</code></pre>
+
+<p>The implementation of <strong><em>close_database</em></strong> is trivial, so you can just
+look in the patch I&#8217;ve provided for it.</p>
+
+<p>The patch to the Ruby source code is included in <a href="http://seanmountcastle.com/wp-content/uploads/2007/12/ruby-load-db.zip">this zipped
+attachment</a>
+along with another utility I wrote to load all of your Ruby source into
+the encrypted BDB instance (along with its Makefile). Here is a
+transcript which shows how to use the tools and your new Ruby
+interpreter:</p>
+
+<pre><code>~RubyProject/tools&gt; ./rb_store data.db *.rb
+Enter database password:
+Stored Example (131) bytes
+
+~RubyProject/tools&gt; ./rb_load data.db
+Enter database password:
+Hit CTRL+C to quit.
+Enter a class name: Example
+Found: 
+
+class Example
+  def initialize
+    puts "Hello from the Example class"
+  end
+
+  def aMethod
+    puts "Called aMethod"
+  end
+end
+
+Enter a class name: Foo
+No such class
+Enter a class name: ^C
+
+~RubyProject/ruby-1.8.6-p111&gt; ./ruby -e "e = Example.new"
+Hello from the Example class
+
+~RubyProject/ruby-1.8.6-p111&gt; ./ruby -e "f = Foo.new"
+-e:1: uninitialized constant Foo (NameError)
+</code></pre>
+
+<p>This implementation doesn&#8217;t deal with multiple classes of the same name
+residing in different directories. Also, the way in which the <em>rb_load</em>
+tool determines the name of the class is rather naive and can screw it
+up. I&#8217;ve wanted to write this for over a year now after hearing <a href="http://richkilmer.blogs.com/">Rich
+Kilmer</a> talk about the way in which
+<a href="http://infoether.com/">InfoEther</a> distributes its Ruby applications. So
+this is more of a proof-of-concept for myself than anything else.
+Hopefully you learned from this tutorial and can put it to good use.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">admin</span></span>
+
+      
+
+
+
+
+
+  
+
+
+
+<time datetime="2007-12-15T17:54:41-05:00" pubdate  data-updated="true" >Dec 15<span>th</span>, 2007</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/c-c-/'>C/C++</a>, <a class='category' href='/blog/categories/programming/'>Programming</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://sean.github.com/blog/2007/12/15/protecting-your-ruby-source-code-for-end-user-applications/" data-via="smountcastle" data-counturl="http://sean.github.com/blog/2007/12/15/protecting-your-ruby-source-code-for-end-user-applications/" >Tweet</a>
+  
+  
+</div>
+
+    
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/08/14/iosdevcamp-dc-2012/">iOSDevCamp DC 2012</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/09/26/moved-to-github-pages-and-octopress/">Moved to GitHub Pages and Octopress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2010/01/21/skribit/">Skribit</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2008/11/25/invented-quality-metric-feltz-levels/">Invented Quality Metric: Feltz Levels</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2008/08/08/rubynation-2008/">RubyNation 2008</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Github Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/sean">@sean</a> on Github
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'sean',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("smountcastle", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/smountcastle" class="twitter-follow-button" data-width="208px" data-show-count="false">Follow @smountcastle</a>
+  
+</section>
+
+
+<section>
+  <h1>Currently Reading</h1>
+  <p> 
+    1451648537
+    <br />
+    1451648537 by
+    1451648537
+  </p>
+  <h1>Recent Reads</h1>
+  <ul id="recent_reads">
+    
+      <li class="post">
+	<p> 
+	  055357342X
+	  <br />
+	  055357342X by
+	  055357342X
+	</p>
+      </li>
+    
+      <li class="post">
+	<p> 
+	  0553381695
+	  <br />
+	  0553381695 by
+	  0553381695
+	</p>
+      </li>
+    
+      <li class="post">
+	<p> 
+	  0553386794
+	  <br />
+	  0553386794 by
+	  0553386794
+	</p>
+      </li>
+    
+  </ul>
+</section>
+
+Included file 'asides/googleplus.html' not found in _includes directory
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Sean Mountcastle -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+  <br />
+  <a href="https://twitter.com/smountcastle" class="twitter-follow-button">You should follow me on Twitter</a>
+</p>
+
+<script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
+
+</footer>
+  
+
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-378484-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+  
+
+  
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+</body>
+</html>

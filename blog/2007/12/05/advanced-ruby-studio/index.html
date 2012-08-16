@@ -1,0 +1,387 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Advanced Ruby Studio - Sean Mountcastle</title>
+  <meta name="author" content="Sean Mountcastle">
+
+  
+  <meta name="description" content="Back in July I attended the Advanced RubyStudio in Reston, VA. At the time Ihad wanted to blog about it but my life suddenly became extremely busyand &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://sean.github.com/blog/2007/12/05/advanced-ruby-studio/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="http://feeds.feedburner.com/SeanMountcastle" rel="alternate" title="Sean Mountcastle" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Sean Mountcastle</a></h1>
+  
+    <h2>Thoughts on technology and engineering.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://feeds.feedburner.com/SeanMountcastle" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:sean.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Advanced Ruby Studio</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2007-12-05T23:54:04-05:00" pubdate  data-updated="true" >Dec 5<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Back in July I attended the <a href="http://pragmaticstudio.com/ruby/">Advanced Ruby
+Studio</a> in Reston, VA. At the time I
+had wanted to blog about it but my life suddenly became extremely busy
+and I left my blog to languish for several months. To rectify that, I&#8217;ve
+decided to write up this post providing an overview of the studio and my
+impressions. The instructors for the three day course were <a href="http://pragdave.blogs.pragprog.com/pragdave/">Dave
+Thomas</a> and <a href="http://www.chadfowler.com/">Chad
+Fowler</a>, two elite Ruby programmers (and
+excellent teachers). While I wouldn&#8217;t consider every topic covered
+during the course advanced, I will say that there was a good mix of
+intermediate and advanced content (and some of the advanced stuff was
+really advanced!)</p>
+
+<p><strong>Day 1</strong></p>
+
+<ul>
+<li>Blocks, Procs, and Closures</li>
+<li>Ruby Internals</li>
+<li>Your Own Private Ruby</li>
+<li>Design in a Dynamic Language</li>
+<li>Types</li>
+<li>Performance</li>
+</ul>
+
+
+<p><strong>Day 2</strong></p>
+
+<ul>
+<li>Metaprogramming</li>
+<li>Creating Domain Specific Languages</li>
+<li>Exotic Control Flow</li>
+</ul>
+
+
+<p><strong>Day 3</strong></p>
+
+<ul>
+<li>Library Organization</li>
+<li>Distributed Programming</li>
+<li>Debugging and Profiling</li>
+<li>Ruby Extras</li>
+</ul>
+
+
+<p>The first day we jumped right into blocks, procs, and closures. At
+first, I thought this would be primarily review for me, but Dave and
+Chad always provide those few extra tidbits which make it interesting.
+From there we delved into the Ruby source code and learned how to
+construct Ruby classes in C code and how to find our way around the Ruby
+source. &#8220;Your Own Private Ruby&#8221; covered how to build Ruby (with specific
+extensions) and how to manage multiple copies of Ruby on the same
+machine. There were so many goodies in the &#8220;Design in a Dynamic
+Language&#8221; portion of the day, I don&#8217;t want to ruin the experience for
+those who haven&#8217;t attended yet. The second day of the studio was my
+favorite, covering metaprogramming, DSLs, and control flow. There was so
+much material that it&#8217;s hard to do it justice in a short blog posting.
+The exercises/labs were integral to understanding the material and I&#8217;m
+glad the slides and source code were provided as they&#8217;ve turned out to
+be useful references to refer back to. The third day was the &#8216;choose
+your own adventure&#8217; day where each of us voted on the topics for the
+day. Even though there seemed to be some interest in JRuby on the first
+day, that topic didn&#8217;t make the short list for the final day.
+Concurrency also fell by the way-side (though the slides provided
+contained more than enough material on Ruby threads). Distributed
+programming was largely review for me having played with DRb and the
+Rinda tuple space, though the discussion of multicast and the ease of
+dealing with binary protocol using pack/unpack was new and useful to me.
+The primary message regarding library organization is to follow the
+conventions set forth by Rails, though this was the portion of the class
+where we packaged our own gem and served it up to classmates. Debugging
+and profiling Ruby applications was partially review, having used
+benchmark, ruby-debug, and profiler. Yet, I had never thought to debug
+my Ruby applications using gdb even though I use it frequently at work
+to debug C/C++ applications. <a href="http://clarkware.com/cgi/blosxom">Mike</a>
+and Nicole Clark really brought everything together. Their stewardship
+of the event made it truly remarkable (as they seem to do every time).
+Their goal is to ensure that every single attendee has a wonderful time
+and they appear to be willing to do whatever it takes to make it so.
+Next time you&#8217;re at one of their events be sure to thank them for their
+diligence. Overall, I found the course to be of tremendous value as it
+got me thinking about even more ways to use Ruby. The insight that Chad
+and Dave provided was integral to unlocking the reasoning behind the
+design of the language. As is true with all of the <a href="http://pragmaticstudio.com/">Pragmatic
+Studio</a> offerings I&#8217;ve attended, this class
+reinvigorated me and left me energized to tackle more projects. For
+those who have never been to a Pragmatic Studio event before, one of the
+best alumni benefits is the mailing list you&#8217;re able to join afterwards
+&#8211; the signal to noise ratio is extremely high. Now, if only I could
+convince my employer to send me four or five times a year.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">admin</span></span>
+
+      
+
+
+
+
+
+  
+
+
+
+<time datetime="2007-12-05T23:54:04-05:00" pubdate  data-updated="true" >Dec 5<span>th</span>, 2007</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/training/'>Training</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://sean.github.com/blog/2007/12/05/advanced-ruby-studio/" data-via="smountcastle" data-counturl="http://sean.github.com/blog/2007/12/05/advanced-ruby-studio/" >Tweet</a>
+  
+  
+</div>
+
+    
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/08/14/iosdevcamp-dc-2012/">iOSDevCamp DC 2012</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/09/26/moved-to-github-pages-and-octopress/">Moved to GitHub Pages and Octopress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2010/01/21/skribit/">Skribit</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2008/11/25/invented-quality-metric-feltz-levels/">Invented Quality Metric: Feltz Levels</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2008/08/08/rubynation-2008/">RubyNation 2008</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Github Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/sean">@sean</a> on Github
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'sean',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("smountcastle", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/smountcastle" class="twitter-follow-button" data-width="208px" data-show-count="false">Follow @smountcastle</a>
+  
+</section>
+
+
+<section>
+  <h1>Currently Reading</h1>
+  <p> 
+    1451648537
+    <br />
+    1451648537 by
+    1451648537
+  </p>
+  <h1>Recent Reads</h1>
+  <ul id="recent_reads">
+    
+      <li class="post">
+	<p> 
+	  055357342X
+	  <br />
+	  055357342X by
+	  055357342X
+	</p>
+      </li>
+    
+      <li class="post">
+	<p> 
+	  0553381695
+	  <br />
+	  0553381695 by
+	  0553381695
+	</p>
+      </li>
+    
+      <li class="post">
+	<p> 
+	  0553386794
+	  <br />
+	  0553386794 by
+	  0553386794
+	</p>
+      </li>
+    
+  </ul>
+</section>
+
+Included file 'asides/googleplus.html' not found in _includes directory
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Sean Mountcastle -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+  <br />
+  <a href="https://twitter.com/smountcastle" class="twitter-follow-button">You should follow me on Twitter</a>
+</p>
+
+<script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
+
+</footer>
+  
+
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-378484-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+  
+
+  
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+</body>
+</html>

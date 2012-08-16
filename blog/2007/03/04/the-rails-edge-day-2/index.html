@@ -1,0 +1,442 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>The Rails Edge Day 2 - Sean Mountcastle</title>
+  <meta name="author" content="Sean Mountcastle">
+
+  
+  <meta name="description" content="The second day of the conference was even better than the first, in myopinion. There were several more talks which I was eager to hear. Here&#8217; &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://sean.github.com/blog/2007/03/04/the-rails-edge-day-2/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="http://feeds.feedburner.com/SeanMountcastle" rel="alternate" title="Sean Mountcastle" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Sean Mountcastle</a></h1>
+  
+    <h2>Thoughts on technology and engineering.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://feeds.feedburner.com/SeanMountcastle" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:sean.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">The Rails Edge Day 2</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2007-03-04T16:59:26-05:00" pubdate  data-updated="true" >Mar 4<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>The second day of the conference was even better than the first, in my
+opinion. There were several more talks which I was eager to hear. Here&#8217;s
+an overview of the second day&#8217;s presentations:</p>
+
+<ul>
+<li>Creating Rails Plugins by Chad Fowler and Bruce Williams</li>
+<li>The Presenter Pattern by Marcel Molina, Jr.</li>
+<li>The Deployment Golden Path by James Duncan Davidson</li>
+<li>Testing Rails Apps by Stu Halloway</li>
+<li>Red, Green, Refactor by Jim Weirich</li>
+<li>Building View Frameworks by Bruce Williams</li>
+<li>Lightning Talks</li>
+</ul>
+
+
+<p>Read on for my notes. First up were Chad and Bruce who went through
+Creating Rails Plugins. Never having created a Rails plugin before, I
+was very interested in the process. They started by providing an
+overview of the plugin script and then the generate plugin script. Next
+they showed how you can provide your own controllers (in the lib subdir)
+and views (in the views/&#8217;plugin name&#8217; subdir), rake tasks (in the tasks
+subdir), models (right at the top-level of your plugin) and your own
+generators (in the generators/&#8217;plugin name&#8217; subdir). The remainder of
+the talk walked through the creation of their
+<a href="http://rubyforge.org/projects/ratable/">acts_as_ratable</a> plugin.
+Marcel followed that with his talk on the Presenter Pattern. He was
+quick to point out that this is not a design pattern in the style of the
+Gang-of-Four book (especially since previous presenters had made
+derogatory comments about design patterns and their utility). The
+presenter pattern is basically a way to <em>organize</em> a chunk of view code.
+He started off with a discussion of the problems with helper modules,
+how they become a dumping ground for methods (one suggestion was to
+break-up your helpers into smaller modules organized around specific
+functionality and then include those in your helper). A comparison was
+made to the &#8216;method object&#8217; in Kent Beck&#8217;s Smalltalk Best Practice
+Patterns (linked at bottom of this post). To finish, Marcel gave a brief
+demo of this but it&#8217;s basically vaporware at this point and didn&#8217;t have
+a date for when it would be released. JDD was up next with his talk on
+Deployment. He stressed that it was important to start deploying your
+app as soon as possible in the development cycle (he suggested that you
+do it at the same time you set up your Subversion repository). This is
+necessary to find all of the &#8220;interesting&#8221; deployment problems up front,
+so you can get into the deployment rhythm and so that you can show
+others what you&#8217;re working on for feedback. You just need a machine that
+works well enough, he suggested a Mac mini, but some folks in the
+audience suggested a virtual machine on the same box &#8211; Duncan said that
+while that might work he prefers having another machine to deploy to.
+The only deployment solution that he recommends right now is Mongrel
+fronted by Apache, Lighty, Pound, Pen or a hardware load balancer. Then
+he went on to describe what he calls &#8216;the golden path&#8217; using Capistrano,
+Subversion and Unix machines. At the end he gave a live demo deploying
+his app to an Amazon EC2 machine. After lunch, Stu presented on Testing
+Rails Apps. Perhaps I&#8217;m insecure about my testing and test coverage
+(though Mike Clark&#8217;s rcov Rake task certainly provides peace-of-mind),
+but I always find myself very interested in the testing methodologies of
+others. Stu started off by discussion the reasons to write tests (tight
+feedback loop, easy refactoring, early warning, cheap measure of success
+and that it makes bad code painful). He went through testing models
+(ensure your tests are self-documenting, test everything in sight and
+then evolve your own style), fixtures (YAML, always use valid data, use
+ERB for dynamic data), controllers (check out the scaffold: it tests
+responses, redirects, model updates and uses restful verbs), managing
+your tests (group and run using rake, manage your fixtures with rake,
+put your common tasks in test_helper.rb). He then went through an
+example of testing a space station w/o having access to a rocket, so he
+used flexmock to mock one up, like this:</p>
+
+<p>~~~~ {lang=&#8221;ruby&#8221;}
+def test_refuel_with_mock_recorder
+  rocket = flexmock(&#8220;rocket&#8221;)
+  rocket.should_expect do |rec|</p>
+
+<pre><code>rec.dock.ordered
+rec.attach_fuel_hose.ordered
+rec.add_fuel(Integer).returns(50).ordered
+rec.detach_fuel_hose.ordered
+rec.undock.ordered
+</code></pre>
+
+<p>  end
+  @station.refuel(rocket, 50)
+  assert_equal 950, @station.fuel
+end
+~~~~</p>
+
+<p>He then went on to recommend rcov and said that you should have 100% of
+your code covered. He ran out of time before he could cover the
+<a href="http://www.degrunt.net/articles/2006/08/27/cerberus-continious-integration-for-rails/">Cerberus</a>
+continuous integration tool. Jim Weirich sat down for a live coding
+presentation entitled, &#8220;Red, Green, Refactor&#8221; in which he demonstrated
+test/behavior driven development. The steps were:</p>
+
+<ol>
+<li>Write a new test and watch it fail</li>
+<li>Write just enough code for the test to pass</li>
+<li>remove duplication, clean up, etc. and repeat</li>
+</ol>
+
+
+<p>He spoke in terms of dividing your perspective into two parts a Dr.
+Jekyll who writes a test that forces you to write the code you need and
+a Mr. Hyde who deliberately writes the minimal amount of code that
+passes the tests. His demo seemed pedantic at first, but because you
+have this extremely lazy Mr. Hyde you really have to think about your
+tests and write them such that you force the implementation to be
+correct. Bruce Williams spoke about Building View Frameworks and made
+the example code available at his
+<a href="http://codefluency.com/examples/ui_frameworks.tar.gz">site</a>. I was
+really looking forward to this talk and Bruce didn&#8217;t disappoint. He
+started off discussion the traditional methods of DRYing up your views:
+Helpers, Block Helpers and Partials then he went into REST DRYing with
+the simply_helpful plugin. Next he went into some new territory for me,
+DRY interactions by creating a controller DSL, controller plugins and
+&#8220;big frameworks&#8221; as he called them. He gave examples of this from his
+work at Naviance: folder_for (which created a tabbed view for the
+different folders), paginated_index which was a controller DSL,
+roster_for (which was very similar to paginated_index) and a calendar
+which was a controller plugin. Bruce suggested using plugins and writing
+your own and contributing them back to the community as well as testing
+your views with Watir or Selenium. Following the presentations, were the
+lightning talks. I was unable to stay for all of them but some of the
+more notable ones were: Aaron from <a href="https://www.revolutionhealth.com/preview?code=gJ3AyxODNg">Revolution
+Health</a>
+demo&#8217;ed their huge web app (or more accurately collection of integrated
+web apps) and spoke about their PluGems solution which has been document
+on their <a href="http://revolutiononrails.blogspot.com/">blog</a>. It looks like
+they&#8217;re really doing some interesting work and having a lot of fun doing
+it (plus I&#8217;m jealous of their development environment &#8211; I wish my
+employer gave each of us MacBook Pros instead of Lenovo ThinkPads); Next
+<a href="http://jaredrichardson.net/">Jared Richardon</a>, author of <a href="http://www.pragmaticprogrammer.com/titles/prj/">Ship
+It</a>, spoke about his
+consulting work on a new search engine site called
+<a href="http://www.chacha.com/">ChaCha</a> and how they scaled Rails by removing
+ActiveRecord in production. They use Rails as normal during development
+and then extract out all of the SQL queries and tune them for
+production; <a href="http://mcornick.org/">Mark Cornick</a> gave a quick run-down
+on the service manager framework in Solaris and <a href="http://mcornick.org/stories/91-mongrel-meet-smf-smf-meet-mongrel">how he used it to
+launch his Rails app when the machine
+boots</a>.
+Since we use a fair amount of Solaris at work and I&#8217;m not that familiar
+with this feature, I found his talk quite enlightening. The presenters
+have really been pimping Kent Beck&#8217;s book, <a href="http://www.amazon.com/Smalltalk-Best-Practice-Patterns-Kent/dp/013476904X/ref=sr_1_1/102-1786598-6301708?ie=UTF8&amp;s=books&amp;qid=1173043516&amp;sr=1-1">Smalltalk Best Practice
+Patterns</a>
+&#8211; so of course, I picked up a copy.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">admin</span></span>
+
+      
+
+
+
+
+
+  
+
+
+
+<time datetime="2007-03-04T16:59:26-05:00" pubdate  data-updated="true" >Mar 4<span>th</span>, 2007</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/programming/'>Programming</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/training/'>Training</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://sean.github.com/blog/2007/03/04/the-rails-edge-day-2/" data-via="smountcastle" data-counturl="http://sean.github.com/blog/2007/03/04/the-rails-edge-day-2/" >Tweet</a>
+  
+  
+</div>
+
+    
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/08/14/iosdevcamp-dc-2012/">iOSDevCamp DC 2012</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/09/26/moved-to-github-pages-and-octopress/">Moved to GitHub Pages and Octopress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2010/01/21/skribit/">Skribit</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2008/11/25/invented-quality-metric-feltz-levels/">Invented Quality Metric: Feltz Levels</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2008/08/08/rubynation-2008/">RubyNation 2008</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Github Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/sean">@sean</a> on Github
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'sean',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("smountcastle", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/smountcastle" class="twitter-follow-button" data-width="208px" data-show-count="false">Follow @smountcastle</a>
+  
+</section>
+
+
+<section>
+  <h1>Currently Reading</h1>
+  <p> 
+    1451648537
+    <br />
+    1451648537 by
+    1451648537
+  </p>
+  <h1>Recent Reads</h1>
+  <ul id="recent_reads">
+    
+      <li class="post">
+	<p> 
+	  055357342X
+	  <br />
+	  055357342X by
+	  055357342X
+	</p>
+      </li>
+    
+      <li class="post">
+	<p> 
+	  0553381695
+	  <br />
+	  0553381695 by
+	  0553381695
+	</p>
+      </li>
+    
+      <li class="post">
+	<p> 
+	  0553386794
+	  <br />
+	  0553386794 by
+	  0553386794
+	</p>
+      </li>
+    
+  </ul>
+</section>
+
+Included file 'asides/googleplus.html' not found in _includes directory
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Sean Mountcastle -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+  <br />
+  <a href="https://twitter.com/smountcastle" class="twitter-follow-button">You should follow me on Twitter</a>
+</p>
+
+<script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
+
+</footer>
+  
+
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-378484-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+  
+
+  
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+</body>
+</html>

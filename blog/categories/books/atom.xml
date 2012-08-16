@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Books | Sean Mountcastle]]></title>
+  <link href="http://sean.github.com/blog/categories/books/atom.xml" rel="self"/>
+  <link href="http://sean.github.com/"/>
+  <updated>2012-08-16T00:11:34-04:00</updated>
+  <id>http://sean.github.com/</id>
+  <author>
+    <name><![CDATA[Sean Mountcastle]]></name>
+    <email><![CDATA[smountcastle@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[I'm in Rails Recipes!]]></title>
+    <link href="http://sean.github.com/blog/2006/04/12/im-in-rails-recipes/"/>
+    <updated>2006-04-12T08:21:00-04:00</updated>
+    <id>http://sean.github.com/blog/2006/04/12/im-in-rails-recipes</id>
+    <content type="html"><![CDATA[<p><a href="http://www.chadfowler.com/">Chad Fowler</a> has graciously accepted one of
+my recipes for inclusion in his new book, <a href="http://pragmaticprogrammer.com/titles/fr_rr/index.html">Rails
+Recipes</a>! Itâ€™s
+recipe #65, â€œEasy HTML Whitelistsâ€?, in the latest beta version of
+the book. If you havenâ€™t already pre-ordered your copy, I suggest you
+click over to the Pragmatic Programmers website and do so now. The other
+69 recipes are just as good (if not better).</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Rails Recipes]]></title>
+    <link href="http://sean.github.com/blog/2006/03/17/rails-recipes/"/>
+    <updated>2006-03-17T12:14:14-05:00</updated>
+    <id>http://sean.github.com/blog/2006/03/17/rails-recipes</id>
+    <content type="html"><![CDATA[<p>I finally got around to purchasing a copy of the <a href="http://www.pragmaticprogrammer.com/titles/fr_rr/index.html">Rails
+Recipes</a>
+book by Chad Fowler and I must say I'm enjoying it quite a bit. So I
+thought I'd contribute to the discussion surrounding the book with a
+recipe: <a href="http://fora.pragprog.com/rails-recipes/write-your-own/post/126">Quick and Easy
+Textfilters</a>.
+Enjoy!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Agile Web Development with Rails is Out!]]></title>
+    <link href="http://sean.github.com/blog/2005/05/27/agile-web-development-with-rails-is-out/"/>
+    <updated>2005-05-27T08:51:50-04:00</updated>
+    <id>http://sean.github.com/blog/2005/05/27/agile-web-development-with-rails-is-out</id>
+    <content type="html"><![CDATA[<p><a href="http://www.pragmaticprogrammer.com/titles/rails/index.html" title="Agile Web Development with Rails"><img src="http://www.pragmaticprogrammer.com/images/covers/rails_medium.jpg" alt="Agile Web Development with
+Rails" /></a>
+It looks like <a href="http://www.loudthinking.com">DHH</a> was able to influence
+<a href="http://blogs.pragprog.com/cgi-bin/pragdave.cgi">Dave Thomas</a> into
+releasing a
+<a href="http://www.pragmaticprogrammer.com/starter_kit/faqs/beta_faq.html">Beta</a>
+version of <a href="http://www.pragmaticprogrammer.com/titles/rails/index.html">Agile Web Development with
+Rails</a>. I
+purchased the PDF+book edition to show my support and, frankly, I am not
+disappointed. Though there are some layout and typographical issues, the
+content is great. I feel like I'm finally getting up to speed on
+<a href="http://www.rubyonrails.org/">Rails</a>. I'm currently up to Chapter 5,
+where the book dives into the development of an e-commerce web-app. I'll
+post a review once I finish the book. But, as of right now, I recommend
+that anyone interested in developing web-apps with Rails definitely
+pick-up a copy.</p>
+]]></content>
+  </entry>
+  
+</feed>

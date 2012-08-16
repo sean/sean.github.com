@@ -1,0 +1,375 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>February NoVA Ruby Users Group - Sean Mountcastle</title>
+  <meta name="author" content="Sean Mountcastle">
+
+  
+  <meta name="description" content="This month we had Chad Fowler as a guestspeaker at NoVA RUG. His talk was entitled &#8220;Quick and Clean RailsDevelopment.&#8221; Here&#8217;s the &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://sean.github.com/blog/2007/03/04/february-nova-ruby-users-group/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="http://feeds.feedburner.com/SeanMountcastle" rel="alternate" title="Sean Mountcastle" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Sean Mountcastle</a></h1>
+  
+    <h2>Thoughts on technology and engineering.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://feeds.feedburner.com/SeanMountcastle" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:sean.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">February NoVA Ruby Users Group</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2007-03-04T18:09:13-05:00" pubdate  data-updated="true" >Mar 4<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>This month we had <a href="http://www.chadfowler.com/">Chad Fowler</a> as a guest
+speaker at NoVA RUG. His talk was entitled &#8220;Quick and Clean Rails
+Development.&#8221; Here&#8217;s the abstract for his talk:</p>
+
+<blockquote><p>Rails is all about speed. It has been said that Rails programmers can
+develop software ten times faster than those programming in
+technologies such as .NET or J2EE. Rails itself is evolving at the
+speed of light. But, to paraphrase Martin Fowler&#8217;s RailsConf 2006
+keynote, with Rails we don&#8217;t have to choose between Quick and Dirty
+and Slow and Clean. With Ruby, and therefore Rails, we can have both
+speed and maintainability. With Rails, the speed comes naturally. As
+it turns out, the cleanliness often doesn&#8217;t. This talk will focus on
+how to make your application development both quick _and_ clean.</p></blockquote>
+
+<p>Read on for a summary of Chad&#8217;s talk. <strong>Update</strong>: I found a video of
+this talk which Chad gave at Rails eXchange in London
+<a href="http://video.google.com/videoplay?docid=-5067787434087643104&amp;hl=en-GB">here</a>.
+This presentation was a grab-bag of techniques to clean-up your Rails
+code, making it easier to maintain. Stick with CRUD. If you find
+yourself deviating from the create, show, update and destroy methods in
+your controller you need to rethink your design/schema so that you can
+map it to CRUD. Chad said that placing this constraint on his controller
+design led to much cleaner and easier to maintain code. <em>Over Do MVC</em></p>
+
+<ul>
+<li>No SQL in your controllers (or views). Basically if you&#8217;re calling
+find with multiple arguments in your controller, you&#8217;re violating
+this principle. Here&#8217;s some before and after code:</li>
+</ul>
+
+
+<p><del> {lang=&#8221;ruby&#8221;}
+class PostsController &lt; ApplicationController
+def index
+@recent_articles = Post.find(:all, : order => &#8220;created_at DESC&#8221;, :limit => 5)
+@recent_visits = @user.visits.find(:all, : order => &#8220;created_at DESC&#8221;, :limit => 5)
+end
+end
+</del></p>
+
+<pre><code>and after:
+</code></pre>
+
+<p><del> {lang=&#8221;ruby&#8221;}
+class Post &lt; ActiveRecord::Base
+def self.recent(limit = 5)
+self.find(:all, : order => &#8220;created_at DESC&#8221;, :limit => limit)
+end
+end
+class User &lt; ActiveRecord::Base
+has_many :visits do
+def recent(limit = 5)
+self.find(:all, : order => &#8220;created_at DESC&#8221;, :limit => 5)
+end
+end
+end
+class PostsController &lt; ApplicationController
+def index
+@recent_articles = Post.recent
+@recent_visits = @user.visits.recent
+end
+end
+</del></p>
+
+<ul>
+<li>No more than four lines per action in the controller</li>
+<li>No code in your view. This means putting your code in the helpers
+(or modules included by your helpers) to keep the view clean. Chad
+also recommended investigating other templating libraries like
+Amrita.</li>
+</ul>
+
+
+<p>I really hope that Chad will make this presentation available online as
+there were some great examples in his slides. Next month I&#8217;ll be
+presenting at NoVA RUG on RESTful Rails (CRUD, REST and, if I can fit it
+in, ActiveResource).</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">admin</span></span>
+
+      
+
+
+
+
+
+  
+
+
+
+<time datetime="2007-03-04T18:09:13-05:00" pubdate  data-updated="true" >Mar 4<span>th</span>, 2007</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/programming/'>Programming</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://sean.github.com/blog/2007/03/04/february-nova-ruby-users-group/" data-via="smountcastle" data-counturl="http://sean.github.com/blog/2007/03/04/february-nova-ruby-users-group/" >Tweet</a>
+  
+  
+</div>
+
+    
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/08/14/iosdevcamp-dc-2012/">iOSDevCamp DC 2012</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/09/26/moved-to-github-pages-and-octopress/">Moved to GitHub Pages and Octopress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2010/01/21/skribit/">Skribit</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2008/11/25/invented-quality-metric-feltz-levels/">Invented Quality Metric: Feltz Levels</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2008/08/08/rubynation-2008/">RubyNation 2008</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Github Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/sean">@sean</a> on Github
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'sean',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("smountcastle", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/smountcastle" class="twitter-follow-button" data-width="208px" data-show-count="false">Follow @smountcastle</a>
+  
+</section>
+
+
+<section>
+  <h1>Currently Reading</h1>
+  <p> 
+    1451648537
+    <br />
+    1451648537 by
+    1451648537
+  </p>
+  <h1>Recent Reads</h1>
+  <ul id="recent_reads">
+    
+      <li class="post">
+	<p> 
+	  055357342X
+	  <br />
+	  055357342X by
+	  055357342X
+	</p>
+      </li>
+    
+      <li class="post">
+	<p> 
+	  0553381695
+	  <br />
+	  0553381695 by
+	  0553381695
+	</p>
+      </li>
+    
+      <li class="post">
+	<p> 
+	  0553386794
+	  <br />
+	  0553386794 by
+	  0553386794
+	</p>
+      </li>
+    
+  </ul>
+</section>
+
+Included file 'asides/googleplus.html' not found in _includes directory
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Sean Mountcastle -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+  <br />
+  <a href="https://twitter.com/smountcastle" class="twitter-follow-button">You should follow me on Twitter</a>
+</p>
+
+<script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
+
+</footer>
+  
+
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-378484-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+  
+
+  
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+</body>
+</html>

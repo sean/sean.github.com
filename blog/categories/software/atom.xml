@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Software | Sean Mountcastle]]></title>
+  <link href="http://sean.github.com/blog/categories/software/atom.xml" rel="self"/>
+  <link href="http://sean.github.com/"/>
+  <updated>2012-08-16T00:11:34-04:00</updated>
+  <id>http://sean.github.com/</id>
+  <author>
+    <name><![CDATA[Sean Mountcastle]]></name>
+    <email><![CDATA[smountcastle@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Inaugural CocoaHeads Reston Meeting]]></title>
+    <link href="http://sean.github.com/blog/2008/06/12/inaugural-cocoaheads-reston-meeting/"/>
+    <updated>2008-06-12T22:31:20-04:00</updated>
+    <id>http://sean.github.com/blog/2008/06/12/inaugural-cocoaheads-reston-meeting</id>
+    <content type="html"><![CDATA[<p>Tonight the first <a href="http://cocoaheads.org/us/RestonVirginia/index.html">CocoaHeads Reston</a> meeting was held at <a href="http://www.nearinfinity.com/index.html">Near Infinity Corporation</a>. <a href="http://pinepointsoftware.com/">Jason Harwig</a> gave an excellent presentation on <a href="http://webkit.org/">WebKit</a>, starting with a simple browser created completely in Interface Builder (it consisted of a text field linked to a web view). I've recreated it and included a snapshot below.</p>
+
+<p><img class="left" src="/assets/basicbrowser.png" title="An Extremely Basic Web Browser" ></p>
+
+<p>Next he demonstrated how to interact with the DOM and JavaScript. The JavaScript integration was in both directions, first he demonstrated calling JavaScript functions from Objective-C and then calling Objective-C from JavaScript. It should be noted that for JavaScript to call Objective-C you need to implement the <code>+ (BOOL)isSelectorExcludedFromWebScript:(SEL)aSelector;</code> method and return <code>NO</code> for each of the methods you wish to call.</p>
+
+<p>Finally, Jason walked through various uses of WebKit an demonstrated an application specific, full-screen browser he wrote for a game as well as a del.icio.us Cocoa application he wrote called <a href="http://pinepointsoftware.com/delish/site/">Delish</a>. Several other webkit based applications were also covered such as <a href="http://fluidapp.com/">Fluid</a> - a freely available site-specific browser creator, <a href="http://infinitenil.com/packrat/">PackRat</a> - a commercial site-specific browser for Backpack, and another application which I've forgotten (I guess I should've taken notes). As an aside, Jason brought up the interesting work that the <a href="http://280north.com/">280North</a> folks have done for their <a href="http://280slides.com/">280Slides</a> web-based presentation called <a href="http://objective-j.org/">Objective-J</a>. Objective-J (code named Cappuccino), is an Objective-C like language built on JavaScript.</p>
+
+<p>Matt Wizeman stepped up next to demo a WebKit application he's developing to wrap a troublesome time tracking web application. It was interesting the machinations he had to go through to know when the page had finished loading and to transition between pages since the application was JavaScript heavy, using tricks like clickable divs.</p>
+
+<p>I learned quite a bit about WebKit. As soon as I got home I was energized to play with it.</p>
+
+<p>Be sure to come to the next meeting on July 10th (day before iPhone 3G day)!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[MacSanta is Back!]]></title>
+    <link href="http://sean.github.com/blog/2007/12/07/macsanta-is-back/"/>
+    <updated>2007-12-07T17:48:09-05:00</updated>
+    <id>http://sean.github.com/blog/2007/12/07/macsanta-is-back</id>
+    <content type="html"><![CDATA[<p><a href="http://macsantadeals.com/"><img src="http://seanmountcastle.com/wp-content/uploads/2007/12/macsanta.png" alt="MacSanta" /></a></p>
+
+<p><a href="http://www.macsantadeals.com/">MacSanta</a> is back again this year with
+some nice savings on great software for Mac OS X! Each day they have 20%
+off deals on a subset of the software in their extended list (which is
+all 10% off until December 24th). Just use the coupon code,
+<strong>MACSANTA07</strong>, at participating vendors.</p>
+
+<p>Hurry over and scoop up those apps which you've always wanted! So far,
+I've purchased <a href="http://www.red-sweater.com/marsedit/">MarsEdit</a> and
+<a href="http://www.happyapps.com/webnotehappy/">Webnote Happy</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A Tasty Treat for Your Mac]]></title>
+    <link href="http://sean.github.com/blog/2007/11/27/a-tasty-treat-for-your-mac/"/>
+    <updated>2007-11-27T08:25:40-05:00</updated>
+    <id>http://sean.github.com/blog/2007/11/27/a-tasty-treat-for-your-mac</id>
+    <content type="html"><![CDATA[<p>The folks over at <a href="http://www.aquafadas.com/">Aquafadas</a> are running a
+promotion entitled, "<a href="http://givegoodfoodtoyourmac.com/">Give Good Food to Your
+Mac.</a>" It's a very sweet deal as you
+get to choose from 28 different Mac OS X apps and the more you purchase
+the bigger the discount. If you purchase three apps, you get a 30%
+discount, 40% for five, 50% for seven and 70% for ten.</p>
+
+<p>Here's a little hint, pick the five apps you really want (even if they
+are the most expensive apps available). This will start you off with a
+40% discount for the apps you want. Then pick the two cheapest apps --
+once this brings your discount up to 50%, the total will probably be
+less than it was without those two apps (unless you've only been
+choosing the cheapest apps). Finally, pick the next three cheapest apps
+-- you should end up with ten apps for a total cost which was less than
+price of your original five! You're getting the five apps you want, plus
+another five free and then they'll throw in another app at check out
+(for me it was <a href="http://www.coladia.com/postino/">Postino</a>, a feed reader
+-- I'm not sure if they give the same bonus app away to everyone or
+not).</p>
+
+<p>This great deal is time limited and ends on December 9th, so get on over
+<a href="http://www.givegoodfood2yourmac.com/kitchen34/index.php">there</a> and
+scoop up some great Mac apps.</p>
+
+<p>The full list of apps can be found after the jump.</p>
+
+<ul>
+<li><a href="http://www.iospirit.com/remotebuddy/">Remote Buddy</a> - Remote
+control your apps using Bluetooth hardware (iPhone, iPod Touch, Wii
+Remote, etc).</li>
+<li><a href="http://www.coladia.com/trader/">Personal Trader</a> - Manage your
+stock portfolio.</li>
+<li><a href="http://www.equinux.com/us/products/coverscout/index.html">CoverScout</a>
+
+<ul>
+<li>Find iTunes art work anywhere on the web.</li>
+</ul>
+</li>
+<li><a href="http://www.creaceed.com/magnet">Magnet</a> - Customize and share
+movies.</li>
+<li><a href="http://www.creaceed.com/morphage">Morphage</a> - Morph/warp images and
+movies.</li>
+<li><a href="http://www.aquafadas.com/idive-digital-video/index.html">iDive</a> -
+Manage video and DV clips and integrate with iMovie and Final Cut
+Pro.</li>
+<li><a href="http://www.expert-wine-cellar.com/">Expert Wine Cellar</a> - Manage
+your wine collection, pairings, and preferences.</li>
+<li><a href="http://boinx.com/istopmotion/">iStopMotion Home</a> - Easy to use stop
+motion animation software.</li>
+<li><a href="http://www.cheetah3d.com/">Cheetah3D</a> - 3D modeling, rendering, and
+animation package.</li>
+<li><a href="http://aquafadas.com/bannerzest">BannerZest</a> - Create Flash banners
+easily (Flash not required).</li>
+<li><a href="http://www.aquafadas.com/videopier">VideoPier</a> - Visualize clips
+from your camera that Quicktime would refuse to open.</li>
+<li><a href="http://www.pulpmotion.com/">PulpMotion</a> - Presentation software.</li>
+<li><a href="http://macrabbit.com/cssedit/">CSSEdit</a> - Easy to use CSS editor
+for web developers.</li>
+<li><a href="http://objective-decision.com/en/products/contactizerpro/">Contactizer
+Pro</a> -
+Solution for managing, sharing and organizing your personal and
+business information.</li>
+<li><a href="http://objective-decision.com/en/products/contactizerexpress/">Contactizer
+Express</a>
+
+<ul>
+<li>Solution for managing, sharing and organizing your personal
+information.</li>
+</ul>
+</li>
+<li><a href="http://www.ovolab.com/geophoto/">Geophoto</a> - Organize and browse
+your photos by location.</li>
+<li><a href="http://www.merlin2.net/merlin25beta.html">Merlin</a> - Project
+management software.</li>
+<li><a href="http://www.realmacsoftware.com/rapidweaver/index.php">RapidWeaver</a>
+
+<ul>
+<li>Web design software.</li>
+</ul>
+</li>
+<li><a href="http://www.softpress.com/products/freewayexpressin.php">Freeway 4
+Express</a> -
+Web design software.</li>
+<li><a href="http://www.softpress.com/products/freewayprointerf.php">Freeway 4
+Pro</a> - Web
+design software.</li>
+<li><a href="http://www.jumsoft.com/money/">Money</a> - Organize and manage your
+personal finances.</li>
+<li><a href="http://belightsoft.com/products/arttext/overview.php">Art Text</a> - A
+tool for creating textual graphics, headings, logos, icons, web
+banners and buttons.</li>
+<li><a href="http://boinx.com/fotomagico/">FotoMagico Express</a> - Slideshow
+creator.</li>
+<li><a href="http://reinventedsoftware.com/feeder/">Feeder</a> - App for creating,
+editing and publishing RSS feeds.</li>
+<li><a href="http://reinventedsoftware.com/together/">Together</a> - Keep your
+documents, images, movies, bookmarks and web pages in one place,
+preview them, and organize them.</li>
+<li><a href="http://www.pixelmator.com/">Pixelmator</a> - Image editor.</li>
+<li><a href="http://www.x-tables.eu/">Tables</a> - Spreadsheet.</li>
+<li><a href="http://unity3d.com/">Unity Indie</a> - Easy to use multiplatform game
+development tool.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[OSCON: Sessions Day One]]></title>
+    <link href="http://sean.github.com/blog/2006/07/27/oscon-sessions-day-one/"/>
+    <updated>2006-07-27T20:34:00-04:00</updated>
+    <id>http://sean.github.com/blog/2006/07/27/oscon-sessions-day-one</id>
+    <content type="html"><![CDATA[<p>Below are my notes from the first day of sessions here at
+<a href="http://conferences.oreillynet.com/os2006/">OSCON</a>. The talks I attended
+were:</p>
+
+<ul>
+<li>Using Ruby on Rails to Build a Massive Multiplayer Game</li>
+<li>Easy AI with Python</li>
+<li>Driving Rails Deep into the Back Office</li>
+<li>Streamlined</li>
+<li>Ruby for Java Programmers</li>
+<li>Coding Wizard, Savvy Trader</li>
+</ul>
+
+
+<p>In the morning, I attended <a href="http://www.michaelbuffington.com/">Michael
+Buffingtonâ€™s</a> talk on <a href="http://conferences.oreillynet.com/cs/os2006/view/e_sess/8390">â€œUsing
+Ruby on Rails to Build a Massive Multiplayer
+Gameâ€?</a>.
+He gave a nice overview of the development of <a href="http://llor.nu">unroll</a>
+discussing isometric art, game design and briefly mentioning
+Ajax/JavaScript/script.aculo.us. Hopefully his slides will be available
+online shortly. The code for unroll can be downloaded
+<a href="http://dev.llor.nu">here</a>. At 11:35am, I was torn between <a href="http://clarkware.com/cgi/blosxom">Mike
+Clarkâ€™s</a> <a href="http://conferences.oreillynet.com/cs/os2006/view/e_sess/8396">Deploying Rails Apps with
+Capistrano</a>
+and Raymond Hettingerâ€™s <a href="http://conferences.oreillynet.com/cs/os2006/view/e_sess/9577">Easy AI with
+Python</a>.
+Since Iâ€™ve already deployed a couple of Rails apps using Capistrano, I
+decided to sneak into the Python camp (I ended up sitting right in front
+of Guido). I found the presentation quite interesting and will be
+looking into similar libraries for Ruby. Raymond covered the following
+topics: neural networks for datamining, solving the mastermind game,
+solving sudoku, a Bayesian classifer and, finally, a generic puzzle
+solver. Though the slides do not appear to be online yet, the Python
+code is available
+<a href="http://aspn.activestate.com/ASPN/Cookbook/Python?author=178123">here</a>.
+After lunch I attended <a href="http://www.jroller.com/page/obie">Obie
+Fernandezâ€™s</a> <a href="http://conferences.oreillynet.com/cs/os2006/view/e_sess/8674">Driving Rails Deep
+into the Back
+Office</a>.
+Obie discussed the PCS project for Barclays Bank in Willmington, DE that
+Thoughtworks was involved in. He discussed the various ways in which to
+get new technology into the very conservative back office of companies,
+such as: Trojan horse (sneaking it in), the race (two parallel
+development teams using different technologies), the pilot project, the
+rescue (for a failed/failing project) and finally undercutting (but he
+cautioned that this de-values the work youâ€™re doing). The three key
+points of his talk were:</p>
+
+<ol>
+<li>Optimize and raise your level of abstraction (by creating custom
+DSLs and capturing the requirements in Ruby)</li>
+<li>Rails really breathes life into extreme programming (they had one
+week iterations on their project)</li>
+<li>Donâ€™t sweat performance and scaling (they had their custom DSL
+generate SQL directly instead of Ruby to keep the performance up â€“
+so you canâ€™t completely ignore performance issues, but theyâ€™re
+usually not as bad as you think)</li>
+</ol>
+
+
+<p><a href="http://www.relevancellc.com">Stuart Halloway</a> demoed the
+<a href="http://conferences.oreillynet.com/cs/os2006/view/e_sess/9535">Streamlined</a>
+generator for Ruby on Rails â€˜backendâ€™ admin interfaces. Stuart
+described Streamlined as:</p>
+
+<ol>
+<li>Product ready backend scaffolding</li>
+<li>Generic enterprise CRUD</li>
+<li>The simplicity of ActiveRecord brought to views and controllers</li>
+</ol>
+
+
+<p>Heâ€™s not going to put the material present online since it is all
+basically available via the <a href="http://www.streamlinedframework.org/">Streamlined
+blog</a>. Ugo Cei gave a talk
+entitled <a href="http://conferences.oreillynet.com/cs/os2006/view/e_sess/8636">Ruby for Java
+Programmers</a>
+â€“ which confused many folks who thought it was an introduction to Ruby
+for those coming from a Java programming background â€“ instead it
+covered how to call Ruby from Java and how to call Java from Ruby. All
+of the material is covered in his slides, which are available
+<a href="http://www.sourcesense.com/transfer/ruby_for_java_programmers.pdf">here</a>.
+At the end of his talk he demoâ€™ed Rails running inside of JRuby which
+was pretty neat (though very slow and a bit buggy â€“ sometimes
+controllers wouldnâ€™t respond). Since Iâ€™ve already written a C
+extension for Ruby, I decided to attend a different kind of talk,
+<a href="http://conferences.oreillynet.com/cs/os2006/view/e_sess/8755">Coding Wizard, Savvy
+Trader</a> by
+Kartik Subbarao of HP. It was a whirlwind talk covering stocks and
+options trading and how to get access to financial information as well
+as how to process it using Perl, GreaseMonkey, etc. When the slides are
+posted, Iâ€™ll link back to them but here are several of the sites which
+were recommended:</p>
+
+<ul>
+<li><a href="http://finance.yahoo.com">Yahoo! Finance</a></li>
+<li><a href="http://www.stockcharts.com/education">StockCharts Learning Center</a></li>
+<li><a href="http://www.cboe.com/LearnCenter">Chicago Board of Exchange Learning
+Center</a></li>
+<li><a href="http://www.optionsxpress.com">OptionsXpress</a></li>
+<li><a href="http://www.wealthlab.com">WealthLab</a></li>
+<li><a href="http://www.elitetrader.com">EliteTrader</a></li>
+<li><a href="http://www.opentick.com">OpenTick</a></li>
+<li><a href="http://www.stocktickr.com">StockTickr</a></li>
+<li><a href="http://www.socialpicks.com">SocialPicks</a></li>
+<li><a href="http://www.marketocracy.com">Marketocracy</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[NoVA JUG Special Session]]></title>
+    <link href="http://sean.github.com/blog/2005/11/17/nova-jug-special-session/"/>
+    <updated>2005-11-17T16:15:00-05:00</updated>
+    <id>http://sean.github.com/blog/2005/11/17/nova-jug-special-session</id>
+    <content type="html"><![CDATA[<p><a href="http://www.novajug.com:8080/">NoVA JUG</a> held a special session on
+Thursday night where <a href="http://tomcopeland.blogs.com">Tom Copeland</a>
+presented on <a href="http://seanmountcastle.com/pmd.sf.net">PMD</a> and <a href="http://blogs.pragprog.com/cgi-bin/pragdave.cgi">Dave
+Thomas</a> provided an
+introduction to <a href="http://www.rubyonrails.org">Ruby on Rails</a>. Held
+concurrently was the initial meeting of the NoVA Ruby Users Group -- of
+which I hope there will be more meetings. Tom's overview of PMD focused
+primarily on CPD, the copy-paste detector. He showed how to run PMD/CPD
+and what the results look like (there are a number of plugins for IDEs
+to run PMD as well as an ant task). Dave gave a high-level overview of
+Rails and showed how quickly you can get webapps up and running using
+Rails. He focused on the benefits of Rails from a Java developer's
+perspective (since that was the primary audience). He also discussed the
+Ruby programming language since many of the attendees were not familiar
+with it. Overall, I think he did an excellent job and many folks went
+away eager to try out Rails.</p>
+]]></content>
+  </entry>
+  
+</feed>

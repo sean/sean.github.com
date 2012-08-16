@@ -1,0 +1,353 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>FOSCON II: The Ruby Rodeo - Sean Mountcastle</title>
+  <meta name="author" content="Sean Mountcastle">
+
+  
+  <meta name="description" content="Tonight I was able to attend FOSCON II atFreeGeek (I wish theyâ€™d hold FOSCON at theOCC so it wasnâ€™t such a hassle to get there and back â€“ but I &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://sean.github.com/blog/2006/07/27/foscon-ii-the-ruby-rodeo/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="http://feeds.feedburner.com/SeanMountcastle" rel="alternate" title="Sean Mountcastle" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Sean Mountcastle</a></h1>
+  
+    <h2>Thoughts on technology and engineering.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://feeds.feedburner.com/SeanMountcastle" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:sean.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">FOSCON II: The Ruby Rodeo</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2006-07-27T01:19:22-04:00" pubdate  data-updated="true" >Jul 27<span>th</span>, 2006</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Tonight I was able to attend <a href="http://oscamp.org/FOSCON">FOSCON II</a> at
+<a href="http://www.freegeek.org/">FreeGeek</a> (I wish theyâ€™d hold FOSCON at the
+OCC so it wasnâ€™t such a hassle to get there and back â€“ but I will
+say the volunteers who walked us down there and then drove us back did
+make it easier). Follow the link below for brief summaries of the
+presentations and links to them. First up was <a href="http://tech.rufy.com/">Lucas
+Carlson</a> who spoke about <a href="http://rufy.com/distributed-programming/">distributed processing
+using Rinda and DRb</a>. Lucas
+showed how to setup a simple DRb server and run a client against it,
+then he showed how to run a Rinda ring server. Once he got through the
+basics he setup a server which parceled out ranges of numbers for us to
+check for primes within â€“ several folks in the audience were able to
+connect up and process jobs handed out by his prime finder server. Next
+up was <a href="http://cyll.org/blog/tech">Topher Cyll</a> who gave a talk entitled
+â€œA Ruby/DHTML Turn Based Strategy Gameâ€¦ in 20 Minutesâ€? â€“
+unfortunately I donâ€™t see the slides online yet, but hereâ€™s a link
+to his <a href="http://cyll.org/tbs.shtml">TBS gem with some exposition</a>. Topher
+used his TBS gem to create a simple turn based strategy game in which
+you control a cowboy by moving and attacking (there is another
+â€˜evilâ€™ cowboy which you must defeat to win the game). Even though
+the game is very simplistic it shows the potential of Rails, JSON and
+DHTML/Ajax. Seeing this I was reminded of the talk I went to this
+morning at OSCON about unroll (llor.nu) â€“ which Iâ€™ll write about
+later as Iâ€™m wiped out and want to finish this FOSCON post before bed.
+<a href="http://blog.zenspider.com/">Ryan Davis</a> from seattle.rb spoke about the
+ruby2c project. The project appears to have many facets (more than my
+tired brain can grok right now) but two key points I took away from
+Ryanâ€™s talk were 1) ruby2c is about generating that subset of the Ruby
+interpreter which needs to be in C, everything else should be written in
+Ruby so that Ruby can bootstrap itself (like Lisp) and 2) as a result of
+the work done on ruby2c, it was really easy for the team to create a
+Ruby Obfuscator (a commercial product they are selling). <a href="http://www.nubyonrails.com/">Geoffrey
+Grosenbach</a> of the Ruby on Rails podcast
+spoke next â€“ it was quite eerie watching and listening to him as I
+pictured him totally differently from hearing his podcasts. Geoffrey
+discussed several short cuts, scripts, tools and Rake tasks he uses to
+make his life easier when developing Ruby and Rails. He promised to post
+the slides on his blog soon. Next <a href="http://onestepback.org/">Jim Weirich</a>
+gave an abbreviated version of his OSCON talk, entitled <a href="http://conferences.oreillynet.com/cs/os2006/view/e_sess/8699">â€œTest-driven
+Development Meets
+Design-by-Contractâ€?</a>.
+He mentioned the fact that Eiffel has built-in support for design by
+contract and went through an example of a stack with the contracts for
+pop and push. This is what makes duck typing work â€“ itâ€™s not just
+that the method is there but that the contract is the same for those
+methods. Wrapping up FOSCON II was <a href="http://www.slash7.com/">Amy Hoy</a>
+with a talk entitled â€œCommunity Explosionâ€?. She spoke about the
+problems that go with massive popularity (not everyone who wants to
+being able to attend a particular conference) and in particular focused
+on the problems surrounding newbies. See her earlier write-up on <a href="http://www.slash7.com/pages/vampires">Help
+Vampires</a> for more detail about
+the problem. But she was asking for help in setting up materials for
+newbies so that they could increase their skills and not be such a drain
+on the community. Ok, Iâ€™m wiped, I havenâ€™t been getting much sleep
+since arriving at OSCON so no more posts until later tomorrow.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">admin</span></span>
+
+      
+
+
+
+
+
+  
+
+
+
+<time datetime="2006-07-27T01:19:22-04:00" pubdate  data-updated="true" >Jul 27<span>th</span>, 2006</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/conferences/'>Conferences</a>, <a class='category' href='/blog/categories/oscon/'>OSCON</a>, <a class='category' href='/blog/categories/programming/'>Programming</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://sean.github.com/blog/2006/07/27/foscon-ii-the-ruby-rodeo/" data-via="smountcastle" data-counturl="http://sean.github.com/blog/2006/07/27/foscon-ii-the-ruby-rodeo/" >Tweet</a>
+  
+  
+</div>
+
+    
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/08/14/iosdevcamp-dc-2012/">iOSDevCamp DC 2012</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/09/26/moved-to-github-pages-and-octopress/">Moved to GitHub Pages and Octopress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2010/01/21/skribit/">Skribit</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2008/11/25/invented-quality-metric-feltz-levels/">Invented Quality Metric: Feltz Levels</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2008/08/08/rubynation-2008/">RubyNation 2008</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Github Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/sean">@sean</a> on Github
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'sean',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("smountcastle", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/smountcastle" class="twitter-follow-button" data-width="208px" data-show-count="false">Follow @smountcastle</a>
+  
+</section>
+
+
+<section>
+  <h1>Currently Reading</h1>
+  <p> 
+    1451648537
+    <br />
+    1451648537 by
+    1451648537
+  </p>
+  <h1>Recent Reads</h1>
+  <ul id="recent_reads">
+    
+      <li class="post">
+	<p> 
+	  055357342X
+	  <br />
+	  055357342X by
+	  055357342X
+	</p>
+      </li>
+    
+      <li class="post">
+	<p> 
+	  0553381695
+	  <br />
+	  0553381695 by
+	  0553381695
+	</p>
+      </li>
+    
+      <li class="post">
+	<p> 
+	  0553386794
+	  <br />
+	  0553386794 by
+	  0553386794
+	</p>
+      </li>
+    
+  </ul>
+</section>
+
+Included file 'asides/googleplus.html' not found in _includes directory
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Sean Mountcastle -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+  <br />
+  <a href="https://twitter.com/smountcastle" class="twitter-follow-button">You should follow me on Twitter</a>
+</p>
+
+<script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
+
+</footer>
+  
+
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-378484-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+  
+
+  
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+</body>
+</html>

@@ -1,0 +1,503 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>OSCON: Sessions Day Two - Sean Mountcastle</title>
+  <meta name="author" content="Sean Mountcastle">
+
+  
+  <meta name="description" content="Below are my notes from the second day of sessions here atOSCON. The talks I attendedwere:Subversion Best PracticeshaXe: A Cross-platform Web &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://sean.github.com/blog/2006/07/27/oscon-sessions-day-two/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="http://feeds.feedburner.com/SeanMountcastle" rel="alternate" title="Sean Mountcastle" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Sean Mountcastle</a></h1>
+  
+    <h2>Thoughts on technology and engineering.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://feeds.feedburner.com/SeanMountcastle" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:sean.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">OSCON: Sessions Day Two</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2006-07-27T23:08:00-04:00" pubdate  data-updated="true" >Jul 27<span>th</span>, 2006</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Below are my notes from the second day of sessions here at
+<a href="http://conferences.oreillynet.com/os2006/">OSCON</a>. The talks I attended
+were:</p>
+
+<ul>
+<li>Subversion Best Practices</li>
+<li>haXe: A Cross-platform Web Language</li>
+<li>Building DSLs in Ruby</li>
+<li>Testing Rails Apps</li>
+<li>When Interface Design Attacks!</li>
+<li>Web Heresies: The Seaside Framework</li>
+</ul>
+
+
+<p>In the morning, I attended <a href="http://conferences.oreillynet.com/cs/os2006/view/e_sess/8671">Subversion Best
+Practices</a>
+by Ben Collins-Sussman and Brian Fitzpatrick. I donâ€™t see the slides
+up yet at the <a href="http://subversion.tigris.org/">Subversion</a> site, but they
+said that the slides would be posted. Several of the best practices they
+covered were:</p>
+
+<ul>
+<li><p>Server Best Practices</p>
+
+<ul>
+<li>svnserve: good for simple setups</li>
+<li>svn+ssh: great if you already depend on sshd</li>
+<li>Apache: more points of integration, repos web browsing, network
+share, etc.</li>
+<li>Always use a single repository when you have shared users,
+shared code, etc; except when you have radically different
+access policies, radically different data types, etc.</li>
+<li>Some nice repos browsing tools are:
+<a href="http://www.viewvc.org/">ViewVC</a> and
+<a href="http://trac.edgewall.org/">Trac</a></li>
+<li><p>Hook scripts:</p>
+
+<ul>
+<li>pre-commit: donâ€™t try to modify the transaction, just fail
+it if you need the code to be formatted, for example.
+Mentioned case-insensitive.py.</li>
+<li>post-commit: run it in the background so it doesnâ€™t hold
+up the user. Mentioned mailer.py and CIA bot.</li>
+</ul>
+</li>
+<li><p>Repos Maintenance:</p>
+
+<ul>
+<li>dump: slow, not for backups</li>
+<li>hotcopy: does a cp -R, can be used for backups and then you
+can rsync the copy, if needed</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Client Best Practices</p>
+
+<ul>
+<li>commit often</li>
+<li>commit small, discreet chunks (but <strong>donâ€™t</strong> commit individual
+files)</li>
+<li>have a consistent log message policy</li>
+</ul>
+</li>
+<li><p>Misc Best Practices</p>
+
+<ul>
+<li>Use branches: you can have task branches, feature branches,
+release branches, etc.</li>
+<li>Merge tracking: must be done by humans currently, but in 1.5
+there is real merge tracking.</li>
+<li>Autoprops: take advantage of these, some examples are:
+svn:mime-type, svn:eol-style, svn:needs-lock</li>
+</ul>
+</li>
+</ul>
+
+
+<p>Thankfully Nicolas Cannasseâ€™s talk entitled <a href="http://conferences.oreillynet.com/cs/os2006/view/e_sess/8600">haXe: A cross-platform
+web
+language</a>
+was moved earlier (prior to this I had a triple-conflict this
+afternoon). Nico appears to be an amazingly smart fellow and
+<a href="http://www.haxe.org">haXe</a> along with the <a href="http://nekovm.org/">NekoVM</a>
+(only 220KB!) look like very interesting technologies. He started with a
+simple â€˜Hellow Worldâ€™ example in haXe which was then generated into
+JavaScript, Flash and Neko â€“ that is the same source code can be
+easily re-targeted to different â€˜platformsâ€™. At the end he showed
+off <a href="http://en.dinoparc.com">Dinoparc</a> and Hammerfell, two Flash games
+that were written using haXe. Nico also mentioned that someone is
+writing a Ruby compiler which targets the NekoVM.</p>
+
+<p>After lunch I attended <a href="http://www.nealford.com">Neal Fordâ€™s</a> Building
+DSLs in Ruby. He showed off a simple calendaring DSL. His slides are
+here and he followed them very closely so I donâ€™t have much
+commentary. I guess the only way to get comfortable designing and
+implementing DSLs in Ruby is to actually write them â€¦ Iâ€™m going to
+have to pick some domain and just start.</p>
+
+<p>Then <a href="http://www.pragmaticstudio.com/">Mike Clark</a> was up with <a href="http://conferences.oreillynet.com/cs/os2006/view/e_sess/8395">Testing
+Rails
+Apps</a> â€“
+much of this was review for me, but I was looking forward to his
+tips/tricks to make testing easier. Iâ€™m really trying hard to be a
+â€œtest-firstâ€? developer but I get so excited writing new features
+that I leave the tests for last (of course, this usually means that I
+end-up refactoring the code I wrote based on the tests, which is a good
+thing). Since his slides arenâ€™t up yet, Iâ€™ll post some of my notes.
+Mikeâ€™s keypoint was that tests are insurance â€“ they ensure that
+programming your app remains fun, so youâ€™re not scared of making
+changes because you have a nice test suite which can quickly find out if
+youâ€™ve broken something else with your change. Some of his tips are
+below:</p>
+
+<pre><code># if the product isn't valid, print out the errors
+assert product.valid?, product.errors.full_messages
+
+# checking uniqueness
+assert_equal ActiveRecord::Errors.default_error_message[:taken],
+product.errors.on(:title)
+
+# for integration testing create a user object with method
+# names that are in plain English
+def regular_user
+open_session do |user|
+def goes_to_store
+get :index
+assert_response :success
+end
+
+def is_viewing_index
+assert_template "index"
+end
+
+def buys_book
+post :add_to_cart, :item =&gt; { :id =&gt; 1234 }
+end
+
+def checks_out
+post :checkout, :payment_info =&gt; { ... }
+end
+end
+end
+</code></pre>
+
+<p>Following the break, I attended <a href="http://conferences.oreillynet.com/cs/os2006/view/e_sess/8924">When Interface Design
+Attacks!</a>
+by <a href="http://www.slash7.com">Amy Hoy</a>. Her slides should be up on her
+website soon but some of the key points were that interface involves:</p>
+
+<ul>
+<li>expectations (baggage)</li>
+<li>interaction (usability)</li>
+<li>behavior (your appâ€™s personality)</li>
+</ul>
+
+
+<p>Some of the principles she mentioned were:</p>
+
+<ul>
+<li>usersâ€™ brains are affected by literacy; they scan in predictable
+patterns (reading right to left, top to bottom)</li>
+<li>users adapt to web design (ignoring headers, sidebars, stuff below
+the fold)</li>
+<li>if it looks like an ad, itâ€™s ignored (or if itâ€™s a small bit of
+content surrounded by ads, itâ€™s ignored)</li>
+<li>users â€˜satisficeâ€™ or give up (they pick the closest thing to
+what they were looking for)</li>
+<li>30-40% of users have low literacy (reading blocks of text is
+difficult for them â€“ the changes you make for these users also pay
+off for those who donâ€™t have literacy issues)</li>
+<li>There should be twice as many pixels above an object than below it</li>
+<li>Labels should be above their input and labels should have the same
+name/id as their corresponding input fields</li>
+</ul>
+
+
+<p>Amy then went through several examples from popular websites.</p>
+
+<p>The last talk of the day was <a href="http://conferences.oreillynet.com/cs/os2006/view/e_sess/8942">Web Heresies: The Seaside
+Framework</a>
+by <a href="http://smallthought.com/avi/">Avi Bryant</a> â€“ basically it was
+<a href="http://www.apple.com/webobjects/">WebObjects</a> meets
+<a href="http://www.paulgraham.com/vwfaq.html">ViaWeb</a> (in
+<a href="http://www.squeak.org/">Smalltalk</a>). The ideas behind
+<a href="http://www.seaside.st/">Seaside</a> are quite cool, but having never used
+Smalltalk and hating every IDE Iâ€™ve ever tried it just didnâ€™t appeal
+to me. Technically, the continuation usage is incredible â€“ every time
+you click a link a continuation is generated (complete call stack) so if
+you go back youâ€™re old call stack is still there and you can then have
+the function return a different value taking you some place else within
+the web app. Avi doesnâ€™t like templates, he wants HTML to be back in
+the domain of the developer and it should be generated from within the
+web app â€“ the designer only gets to touch the CSS (see <a href="http://www.csszengarden.com/">CSS Zen
+Garden</a> for examples of how this works).
+To handle form fields, Seaside simply uses callbacks â€“ you place the
+block of code in a callback right where the text field is generated,
+this is what the code looks like:</p>
+
+<pre><code>html form:
+[html text: 'Name: '.
+html textInputWithValue: person name callback: [:val | person name: val].
+html break.
+html submitButton]
+</code></pre>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">admin</span></span>
+
+      
+
+
+
+
+
+  
+
+
+
+<time datetime="2006-07-27T23:08:00-04:00" pubdate  data-updated="true" >Jul 27<span>th</span>, 2006</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/conferences/'>Conferences</a>, <a class='category' href='/blog/categories/oscon/'>OSCON</a>, <a class='category' href='/blog/categories/programming/'>Programming</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/smalltalk/'>Smalltalk</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://sean.github.com/blog/2006/07/27/oscon-sessions-day-two/" data-via="smountcastle" data-counturl="http://sean.github.com/blog/2006/07/27/oscon-sessions-day-two/" >Tweet</a>
+  
+  
+</div>
+
+    
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/08/14/iosdevcamp-dc-2012/">iOSDevCamp DC 2012</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/09/26/moved-to-github-pages-and-octopress/">Moved to GitHub Pages and Octopress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2010/01/21/skribit/">Skribit</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2008/11/25/invented-quality-metric-feltz-levels/">Invented Quality Metric: Feltz Levels</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2008/08/08/rubynation-2008/">RubyNation 2008</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Github Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/sean">@sean</a> on Github
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'sean',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("smountcastle", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/smountcastle" class="twitter-follow-button" data-width="208px" data-show-count="false">Follow @smountcastle</a>
+  
+</section>
+
+
+<section>
+  <h1>Currently Reading</h1>
+  <p> 
+    1451648537
+    <br />
+    1451648537 by
+    1451648537
+  </p>
+  <h1>Recent Reads</h1>
+  <ul id="recent_reads">
+    
+      <li class="post">
+	<p> 
+	  055357342X
+	  <br />
+	  055357342X by
+	  055357342X
+	</p>
+      </li>
+    
+      <li class="post">
+	<p> 
+	  0553381695
+	  <br />
+	  0553381695 by
+	  0553381695
+	</p>
+      </li>
+    
+      <li class="post">
+	<p> 
+	  0553386794
+	  <br />
+	  0553386794 by
+	  0553386794
+	</p>
+      </li>
+    
+  </ul>
+</section>
+
+Included file 'asides/googleplus.html' not found in _includes directory
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Sean Mountcastle -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+  <br />
+  <a href="https://twitter.com/smountcastle" class="twitter-follow-button">You should follow me on Twitter</a>
+</p>
+
+<script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
+
+</footer>
+  
+
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-378484-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+  
+
+  
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+</body>
+</html>

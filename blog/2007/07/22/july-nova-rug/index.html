@@ -1,0 +1,352 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>July NoVA RUG - Sean Mountcastle</title>
+  <meta name="author" content="Sean Mountcastle">
+
+  
+  <meta name="description" content="This past Wednesday we held the July Northern VA Ruby Users Group. Westarted off with two short talks, first by PatrickReagan on two mocking &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://sean.github.com/blog/2007/07/22/july-nova-rug/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="http://feeds.feedburner.com/SeanMountcastle" rel="alternate" title="Sean Mountcastle" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Sean Mountcastle</a></h1>
+  
+    <h2>Thoughts on technology and engineering.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://feeds.feedburner.com/SeanMountcastle" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:sean.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">July NoVA RUG</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2007-07-22T17:33:49-04:00" pubdate  data-updated="true" >Jul 22<span>nd</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>This past Wednesday we held the July Northern VA Ruby Users Group. We
+started off with two short talks, first by <a href="http://www.sneaq.net/">Patrick
+Reagan</a> on two mocking libraries for Ruby
+(<a href="http://onestepback.org/software/flexmock/">Flexmock</a> and
+<a href="http://mocha.rubyforge.org/">Mocha</a>), the second was on <a href="http://haml.hamptoncatlin.com/">Haml and
+Sass</a> by <a href="http://blog.twifkak.com/">Devin
+Mullins</a>. For the final hour of the meeting,
+<a href="http://weblogs.asp.net/mscilipoti/default.aspx">Matt Scilipoti</a> spoke
+about using Rails with legacy databases. Patrick&#8217;s talk, entitled
+<a href="http://www.slideshare.net/viget/mockfight-flexmock-vs-mocha">&#8220;Mockfight! Flexmock vs
+Mocha&#8221;</a>,
+provided a nice overview of both libraries and several examples
+comparing the libraries side-by-side. From the title, I thought Patrick
+would be able to declare a clear winner but since both libaries try to
+maintain feature parity they are essentially equivalent. My main
+takeaway from the presentation was the benefit of using a mocking
+library in your tests to bypass expensive or dangerous code paths. Devin
+eschewed slides in favor of a live coding session where he converted
+Rails scaffold generated eRB (rhtml) to haml. Personally, I don&#8217;t like
+haml markup even though it is definitely more concise than XHTML with
+eRB. When I develop, I like to be able to view my template files in the
+browser, so I&#8217;d like to be able to go in the other direction where my
+views are completely XHTML, perhaps something closer to Java&#8217;s
+<a href="http://tapestry.apache.org/">Tapestry</a> (without the XML descriptor
+files). Here&#8217;s an example comparing eRB vs haml:</p>
+
+<hr />
+
+<p>  <div id='content'\> <div class='left column'\> &lt;h2>Welcome to our site!&lt;/h2> &lt;p> &lt;%= print_information %> &lt;/p> &lt;/div> <div class="right column"\> &lt;%= render :partial => &#8220;sidebar&#8221; %> &lt;/div> &lt;/div>   #content .left.column %h2 Welcome to our site! %p= print_information .right.column= render :partial => &#8220;sidebar&#8221;</p>
+
+<hr />
+
+<p>Matt&#8217;s talk on working with legacy databases was the final presentation
+of the evening. He used the <a href="http://presentationzen.blogs.com/presentationzen/2005/09/living_large_ta.html">Takahashi
+Method</a>
+of presenting and ripped through his slides quickly. The first part
+covered the issues he encountered trying to build a Rails app around his
+legacy database and all of the false starts he made trying to override
+the opinions of Rails. One of the approaches he discussed which looked
+promising but turned out to be too much trouble in the end were database
+views. Using views he could overlay his own view on a table and remap it
+to conform to the Rails conventions, unfortunately this turned out to be
+a very leaky abstraction &#8211; for example he had to maintain the id fields
+manually. His finaly solution involved writing a plugin which handles
+the transformations between what Rails expects and how the database is
+actually implemented. He is planning on releasing this though he hasn&#8217;t
+settled on a name for his plugin yet (some suggestions were:
+acts_as_rails, acts_as_greenfield, etc). He also mentioned that he
+doesn&#8217;t have to deal with composite keys so he doesn&#8217;t plan on
+supporting them out of the gate. Though like all open source projects,
+contributions are welcome, so if you need this functionality give Matt a
+hand. Next month&#8217;s meeting will be on August 22 and <a href="https://elitefrontier.org/elgg/rubyclrdev/weblog/">Rodney
+Degracia</a> will be
+presenting on the Ruby CLR for .NET.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">admin</span></span>
+
+      
+
+
+
+
+
+  
+
+
+
+<time datetime="2007-07-22T17:33:49-04:00" pubdate  data-updated="true" >Jul 22<span>nd</span>, 2007</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/programming/'>Programming</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://sean.github.com/blog/2007/07/22/july-nova-rug/" data-via="smountcastle" data-counturl="http://sean.github.com/blog/2007/07/22/july-nova-rug/" >Tweet</a>
+  
+  
+</div>
+
+    
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/08/14/iosdevcamp-dc-2012/">iOSDevCamp DC 2012</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/09/26/moved-to-github-pages-and-octopress/">Moved to GitHub Pages and Octopress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2010/01/21/skribit/">Skribit</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2008/11/25/invented-quality-metric-feltz-levels/">Invented Quality Metric: Feltz Levels</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2008/08/08/rubynation-2008/">RubyNation 2008</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Github Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/sean">@sean</a> on Github
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'sean',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("smountcastle", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/smountcastle" class="twitter-follow-button" data-width="208px" data-show-count="false">Follow @smountcastle</a>
+  
+</section>
+
+
+<section>
+  <h1>Currently Reading</h1>
+  <p> 
+    1451648537
+    <br />
+    1451648537 by
+    1451648537
+  </p>
+  <h1>Recent Reads</h1>
+  <ul id="recent_reads">
+    
+      <li class="post">
+	<p> 
+	  055357342X
+	  <br />
+	  055357342X by
+	  055357342X
+	</p>
+      </li>
+    
+      <li class="post">
+	<p> 
+	  0553381695
+	  <br />
+	  0553381695 by
+	  0553381695
+	</p>
+      </li>
+    
+      <li class="post">
+	<p> 
+	  0553386794
+	  <br />
+	  0553386794 by
+	  0553386794
+	</p>
+      </li>
+    
+  </ul>
+</section>
+
+Included file 'asides/googleplus.html' not found in _includes directory
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Sean Mountcastle -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+  <br />
+  <a href="https://twitter.com/smountcastle" class="twitter-follow-button">You should follow me on Twitter</a>
+</p>
+
+<script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
+
+</footer>
+  
+
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-378484-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+  
+
+  
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+</body>
+</html>

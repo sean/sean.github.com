@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: GIS | Sean Mountcastle]]></title>
+  <link href="http://sean.github.com/blog/categories/gis/atom.xml" rel="self"/>
+  <link href="http://sean.github.com/"/>
+  <updated>2012-08-16T00:11:34-04:00</updated>
+  <id>http://sean.github.com/</id>
+  <author>
+    <name><![CDATA[Sean Mountcastle]]></name>
+    <email><![CDATA[smountcastle@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Getting the Lat/Long for a Zipcode]]></title>
+    <link href="http://sean.github.com/blog/2006/01/11/getting-the-latlong-for-a-zipcode/"/>
+    <updated>2006-01-11T09:08:00-05:00</updated>
+    <id>http://sean.github.com/blog/2006/01/11/getting-the-latlong-for-a-zipcode</id>
+    <content type="html"><![CDATA[<p>I've uploaded a short Ruby script which uses Google maps to obtain the
+lat/long given a zipcode. I needed this since the
+<a href="http://wiki.rubyonrails.com/rails/pages/Plugins">Cartographer</a> RoR
+plug-in takes coordinates in the form of lat/long and my customers will
+only provide me with their zipcodes or complete addresses. Obviously in
+my Rails web-app I'm storing the lat/long in the DB so I don't
+repeatedly query Google Maps. The class simply returns a hash and is
+trivial to use:</p>
+
+<p><del> {lang="ruby"}
+coords = GMap.to_latlng("90210")
+lat = coords[:lat]
+lng = coords[:lng]
+</del></p>
+
+<p>Download
+<a href="http://seanmountcastle.com/wp-content/uploads/2007/04/zipcode.zip">zipcode.zip</a>
+<strong>Updated 2007</strong>: This has basically been supplanted by the excellent
+<a href="http://geokit.rubyforge.org/">GeoKit for Rails</a>.</p>
+]]></content>
+  </entry>
+  
+</feed>

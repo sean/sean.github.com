@@ -1,0 +1,481 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>OSCON Building Responsive Web UIs with DHTML - Sean Mountcastle</title>
+  <meta name="author" content="Sean Mountcastle">
+
+  
+  <meta name="description" content="Alex Russell gave an interesting talk this morning on BuildingResponsive Web UIs withDHTML. Mynotes are below. Updated Aug 6, 12:38: I fixed the &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://sean.github.com/blog/2005/08/05/oscon-building-responsive-web-uis-with-dhtml/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="http://feeds.feedburner.com/SeanMountcastle" rel="alternate" title="Sean Mountcastle" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Sean Mountcastle</a></h1>
+  
+    <h2>Thoughts on technology and engineering.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://feeds.feedburner.com/SeanMountcastle" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:sean.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">OSCON Building Responsive Web UIs With DHTML</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2005-08-05T09:37:00-04:00" pubdate  data-updated="true" >Aug 5<span>th</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Alex Russell gave an interesting talk this morning on <a href="http://conferences.oreillynet.com/cs/os2005/view/e_sess/6985">Building
+Responsive Web UIs with
+DHTML</a>. My
+notes are below. Updated Aug 6, 12:38: I fixed the errors in the post
+pointed out by Alex Russell. BTW, he&#8217;s an excelllent speaker, if he ever
+gives a talk and you are able to go, I heartily recommend doing so.</p>
+
+<h2>Building Responsive Web UIs with DHTML</h2>
+
+<p><a href="http://www.dojotoolkit.org">Alex Russell</a> Namespaces</p>
+
+<ul>
+<li>you NOT are the only thing in the interpreter. deal</li>
+<li>do nothing in global namesapce</li>
+<li>declare the start of a namespace</li>
+<li>Object.prototype.foo = &#8220;&#8221;; is EVIL</li>
+<li>MyObject.prototype.foo = &#8220;&#8221;; is GOOD</li>
+</ul>
+
+
+<p>Events: The old way</p>
+
+<ul>
+<li>clients treated a dumb renderers</li>
+<li>iframes make some partial content workable</li>
+</ul>
+
+
+<p>Events the DHTML way</p>
+
+<ul>
+<li>multiple models</li>
+<li>onclick=&#8221;foo()&#8221;</li>
+<li>DOM2 style: attachEvent (or addEventListener for IE6)</li>
+</ul>
+
+
+<p>Events the Dojo way</p>
+
+<ul>
+<li>dojo.event.connect()</li>
+<li>transparently handles multiple listeners</li>
+<li>makes browser differences go away</li>
+<li>builds in memory leak protection for IE</li>
+<li>connects normal functions too, not just DOM nodes</li>
+<li>dojo.event.connect(fooNode, &#8220;onclick&#8221;, doFoo);</li>
+<li>dojo.event.topic.subscribe(&#8220;/foo&#8221;, bar, &#8220;baz&#8221;);</li>
+<li>dojo.event.topic.publish(&#8220;/foo&#8221;, &#8220;arg1&#8221;, &#8220;arg2&#8221;);</li>
+</ul>
+
+
+<p>AOP &#8230; Say What?</p>
+
+<ul>
+<li>Aspect oriented</li>
+<li>does name method interception</li>
+<li>advice types available past the default of after</li>
+</ul>
+
+
+<p>I/O: the old way</p>
+
+<ul>
+<li>full page refreshes</li>
+<li>iframes provided some partial page refresh capability</li>
+</ul>
+
+
+<p>I/O the DHTML way</p>
+
+<ul>
+<li><p>XMLHttp requests</p>
+
+<ul>
+<li>sync or async</li>
+<li>browser capability detection code</li>
+<li>no file upload</li>
+<li>usability problems</li>
+</ul>
+</li>
+<li><p>iframes</p>
+
+<ul>
+<li>ugly, gratuitous hacks</li>
+<li>plays nice with forms</li>
+</ul>
+</li>
+</ul>
+
+
+<p>I/O the Dojo way</p>
+
+<ul>
+<li>common interface to multiple &#8220;transports&#8221;, incl. XMLHttp</li>
+<li>single response and multi response API (ready for LivePage,
+mod_pubsub, etc).</li>
+</ul>
+
+
+<p>Packaging the old way</p>
+
+<ul>
+<li>tags</li>
+<li>absolute URLs
+
+<ul>
+<li>External CSS files and template systems</li>
+</ul>
+</li>
+<li></li>
+</ul>
+
+
+<p>Packaging the DHTML way</p>
+
+<ul>
+<li>tags</li>
+<li>no dependency tracking</li>
+<li>no load ordering</li>
+<li>no transparent optimization</li>
+</ul>
+
+
+<p>Packaging the Dojo way</p>
+
+<ul>
+<li><p>built in pkg system:</p>
+
+<ul>
+<li>integrates and is transparent with the build system</li>
+<li>yes, we make builds to optimize your code for you</li>
+</ul>
+</li>
+<li><p>dependency satisfaction at runtime or build time</p></li>
+<li>partial builds can call source versions of this that aren&#8217;t baked in</li>
+<li>just use dojo.require()</li>
+</ul>
+
+
+<p>Widget Reuse the old way</p>
+
+<ul>
+<li>you build modularized PHP or *SP</li>
+<li>CSS moved to external files</li>
+<li>behavioral code always copied</li>
+<li>JS potentially moved to libraries/external files</li>
+<li>No re-use previously available for DHTML</li>
+</ul>
+
+
+<p>Widget Reuse the Dojo way</p>
+
+<ul>
+<li>build with HTML and CSS fragements</li>
+<li>amazingly fast to prototype</li>
+<li>look and feel can change w/o changing JS class</li>
+<li>automatic reuse:
+
+<ul>
+<li>previously everything had to have unique IDS that you managed</li>
+<li>Dojo does that counting work for you</li>
+</ul>
+</li>
+</ul>
+
+
+<p>Demos</p>
+
+<ul>
+<li>Corkboard (from JotSpot)</li>
+<li>Turbo DbAdmin</li>
+</ul>
+
+
+<p>Functional Testing</p>
+
+<ul>
+<li>LiveTest &#8211; testing the deployed application (part of the Neuvaux
+(sp?) project). Only in svn for neuvous (sp?)</li>
+</ul>
+
+
+<p>Slides available <a href="http://dojotoolkit.org/~alex/dhtml_webapps.pdf">here</a>.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">admin</span></span>
+
+      
+
+
+
+
+
+  
+
+
+
+<time datetime="2005-08-05T09:37:00-04:00" pubdate  data-updated="true" >Aug 5<span>th</span>, 2005</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/conferences/'>Conferences</a>, <a class='category' href='/blog/categories/javascript/'>JavaScript</a>, <a class='category' href='/blog/categories/oscon/'>OSCON</a>, <a class='category' href='/blog/categories/programming/'>Programming</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://sean.github.com/blog/2005/08/05/oscon-building-responsive-web-uis-with-dhtml/" data-via="smountcastle" data-counturl="http://sean.github.com/blog/2005/08/05/oscon-building-responsive-web-uis-with-dhtml/" >Tweet</a>
+  
+  
+</div>
+
+    
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/08/14/iosdevcamp-dc-2012/">iOSDevCamp DC 2012</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/09/26/moved-to-github-pages-and-octopress/">Moved to GitHub Pages and Octopress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2010/01/21/skribit/">Skribit</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2008/11/25/invented-quality-metric-feltz-levels/">Invented Quality Metric: Feltz Levels</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2008/08/08/rubynation-2008/">RubyNation 2008</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Github Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/sean">@sean</a> on Github
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'sean',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("smountcastle", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/smountcastle" class="twitter-follow-button" data-width="208px" data-show-count="false">Follow @smountcastle</a>
+  
+</section>
+
+
+<section>
+  <h1>Currently Reading</h1>
+  <p> 
+    1451648537
+    <br />
+    1451648537 by
+    1451648537
+  </p>
+  <h1>Recent Reads</h1>
+  <ul id="recent_reads">
+    
+      <li class="post">
+	<p> 
+	  055357342X
+	  <br />
+	  055357342X by
+	  055357342X
+	</p>
+      </li>
+    
+      <li class="post">
+	<p> 
+	  0553381695
+	  <br />
+	  0553381695 by
+	  0553381695
+	</p>
+      </li>
+    
+      <li class="post">
+	<p> 
+	  0553386794
+	  <br />
+	  0553386794 by
+	  0553386794
+	</p>
+      </li>
+    
+  </ul>
+</section>
+
+Included file 'asides/googleplus.html' not found in _includes directory
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Sean Mountcastle -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+  <br />
+  <a href="https://twitter.com/smountcastle" class="twitter-follow-button">You should follow me on Twitter</a>
+</p>
+
+<script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
+
+</footer>
+  
+
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-378484-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+  
+
+  
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+</body>
+</html>

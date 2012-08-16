@@ -1,0 +1,673 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Sean Mountcastle</title>
+  <meta name="author" content="Sean Mountcastle">
+
+  
+  <meta name="description" content="Tonight the first CocoaHeads Reston meeting was held at Near Infinity Corporation. Jason Harwig gave an excellent presentation on WebKit, starting &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://sean.github.com/blog/page/3/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="http://feeds.feedburner.com/SeanMountcastle" rel="alternate" title="Sean Mountcastle" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Sean Mountcastle</a></h1>
+  
+    <h2>Thoughts on technology and engineering.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://feeds.feedburner.com/SeanMountcastle" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:sean.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/06/12/inaugural-cocoaheads-reston-meeting/">Inaugural CocoaHeads Reston Meeting</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2008-06-12T22:31:20-04:00" pubdate  data-updated="true" >Jun 12<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Tonight the first <a href="http://cocoaheads.org/us/RestonVirginia/index.html">CocoaHeads Reston</a> meeting was held at <a href="http://www.nearinfinity.com/index.html">Near Infinity Corporation</a>. <a href="http://pinepointsoftware.com/">Jason Harwig</a> gave an excellent presentation on <a href="http://webkit.org/">WebKit</a>, starting with a simple browser created completely in Interface Builder (it consisted of a text field linked to a web view). I&#8217;ve recreated it and included a snapshot below.</p>
+
+<p><img class="left" src="/assets/basicbrowser.png" title="An Extremely Basic Web Browser" ></p>
+
+<p>Next he demonstrated how to interact with the DOM and JavaScript. The JavaScript integration was in both directions, first he demonstrated calling JavaScript functions from Objective-C and then calling Objective-C from JavaScript. It should be noted that for JavaScript to call Objective-C you need to implement the <code>+ (BOOL)isSelectorExcludedFromWebScript:(SEL)aSelector;</code> method and return <code>NO</code> for each of the methods you wish to call.</p>
+
+<p>Finally, Jason walked through various uses of WebKit an demonstrated an application specific, full-screen browser he wrote for a game as well as a del.icio.us Cocoa application he wrote called <a href="http://pinepointsoftware.com/delish/site/">Delish</a>. Several other webkit based applications were also covered such as <a href="http://fluidapp.com/">Fluid</a> - a freely available site-specific browser creator, <a href="http://infinitenil.com/packrat/">PackRat</a> - a commercial site-specific browser for Backpack, and another application which I&#8217;ve forgotten (I guess I should&#8217;ve taken notes). As an aside, Jason brought up the interesting work that the <a href="http://280north.com/">280North</a> folks have done for their <a href="http://280slides.com/">280Slides</a> web-based presentation called <a href="http://objective-j.org/">Objective-J</a>. Objective-J (code named Cappuccino), is an Objective-C like language built on JavaScript.</p>
+
+<p>Matt Wizeman stepped up next to demo a WebKit application he&#8217;s developing to wrap a troublesome time tracking web application. It was interesting the machinations he had to go through to know when the page had finished loading and to transition between pages since the application was JavaScript heavy, using tricks like clickable divs.</p>
+
+<p>I learned quite a bit about WebKit. As soon as I got home I was energized to play with it.</p>
+
+<p>Be sure to come to the next meeting on July 10th (day before iPhone 3G day)!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/06/05/yesterdays-storm/">Yesterday&#8217;s Storm</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2008-06-05T10:56:42-04:00" pubdate  data-updated="true" >Jun 5<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://xiix.wordpress.com/">ErinGary</a> has <a href="http://eringary.com/storm/">NEXRAD images and commentary
+of yesterday&#8217;s storm</a> here in Northern, VA.
+For about half-an-hour yestersay, the folks at work milled around in
+interior offices, hallways, and the stairwell while my family at home
+hid out in the basement. Thankfully there were not much damage in my
+neighborhood, though I saw several fallen trees on homes during my
+commute home.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/06/04/learn-a-new-programming-language/">Learn a New Programming Language</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2008-06-04T23:10:20-04:00" pubdate  data-updated="true" >Jun 4<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>As <a href="http://www.chadfowler.com/">Chad Fowler</a> says, &#8220;The best reason to
+learn a new programming language is to learn to think differently.&#8221; Here
+in Northern VA, we have a new opportunity to think differently with the
+introduction of the <a href="http://groups.google.com/group/novalanguages">NoVA Languages
+group</a>. <a href="http://www.twitter.com/voodootikigod">Chris
+Williams</a> from <a href="http://www.iterativedesigns.com/">Iterative
+Designs</a> posted to the <a href="http://novarug.org/">NoVA
+RUG</a> mailing list this morning and received quite a
+bit of interest. Here&#8217;s what he has to say about the new group:</p>
+
+<blockquote><p>Thoughts on the makeup of the group include obtaining (however you
+want) a book, working through the book 1 chapter per week on one night
+of that week with a group of like minded individuals.</p></blockquote>
+
+<p>To start, the group will work through Joe Armstrong&#8217;s <a href="http://www.pragprog.com/titles/jaerlang/programming-erlang">Programming
+Erlang</a> book
+starting on Monday, June 16th (hopefully I&#8217;ll be able to work out a
+schedule with my wife so I can attend). This is an excellent choice on
+several levels: every developer should know a functional programming
+language; single core processors are increasingly rare and the number of
+cores in commodity hardware should only increase in the coming years;
+and I already own the book.</p>
+
+<p>If <a href="http://www.erlang.org/">Erlang</a> doesn&#8217;t pique your interest, the
+<a href="http://groups.google.com/group/nscodernightdc">NSCoderNight DC</a> group
+is going to work through the 3rd Edition of <a href="http://www.bignerdranch.com/">Aaron
+Hillegass&#8217;s</a> <a href="http://www.amazon.com/Cocoa-Programming-Mac-OS-3rd/dp/0321503619">Cocoa Programming for Mac OS
+X</a>
+book on Tuesday nights. For several months now, I&#8217;ve been playing around
+with Cocoa and while I&#8217;m getting used to the syntax of Objective-C, the
+XCode IDE and Interface Builder still seem foreign to me (I never liked
+IDEs having been weened on Emacs).</p>
+
+<p>It&#8217;s a great time to be a programmer in Northern Virginia!</p>
+
+<p><strong>Update:</strong> It turns out that there&#8217;s another Cocoa group right around
+the corner from me in Reston:
+<a href="http://www.cocoaheads.org/us/RestonVirginia/index.html">CocoaHeads</a>.
+They meet the second Thursday of each month.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/04/23/startups-101/">Startups 101</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2008-04-23T23:58:26-04:00" pubdate  data-updated="true" >Apr 23<span>rd</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://refresh-dc.org/"><img src="http://seanmountcastle.com/wp-content/uploads/2008/04/refreshdc.png" alt="Refresh
+DC" /></a></p>
+
+<p>Tonight I had the opportunity to attend a special <a href="http://refresh-dc.org/">Refresh
+DC</a> meeting on the challenges of starting your
+own business. The format was a panel of folks from the DC startup scene
+moderated by <a href="http://www.viget.com/about/team/jwilkinson">Jackson
+Wilkinson</a> of <a href="http://www.viget.com">Viget
+Labs</a>. The panel consisted of <a href="http://www.viget.com/about/team/bwilliams">Brian
+Williams</a> of Viget Labs,
+<a href="http://andrewlee.com/">Andrew Lee</a> of <a href="http://publi.us/">Publi.us</a>,
+Eric Rupert from <a href="http://odeo.com/">Odeo</a>, <a href="http://blog.hungrymachine.com/">Eddie
+Frederick</a>of <a href="http://hungrymachine.com/">Hungry
+Machine</a>, and <a href="http://www.launchboxdigital.com/blog.html">Sean
+Greene</a> of <a href="http://www.launchboxdigital.com/">LaunchBox
+Digital</a>.</p>
+
+<p>These were the main points I took away:</p>
+
+<ol>
+<li><strong>Be passionate.</strong> The most important quality for startup founders
+is to be passionate about their product or service. Starting a
+company can be exhilarating but the setbacks can be really
+difficult. If you&#8217;re not passionate about what you&#8217;re doing each of
+these roadblocks will be an excuse for you to quit. Figure out what
+you&#8217;re passionate about and work on that.</li>
+<li><strong>Focus on your product.</strong> Don&#8217;t focus on the pie-in-the-sky
+potential valuations of your company or worry about leasing office
+space, hiring an attorney, finding an accountant, etc. Instead you
+should focus on the product or service you&#8217;re going to sell. Get
+something out there quickly &#8211; pick the most important feature and
+get it out there in front of your customers quickly.</li>
+<li><strong>Have your customers influence your product.</strong> If you follow the
+previous advice and get your product out there quickly you can use
+customer feedback to iterate your product. You may not know all of
+the difference ways customers will use your product, so this
+feedback is critical in charting your product roadmap.</li>
+<li><strong>Equity is control, don&#8217;t surrender it easily.</strong> One of the
+attendees asked about using equity to pay for services if money was
+tight. Brian said to avoid giving out equity as you make that person
+a partner in your business. While they may not have a controlling
+interest, they are still an owner and have some influence.</li>
+<li><strong>Don&#8217;t overfund.</strong> All of the panelists warned of the dangers of
+taking too much money as it does more than dilute the founders&#8217;
+ownership. Venture capitalists are looking to make a large return o
+their capital for themselves and their limited partners. If you need
+to pay a vendor or contractor find another way &#8211; defer payment, use
+credit, etc.</li>
+<li><strong>Hire slow, fire fast.</strong> Early employees can make or break your
+company. You will be working long hours aside these folks so you
+must ensure they&#8217;re a good fit. If you make a bad hire, you need to
+resolve the situation quickly, don&#8217;t let emotion get in the way.</li>
+</ol>
+
+
+<p>Some of the books recommended were: <a href="http://www.amazon.com/Art-Start-Time-Tested-Battle-Hardened-Starting/dp/1591840562/ref=pd_bbs_sr_1?ie=UTF8&amp;s=books&amp;qid=1209008603&amp;sr=8-1">Art of the
+Start</a>,
+<a href="http://www.amazon.com/Getting-Yes-Negotiating-Agreement-Without/dp/0140157352/ref=pd_bbs_2?ie=UTF8&amp;s=books&amp;qid=1209008634&amp;sr=8-2">Getting to
+Yes</a>,
+and <a href="http://www.amazon.com/Founders-Work-Stories-Startups-Early/dp/1590597141/ref=pd_bbs_3?ie=UTF8&amp;s=books&amp;qid=1209008603&amp;sr=8-3">Founders at
+Work</a>.
+Andrew also recommended <a href="http://startupschool.org/">Startup School</a> run
+by <a href="http://ycombinator.com/">Y Combinator</a> (YC). I&#8217;ve been reading <a href="http://www.paulgraham.com">Paul
+Graham</a>&#8217;s essays for around seven years now
+and following YC&#8217;s investments. I&#8217;m glad to see an early stage investor
+like YC in the DC area (LaunchBox Digital) and hope that the startup
+scene in DC and suburbs becomes more vibrant.</p>
+
+<p>Thanks to <a href="http://www.sainc.com/">Strategic Analysis</a> for hosting this.
+It was a great venue and hope they&#8217;ll offer to host Refresh DC again.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/03/20/performance-tuning-network-applications/">Performance Tuning Network Applications</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2008-03-20T23:09:57-04:00" pubdate  data-updated="true" >Mar 20<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Recently at work I spent a few weeks tuning a network service across
+three platforms (Solaris, Linux, and AIX) to get within 10% of the
+theoretical maximum throughput. In this short article, I&#8217;ll walk through
+the various tools I used to improve the performance of the application.</p>
+
+<p>This application is very specialized in that the two machines are
+connected directly through an ethernet switch. This means that the MTU
+could easily be determined from each end of the link and the extra work
+to determine the maximum segment size for the transit network (see <a href="http://tools.ietf.org/html/rfc1191">RFC
+1191</a>) was unnecessary. This also
+made it very easy to watch the traffic between the two hosts as well as
+the system calls they were using to transfer and receive the data.</p>
+
+<p>Before I get into the steps I took to tune the service, I&#8217;d like to
+introduce the tools used:</p>
+
+<ul>
+<li>Truss: a tracing utility which displays system calls, dynamically
+loaded user level function calls, received signals, and incurred
+machine faults. This is available for many platforms, but I use it
+most on AIX.</li>
+<li>DTrace/DTruss: a dynamic tracing compiler and tracing utility. This
+is an amazingly powerful tool from Sun, originally for Solaris but
+slowly spreading to other platforms. See Sun&#8217;s <a href="http://www.sun.com/software/solaris/howtoguides/dtracehowto.jsp">How To
+Guide</a>.</li>
+<li>strace: a dynamic tracing utility which displays systems calls and
+received signals under Linux.</li>
+<li>mpstat: collects and displays performance statistics for all logical
+CPUs in the system.</li>
+<li>prstat: iteratively examines all active processes on the system and
+reports statistics based on the selected output mode and sort order.</li>
+<li>tcpdump: a utility for capturing network traffic.</li>
+<li>Wireshark: a network protocol analyzer. It replaces the venerable
+Ethereal tool and allows you to either capture network traffic on
+demand or load a captured session for analysis. Find out more
+<a href="http://www.wireshark.org">here</a>.</li>
+<li>gprof: a tool for profiling your code to determine where the
+performance bottle-necks are. See the
+<a href="http://www.gnu.org/software/binutils/manual/gprof-2.9.1/html_mono/gprof.html">manual</a>
+for more information.</li>
+<li>c++filt: a tool for demangling C++ method names. It is part of the
+<a href="http://directory.fsf.org/project/binutils/">GNU binutils package</a>.</li>
+</ul>
+
+
+<p>Since I already had the service up and running, I simply ran the two
+components and captured the traffic between them using tcpdump. While
+the processes were running, I also used dtruss, truss, or strace
+(depending on the platform) to capture the system calls being made.
+Since this is a network service, I focused on calls to <code>select</code>, <code>send</code>,
+and <code>recv</code>.</p>
+
+<pre><code>13455/15:   2143177    2994      4 pollsys(0xFFFFFD7EBADDB910, 0x1, 0xFFFFFD7EBADDBA30) = 1 0
+13455/15:   2143180       5      0 pollsys(0xFFFFFD7EBADDB8D0, 0x1, 0xFFFFFD7EBADDB9F0) = 1 0
+13455/15:   2143185       8      4 recvfrom(0x11, 0xB384A0, 0x10000)                    = 1416 0
+13455/15:   2143253       5      0 pollsys(0xFFFFFD7EBADDB8D0, 0x1, 0xFFFFFD7EBADDB9F0) = 0 0
+13455/15:   2143262      12      8 send(0x11, 0xB084D0, 0x14B8)                         = 5304 0
+13455/15:   2143268     365      4 pollsys(0xFFFFFD7EBADDB910, 0x1, 0xFFFFFD7EBADDBA30) = 1 0
+13455/15:   2143270       4      0 pollsys(0xFFFFFD7EBADDB8D0, 0x1, 0xFFFFFD7EBADDB9F0) = 1 0
+13455/15:   2143275       8      4 recvfrom(0x11, 0xB384A0, 0x10000)                    = 1416 0
+13455/15:   2143343       5      0 pollsys(0xFFFFFD7EBADDB8D0, 0x1, 0xFFFFFD7EBADDB9F0) = 0 0
+13455/15:   2143348       9      4 send(0x11, 0xB084D0, 0x14B8)                         = 5304 0
+13455/15:   2143353    1000      4 pollsys(0xFFFFFD7EBADDB910, 0x1, 0xFFFFFD7EBADDBA30) = 1 0
+</code></pre>
+
+<p>Looking at the results above you can see that <code>select</code> (<code>pollsys</code>) is
+being called each time we need to send or receive data over the network.
+Since the socket is non-blocking we can rely on the immediate return
+when the outgoing socket buffer is full as well as when there is no data
+available to read. By <code>select</code>ing at the very top of the receive loop we
+can bundle multiple receive calls together, increasing the application&#8217;s
+throughput. Now the output looks like this:</p>
+
+<pre><code>16712/9:     16202    1560      6 pollsys(0xFFFFFD7EBB9DB940, 0x1, 0xFFFFFD7EBB9DBA30) = 1 0
+16712/9:     16217      10      6 recv(0xB, 0x8A6450, 0x10000)                         = 1416 0
+16712/9:     16246       9      5 send(0xB, 0x876480, 0x540)                           = 1344 0
+16712/9:     16267       7      3 send(0xB, 0x876480, 0x540)                           = 1344 0
+16712/9:     16285       5      1 send(0xB, 0x876480, 0x540)                           = 1344 0
+16712/9:     16680      10      5 recv(0xB, 0x8A6450, 0x10000)                         = 1416 0
+16712/9:     16712      11      7 send(0xB, 0x876480, 0x540)                           = 1344 0
+16712/9:     16733       7      3 send(0xB, 0x876480, 0x540)                           = 1344 0
+16712/9:     16753       6      2 send(0xB, 0x876480, 0x540)                           = 1344 0
+16712/9:     16768       4      0 recv(0xB, 0x8A6450, 0x10000)                         = -1 Err#11
+</code></pre>
+
+<p>You&#8217;ll notice that now we are able to process two requests and send out
+six responses in the time that it previously took to call select and
+receive a single request. When there is nothing left to read, the call
+to <code>recv</code> returns errno 11 (<code>EAGAIN</code>). This change made the single
+biggest performance impact on the code. I also changed the calls
+<code>recvfrom</code> to <code>recv</code> since the application did not make use of the
+foreign address.</p>
+
+<p>At this point the performance was much better but I noticed that under
+heavy load the sending socket would block as the ratio of requests to
+responses was 1:3. As this was a UDP application, having the sending
+buffers fill up seemed strange as we assumed that additional packets
+would simply be dropped on the floor.</p>
+
+<p>On the server, I checked the UDP socket buffer size using <code>ndd</code> (this
+was under Solaris. For AIX the command is <code>no</code> and for Linux the command
+is <code>sysctl</code>).</p>
+
+<p>The following code was added to the socket initialize (minus the error
+handling) to ensure that the socket buffers were large enough.</p>
+
+<pre><code>unsigned size = 1024 * 1024; // 1MB
+int ret = setsockopt(desc, SOL_SOCKET, SO_SNDBUF, &amp;size, sizeof(size));
+    ret = setsockopt(desc, SOL_SOCKET, SO_RCVBUF, &amp;size, sizeof(size));
+</code></pre>
+
+<p>Now that the application was performing acceptably I decided to run it
+under the profiler. This turned up the function which was adding
+responses to the in-memory packet. It turned out that as responses were
+being added to the packet, the headers were being recalculated each
+time. I removed this unnecessary work and only made the calculations
+right before the packet was sent. This improved performance a few
+percentage points more.</p>
+
+<p>By binding the network interrupts to a particular core and keeping the
+sending thread off of that core we were able to eek out additional
+performance from the application. To accomplish this, the application
+allows the operator to specify which core(s) it should bind to using
+<code>sched_setaffinity</code> (Linux) and <code>processor_bind</code> (Solaris). You can also
+accomplish this using <code>taskset</code> (Linux) and pbind (Solaris) if you don&#8217;t
+wish to modify your application.</p>
+
+<p>Looking at the network traffic with tcpdump, I saw that I could fit an
+additional response in the response bundle packet if I reduced or
+removed some of the items in the packet header. At this point the
+analysis and tuning had gone on for a few weeks and we had a schedule to
+meet. Since the performance was where we needed it, the application was
+wrapped up and sent to quality assurance.</p>
+
+<p>The single most important lesson I learned from this exercise was to use
+non-blocking sockets to their fullest by continually calling
+<code>recv</code>/<code>send</code> until the call would block and then using <code>select</code> to idle
+the process until there is work to do.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <nav class="pagination">
+    <div>
+      
+        <a class="prev" href="/blog/page/4/">&larr; Older</a>
+      
+      <a href="/blog/archives">Blog Archives</a>
+      
+      <a class="next" href="/blog/page/2/">Newer &rarr;</a>
+      
+    </div>
+  </nav>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/08/14/iosdevcamp-dc-2012/">iOSDevCamp DC 2012</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/09/26/moved-to-github-pages-and-octopress/">Moved to GitHub Pages and Octopress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2010/01/21/skribit/">Skribit</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2008/11/25/invented-quality-metric-feltz-levels/">Invented Quality Metric: Feltz Levels</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2008/08/08/rubynation-2008/">RubyNation 2008</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Github Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/sean">@sean</a> on Github
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'sean',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("smountcastle", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/smountcastle" class="twitter-follow-button" data-width="208px" data-show-count="false">Follow @smountcastle</a>
+  
+</section>
+
+
+<section>
+  <h1>Currently Reading</h1>
+  <p> 
+    1451648537
+    <br />
+    1451648537 by
+    1451648537
+  </p>
+  <h1>Recent Reads</h1>
+  <ul id="recent_reads">
+    
+      <li class="post">
+	<p> 
+	  055357342X
+	  <br />
+	  055357342X by
+	  055357342X
+	</p>
+      </li>
+    
+      <li class="post">
+	<p> 
+	  0553381695
+	  <br />
+	  0553381695 by
+	  0553381695
+	</p>
+      </li>
+    
+      <li class="post">
+	<p> 
+	  0553386794
+	  <br />
+	  0553386794 by
+	  0553386794
+	</p>
+      </li>
+    
+  </ul>
+</section>
+
+Included file &#8216;asides/googleplus.html&#8217; not found in _includes directory
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Sean Mountcastle -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+  <br />
+  <a href="https://twitter.com/smountcastle" class="twitter-follow-button">You should follow me on Twitter</a>
+</p>
+
+<script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
+
+</footer>
+  
+
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-378484-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+  
+
+  
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+</body>
+</html>

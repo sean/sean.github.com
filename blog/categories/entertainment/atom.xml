@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Entertainment | Sean Mountcastle]]></title>
+  <link href="http://sean.github.com/blog/categories/entertainment/atom.xml" rel="self"/>
+  <link href="http://sean.github.com/"/>
+  <updated>2012-08-16T00:11:34-04:00</updated>
+  <id>http://sean.github.com/</id>
+  <author>
+    <name><![CDATA[Sean Mountcastle]]></name>
+    <email><![CDATA[smountcastle@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Dr. Horrible]]></title>
+    <link href="http://sean.github.com/blog/2008/07/18/dr-horrible/"/>
+    <updated>2008-07-18T19:23:51-04:00</updated>
+    <id>http://sean.github.com/blog/2008/07/18/dr-horrible</id>
+    <content type="html"><![CDATA[<p>NPR's <a href="http://wamu.org/programs/atc/">All Things Considered</a> had a <a href="http://www.npr.org/templates/story/story.php?storyId=92678153">nice
+story</a> on
+<a href="http://drhorrible.com/">Dr. Horrible</a> tonight. This enjoyable,
+currently web-only, musical was produced during the writers' strike last
+year by Joss Whedon. I highly recommend catching it while you still can.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[On Desire]]></title>
+    <link href="http://sean.github.com/blog/2007/07/08/on-desire/"/>
+    <updated>2007-07-08T22:14:49-04:00</updated>
+    <id>http://sean.github.com/blog/2007/07/08/on-desire</id>
+    <content type="html"><![CDATA[<p><a href="http://seanmountcastle.com/wp-content/uploads/2007/07/pbarnett.png" title="Paul Barnett"><img src="http://seanmountcastle.com/wp-content/uploads/2007/07/pbarnett.thumbnail.png" alt="Paul
+Barnett" /></a></p>
+
+<p>Last week, I was fortunate enough to be one of the few folks who
+attended the <a href="http://games.groups.yahoo.com/group/igda_dc_chapter/">Northern
+VA</a>
+<a href="http://www.idga.org/cgi-bin/templates/single.html?topic=329">IGDA</a>
+meeting where <a href="http://www.warhammeronline.com/english/behindTheScenes/meetTheTeam/paulBarnett.php">Paul
+Barnett</a>
+spoke to us about <em>desire</em>. Specifically what you can and cannot control
+to influence your customers into buying your product (in his case a
+subscription to a MMORPG). That is, to make them <em>desire</em> your product.
+To warm up he spoke about the utility of mind maps and suggested reading
+Tony Buzan's book on Mind Maps. While speaking about mind maps, he
+hinted at the mind map he drew on the board in preparation for his talk.
+As background, for those who may not know what <a href="http://www.warhammeronline.com/">Warhammer: Age of
+Reckoning</a> (WAR) is, Paul explained
+that it is <strong>not</strong> a computer game. As Paul sees it, computer games are
+like "washing powder" (laundry detergent) in that it is a product which
+is made, shipped and forgotten about. Next week there is always a better
+version of washing powder on the market (new, improved, etc), to the
+point where it seems like just weeks ago we were essentially washing our
+clothes in dirt. WAR, in contrast, is a hobby game. As a hobby game it
+requires skill, commitment and imagination. Hobbies are
+self-obsessed/self-indulgent; a very personal endeavor. And WAR is not
+just a game that is shipped and forgotten. Since it is a massively
+multiplayer online game, the developers must constantly work to improve
+the game while the customer service team resolves issues and others work
+to lead in-game special events. EA Mythic is providing an experience
+with WAR (as is Blizzard with World of Warcraft, aka WoW). Getting back
+to the topic of the evening, Paul spoke of the three thwarts to your
+product:</p>
+
+<ol>
+<li><strong>Acts of God</strong>. These are causes that you have no control over, so
+you shouldn't try to overcome them. Examples included loss of
+internet, loss of life, bankruptcy, etc.</li>
+<li><strong>Your own fault</strong>. These are causes that you have total control
+over which you can mitigate with planning, investment and training.
+Examples included unstable code/servers, bad download experience,
+bad customer service, bad install experience, etc.</li>
+<li><strong>Not any good</strong>. These are causes that you have control over which
+are extremely difficult to mitigate. You cannot just plan to have a
+good game or invest in a good game. This is extremely subjective,
+what one person thinks is great someone else may believe to be total
+crap. Examples included balancing the game, making it engaging,
+building a sense of community, etc.</li>
+</ol>
+
+
+<p><a href="http://seanmountcastle.com/wp-content/uploads/2007/07/board.jpg" title="board.jpg"><img src="http://seanmountcastle.com/wp-content/uploads/2007/07/board.thumbnail.jpg" alt="board.jpg" /></a></p>
+
+<p>Once you've built-up desire for your product you have to maintain it.
+Paul stated that desire is eroded at audit points. Audit points are
+times when the customer takes stock of their experience and consciously
+chooses to continue paying you money or not. He compared audit points to
+the form of interrogation where-by a person's head is held under water
+for a period of time and then pulled out -- those points when the person
+comes up gasping for air are audit points. You have to keep people away
+from audit points. Each of the thwarts mentioned above cause audit
+points. Thus when you balance (or nerf) the game, you've just changed
+the user's experience and thus inserted an audit point. In addition,
+when you release an expansion pack or a patch, it causes an audit point
+as the user must choose whether or not to go out and purchase the
+expansion pack which allows them access to new locations/adventures
+taking them out of their comfort zone within the game. That's all well
+and good, but how do you actually build desire for your product in the
+first place? Paul believes that you must plan and invest in several
+areas prior to the launch of your product. You should have transparent
+communication from the very beginning (see <a href="http://www.warhammeronline.com/english/behindTheScenes/vidPhoneDiaries/index.php">Paul's video
+blog</a>
+along with <a href="http://www.warhammeronline.com/english/behindTheScenes/developmentDiaries/index.php">developer
+interviews/podcasts</a>
+and other behind the scenes material). You also need to build a sense of
+community so that your customers and prospective customers feel part of
+a greater whole. In this regard, EA Mythic has created <a href="http://www.warhammeronline.com/english/community/fansiteKit/">kits for fan
+sites</a>,
+<a href="http://www.warhammeronline.com/english/community/forumsFansites/">forums</a>
+on their website, special <a href="http://www.warhammeronline.com/english/community/eventsCalendar/">promotional
+events</a>
+and materials, etc. Another way to build desire is to ensure that your
+product provides a sense of progression. This is very similar to the
+notions espoused by <a href="http://headrush.typepad.com/creating_passionate_users/">Kathy
+Sierra</a> around
+helping your users kick ass. At the end of his talk, Paul mentioned the
+'innovator's dilemma', specifically evolution vs. revolution. He
+estimated that new products can only support 2-3 innovations per
+release, any more would simply overwhelm the market. For a product like
+his, he gave examples like a unique HUD, unique control scheme,
+completely different questing system, etc. In a related vein, he spoke
+about 'crossing the chasm', loosely related to Geoffrey Moore's book
+which discusses bridging the gap between the early adopters and the
+early majority (the pragmatists). Paul's example was that of setting for
+the game, fantsy vs. science fiction. His argument was that people can
+relate to better to a fantasy world as everyone knows about cutting
+enemies down with swords or clubbing them but shooting blaster cannons
+or instaneous space travel, which don't exist in real life, take more of
+a leap. Personally, I'm not sure that's the reason why most Sci-Fi MMOs
+are having a difficult time but he's certainly entitled to his opinion.
+Overall, Paul's talk was quite enjoyable (in no small part to his
+bitingly sarcastic British humor) and he has definitely made some
+interesting observations, though it would seem that many are widely
+known outside of the "game development" community. I look forward to
+hearing more from Paul and the team at EA Mythic and will be keeping an
+eye on the development of WAR.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The Venture Bros.]]></title>
+    <link href="http://sean.github.com/blog/2007/02/20/the-venture-bros/"/>
+    <updated>2007-02-20T20:58:35-05:00</updated>
+    <id>http://sean.github.com/blog/2007/02/20/the-venture-bros</id>
+    <content type="html"><![CDATA[<p><a href="http://www.adultswim.com/shows/venturebros/"><img src="http://seanmountcastle.com/wp-content/uploads/2007/02/venturebros.png" alt="image" /></a>
+I've been meaning to write about <a href="http://www.adultswim.com/shows/venturebros/">The Venture
+Bros.</a> since I found out
+about them over lunch during my interview at EA Mythic. I think that the
+series is quite funny and have been enjoying it ever since I first heard
+about it. Though I have seen reviews on the 'net which complain that the
+show is infantile, others compare it to <em>South Park</em> and <em>The Simpsons</em>
+as well as <em>Johnny Quest</em>. The last comparison is apt as that is where
+Venture Brothers draws its inspiration, though all aspects of popular
+culture are referenced in the shows. My personal favorite episode thus
+far is <a href="http://en.wikipedia.org/wiki/Twenty_Years_to_Midnight">Twenty Years to
+Midnight</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Interviewing at EA Mythic]]></title>
+    <link href="http://sean.github.com/blog/2006/12/10/interviewing-at-ea-mythic/"/>
+    <updated>2006-12-10T23:11:19-05:00</updated>
+    <id>http://sean.github.com/blog/2006/12/10/interviewing-at-ea-mythic</id>
+    <content type="html"><![CDATA[<p>Ever since I started playing video games at an early age, I always
+wanted to develop them. I had my first taste of this in grade school
+when I figured out how to modify some of my favorite games by editing
+the data files in a hex editor. In high school, I bought myself a copy
+of Borland Turbo Pascal (and then later Turbo C++) and taught myself how
+to program--building rudimentary games. For college, my mother really
+wanted me to become a lawyer so I decided that the best way to get there
+was to major in political science. While I did well, I just wasn't
+really interested in it. So in my junior year I changed my major to
+computer science. Of course, I had already chosen my university based on
+their reputation for political science and law and as such the computer
+science curriculum wasn't the best. Since freshman year I had been
+running a <a href="http://en.wikipedia.org/wiki/MUD">MUD</a> (I had to finagle an
+account on the engineering Ultrix machines as I wasn't in the School of
+Engineering--we also weren't supposed to be running servers either but I
+had some crafty ways to hide my work from the TAs). In my junior year I
+built a raycasting engine and a simple FPS (similar to <a href="http://en.wikipedia.org/wiki/Wolfenstein_3D">Wolfenstein
+3D</a>). While I continued to
+follow the game industry and read-up on the newest techniques from folks
+like Michael Abrash, John Carmack, Andre LaMothe, etc. my foray into
+game development was still-born. In my senior year I took an internship
+at the Naval Research Lab and was pigeon-holed into telecommunications
+from that point on (I believe I've finally escaped, though I'm currently
+working on some very interesting and vital Internet infrastructure).
+Anyway, you didn't come here to read about me and my failed attempts at
+game development, you want to know about interviewing at EA's Mythic
+Studio in Fairfax, VA. Home to Dark Age of Camelot (DAoC) and the
+upcoming Warhammer Online: Age of Reckoning (WAR). Back in July, I
+contacted my friend Scott who works at <a href="http://www.bluefang.com/">Blue Fang
+Games</a> in Waltham, MA to find out if he knew
+anyone at <a href="http://www.mythicentertainment.com/">Mythic Entertainment</a>.
+Fortunately he did, his friend Ralph, an artist at Mythic, was able to
+put me in touch with the CTO, Matt. At this time they were still in
+transition due to the acquisition of Mythic by Electronic Arts so Matt's
+email address changed and communication was difficult. I continued to
+persevere until Matt agreed to bring me in for an interview at the end
+of August. It was an all day interview (from 10am until 5pm), which I
+was glad for--I really dislike it when companies only speak to you for
+an hour or two; it's just not enough time to assess someone. Knowing the
+culture at the company I didn't wear a suit and tie to my interview, but
+khaki pants and a button-down shirt thinking that I should at least
+dress somewhat nicely to the interview (even this elicited a mixed
+response, which I'll speak about later). When I arrived at Mythic, Matt
+(the CTO) came out to greet me and spoke with me for a short while about
+why I wanted to become a game developer, my professional experience and
+skills. He then walked me over to speak with Darren who is essentially
+the director of operations for Mythic, managing their datacenters and
+ensuring that the hardware and network are operating. One of his direct
+reports, Andrew, was in his office so they decided to tag-team interview
+me--which I didn't mind. Darren explained his role, the machines in
+their co-lo out in Ashburn and their pipe to the internet. Andrew
+quizzed me about various programming languages and had me explain my
+most recent project at Cisco. I brought up Ruby and tried to make a case
+for it increasing their productivity in operations through the use of
+scripts and custom web apps to help manage and monitor their systems.
+Andrew was already using Python and had done some of this already
+(though not to the extent I had envisioned) and didn't see the need to
+learn yet another programming language. Granted Python and Ruby are
+equivalent enough that one or the other is suitable for these type of
+scripts/apps. Matt had thought that the best fit for me would be here in
+the operations group since I did not have any professional game
+development experience. Next I met with Ed who works on the WAR game
+server. He explained that one of his biggest problems was NPC
+path-finding and that they were evaluating a new library from a company
+in Europe (France, I think). But even that wouldn't scale to the number
+of NPCs they have in a shard. He showed me the 'tools' they used to
+design spells and NPC behavior--basically an Excel spreadsheet that the
+game designers fill in that gets imported into the game server. I left
+with some ideas on how to improve these tools quite a bit (using a DSL
+written in Ruby that would be easy for the designers to write spells and
+behaviors in or a Rails app which used Script.aculo.us for drag-and-drop
+building of spells/NPC behavior from basic building blocks). Following
+my meeting with Ed, the team took me out to lunch where I made a pretty
+big mistake--instead of talking about games the whole time, I admitted
+that I had to pack-up my PS2 over a year ago because my toddler kept
+grabbing at the cords and opening the game cases. One good thing that
+did come out of lunch is that I learned about <a href="http://www.adultswim.com/shows/venturebros/">The Venture
+Bros.</a>, the best cartoon on
+TV. I think it's absolutely hilarious and I've been recommending it to
+all of my friends ever since. When I got back to the office, they
+introduced me to Brian who also worked on the WAR game server. I had a
+great conversation with him and liked him quite a bit. He has been
+working at Mythic (or Interworld Productions as it was known at the
+time) since their first MUD, Dragon's Gate. What I found interesting
+about Brian was that he had been working there since high school and had
+no formal computer science background (though he said he was working on
+his degree at GMU). An interesting tidbit that I learned from Brian is
+that for all of the games Mythic has released, the server-side codebase
+is derived from Dragon's Gate--they just keep adding functionality to it
+over the years and try to patch over the brittle parts. After speaking
+with both Ed and Brian, I was very excited about working on the WAR game
+server and thought this was the group I could quickly contribute to.
+Next they had me speak to another developer named Matt (not the CTO). At
+first, I had mistakenly though he was in the operations group working
+with Andrew and Darren. Matt works on the game server for DAoC which
+appears to be in a sustaining mode. Following the interview, I was still
+not clear on what work needed to be done on DAoC. I think this was one
+of my worst interviews at the company as there seemed to be a lack of
+understanding between us--the questions he was asking me were not at all
+clear (perhaps that was the point), so I tried my best to tease more
+information out of him and answer them to the best of my ability. As
+sort of an afterthought they had me speak to Marty, another game server
+developer on DAoC who said his background was on the client side (3D
+Windows application programming). He was the most hostile towards me and
+also the most frank. He was appalled by the fact that I had packed up my
+PS2 to prevent my children from breaking it--he explained that if he
+were in that position he would tell his wife to take the kids away so he
+could play (the way he said this made me feel sorry for his family).
+According to Marty they are only looking for folks who've worked in the
+game industry before or are hard-core gamers (at the expense of all
+else, he recounted the personal sacrafices he made to get into
+Mythic--essentially commuting up to Northern VA on Monday, staying for
+the week and commuting back to his family for the weekend). His
+rationale for preferring hard-core gamers was reasonable--he explained
+that in design meetings they typically referred to other games and this
+shared knowledge of the details of games (through having played them)
+allowed the team to come to consensus much sooner. He used <a href="http://www.elderscrolls.com/games/oblivion_overview.htm">Elder
+Scrolls
+Oblivion</a> as an
+example, but couldn't remember the name of the game (which I had to
+remind him of). So while I stay up-to-date on the latest games, actually
+having played them helps to build this shared gaming culture. Marty also
+thought that I was way over-dressed for the interview (in khaki pants
+and a button down shirt), he was wearing a t-shirt and shorts and I
+thought I should've worn something more casual. I tried to explain to
+him that this was a job interview and that I wanted to make a good
+impression but it had the reverse effect on him. Finally I had a sort of
+exit interview with Matt (the CTO) who asked for my impression of the
+team and the company (which was good) and he gave me a tour of the area
+surrounding the art team for WAR. The art on the walls there is simply
+amazing and having been a huge fan of Warhammer it was a real treat. At
+this time he also explained to me why <a href="http://en.wikipedia.org/wiki/Mythic_Entertainment#Presently">Imperator
+Online</a> was
+cancelled--it just wasn't fun for them when they played through it.
+MMO's with guns are really hard to balance and after many months of
+development the game just wasn't coming together. Matt also confirmed
+that WAR would be released on both the PC and the Xbox 360 (the latter
+of which he recommended I get, instead of the PS3 or Wii). Matt was most
+concerned about my salary at Cisco, constantly assuring me that they
+would be unable to me it. I explained that I was willing to take a bit
+of a pay cut for the opportunity to work as a game developer on
+Warhammer. I left with mixed feelings, not sure whether I would be
+offered a position at Mythic. I was quite surprised that I wasn't given
+any form of coding test. Following Labor Day weekend, I heard back from
+Matt that they decided not to offer me a position, here's the content of
+his email:</p>
+
+<blockquote><p>After a lot of consideration, we don't think it is a good fit for you
+here at Mythic. You obviously are very talented at what you do, with
+our limited position slots available here; we would like to fill them
+with individuals with game job experience if possible. Take care, we
+wish you the best with your future endeavors.</p></blockquote>
+
+<p>Having gone through this experience and done quite a bit of research,
+I've come up with the following tips for interviewing at EA Mythic, or
+any game developer:</p>
+
+<ul>
+<li>If you don't have any game industry experience, create your own by
+making your own game. Go through the entire process and complete
+it--don't show off a half finished game.</li>
+<li>If you're not a rabid gamer, become one. At lunch talk about your
+favorite games, why they are your favorites, what new games you're
+looking forward to, etc. Here they're looking for passion. The
+thought is if your passionate about games, your passion will show in
+your work (and you'll be willing to work 80-100 hours during crunch
+time, the two or so months prior to release).</li>
+<li>Don't try to push any new technology or programming language during
+your interview. Once you've gotten the job you can then try to
+effect change. Instead show how your skills can work within the
+existing situation to improve it. This is true of basically any
+job--it's naive to think that you know better than they do after
+having worked in the domain for so long. Though the game industry in
+particular appears to be quite insular and has only recently started
+switching to tools, processes and procedures that have been shown to
+work well in software development projects.</li>
+<li>Provide specific examples of how you can contribute to the team. You
+need to sell yourself to them.</li>
+<li>Research the company and culture as much as possible prior to the
+interview. I did quite a bit of research about Mythic before
+interviewing and knew a lot about the founders and the products, but
+I didn't know that much about the culture. I should've used Ralph
+(my friend's friend) to find out more prior to my interview.</li>
+<li>And, of course, they're looking to see that you can communicate with
+them and that you're not a total jack-ass. Remember, we're dealing
+with real people, treat them the way you wish to be treated. Even
+though Marty was rather hostile to me during my interview, I still
+treated him with respect and answered his questions honestly. Having
+hobbies you can talk about in a lunch setting may also be good, but
+the lives of the guys I spoke to seemed to revolve around games and
+television (not really what I'd consider hobbies).</li>
+</ul>
+
+
+<p>If you have any additional tips/tricks for landing a job as a game
+developer, please post them in the comments.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Switched from Cox Cable to Verizon FiOS TV]]></title>
+    <link href="http://sean.github.com/blog/2006/11/22/switched-from-cox-cable-to-verizon-fios-tv/"/>
+    <updated>2006-11-22T17:25:55-05:00</updated>
+    <id>http://sean.github.com/blog/2006/11/22/switched-from-cox-cable-to-verizon-fios-tv</id>
+    <content type="html"><![CDATA[<p>Even though I was the first person in my neighborhood to sign-up for the
+uber-fast Verizon FiOS internet service (15Mbps downstream/2Mbps
+upstream), I've been waiting to see how their TV offering fared before
+switching. This past weekend I finally took the plunge. I decided to get
+the <a href="http://broadband.motorola.com/catalog/productdetail.asp?ProductID=446">Home Media
+DVR</a>
+along with the basic set-top box so that we could watch DVR content from
+anywhere in the house. That with the basic and movie package ends up
+being $18 less than my service with Cox (which doesn't include a movie
+package). Since I don't watch too much TV and my wife can live without
+it, we decided against the HBO package. When the Verizon tech arrived
+(3/4 of the way through the 8am to 5pm time window they provided), he
+quickly went to work switching the cable connection outside of the house
+from Cox to Verizon's AFC ONT. Once that was done he brought the two new
+set-tops inside along with the remotes (as it happens the remotes are
+almost identical to the Cox DVR remotes made by Scientific Atlanta).
+Before setting up the DVR box he asked where my Verizon wireless router
+was--I happily obliged by going down to the basement and getting the
+still sealed box that the router came in. Unfortunately, the DVR
+requires the use of the Dlink router--which I refused to install as I'm
+running custom software on my LinkSys WRT54GL. Thankfully the technician
+had a Motorola cable modem in his truck which he was able to use
+instead. Once that was sorted out, it was a simple matter of swapping
+out the existing Cox Scientific Atlanta set-tops for Verizon Motorola
+set-tops. The picture quality is great, though we have no HD TVs in our
+household so my impression matters little to you hard-core TV watchers.
+I will say that the enhanced program guide is going to take some getting
+used to after using Cox's for so long. It's not that one is better than
+the other, just different. The DVR definitely needs some work. The gold
+standard by which I judge DVRs is, of course, TiVo and both Cox and
+Verizon have a long way to go--but the experience provided by Cox is
+better than Verizon at this point. Granted, I've seen numerous updates
+to the DVR software rolled out by Cox during my years of service with
+them (they didn't even have a season pass feature when I first received
+it). So if you compare Verizon's DVR to Cox's initial DVR, Verizon comes
+out on top. One huge difference between the Cox DVR and Verizon's is the
+space. Verizon has a 160 GB hard disk while Cox only has 40 GB.
+Recording shows on a one-shot basis is trivial with Verizon as is
+recording every single instance of that show, but it gets tricky with
+way too many button presses to record just the new episodes of a
+particular show. My co-worker, who recently switched from Verizon's DVR
+to a Series 3 TiVo with dual cable cards, complained that deleting shows
+took too many button presses, but I've not found this bothersome
+(probably because I'm coming from Cox's DVR and not TiVo). The home
+media option, which allows you to watch DVR content in other rooms on
+the standard set-top boxes is in desperate need of an upgrade. You
+cannot even fast forward through recorded content on a remote set-top!
+Just fixing this one issue would significantly improve the experience.
+The "on demand" content available through Verizon appears to be much
+greater in size and scope than what we had with Cox. Though this may be
+colored by the fact that with the movie package you get access to Starz,
+Showtime, TMC and a few other channels worth of movies, original series,
+specials, etc. Overall, I'm happy with the switch; especially because
+the service is comprable if not slightly better and it's saving me a bit
+of money each month. <strong>Updated 2006-11-24</strong>: I called Verizon about the
+issue of not being able to fast forward DVR content on the remote
+set-top and they refreshed both boxes which resolved the issue. So my
+biggest complaint about the service has been resolved. Yay!</p>
+]]></content>
+  </entry>
+  
+</feed>

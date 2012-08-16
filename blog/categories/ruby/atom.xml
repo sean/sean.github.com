@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Ruby | Sean Mountcastle]]></title>
+  <link href="http://sean.github.com/blog/categories/ruby/atom.xml" rel="self"/>
+  <link href="http://sean.github.com/"/>
+  <updated>2012-08-16T00:11:34-04:00</updated>
+  <id>http://sean.github.com/</id>
+  <author>
+    <name><![CDATA[Sean Mountcastle]]></name>
+    <email><![CDATA[smountcastle@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[RubyNation 2008]]></title>
+    <link href="http://sean.github.com/blog/2008/08/08/rubynation-2008/"/>
+    <updated>2008-08-08T08:11:35-04:00</updated>
+    <id>http://sean.github.com/blog/2008/08/08/rubynation-2008</id>
+    <content type="html"><![CDATA[<p><img class="left" src="http://www.rubynation.org/images/conference/badges/ruby_attendee.png"></p>
+
+<p>Last weekend (Friday and Saturday), I attended <a href="http://www.rubynation.org/">RubyNation</a> 2008, the first regional Ruby conference in my area. The speakers were excellent and it was great to meet up with folks from the Ruby community who I haven't seen in awhile. As always, I left feeling energized and excited about my Ruby projects.</p>
+
+<p>There were two main themes of the conference: the 'official' one was <em>Ceremony vs. Essence</em>, while the 'unofficial' one was <em>Test all the fucking time</em>. The first theme was the subject of the opening and closing keynotes. The second came from Bryan Liles lighting talk on the first day and kept coming up afterwards (audience 'hecklers' would ask presenters how often they should test).</p>
+
+<h2>Agenda</h2>
+
+<hr />
+
+<table>
+<tr><td>Welcome to RubyNation</td><td>Gray Herter</td></tr>
+<tr><td>Opening Keynote: Ceremony vs. Essence</td><td>Neal Ford</td></tr>
+<tr><td>DSLs and Ruby: Blurring the Lines Between Programs And Data</td><td>Russ Olsen</td></tr>
+<tr><td>The Culture of Innovation in Ruby</td><td>Glenn Vanderburg</td></tr>
+<tr><td>Living on the Edge</td><td>Yehuda Katz</td></tr>
+<tr><td>Lightning Talks</td><td>Chris Bucherre, Bryan Liles</td></tr>
+<tr><td>Archaeopteryx: A Ruby MIDI Generator</td><td>Giles Bowkett</td></tr>
+<tr><td>Welcome, Day 2</td><td>David Keener</td></tr>
+<tr><td>Keynote: Ruby, A Retrospective</td><td>Rich Kilmer</td></tr>
+<tr><td>Ruby Puzzlers</td><td>Mike Furr</td></tr>
+<tr><td>Pratical JRuby</td><td>David Keener</td></tr>
+<tr><td>Tools for Your Ruby Toolbox</td><td>Dave Bock</td></tr>
+<tr><td>Lightning Talks</td><td>Soren Burkhart, Glenn West, Jesse Shock, Yehuda Katz, Bryan Liles</td></tr>
+<tr><td>Closing Keynote: Bad Ruby</td><td>Stuart Halloway</td></tr>
+</table>
+
+
+<hr />
+
+<p>Neal Ford's talk on <em>Ceremony vs Essence</em> was one of the best talks of the conference and a great way to kick it off. He criticized our industry for failing to look backwards and leveraging the lore of the past. Then he proceeded to look even further back discussing <a href="http://en.wikipedia.org/wiki/Plato">Plato's</a> doctrine of ideas, <a href="http://en.wikipedia.org/wiki/Aristotle">Aristotle's</a> essential properties vs accidental properties, <a href="http://en.wikipedia.org/wiki/Galileo">Galileo's</a> use of experimentation to verify ideas, and <a href="http://en.wikipedia.org/wiki/William_Occam">William Occam's</a> principle that the explanation of any phenomenon should make as few assumptions as possible (KISS). Don't confuse essential complexity (we have a hard problem to solve) vs accidental complexity (we've made the problem hard to solve). Some of the new patterns he presented were:</p>
+
+<ul>
+<li>Chicken Cognition: no memory, can't learn from your mistakes</li>
+<li>Frozen Caveman: burned by something and was flash frozen at that point in time, everything revolves around that issue</li>
+<li>Rubik's Cubicle: love to solve puzzles, not real issues</li>
+</ul>
+
+
+<p>During his keynote, Neal suggested learning from the lore of our past by reading classics like 0201835959, 013476904X, 020161622X.</p>
+
+<p>Next up was Russ Olsen who gave a talk about DSLs, both external and internal. Domain specific languages continue to be a hot topic in Ruby and the developer community in general. Ruby is very well suited to both external DSLs (involving a parser) and internal DSLs (use the Ruby parser and build language infrastructure). Ruby is great for DSLs because it doesn't require parenthesis or semi-colons, it supports procs, the reflection capabilities (method_missing, instance_eval, etc), etc. Rich Kilmer called DSL building, syntax driven development.</p>
+
+<p>Glenn Vanderburg presented on the culture of innovation within the Ruby community. The Ruby community is seeing so much innovation because Rubyists are novelty junkies, the languages opens possibilities that deserve to be explored, the requirement to integrate with IDEs is hampering innovation in Java (Java developers won't use it until it's integrated within their IDE), and things are just easier to accomplish in Ruby (low ceremony). He said that sometimes its good to start over as being forced to reinvent can be an opportunity. To close out his talk he did have a warning: <strong>When learning new things costs are easier to spot than benefits, but when inventing new things benefits are easier to spot than costs.</strong></p>
+
+<p>Yehuda Katz from Engine Yard spoke about living on the edge. As an aside, it appears that <a href="http://engineyard.com/">Engine Yard</a> is trying to be a mini-Google in that they appear to have hired many of the top Rubyists as well as some very savvy operations folks. Yehuda said that we should expect <a href="http://merbivore.com/">Merb</a> 1.0 by the end of summer, introduced the <a href="http://datamapper.org/">DataMapper</a> ORM, <a href="http://www.infoq.com/news/2008/07/yard-documentation-generator">YARD</a> (a replacement for rdoc), and <a href="http://github.com/jbarnette/johnson/tree/master">Johnson</a> (a JavaScript/Ruby bridge). <strong>He urged those present to take the time to think things through and not rush an API (or software) out.</strong></p>
+
+<p>During the Lightning Talks we heard from Chris Bucchere about <a href="http://www.thebdgway.com/">BDG</a>'s social network for conferences; David James of Community Goals about state machines, Simon Kaczar of Prognosoft about libncurses-ruby, and <a href="http://smartic.us/">Bryan Liles</a> about testing (where the meme <em>test all the fucking time</em> appeared). Bryan's was one of the best talks of the conference, I highly recommend seeing him present.</p>
+
+<p>The first day closed with <a href="http://gilesbowkett.blogspot.com/">Giles Bowkett's</a> presentation on Archaeopteryx (a Ruby MIDI generator). The music it generated (through <a href="http://www.propellerheads.se/products/reason/">Reason</a>) was pretty good. The software makes heavy use of lambda functions and so Giles has aliased lambda to L to reduce typing. His talk covered a wide range of topics and there's no way I can do it justice. Hopefully he'll have it recorded (since he's given the presentation a few times now) and post it on the 'net.</p>
+
+<p>The second day opened with Rich Kilmer of <a href="http://www.infoether.com/InfoEther/Home.html">InfoEther</a> who provided a look back at the early days of Ruby (from his involvement in 2001), the conferences, and all of the various projects he's worked on with Ruby. Rich always has fun stories to tell and I enjoyed his talk immensely. I won't go through the entire chronology, but he ended by stating that the community needs to develop tools to deal with the dynamic nature of Ruby in order for wider adoption of the language, though he did note that Ruby is becoming mainstream. He also announced <a href="http://www.macruby.org/trac/wiki/HotCocoa">HotCocoa</a>, a DSL for Cocoa application development.</p>
+
+<p>Mike Furr spoke about issues he encountered when writing a Ruby parser for his <a href="http://www.cs.umd.edu/~jfoster/ruby.pdf">DRuby</a> project. These were somewhat interesting traps, pitfals, and corner cases for where the language is ambiguous. His slides are available <a href="http://rubynation.nowgetsocial.com/images/material/11M5676.pdf">here</a> so you can see specific code examples.</p>
+
+<p>David Keener walked through installing, configuring and running JRuby. Unfortunately, I have no interest in JRuby. I started working with it at my previous job to add Ruby scripting to a Java application, but since I no longer program in Java nor have an operational environment that is setup to deploy Java, I just don't care.</p>
+
+<p>Tools for your Ruby toolbox by <a href="http://codesherpas.com/">David Bock</a> was an interesting tour of three Ruby projects: <a href="http://staticmatic.rubyforge.org/">StaticMatic</a>, <a href="http://sinatra.rubyforge.org/">Sinatra</a>, and <a href="http://www.ruby-doc.org/stdlib/libdoc/gserver/rdoc/index.html">GServer</a>. StaticMatic looked interested for static website development, but then Mike Clark <a href="http://clarkware.com/cgi/blosxom/2008/08/06#Webby">wrote</a> about <a href="http://webby.rubyforge.org/">Webby</a> and it looks even better. Sinatra appears to be a very light weight alternative to Rails and in combination with a static web site tool like StaticMatic or Webby could be extremely useful. GServer is a generic server which takes some of the pain out of setting them up. Dave's an engaging speaker and I always enjoy his presentations as well as speaking with him in the hallways at conferences.</p>
+
+<p>The second day of Lightning Talks was even better than the first. Soren Burkhard from <a href="http://hawaiibcllc.com/">Hawaii Business Consulting</a> had a great overview of starting your own business. <a href="http://mentalpagingspace.blogspot.com/">Glenn West</a> spoke about several Rails plugins that he uses on a regular basis: ActiveScaffold, Role Requirement, ActiveAuthentication, File_column, PDFtoRuby, DotR, and Tabnav. Jesse Shock from Engine Yard spoke about high availability planning: multiple sites, geographic diversity, data partitioning, sharding, etc. He said you need to establish costs up front so the customer knows which availability techniques they can afford. Yehuda Katz, also from Engine Yard, spoke about testing (in the context of Merb) and how you should use BDD for internal as well as external interfaces. The last of the lightning talks was by Bryan Liles on how to be a manager, his slides are available <a href="http://smartic.us/assets/2008/8/5/smarticus_guide_to_being_the_boss.pdf">here</a>.</p>
+
+<p>Finally, Stu closed out the conference with a talk on bad Ruby. Overall, Ruby is good but that there are some bad practices/decisions that could come back to bite us later as Ruby adoption grows. Some of the examples he provided were: constants (you can't change them so testing becomes difficult), class attributes (prefer instance attributes on the eigenclass), direct access of instance variables, and proc workarounds (e.g. passing more than one block to a method). The code examples from his talk are available <a href="http://github.com/stuarthalloway/bad-ruby/tree">here</a>.</p>
+
+<p><a href="http://www.luisdelarosa.com/">Luis de la Rosa</a> was kind enough keep track of all of the URLs that folks were throwing around and has posted them here:
+- delicious:
+  <a href="http://delicious.com/tag/rubynation">http://delicious.com/tag/rubynation</a>
+- magnolia:
+  <a href="http://ma.gnolia.com/tags/rubynation">http://ma.gnolia.com/tags/rubynation</a></p>
+
+<p>Overall, it was a great conference and I look forward to next year's RubyNation in June 2009.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Protecting Your Ruby Source Code for End User Applications]]></title>
+    <link href="http://sean.github.com/blog/2007/12/15/protecting-your-ruby-source-code-for-end-user-applications/"/>
+    <updated>2007-12-15T17:54:41-05:00</updated>
+    <id>http://sean.github.com/blog/2007/12/15/protecting-your-ruby-source-code-for-end-user-applications</id>
+    <content type="html"><![CDATA[<p>If you want to distribute your Ruby applications while still protecting
+your intellectual property you could use an obfuscation tools such as
+<a href="http://blog.zenspider.com/archives/2006/07/zenobfuscate_no.html">ZenObfuscate</a>
+or try to write your own. But in this article, I'm going to show a
+different approach that's been used by several different companies
+producing commercial products written in Ruby. The method is not
+specific to Ruby and should work for any interpreted language in which
+you need to distribute your source code with the application.</p>
+
+<p>The secret is to encrypt your Ruby source, store it in a database and
+then modify the Ruby interpreter to look for your code in the database
+and decrypt it on the fly. I should note that there is no way to
+completely protect a product which is distributed to your
+customers--with enough diligence any security measures can be broken.</p>
+
+<p>These instructions are for Unix operating systems (include MacOS X).
+Unfortunately (or fortunately, for me), I don't own a Windows machine.</p>
+
+<p>If you don't already have Berkeley DB (BDB) installed on your system you
+can download it
+<a href="http://www.oracle.com/technology/software/products/berkeley-db/index.html">here</a>.
+You will need to follow the instructions which come with BDB which
+explain how to build and install it. Originally, I was going to use
+<a href="http://openssl.org/">OpenSSL</a> to encrypt our Ruby source code before
+inserting it into the database and decrypt it after retrieving it from
+the database. Thankfully, the latest version of BDB includes
+<a href="http://en.wikipedia.org/wiki/Advanced_Encryption_Standard">AES</a> support
+which allows you to maintain an encrypted database very easily.</p>
+
+<p>You will also need to obtain a fresh copy of the <a href="http://www.ruby-lang.org/en">Ruby source
+code</a> so that we can build our own private
+version which knows how to pull classes out of our BDB instance. So
+let's start by creating a directory for us to work in:</p>
+
+<pre><code>mkdir -p ~/RubyProject/deploy
+</code></pre>
+
+<p>You should unpack the Ruby source in the <em>\~/RubyProject</em> directory
+(this should create directory which looks like
+<em>\~/RubyProject/ruby-1.8.6-p111</em>). Go into that directory and run the
+configure script as follows:</p>
+
+<pre><code>./configure --prefix=~/RubyProject/deploy --with-static-linked-ext
+</code></pre>
+
+<p>This will enable us to build a stand alone Ruby interpreter which has
+everything it needs statically linked in.</p>
+
+<p>To find out where we need to hook in our handler which loads missing
+classes from the database, you can <em>grep</em> through the source code
+looking for const_missing like this:</p>
+
+<pre><code>grep const_missing *.c
+</code></pre>
+
+<p>This turned up two files <em>object.c</em> and <em>variable.c</em>. Looking at the
+output, I could see that the <strong><em>const_missing</em></strong> function is actually
+defined in <em>variable.c</em>. Jumping in, I searched for the code executed
+when a constant cannot be found. This led me to the
+<strong><em>rb_const_get_0</em></strong> function which walks up the class hierarchy
+looking for the specified constant. If it cannot be found, it returns
+the result of the <strong><em>const_missing</em></strong> function. So right before that
+final return, I added the following hook:</p>
+
+<pre><code>    /* At this point we haven't found the class so we must look
+       inside of the BerkeleyDB for it, see dbloader.c */
+    value = load_from_db(id);
+    if (value != Qundef) return value;
+</code></pre>
+
+<p>Now I just had to implement the load_from_db function which should
+look inside of the encrypted BDB instance for the file. Looking at how
+the <strong><em>rb_const_get_0</em></strong> function works, I knew my new method had to
+return a Ruby <em>VALUE</em>:</p>
+
+<pre><code>VALUE
+load_from_db(id)
+     ID id;
+{
+    DBT k;
+    DBT d;
+
+    memset(&amp;k, 0, sizeof(DBT));
+    memset(&amp;d, 0, sizeof(DBT));
+
+    verify_database_state();
+
+    k.data = rb_id2name(id);
+    k.size = strlen(k.data);
+
+    d.flags = DB_DBT_MALLOC;
+
+    if (bdb-&gt;get(bdb, NULL, &amp;k, &amp;d, 0) == 0) {
+      rb_eval_string((const char *)d.data);
+      free(d.data);
+      return rb_eval_string(rb_id2name(id));
+    }
+    return Qundef;
+}
+</code></pre>
+
+<p>You'll note that if we find the class in the database, we first evaluate
+it using <strong><em>rb_eval_string</em></strong>. Since this returns <em>nil</em>, we need
+evaluate the class name so that we can pass back a Ruby <em>VALUE</em>. If the
+class doesn't exist in the database, we return <em>Qundef</em> and
+<strong><em>const_missing</em></strong> gets called as usual.</p>
+
+<p>The <strong><em>verify_database_state</em></strong> function ensures that the password for
+the BDB instance was passed and the database opened so that the
+<strong><em>get</em></strong> call can access it. It is implemented like so:</p>
+
+<pre><code>/* a simple way to obfuscate the password in memory */
+#define A(c)             (c) - 0x1d
+#define ENCRYPT_PWD(str) do { char * p = str; while (*p) *p++ -= 0x1d; } while (0)
+#define DECRYPT_PWD(str) do { char * p = str; while (*p) *p++ += 0x1d; } while (0)
+
+static void
+verify_database_state()
+{
+  /* don't forget to NULL terminate this array! */
+  static char info[] =
+    { A('1'), A('2'), A('3'), A('4'), A('5'),
+       A('6'), A('7'), A('8'), A('9'), A('0'),
+       0 };
+
+  const char * database_file = "data.db";
+
+  if (bdb == NULL) {
+    db_env_create(&amp;bdbenv, 0);
+    db_create(&amp;bdb, bdbenv, 0);
+
+    DECRYPT_PWD(info);
+    bdbenv-&gt;set_encrypt(bdbenv, info, DB_ENCRYPT_AES);
+    ENCRYPT_PWD(info);
+    bdbenv-&gt;open(bdbenv, ".", DB_INIT_MPOOL | DB_CREATE | DB_PRIVATE, 0600);
+    bdb-&gt;set_flags(bdb, DB_ENCRYPT);
+    bdb-&gt;open(bdb, NULL, database_file, NULL, DB_BTREE, 0, 0644);
+  }
+}
+</code></pre>
+
+<p>You'll notice that the password is hard coded into the binary along with
+the location of the BDB instance. If you are going use this code, you'll
+want to change the default password (which needs to match the password
+you used when storing your Ruby source in the database) and perhaps the
+location of the database. To deter those looking to decrypt our Ruby
+source, I've written C macros which performs a transformation on the
+password. It is fairly simple to circumvent, so you should research
+other methods of securely storing passwords within applications.</p>
+
+<p>Finally, you'll need to remember to close the BDB instance before the
+Ruby interpreter exits. To do this we simply open up <em>main.c</em> and add
+the following line immediately following the call to <strong><em>ruby_run</em></strong>:</p>
+
+<pre><code>close_database();
+</code></pre>
+
+<p>The implementation of <strong><em>close_database</em></strong> is trivial, so you can just
+look in the patch I've provided for it.</p>
+
+<p>The patch to the Ruby source code is included in <a href="http://seanmountcastle.com/wp-content/uploads/2007/12/ruby-load-db.zip">this zipped
+attachment</a>
+along with another utility I wrote to load all of your Ruby source into
+the encrypted BDB instance (along with its Makefile). Here is a
+transcript which shows how to use the tools and your new Ruby
+interpreter:</p>
+
+<pre><code>~RubyProject/tools&gt; ./rb_store data.db *.rb
+Enter database password:
+Stored Example (131) bytes
+
+~RubyProject/tools&gt; ./rb_load data.db
+Enter database password:
+Hit CTRL+C to quit.
+Enter a class name: Example
+Found: 
+
+class Example
+  def initialize
+    puts "Hello from the Example class"
+  end
+
+  def aMethod
+    puts "Called aMethod"
+  end
+end
+
+Enter a class name: Foo
+No such class
+Enter a class name: ^C
+
+~RubyProject/ruby-1.8.6-p111&gt; ./ruby -e "e = Example.new"
+Hello from the Example class
+
+~RubyProject/ruby-1.8.6-p111&gt; ./ruby -e "f = Foo.new"
+-e:1: uninitialized constant Foo (NameError)
+</code></pre>
+
+<p>This implementation doesn't deal with multiple classes of the same name
+residing in different directories. Also, the way in which the <em>rb_load</em>
+tool determines the name of the class is rather naive and can screw it
+up. I've wanted to write this for over a year now after hearing <a href="http://richkilmer.blogs.com/">Rich
+Kilmer</a> talk about the way in which
+<a href="http://infoether.com/">InfoEther</a> distributes its Ruby applications. So
+this is more of a proof-of-concept for myself than anything else.
+Hopefully you learned from this tutorial and can put it to good use.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Advanced Ruby Studio]]></title>
+    <link href="http://sean.github.com/blog/2007/12/05/advanced-ruby-studio/"/>
+    <updated>2007-12-05T23:54:04-05:00</updated>
+    <id>http://sean.github.com/blog/2007/12/05/advanced-ruby-studio</id>
+    <content type="html"><![CDATA[<p>Back in July I attended the <a href="http://pragmaticstudio.com/ruby/">Advanced Ruby
+Studio</a> in Reston, VA. At the time I
+had wanted to blog about it but my life suddenly became extremely busy
+and I left my blog to languish for several months. To rectify that, I've
+decided to write up this post providing an overview of the studio and my
+impressions. The instructors for the three day course were <a href="http://pragdave.blogs.pragprog.com/pragdave/">Dave
+Thomas</a> and <a href="http://www.chadfowler.com/">Chad
+Fowler</a>, two elite Ruby programmers (and
+excellent teachers). While I wouldn't consider every topic covered
+during the course advanced, I will say that there was a good mix of
+intermediate and advanced content (and some of the advanced stuff was
+really advanced!)</p>
+
+<p><strong>Day 1</strong></p>
+
+<ul>
+<li>Blocks, Procs, and Closures</li>
+<li>Ruby Internals</li>
+<li>Your Own Private Ruby</li>
+<li>Design in a Dynamic Language</li>
+<li>Types</li>
+<li>Performance</li>
+</ul>
+
+
+<p><strong>Day 2</strong></p>
+
+<ul>
+<li>Metaprogramming</li>
+<li>Creating Domain Specific Languages</li>
+<li>Exotic Control Flow</li>
+</ul>
+
+
+<p><strong>Day 3</strong></p>
+
+<ul>
+<li>Library Organization</li>
+<li>Distributed Programming</li>
+<li>Debugging and Profiling</li>
+<li>Ruby Extras</li>
+</ul>
+
+
+<p>The first day we jumped right into blocks, procs, and closures. At
+first, I thought this would be primarily review for me, but Dave and
+Chad always provide those few extra tidbits which make it interesting.
+From there we delved into the Ruby source code and learned how to
+construct Ruby classes in C code and how to find our way around the Ruby
+source. "Your Own Private Ruby" covered how to build Ruby (with specific
+extensions) and how to manage multiple copies of Ruby on the same
+machine. There were so many goodies in the "Design in a Dynamic
+Language" portion of the day, I don't want to ruin the experience for
+those who haven't attended yet. The second day of the studio was my
+favorite, covering metaprogramming, DSLs, and control flow. There was so
+much material that it's hard to do it justice in a short blog posting.
+The exercises/labs were integral to understanding the material and I'm
+glad the slides and source code were provided as they've turned out to
+be useful references to refer back to. The third day was the 'choose
+your own adventure' day where each of us voted on the topics for the
+day. Even though there seemed to be some interest in JRuby on the first
+day, that topic didn't make the short list for the final day.
+Concurrency also fell by the way-side (though the slides provided
+contained more than enough material on Ruby threads). Distributed
+programming was largely review for me having played with DRb and the
+Rinda tuple space, though the discussion of multicast and the ease of
+dealing with binary protocol using pack/unpack was new and useful to me.
+The primary message regarding library organization is to follow the
+conventions set forth by Rails, though this was the portion of the class
+where we packaged our own gem and served it up to classmates. Debugging
+and profiling Ruby applications was partially review, having used
+benchmark, ruby-debug, and profiler. Yet, I had never thought to debug
+my Ruby applications using gdb even though I use it frequently at work
+to debug C/C++ applications. <a href="http://clarkware.com/cgi/blosxom">Mike</a>
+and Nicole Clark really brought everything together. Their stewardship
+of the event made it truly remarkable (as they seem to do every time).
+Their goal is to ensure that every single attendee has a wonderful time
+and they appear to be willing to do whatever it takes to make it so.
+Next time you're at one of their events be sure to thank them for their
+diligence. Overall, I found the course to be of tremendous value as it
+got me thinking about even more ways to use Ruby. The insight that Chad
+and Dave provided was integral to unlocking the reasoning behind the
+design of the language. As is true with all of the <a href="http://pragmaticstudio.com/">Pragmatic
+Studio</a> offerings I've attended, this class
+reinvigorated me and left me energized to tackle more projects. For
+those who have never been to a Pragmatic Studio event before, one of the
+best alumni benefits is the mailing list you're able to join afterwards
+-- the signal to noise ratio is extremely high. Now, if only I could
+convince my employer to send me four or five times a year.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[July NoVA RUG]]></title>
+    <link href="http://sean.github.com/blog/2007/07/22/july-nova-rug/"/>
+    <updated>2007-07-22T17:33:49-04:00</updated>
+    <id>http://sean.github.com/blog/2007/07/22/july-nova-rug</id>
+    <content type="html"><![CDATA[<p>This past Wednesday we held the July Northern VA Ruby Users Group. We
+started off with two short talks, first by <a href="http://www.sneaq.net/">Patrick
+Reagan</a> on two mocking libraries for Ruby
+(<a href="http://onestepback.org/software/flexmock/">Flexmock</a> and
+<a href="http://mocha.rubyforge.org/">Mocha</a>), the second was on <a href="http://haml.hamptoncatlin.com/">Haml and
+Sass</a> by <a href="http://blog.twifkak.com/">Devin
+Mullins</a>. For the final hour of the meeting,
+<a href="http://weblogs.asp.net/mscilipoti/default.aspx">Matt Scilipoti</a> spoke
+about using Rails with legacy databases. Patrick's talk, entitled
+<a href="http://www.slideshare.net/viget/mockfight-flexmock-vs-mocha">"Mockfight! Flexmock vs
+Mocha"</a>,
+provided a nice overview of both libraries and several examples
+comparing the libraries side-by-side. From the title, I thought Patrick
+would be able to declare a clear winner but since both libaries try to
+maintain feature parity they are essentially equivalent. My main
+takeaway from the presentation was the benefit of using a mocking
+library in your tests to bypass expensive or dangerous code paths. Devin
+eschewed slides in favor of a live coding session where he converted
+Rails scaffold generated eRB (rhtml) to haml. Personally, I don't like
+haml markup even though it is definitely more concise than XHTML with
+eRB. When I develop, I like to be able to view my template files in the
+browser, so I'd like to be able to go in the other direction where my
+views are completely XHTML, perhaps something closer to Java's
+<a href="http://tapestry.apache.org/">Tapestry</a> (without the XML descriptor
+files). Here's an example comparing eRB vs haml:</p>
+
+<hr />
+
+<p>  <div id='content'\> <div class='left column'\> &lt;h2>Welcome to our site!&lt;/h2> &lt;p> &lt;%= print_information %> &lt;/p> &lt;/div> <div class="right column"\> &lt;%= render :partial => "sidebar" %> &lt;/div> &lt;/div>   #content .left.column %h2 Welcome to our site! %p= print_information .right.column= render :partial => "sidebar"</p>
+
+<hr />
+
+<p>Matt's talk on working with legacy databases was the final presentation
+of the evening. He used the <a href="http://presentationzen.blogs.com/presentationzen/2005/09/living_large_ta.html">Takahashi
+Method</a>
+of presenting and ripped through his slides quickly. The first part
+covered the issues he encountered trying to build a Rails app around his
+legacy database and all of the false starts he made trying to override
+the opinions of Rails. One of the approaches he discussed which looked
+promising but turned out to be too much trouble in the end were database
+views. Using views he could overlay his own view on a table and remap it
+to conform to the Rails conventions, unfortunately this turned out to be
+a very leaky abstraction -- for example he had to maintain the id fields
+manually. His finaly solution involved writing a plugin which handles
+the transformations between what Rails expects and how the database is
+actually implemented. He is planning on releasing this though he hasn't
+settled on a name for his plugin yet (some suggestions were:
+acts_as_rails, acts_as_greenfield, etc). He also mentioned that he
+doesn't have to deal with composite keys so he doesn't plan on
+supporting them out of the gate. Though like all open source projects,
+contributions are welcome, so if you need this functionality give Matt a
+hand. Next month's meeting will be on August 22 and <a href="https://elitefrontier.org/elgg/rubyclrdev/weblog/">Rodney
+Degracia</a> will be
+presenting on the Ruby CLR for .NET.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Implementation of Digg Spy in Rails]]></title>
+    <link href="http://sean.github.com/blog/2007/05/01/implementation-of-digg-spy-in-rails/"/>
+    <updated>2007-05-01T22:17:51-04:00</updated>
+    <id>http://sean.github.com/blog/2007/05/01/implementation-of-digg-spy-in-rails</id>
+    <content type="html"><![CDATA[<p>Based on a comment from an alert reader, I found out that the link was
+broken in my <a href="http://seanmountcastle.com/2006/04/14/ajax-spy-in-rails/">Ajax Spy in
+Rails</a> post.
+Since I couldn't locate the original zip file on my powerbook, I rewrote
+it from scratch using Rails 1.2.3 with REST/CRUD and then updated the
+link at the end of that post. To save you time, you can download the
+source from
+<a href="http://seanmountcastle.com/wp-content/uploads/2007/05/spy.zip">here</a> as
+well. This (and the prior) version simply uses a timer to periodically
+call back to the server to see if there were any updates, which places
+an unnecessarily heavy load on your server. A better approach would be
+to use something like <a href="http://juggernaut.rubyforge.org/">Juggernaut</a> to
+push updates out to clients. I'm investigating Juggernaut now for use in
+my Ajax Rails game -- I'll post more once I have a demo.</p>
+]]></content>
+  </entry>
+  
+</feed>

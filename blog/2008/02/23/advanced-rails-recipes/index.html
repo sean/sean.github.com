@@ -1,0 +1,442 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Advanced Rails Recipes - Sean Mountcastle</title>
+  <meta name="author" content="Sean Mountcastle">
+
+  
+  <meta name="description" content="Almost a year ago, I submitted three recipes to Advanced RailsRecipes. Unfortunately, one whichwas originally selected back in June has been dropped &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://sean.github.com/blog/2008/02/23/advanced-rails-recipes/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="http://feeds.feedburner.com/SeanMountcastle" rel="alternate" title="Sean Mountcastle" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Sean Mountcastle</a></h1>
+  
+    <h2>Thoughts on technology and engineering.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://feeds.feedburner.com/SeanMountcastle" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:sean.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Advanced Rails Recipes</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2008-02-23T21:41:08-05:00" pubdate  data-updated="true" >Feb 23<span>rd</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Almost a year ago, I submitted three recipes to <a href="http://pragprog.com/titles/fr_arr">Advanced Rails
+Recipes</a>. Unfortunately, one which
+was originally selected back in June has been dropped from the book as
+it&#8217;s not really advanced. So I thought I&#8217;d post it here for everyone to
+enjoy.</p>
+
+<h3>Using AJAX with REST</h3>
+
+<h4>Problem:</h4>
+
+<p>You have finally mastered REST (Representational State Transfer) and
+wish to enhance your application with JavaScript but don&#8217;t know which of
+the resource URLs to call.</p>
+
+<h4>Ingredients:</h4>
+
+<p>This recipe requires Rails 1.2 or later as it relies on RJS for the Ajax
+portion and REST for the controller design.</p>
+
+<h4>Solution:</h4>
+
+<p>In this example we need users to be able to register (and unregister)
+for meetings so that we can properly report attendance. So we have three
+models: User, Meeting and Registration.</p>
+
+<p>Since Registrations are associated with a specific meeting, we&#8217;ve
+created them as a nested resource, like so:</p>
+
+<p>~~~~ {lang=&#8221;ruby&#8221;}
+  map.resources :meetings do |meetings|</p>
+
+<pre><code>meetings.resources :registrations
+</code></pre>
+
+<p>  end
+~~~~</p>
+
+<p>To register for a meeting we want to create a new Registration instance
+tied to the Meeting and User. Unregistering from a meeting should
+destroy the Registration object. So our RegistrationsController looks
+like this:</p>
+
+<p>~~~~ {lang=&#8221;ruby&#8221;}
+  # POST /registrations
+  def create</p>
+
+<pre><code>@meeting = Meeting.find(params[:meeting_id])
+current_user.register_for(@meeting)
+respond_to do |format| 
+  format.html { redirect_to meetings_url }
+  format.js   # create.rjs
+  format.xml  { head :ok }
+end
+</code></pre>
+
+<p>  end</p>
+
+<p>  # DELETE /registrations/1
+  def destroy</p>
+
+<pre><code>@registration = Registration.find(params[:id])
+@registration.destroy
+respond_to do |format|
+  format.html { redirect_to meetings_url }
+  format.js   # destroy.rjs
+  format.xml  { head :ok }
+end
+</code></pre>
+
+<p>  end
+~~~~</p>
+
+<p>In the view we want to use Ajax to allow the user to modify their
+registration, so we need to use link_to_remote:</p>
+
+<p>~~~~ {lang=&#8221;ruby&#8221;}
+  &lt;% if !current_user.registered_for(meeting) -%></p>
+
+<pre><code>&lt;%= link_to_remote "Register!", :url =&gt; registrations_path(meeting), 
+                              :meeting_id =&gt; meeting.id, :method =&gt; :post %&gt;
+</code></pre>
+
+<p>  &lt;% else -%></p>
+
+<pre><code>&lt;%= link_to_remote "Unregister", 
+                              :url =&gt; registration_path(meeting, 
+                                         current_user.registration_for(meeting)),  
+                              :confirm =&gt; 'Are you sure?', :method =&gt; :delete %&gt;
+</code></pre>
+
+<p>  &lt;% end -%>
+~~~~</p>
+
+<p>The RJS to update the page looks like this:</p>
+
+<p>~~~~ {lang=&#8221;ruby&#8221;}
+page[&#8221; meeting_#{@meeting.id}&#8221;.to_sym].replace_html</p>
+
+<pre><code>   :partial =&gt; 'shared/meeting', :object =&gt; @meeting
+</code></pre>
+
+<p>page[&#8221; meeting_#{@meeting.id}&#8221;.to_sym].visual_effect :highlight, :duration => 5
+~~~~</p>
+
+<h4>Discussion:</h4>
+
+<p>The resource URLs provided by Rails are extremely useful, but they can
+be confusing. Tools like <a href="http://www.getfirebug.com/">FireBug</a> make it
+easy to see what is going on behind the scenes. When developing Rails
+applications, it is usually easier to develop without Ajax and then go
+back and add Ajax to those portions of the application where it would
+make sense. With this approach, you can gracefully degrade your service
+back to the original mode for those who don&#8217;t have or don&#8217;t enable
+JavaScript. It also allows you to click through your application with
+FireBug enabled and watch which URLs are hit and with which methods
+(GET, POST, PUT, or DELETE).</p>
+
+<p>The table below outlines which resource URLs to use with your remote
+helpers:</p>
+
+<p>  Intent                           Action    Resource URL                                                                  Method</p>
+
+<hr />
+
+<p>  Creating a new instance          create    plural form of model name (i.e. registrations_path)                          POST
+  Retrieving an instance           show      singular form of model name with id (i.e. registration_path(registration)    GET
+  Retrieving all instances         index     plural form of model name (i.e. registrations_path)                          GET
+  Modifying an existing instance   update    singular form of model name with id (i.e. registration_path(registration))   PUT
+  Deleting an existing instance    destroy   singular form of model name with id (i.e. registration_path(registration))   DELETE</p>
+
+<p>Once you are comfortable with the resource URLs, adding Ajax to your
+RESTful is much easier.</p>
+
+<h4>Further Reading:</h4>
+
+<p>If you are unfamiliar with REST, read Chapter 20 of <a href="http://pragprog.com/titles/rails2">Agile Web
+Development with Rails, 2nd Edition</a>
+by Dave Thomas and David Heinemeier Hansson (Pragmatic Programmers,
+2006). There is also a nice screencast on the subject from
+<a href="http://peepcode.com/articles/2006/10/08/restful-rails">PeepCode</a>.</p>
+
+<p>For more on Ajax in Rails, you can check out <a href="http://www.oreilly.com/catalog/9780596527440/index.html">Ajax on
+Rails</a> by Scott
+Raymond (O&#8217;Reilly &amp; Associates, 2007).</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">admin</span></span>
+
+      
+
+
+
+
+
+  
+
+
+
+<time datetime="2008-02-23T21:41:08-05:00" pubdate  data-updated="true" >Feb 23<span>rd</span>, 2008</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/miscellaneous/'>Miscellaneous</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://sean.github.com/blog/2008/02/23/advanced-rails-recipes/" data-via="smountcastle" data-counturl="http://sean.github.com/blog/2008/02/23/advanced-rails-recipes/" >Tweet</a>
+  
+  
+</div>
+
+    
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/08/14/iosdevcamp-dc-2012/">iOSDevCamp DC 2012</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/09/26/moved-to-github-pages-and-octopress/">Moved to GitHub Pages and Octopress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2010/01/21/skribit/">Skribit</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2008/11/25/invented-quality-metric-feltz-levels/">Invented Quality Metric: Feltz Levels</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2008/08/08/rubynation-2008/">RubyNation 2008</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Github Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/sean">@sean</a> on Github
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'sean',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("smountcastle", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/smountcastle" class="twitter-follow-button" data-width="208px" data-show-count="false">Follow @smountcastle</a>
+  
+</section>
+
+
+<section>
+  <h1>Currently Reading</h1>
+  <p> 
+    1451648537
+    <br />
+    1451648537 by
+    1451648537
+  </p>
+  <h1>Recent Reads</h1>
+  <ul id="recent_reads">
+    
+      <li class="post">
+	<p> 
+	  055357342X
+	  <br />
+	  055357342X by
+	  055357342X
+	</p>
+      </li>
+    
+      <li class="post">
+	<p> 
+	  0553381695
+	  <br />
+	  0553381695 by
+	  0553381695
+	</p>
+      </li>
+    
+      <li class="post">
+	<p> 
+	  0553386794
+	  <br />
+	  0553386794 by
+	  0553386794
+	</p>
+      </li>
+    
+  </ul>
+</section>
+
+Included file 'asides/googleplus.html' not found in _includes directory
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Sean Mountcastle -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+  <br />
+  <a href="https://twitter.com/smountcastle" class="twitter-follow-button">You should follow me on Twitter</a>
+</p>
+
+<script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
+
+</footer>
+  
+
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-378484-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+  
+
+  
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+</body>
+</html>
