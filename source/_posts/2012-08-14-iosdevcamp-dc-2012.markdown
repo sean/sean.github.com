@@ -16,3 +16,4 @@ This past weekend, [Luis de la Rosa](http://www.luisdelarosa.com/) and I ran [iO
 * 3:30pm - Chris Brown Improving App Monetization Through Data
 * 4:30pm - James Norton Embedding Lua Script in iOS
 
+Mark Pospesel wrote up his thoughts on the conference [here](http://markpospesel.com/2012/08/17/iosdevcampdc-wrap-up/).
