@@ -28,6 +28,7 @@ module Jekyll
 
   module Filters
     def amazon_link(text)
+      return '' if text.nil? or text.empty?
       resp = AmazonResultCache.instance.item_lookup(text)
       item = resp.item_lookup_response[0].items[0].item[0]
       url = CGI::unescape(item.detail_page_url.to_s)
