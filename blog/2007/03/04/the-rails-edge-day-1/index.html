@@ -1,0 +1,527 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>The Rails Edge Day 1 - Sean Mountcastle</title>
+  <meta name="author" content="Sean Mountcastle">
+
+  
+  <meta name="description" content="Recently, I attended The Rails
+Edge conference
+run by The Pragmatic Studio. It was a
+single track event with some of the best and brightest folks in &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://seanmountcastle.com/blog/2007/03/04/the-rails-edge-day-1">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="http://feeds.feedburner.com/SeanMountcastle" rel="alternate" title="Sean Mountcastle" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-378484-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner">
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://feeds.feedburner.com/SeanMountcastle" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:seanmountcastle.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+  
+    
+      <h1 class="entry-title">The Rails Edge Day 1</h1>
+    
+  
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-03-04T16:02:54-05:00" pubdate data-updated="true">Mar 4<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><a href="http://www.pragmaticstudio.com/therailsedge/index.html"><img src="http://seanmountcastle.com/wp-content/uploads/2007/02/railsedgewhite.jpg" alt="image" /></a></p>
+
+<p>Recently, I attended <a href="http://www.pragmaticstudio.com/therailsedge/index.html">The Rails
+Edge</a> conference
+run by <a href="http://www.pragmaticstudio.com/">The Pragmatic Studio</a>. It was a
+single track event with some of the best and brightest folks in the
+Rails and Ruby community. The speaker line-up was as follows:</p>
+
+<ul>
+<li><a href="http://pragdave.pragprog.com/pragdave/">Dave Thomas</a></li>
+<li><a href="http://clarkware.com/cgi/blosxom">Mike Clark</a></li>
+<li><a href="http://blog.duncandavidson.com/">James Duncan Davidson</a></li>
+<li><a href="http://chadfowler.com/">Chad Fowler</a></li>
+<li><a href="http://www.relevancellc.com/">Justin Gehtland</a></li>
+<li><a href="http://www.relevancellc.com/">Stuart Halloway</a></li>
+<li><a href="http://www.vernix.org/marcel/">Marcel Molina, Jr.</a></li>
+<li><a href="http://www.onestepback.org/">Jim Weirich</a></li>
+<li><a href="http://codefluency.com/">Bruce Williams</a></li>
+</ul>
+
+
+<p>Read on for a description of the first day&rsquo;s sessions. After a brief
+welcome from Mike Clark, Dave Thomas launched the conference with his
+first session entitled &ldquo;Metaprogramming Ruby: Extending Ruby for Fun and
+Profit.&rdquo; He showed how classes were open by re-opening the String class
+and adding a method to encrypt the contents of the string and then he
+reimplemented the Rails modifications to Fixnum (so that
+3.days.from_now works). He showed how code could be executed in the
+context of a class as that class was loaded (i.e. we could conditionally
+include/exclude methods in the class). Adding <em>macros</em> to Rails
+controllers was achieved using the <strong>Module.included</strong> method to detect
+when the Module was included in a controller and then perform some
+actions on that controller (such as adding methods to it). Next the
+power of <strong>eval</strong> and <strong>instance_eval</strong> was displayed&mdash;though he
+cautioned that eval&#8217;ing user input could be very dangerous. Finally, he
+showed how <strong>define_method</strong> could be used to create new methods on a
+controller like so:</p>
+
+<p>~~~~ {lang=&ldquo;ruby&rdquo;}
+class ApplicationController &lt; ActionController::Base
+  def self.search_action_for(table_name)</p>
+
+<pre><code>model = table_name.to_s.classify.constantize
+define_method("search_for_#{table_name}") do
+  @title = "Your #{Inflector.humanize(table_name)}"
+  @results = model.find(:all, :conditions =&gt; ["name like ?", "%#{params[:term]}%"])
+  render :template =&gt; '/shared/search_results'
+end
+</code></pre>
+
+<p>  end
+end
+~~~~</p>
+
+<p>and you would use it like this:</p>
+
+<p><del> {lang=&ldquo;ruby&rdquo;}
+class UsersController &lt; ApplicationController
+  search_action_for :users
+end
+</del></p>
+
+<p>Following a short break, Mike Clark gave an overview of what&rsquo;s new in
+Rails 1.2. Mike started off by listing the various virtual machines that
+are under development for Ruby, such as
+<a href="http://www.atdot.net/yarv/">YARV</a>,
+<a href="http://jruby.codehaus.org/Home">JRuby</a>,
+<a href="http://blog.fallingsnow.net/rubinius/">Rubinius</a>,
+<a href="http://www.rubyclr.com/">RubyCLR</a>,
+<a href="http://cardinal2.rubyforge.org/">Cardinal</a>, and
+<a href="http://smallthought.com/avi/?p=19">smalltalk.rb</a>. Then he went on to
+discuss migrations, plugins, rich models, parameter filtering,
+deprecations, integration test (a testing DSL), running Rails in
+headless mode (via the console), form_for, RJS, serialization,
+respond_to, named routes, CRUD/REST, syndication, ActiveResource,
+Mongrel, Capistrano, full-featured scaffold, Amazon S3, and Rinda/DRB.
+Next Stu gave his talk on Ruby Idioms for Rails Programmers. He covered
+the explicit API (which was Java code) and the implict API of today and
+how the implict API is implemented as many small modules included into
+big classes. Personalized Object Models (POM) were next, this is done by
+augmenting other people&rsquo;s code, implementing DSLs with method-on-demand,
+using method_missing sparingly, and being domain specific. His
+presentation is available at <a href="http://www.codecite.com">CodeCite</a>. Chad
+was up next with his talk on The Meaning of CRUD. This presentation went
+into the meaning of CRUD (Create, Read, Update, Destroy), RESTful routes
+and the SimplyHelpful plugin. This topic has been discussed at length
+elsewhere so I won&rsquo;t go into the details. But Chad is always a great
+speaker and I enjoyed his presentation immensely. Following lunch there
+was a switch to the schedule as Jim Weirich hadn&rsquo;t arrived yet. So
+Justin stepped up and gave his talk on Rails and Ajax. This presentation
+is also available online at <a href="http://www.codecite.com">CodeCite</a>. Justin
+started off with a discussion of the
+<a href="http://www.prototypejs.org/">Prototype</a> JavaScript library with some
+simple examples, then launched into the various effects possible with
+<a href="http://script.aculo.us/">Script.aculo.us</a>. To wrap up, RJS was
+described along with JSON. This led nicely into Marcel&rsquo;s talk on Reusing
+RJS. He started off by showing some duplicated RJS code into two actions
+within the same controller. For the first pass he tried extracting out a
+new private method with the duplicate code, but unfortunately it didn&rsquo;t
+work since it was in the wrong scope. So he extracted it out to a helper
+and ensured that it could be passed the page object. This worked, but
+calling the new method looked really ugly (Marcel called this Pythonic).
+His next approach was to monkey patch JavaScriptGenerator right in Rails
+&mdash; invoking the new methods looked great, but he decided it wasn&rsquo;t worth
+it to abuse method_missing plus it became a maintenance headache. So
+Marcel went back to the origins of RJS and explained some of the design
+choices that he and Sam made and reminded us that &lt;&lt; just adds raw
+JavaScript to the stream. So he decided just to wrap update_page in the
+helper and then reuse the code with &lt;&lt; like so:</p>
+
+<p>~~~~ {lang=&ldquo;ruby&rdquo;}
+module ArticlesHelper
+  def replace_article(article)</p>
+
+<pre><code>update_page do |page|
+  page[article].replace :partial =&gt; article
+  page.replace_html :controls, :partial =&gt; 'shared/controls'
+end
+</code></pre>
+
+<p>  end
+~~~~</p>
+
+<p>and then he reused it:</p>
+
+<p>~~~~ {lang=&ldquo;ruby&rdquo;}
+  def show</p>
+
+<pre><code>render :update do |page|
+  page &lt;&lt; replace_article(@article)
+end
+</code></pre>
+
+<p>  end
+  def update</p>
+
+<pre><code>@article.update_attributes(params[:article])
+render :update do |page|
+  page &lt;&lt; replace_article(@article)
+  page.visual_effect :highlight, dom_id(@article)
+end
+</code></pre>
+
+<p>  end
+~~~~</p>
+
+<p>The great thing about this is that you can also reuse that JavaScript in
+your views as well:</p>
+
+<p><del> {lang=&ldquo;html&rdquo;}
+Edit Article
+&lt;% article_form(article) do |form| %>
+  &lt;%= render :partial => &lsquo;articles/form&rsquo;, : object => form %>
+  &lt;%= submit_tag &lsquo;Save changes&rsquo; %> or
+  &lt;%= link_to_function &lsquo;Cancel&rsquo;, replace_article(article) %>
+&lt;% end %>
+</del></p>
+
+<p>After a short break, several conference attendees came up and demo&#8217;ed
+their apps. Some of the presenters were: <a href="http://www.ehatchersolutions.com/">Erik
+Hatcher</a> who presented on his Solr.rb
+project (the acts_as_solr.rb plugin) and his work at UVA categorizing
+literature; <a href="http://rgarver.blogspot.com/">Ryan Garver</a> spoke about the
+<a href="http://info.aws-console.com/">AWS Console</a> which makes it really easy
+to setup your server on Amazon Web Services EC2; <a href="http://www.metaskills.net/blog/colophon/who-is-to-blame-for-this">Ken
+Collins</a>
+spoke about <a href="http://www.homemarks.com/">Homemarks</a>, simple project-based
+bookmarking, which he is open sourcing; Finally, someone from the
+<a href="http://fiveruns.com">FiveRuns</a> team demo&#8217;ed their hosted systems
+management solution. While it certainly looks nice, I know my employer
+would never use it as it requires installing their software on your
+systems so it can report back to them. After dinner, Dave Thomas gave
+the opening keynote, entitled Fear of Flying. It was very good and I
+believe it was the same as the EuroRailsConf keynote that he gave, which
+is available
+<a href="http://video.google.com/videoplay?docid=-7327520943909344563">online</a>.
+Overall, the first day of The Rails Edge went very well and got me
+re-energized to work on my projects with several new ideas and a fresh
+perspective. I don&rsquo;t think you can put a price on that.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">admin</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-03-04T16:02:54-05:00" pubdate data-updated="true">Mar 4<span>th</span>, 2007</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/programming/'>Programming</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/training/'>Training</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://seanmountcastle.com/blog/2007/03/04/the-rails-edge-day-1/" data-via="smountcastle" data-counturl="http://seanmountcastle.com/blog/2007/03/04/the-rails-edge-day-1/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2007/03/02/sweet/" title="Previous Post: Sweet!">&laquo; Sweet!</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2007/03/04/the-rails-edge-day-2/" title="Next Post: The Rails Edge Day 2">The Rails Edge Day 2 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/08/14/iosdevcamp-dc-2012/">iOSDevCamp DC 2012</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/09/26/moved-to-github-pages-and-octopress/">Moved to GitHub Pages and Octopress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2010/01/21/skribit/">Skribit</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2008/11/25/invented-quality-metric-feltz-levels/">Invented Quality Metric: Feltz Levels</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2008/08/08/rubynation-2008/">RubyNation 2008</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/sean">@sean</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'sean',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section id="twitter">
+  <h1 class="tweets">Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("smountcastle", , );
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/smountcastle">@smountcastle</a></p>
+  
+</section>
+
+
+<section>
+  <h1>Currently Reading</h1>
+  <p> 
+    <a href="http://www.amazon.com/Steve-Jobs-Walter-Isaacson/dp/1451648537?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=1451648537"><img src="http://ecx.images-amazon.com/images/I/5127U12cE-L._SL160_.jpg" /></a>
+    <br />
+    <a href="http://www.amazon.com/Steve-Jobs-Walter-Isaacson/dp/1451648537?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=1451648537">Steve Jobs</a> by
+    Walter Isaacson
+  </p>
+  <h1>Recent Reads</h1>
+  <ul id="recent_reads">
+    
+      <li class="post">
+	<p> 
+	  <a href="http://www.amazon.com/Storm-Swords-Song-Fire-Book/dp/055357342X?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=055357342X"><img src="http://ecx.images-amazon.com/images/I/51JLfDOCDQL._SL160_.jpg" /></a>
+	  <br />
+	  <a href="http://www.amazon.com/Storm-Swords-Song-Fire-Book/dp/055357342X?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=055357342X">A Storm of Swords (A Song of Ice and Fire, Book 3)</a> by
+	  George R.R. Martin
+	</p>
+      </li>
+    
+      <li class="post">
+	<p> 
+	  <a href="http://www.amazon.com/Clash-Kings-Song-Fire-Book/dp/0553381695?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0553381695"><img src="http://ecx.images-amazon.com/images/I/51PmY7G7biL._SL160_.jpg" /></a>
+	  <br />
+	  <a href="http://www.amazon.com/Clash-Kings-Song-Fire-Book/dp/0553381695?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0553381695">A Clash of Kings (A Song of Ice and Fire, Book 2)</a> by
+	  George R.R. Martin
+	</p>
+      </li>
+    
+      <li class="post">
+	<p> 
+	  <a href="http://www.amazon.com/Game-Thrones-Song-Fire-Book/dp/0553386794?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0553386794"><img src="http://ecx.images-amazon.com/images/I/51Yl0b4CjWL._SL160_.jpg" /></a>
+	  <br />
+	  <a href="http://www.amazon.com/Game-Thrones-Song-Fire-Book/dp/0553386794?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0553386794">A Game of Thrones (A Song of Ice and Fire, Book 1)</a> by
+	  George R.R. Martin
+	</p>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/smountcastle?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Sean Mountcastle <br/>
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a>, customized with <a href="https://github.com/mjhea0/whiterspace">whiterspace</a>.</span>
+</p>
+
+</footer>
+  
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

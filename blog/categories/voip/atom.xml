@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: VoIP | Sean Mountcastle]]></title>
+  <link href="http://seanmountcastle.com/blog/categories/voip/atom.xml" rel="self"/>
+  <link href="http://seanmountcastle.com/"/>
+  <updated>2013-09-01T22:16:59-04:00</updated>
+  <id>http://seanmountcastle.com/</id>
+  <author>
+    <name><![CDATA[Sean Mountcastle]]></name>
+    <email><![CDATA[smountcastle@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[OSCON: Asterisk Inside and Out]]></title>
+    <link href="http://seanmountcastle.com/blog/2006/07/24/oscon-asterisk-inside-and-out/"/>
+    <updated>2006-07-24T21:26:00-04:00</updated>
+    <id>http://seanmountcastle.com/blog/2006/07/24/oscon-asterisk-inside-and-out</id>
+    <content type="html"><![CDATA[<p>This afternoon I attended <a href="http://conferences.oreillynet.com/cs/os2006/view/e_sess/8936">Asterisk Inside and
+Out</a> by
+<a href="http://www.saintjoe.edu/faculty/specific/cs.html">Brian Capouch</a>. His
+presentation is available
+<a href="http://www.network-voice.com/oscon/tutorial.pdf">here</a> while all of the
+<a href="http://www.asterisk.org/">Asterisk</a> configuration files can be obtained
+<a href="http://www.network-voice.com/oscon/">here</a>. The tutorial was based on
+his forthcoming book, <em>Asterisk Inside and Out: Do-it-yourself Open
+Source Telephony</em>, from Addison-Wesley.</p>
+
+<p>Following the slides, Brian performed several demos which displayed the
+power of Asterisk. He started with a simple ‘Hello World’ example where
+the caller was played a short message. Next he demonstrated the server
+calling you back (and playing a pre-recorded message). Then he called an
+inside extension, an outside of the system (on to the PSTN via the FXO),
+and called an inside extension from outside (via the PSTN and FXO).
+After that he showed a ‘road warrior’ who ran a local instance of
+Asterisk on their laptop which registered with the home office and then
+called the office number of the ‘road warrior’ and the call was
+automatically redirected to the laptop. Following that, he configured
+the laptop as a remote office and dialed an extension at the ‘remote
+office’ from the ‘local office’, which was properly routed through the
+system. Finally, he demonstrated an intra-office transfer of an incoming
+POTS call.</p>
+
+<p>Asterisk appears to be an amazing application and there is quite a bit
+more that I need to learn about it. It seems like it would be a fun
+project to setup at home (if my wife will agree to it – which is
+doubtful).</p>
+]]></content>
+  </entry>
+  
+</feed>

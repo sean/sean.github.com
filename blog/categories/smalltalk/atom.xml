@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Smalltalk | Sean Mountcastle]]></title>
+  <link href="http://seanmountcastle.com/blog/categories/smalltalk/atom.xml" rel="self"/>
+  <link href="http://seanmountcastle.com/"/>
+  <updated>2013-09-01T22:16:59-04:00</updated>
+  <id>http://seanmountcastle.com/</id>
+  <author>
+    <name><![CDATA[Sean Mountcastle]]></name>
+    <email><![CDATA[smountcastle@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[OSCON: Sessions Day Two]]></title>
+    <link href="http://seanmountcastle.com/blog/2006/07/27/oscon-sessions-day-two/"/>
+    <updated>2006-07-27T23:08:00-04:00</updated>
+    <id>http://seanmountcastle.com/blog/2006/07/27/oscon-sessions-day-two</id>
+    <content type="html"><![CDATA[<p>Below are my notes from the second day of sessions here at
+<a href="http://conferences.oreillynet.com/os2006/">OSCON</a>. The talks I attended
+were:</p>
+
+<ul>
+<li>Subversion Best Practices</li>
+<li>haXe: A Cross-platform Web Language</li>
+<li>Building DSLs in Ruby</li>
+<li>Testing Rails Apps</li>
+<li>When Interface Design Attacks!</li>
+<li>Web Heresies: The Seaside Framework</li>
+</ul>
+
+
+<p>In the morning, I attended <a href="http://conferences.oreillynet.com/cs/os2006/view/e_sess/8671">Subversion Best
+Practices</a>
+by Ben Collins-Sussman and Brian Fitzpatrick. I donâ€™t see the slides
+up yet at the <a href="http://subversion.tigris.org/">Subversion</a> site, but they
+said that the slides would be posted. Several of the best practices they
+covered were:</p>
+
+<ul>
+<li><p>Server Best Practices</p>
+
+<ul>
+<li>svnserve: good for simple setups</li>
+<li>svn+ssh: great if you already depend on sshd</li>
+<li>Apache: more points of integration, repos web browsing, network
+share, etc.</li>
+<li>Always use a single repository when you have shared users,
+shared code, etc; except when you have radically different
+access policies, radically different data types, etc.</li>
+<li>Some nice repos browsing tools are:
+<a href="http://www.viewvc.org/">ViewVC</a> and
+<a href="http://trac.edgewall.org/">Trac</a></li>
+<li><p>Hook scripts:</p>
+
+<ul>
+<li>pre-commit: donâ€™t try to modify the transaction, just fail
+it if you need the code to be formatted, for example.
+Mentioned case-insensitive.py.</li>
+<li>post-commit: run it in the background so it doesnâ€™t hold
+up the user. Mentioned mailer.py and CIA bot.</li>
+</ul>
+</li>
+<li><p>Repos Maintenance:</p>
+
+<ul>
+<li>dump: slow, not for backups</li>
+<li>hotcopy: does a cp -R, can be used for backups and then you
+can rsync the copy, if needed</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Client Best Practices</p>
+
+<ul>
+<li>commit often</li>
+<li>commit small, discreet chunks (but <strong>donâ€™t</strong> commit individual
+files)</li>
+<li>have a consistent log message policy</li>
+</ul>
+</li>
+<li><p>Misc Best Practices</p>
+
+<ul>
+<li>Use branches: you can have task branches, feature branches,
+release branches, etc.</li>
+<li>Merge tracking: must be done by humans currently, but in 1.5
+there is real merge tracking.</li>
+<li>Autoprops: take advantage of these, some examples are:
+svn:mime-type, svn:eol-style, svn:needs-lock</li>
+</ul>
+</li>
+</ul>
+
+
+<p>Thankfully Nicolas Cannasseâ€™s talk entitled <a href="http://conferences.oreillynet.com/cs/os2006/view/e_sess/8600">haXe: A cross-platform
+web
+language</a>
+was moved earlier (prior to this I had a triple-conflict this
+afternoon). Nico appears to be an amazingly smart fellow and
+<a href="http://www.haxe.org">haXe</a> along with the <a href="http://nekovm.org/">NekoVM</a>
+(only 220KB!) look like very interesting technologies. He started with a
+simple â€˜Hellow Worldâ€™ example in haXe which was then generated into
+JavaScript, Flash and Neko â€“ that is the same source code can be
+easily re-targeted to different â€˜platformsâ€™. At the end he showed
+off <a href="http://en.dinoparc.com">Dinoparc</a> and Hammerfell, two Flash games
+that were written using haXe. Nico also mentioned that someone is
+writing a Ruby compiler which targets the NekoVM.</p>
+
+<p>After lunch I attended <a href="http://www.nealford.com">Neal Fordâ€™s</a> Building
+DSLs in Ruby. He showed off a simple calendaring DSL. His slides are
+here and he followed them very closely so I donâ€™t have much
+commentary. I guess the only way to get comfortable designing and
+implementing DSLs in Ruby is to actually write them â€¦ Iâ€™m going to
+have to pick some domain and just start.</p>
+
+<p>Then <a href="http://www.pragmaticstudio.com/">Mike Clark</a> was up with <a href="http://conferences.oreillynet.com/cs/os2006/view/e_sess/8395">Testing
+Rails
+Apps</a> â€“
+much of this was review for me, but I was looking forward to his
+tips/tricks to make testing easier. Iâ€™m really trying hard to be a
+â€œtest-firstâ€? developer but I get so excited writing new features
+that I leave the tests for last (of course, this usually means that I
+end-up refactoring the code I wrote based on the tests, which is a good
+thing). Since his slides arenâ€™t up yet, Iâ€™ll post some of my notes.
+Mikeâ€™s keypoint was that tests are insurance â€“ they ensure that
+programming your app remains fun, so youâ€™re not scared of making
+changes because you have a nice test suite which can quickly find out if
+youâ€™ve broken something else with your change. Some of his tips are
+below:</p>
+
+<pre><code># if the product isn't valid, print out the errors
+assert product.valid?, product.errors.full_messages
+
+# checking uniqueness
+assert_equal ActiveRecord::Errors.default_error_message[:taken],
+product.errors.on(:title)
+
+# for integration testing create a user object with method
+# names that are in plain English
+def regular_user
+open_session do |user|
+def goes_to_store
+get :index
+assert_response :success
+end
+
+def is_viewing_index
+assert_template "index"
+end
+
+def buys_book
+post :add_to_cart, :item =&gt; { :id =&gt; 1234 }
+end
+
+def checks_out
+post :checkout, :payment_info =&gt; { ... }
+end
+end
+end
+</code></pre>
+
+<p>Following the break, I attended <a href="http://conferences.oreillynet.com/cs/os2006/view/e_sess/8924">When Interface Design
+Attacks!</a>
+by <a href="http://www.slash7.com">Amy Hoy</a>. Her slides should be up on her
+website soon but some of the key points were that interface involves:</p>
+
+<ul>
+<li>expectations (baggage)</li>
+<li>interaction (usability)</li>
+<li>behavior (your appâ€™s personality)</li>
+</ul>
+
+
+<p>Some of the principles she mentioned were:</p>
+
+<ul>
+<li>usersâ€™ brains are affected by literacy; they scan in predictable
+patterns (reading right to left, top to bottom)</li>
+<li>users adapt to web design (ignoring headers, sidebars, stuff below
+the fold)</li>
+<li>if it looks like an ad, itâ€™s ignored (or if itâ€™s a small bit of
+content surrounded by ads, itâ€™s ignored)</li>
+<li>users â€˜satisficeâ€™ or give up (they pick the closest thing to
+what they were looking for)</li>
+<li>30-40% of users have low literacy (reading blocks of text is
+difficult for them â€“ the changes you make for these users also pay
+off for those who donâ€™t have literacy issues)</li>
+<li>There should be twice as many pixels above an object than below it</li>
+<li>Labels should be above their input and labels should have the same
+name/id as their corresponding input fields</li>
+</ul>
+
+
+<p>Amy then went through several examples from popular websites.</p>
+
+<p>The last talk of the day was <a href="http://conferences.oreillynet.com/cs/os2006/view/e_sess/8942">Web Heresies: The Seaside
+Framework</a>
+by <a href="http://smallthought.com/avi/">Avi Bryant</a> â€“ basically it was
+<a href="http://www.apple.com/webobjects/">WebObjects</a> meets
+<a href="http://www.paulgraham.com/vwfaq.html">ViaWeb</a> (in
+<a href="http://www.squeak.org/">Smalltalk</a>). The ideas behind
+<a href="http://www.seaside.st/">Seaside</a> are quite cool, but having never used
+Smalltalk and hating every IDE Iâ€™ve ever tried it just didnâ€™t appeal
+to me. Technically, the continuation usage is incredible â€“ every time
+you click a link a continuation is generated (complete call stack) so if
+you go back youâ€™re old call stack is still there and you can then have
+the function return a different value taking you some place else within
+the web app. Avi doesnâ€™t like templates, he wants HTML to be back in
+the domain of the developer and it should be generated from within the
+web app â€“ the designer only gets to touch the CSS (see <a href="http://www.csszengarden.com/">CSS Zen
+Garden</a> for examples of how this works).
+To handle form fields, Seaside simply uses callbacks â€“ you place the
+block of code in a callback right where the text field is generated,
+this is what the code looks like:</p>
+
+<pre><code>html form:
+[html text: 'Name: '.
+html textInputWithValue: person name callback: [:val | person name: val].
+html break.
+html submitButton]
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>

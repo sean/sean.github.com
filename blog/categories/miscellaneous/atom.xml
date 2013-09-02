@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Miscellaneous | Sean Mountcastle]]></title>
+  <link href="http://seanmountcastle.com/blog/categories/miscellaneous/atom.xml" rel="self"/>
+  <link href="http://seanmountcastle.com/"/>
+  <updated>2013-09-01T22:16:59-04:00</updated>
+  <id>http://seanmountcastle.com/</id>
+  <author>
+    <name><![CDATA[Sean Mountcastle]]></name>
+    <email><![CDATA[smountcastle@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Skribit]]></title>
+    <link href="http://seanmountcastle.com/blog/2010/01/21/skribit/"/>
+    <updated>2010-01-21T22:07:39-05:00</updated>
+    <id>http://seanmountcastle.com/blog/2010/01/21/skribit</id>
+    <content type="html"><![CDATA[<p>Wow! It&rsquo;s been over a year since I last updated my blog. How sad. To
+help jump start my blogging again I&rsquo;ve signed up for
+<a href="http://skribit.com/blogs/sean-mountcastle">Skribit</a>. You can use the
+suggestions link on the right to propose blog posts you&rsquo;d like me to
+write. By the way, if you haven&rsquo;t been following <a href="http://paulstamatiou.com/">Paul Stamatiou&rsquo;s
+blog</a> which covers the development of
+Skribit, I recommend it.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Invented Quality Metric: Feltz Levels]]></title>
+    <link href="http://seanmountcastle.com/blog/2008/11/25/invented-quality-metric-feltz-levels/"/>
+    <updated>2008-11-25T23:39:22-05:00</updated>
+    <id>http://seanmountcastle.com/blog/2008/11/25/invented-quality-metric-feltz-levels</id>
+    <content type="html"><![CDATA[<p>There&rsquo;s a meme that continues to amuse our development team. It originated at SRA long ago and was brought through several other companies before reaching my current employer. When I found it on our internal wiki, I assumed it was akin to the <a href="http://www.rfc-humor.com/">April Fools' Day RFCs</a>, so I Googled for &lsquo;Feltz&rsquo; and actually found a Fernand Feltz at the Centre de Recherche Public-Gabriel Lippmann in Luxembourg. Unfortunately, this is not the Feltz for which the software quality metrics below are named. These were invented in the nineties by an engineer at SRA whose last name was Feltz.</p>
+
+<p>Sometimes perfection seems too much to ask. Don&rsquo;t despair; rejoice at all the milestones you have already met. The following Feltz levels are defined:</p>
+
+<ol>
+<li>Sits in the editor without harm.</li>
+<li>Correctly syntax-highlighted</li>
+<li>Successfully saves to disk</li>
+<li>In CM</li>
+<li>Compiles</li>
+<li>Links</li>
+<li>Execution reaches main()</li>
+<li>Produces discernable output</li>
+<li>Does something arguably correct before crashing</li>
+<li>Runs to completion.</li>
+</ol>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Hedge Your Fuel Costs Like Southwest Airlines]]></title>
+    <link href="http://seanmountcastle.com/blog/2008/07/11/hedge-your-fuel-costs-like-southwest-airlines/"/>
+    <updated>2008-07-11T22:36:12-04:00</updated>
+    <id>http://seanmountcastle.com/blog/2008/07/11/hedge-your-fuel-costs-like-southwest-airlines</id>
+    <content type="html"><![CDATA[<p><a href="http://www.autoweek.com/apps/pbcs.dll/article?AID=/20080702/FREE/173263555/1065">Autoweek</a>
+reports that a company called <a href="http://mygallons.com/">MyGallons</a> allows
+folks to pre-purchase gallons of gasoline at a predetermined average
+price for the area where they live. According to the article, the
+gallons are loaded onto a debit card that the company says is accepted
+at more than 95% of the nation&rsquo;s fueling stations. To take part in their
+service, MyGallons charges an annual fee starting at $29.95.</p>
+
+<blockquote><p>Miami-based MyGallons counts a membership of more than 4000 and has
+offices in Philadelphia and Columbus, Ohio. It launched a pilot
+program in April. Verona estimates that the testers paid about $3.10 a
+gallon for gas, saving roughly a dollar over today&rsquo;s prices. The debit
+card system measures consumers' accounts in gallons of regular
+unleaded fuel. Pumping premium fuel or diesel debits more gallons, but
+if you find a station with fuel that&rsquo;s cheaper than your purchased
+price, your account is credited with additional gallons. Still, there
+are some potential pitfalls, including the obvious question: What
+happens if gasoline prices go back down? MyGallons' suggestion is to
+stock up; buy low and use it later if prices increase, though it
+remains to be seen if consumers would adapt to that kind of purchasing
+behavior.</p></blockquote>
+
+<p>It seems like an interesting service to help defray higher energy
+prices.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[iPhone 2.0 Firmware is Like Getting a Whole New iPhone]]></title>
+    <link href="http://seanmountcastle.com/blog/2008/07/11/iphone-20-firmware-is-like-getting-a-whole-new-iphone/"/>
+    <updated>2008-07-11T22:26:01-04:00</updated>
+    <id>http://seanmountcastle.com/blog/2008/07/11/iphone-20-firmware-is-like-getting-a-whole-new-iphone</id>
+    <content type="html"><![CDATA[<p>After bricking my iPhone this morning by getting caught in the iTunes
+server onslaught, I was able to complete the upgrade successfully this
+evening. The upgrade breathes new life into the EDGE iPhone &mdash; when I&rsquo;m
+on a WiFi network it&rsquo;s almost equivalent to the iPhone 3G. So far I&rsquo;ve
+downloaded twelve free apps from the <a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewRoom?fcId=285119007&amp;id=25204&amp;mt=8">App
+Store</a>
+and paid for one (Bejeweled 2). Even though I balked at paying $9.99 for
+an iPhone game, my friend <a href="http://blacka.com/david/">Dave</a> convinced me
+that 1) it&rsquo;s a reasonable price and 2) it&rsquo;s a small price to pay for
+something that I&rsquo;ll use nearly every day. I can already tell that care
+must be taken with the lure of the App Store lest I go broke.</p>
+
+<p>In related news, I finally received approval from Apple for my <a href="http://developer.apple.com/iphone/program/">iPhone
+developer cert</a>, so now I
+can try out my audio application on my iPhone and potentially sell it
+via the App Store.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Startup Mashup]]></title>
+    <link href="http://seanmountcastle.com/blog/2008/06/23/startup-mashup/"/>
+    <updated>2008-06-23T18:53:30-04:00</updated>
+    <id>http://seanmountcastle.com/blog/2008/06/23/startup-mashup</id>
+    <content type="html"><![CDATA[<p>If you&rsquo;re looking for startup companies in your area, there&rsquo;s a great new resource: <a href="http://www.startupwarrior.com/">Startup Warrior</a>. It&rsquo;s incredibly useful to drill-down into your region on the map and see all of the amazing work going on nearby.</p>
+]]></content>
+  </entry>
+  
+</feed>

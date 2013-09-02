@@ -1,0 +1,470 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Rails Studio Reston - Sean Mountcastle</title>
+  <meta name="author" content="Sean Mountcastle">
+
+  
+  <meta name="description" content="Last Friday and Saturday, I attended the very first Pragmatic Rails
+Studio in Reston, VA. I highly recommend
+attending the studio to anyone &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://seanmountcastle.com/blog/2005/11/24/rails-studio-reston">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="http://feeds.feedburner.com/SeanMountcastle" rel="alternate" title="Sean Mountcastle" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-378484-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner">
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://feeds.feedburner.com/SeanMountcastle" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:seanmountcastle.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+  
+    
+      <h1 class="entry-title">Rails Studio Reston</h1>
+    
+  
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-11-24T08:36:00-05:00" pubdate data-updated="true">Nov 24<span>th</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Last Friday and Saturday, I attended the very first <a href="http://studio.pragprog.com/">Pragmatic Rails
+Studio</a> in Reston, VA. I highly recommend
+attending the studio to anyone interested in
+<a href="http://www.rubyonrails.org">Rails</a> development. Unfortunately, I wasn&rsquo;t
+able to take more time off from work and attend the Thursday session on
+Ruby (though I already know enough <a href="http://www.ruby-lang.org">Ruby</a> to
+be dangerous). Dave and Mike really know their stuff and have &ldquo;real
+world&rdquo; examples of what was easy and where they ran into pitfalls in
+Rails. And Nicole took care of all of the little details which make a
+training session great (Thanks!)</p>
+
+<h3>Day 1</h3>
+
+<p>The pace of the first day was a bit slow for me as I&rsquo;d already been
+playing around with Rails for a couple months and had written some small
+web-apps. But David and Mike had to lay the ground-work so that everyone
+was on the same page. Thankfully, for those of us who had already worked
+our way through <a href="http://www.pragmaticprogrammer.com/titles/rails/index.html">Agile Web Development with
+Rails</a>, they
+had updated the Depot application with some added features (such as
+Ajax, email, migrations, additional testing, etc). After getting the
+basics out of the way they went into detail about
+<a href="http://wiki.rubyonrails.com/rails/pages/UnderstandingMigrations">migrations</a>
+&mdash; I had heard about migrations at OSCON from Lucas Carlson and John
+Butler, but at the time I didn&rsquo;t bother investigating since it didn&rsquo;t
+sound that useful to me &mdash; boy, was I wrong. Since learning migrations,
+I haven&rsquo;t written another bit of SQL DDL &mdash; and I love it! After that
+they spoke a bit about scaffolding and models and then demo&#8217;ed
+<a href="http://www.robbyonrails.com/articles/2005/08/18/are-you-a-console-master">script/console</a>
+(basically irb with Rails loaded inside of it). Using the console, they
+showed how to debug your app, fix issues in the DB and simply browse the
+DB &mdash; after the training, the console became a bigger part of my
+development style and now I test things out before &lsquo;coding and
+reloading&rsquo;. After that we discussed model validation, the find method
+(and how the find_by_ methods are dynamically generated), SQL
+injection, rendering, testing and avoiding GETs with side-effects &mdash; all
+of this was review for me, but it had to be covered. Dave showed off
+some debugging techniques, where the logs were and that many issues can
+be resolved by removing or resetting the session. Finally, Dave and Mike
+added some Ajax to the Depot 2.0 app to update the cart in the sidebar
+without reloading the page and then added the yellow-fade technique so
+that the user&rsquo;s attention is drawn to the cart change. There was one
+significant issue during the training which affected many folks:
+rendering the cart in the sidebar caused an infinite rendering loop so
+the page would load completely blank and there was no information about
+a stack overflow in the logs. So if you find that you&rsquo;ve added a render
+call and now the page is completely blank you might have this problem be
+sure that the render command has set layout to false.</p>
+
+<h3>Day 2</h3>
+
+<p>Dave and Mike decided to change the pace so that instead of everyone
+following along coding, our job was to watch, listen and ask questions.
+This allowed us to cover ground much more quickly. First we discussed
+web forms and the two different ways in which they could be implemented
+with Rails: the two action update (two different methods in the
+controller are used, the scaffold works this way with edit and update)
+and the one action update (a single method in the controller handles
+both the GET request and the POST request). They said which one you
+choose depends on your circumstances, but with tools like <a href="http://www.37signals.com/svn/archives2/google_web_accelerator_hey_not_so_fast_an_alert_for_web_app_designers.php">Google Web
+Accelerator</a>
+it might not be so bad for your actions to prevent GET requests from
+updating the application state. Then we talked about has_many and
+belongs_to and managing complex hierarchies (such as many-to-many
+associations and the acts_as tools). Since I had not messed with HABTM
+or the acts_as stuff, I found this interesting and am looking for ways
+to apply it in my next project. Following this Mike explained
+ActionMailer: how to configure Rails for sending and receiving email,
+how to generate a mailer and render it. Then we moved on to testing.
+First, functional testing (i.e. controller testing) was covered along
+with common assertions and the test environment, then we spoke about
+fixtures and how to embed Ruby code in them for generating many records,
+we discussed mock objects briefly and there was some discussion
+regarding how these mocks differ from Java&rsquo;s mocks. Dave then talked
+about partial templates and their usefulness when rendering collections.
+A brief overview of the flash was next. Hooks, both in ActiveRecord and
+ActionController, were explained. Since I had never used the hooks in
+ActiveRecord, I found this discussion interesting while the overview of
+filters in ActionController was all review. The ActiveRecord hooks seem
+great for debugging, though I think they would slow down the application
+quite a bit if you took advantage of every single one &mdash; I guess if you
+need to massage the data going into/coming out of the DB then hooks
+could really be useful. Next routes were covered as an intro to web
+services. I had played around with routes briefly and found them to be
+really powerful. The overview of webservices was quick &mdash; I had already
+written a RESTful one and would be perfectly happy to spend the rest of
+my life without ever having to write a SOAP/XML-RPC web service, so I
+didn&rsquo;t object. Mike then spoke about his experience working on
+VitalSource and how important interface design is for your web-app. He
+also urged everyone to get the web designer involved as early as
+possible in the project. He stressed the importance of creating many
+helpers to extract out the view for components. He recommended waiting
+to add Ajax until the end of the project and that it is better to use it
+subtly than to over do it. Following that we spoke more about SQL
+injection, CSS/XSS, not to trust parameters (especially the id),
+validate and sanitize uploaded files, don&rsquo;t cache authenticated pages,
+use functional tests to seal potential holes (and recommended checking
+out <a href="http://www.owasp.org">OWASP</a>). Deployment was next. First Mike
+discussed the architecture of your web-app (share nothing!) and that you
+should move to saving sessions in the DB since multiple instances of
+your app will be running on different servers. As far as the webserver,
+Dave and Mike were split on Apache and Lighty, respectively (Dave
+doesn&rsquo;t think Lighty is quite there yet in terms of rock solid stability
+and Mike hasn&rsquo;t had any issues with Lighty &mdash; he admits his Apache-fu is
+not that great). Mike talked about setting up your application to email
+you (or your cell phone) when things go wrong and Dave discussed the
+logs some more (and mentioned
+<a href="http://rails-analyzer.rubyforge.org">SyslogLogger</a>). Some techniques
+for optimizing your app were discussed (such as preloading child rows,
+using find_by_sql, etc) and caching. Page caching was discussed first,
+followed by action caching and fragement caching &mdash; I had never used
+these techniques, but they seem straight-forward enough &mdash; Dave
+cautioned that caching only works in production mode, so if you enable
+caching and don&rsquo;t see it working check that first. To end the studio,
+Mike gave a great demonstration of
+<a href="http://weblog.rubyonrails.com/articles/2005/10/19/introducing-switchtower-distributed-deployment-for-rails">SwitchTower</a>
+which showed how easy it is to deploy your app (whether you deploy to a
+single machine or a cluster) and how easy it is to rollback if you found
+an issue after deployment. Dave and Mike reminded us to roll our log
+files (I think there was an issue on
+<a href="http://www.textdrive.com">TextDrive</a> where someone&rsquo;s exceeded their
+quota by far with huge log files), purge old sessions and schedule daily
+maintenance with cron.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">admin</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-11-24T08:36:00-05:00" pubdate data-updated="true">Nov 24<span>th</span>, 2005</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/programming/'>Programming</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/training/'>Training</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://seanmountcastle.com/blog/2005/11/24/rails-studio-reston/" data-via="smountcastle" data-counturl="http://seanmountcastle.com/blog/2005/11/24/rails-studio-reston/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2005/11/17/nova-jug-special-session/" title="Previous Post: NoVA JUG Special Session">&laquo; NoVA JUG Special Session</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2005/12/30/using-subdomains-as-account-keys-in-rails/" title="Next Post: Using Subdomains as Account Keys in Rails">Using Subdomains as Account Keys in Rails &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/08/14/iosdevcamp-dc-2012/">iOSDevCamp DC 2012</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/09/26/moved-to-github-pages-and-octopress/">Moved to GitHub Pages and Octopress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2010/01/21/skribit/">Skribit</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2008/11/25/invented-quality-metric-feltz-levels/">Invented Quality Metric: Feltz Levels</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2008/08/08/rubynation-2008/">RubyNation 2008</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/sean">@sean</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'sean',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section id="twitter">
+  <h1 class="tweets">Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("smountcastle", , );
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/smountcastle">@smountcastle</a></p>
+  
+</section>
+
+
+<section>
+  <h1>Currently Reading</h1>
+  <p> 
+    <a href="http://www.amazon.com/Steve-Jobs-Walter-Isaacson/dp/1451648537?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=1451648537"><img src="http://ecx.images-amazon.com/images/I/5127U12cE-L._SL160_.jpg" /></a>
+    <br />
+    <a href="http://www.amazon.com/Steve-Jobs-Walter-Isaacson/dp/1451648537?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=1451648537">Steve Jobs</a> by
+    Walter Isaacson
+  </p>
+  <h1>Recent Reads</h1>
+  <ul id="recent_reads">
+    
+      <li class="post">
+	<p> 
+	  <a href="http://www.amazon.com/Storm-Swords-Song-Fire-Book/dp/055357342X?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=055357342X"><img src="http://ecx.images-amazon.com/images/I/51JLfDOCDQL._SL160_.jpg" /></a>
+	  <br />
+	  <a href="http://www.amazon.com/Storm-Swords-Song-Fire-Book/dp/055357342X?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=055357342X">A Storm of Swords (A Song of Ice and Fire, Book 3)</a> by
+	  George R.R. Martin
+	</p>
+      </li>
+    
+      <li class="post">
+	<p> 
+	  <a href="http://www.amazon.com/Clash-Kings-Song-Fire-Book/dp/0553381695?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0553381695"><img src="http://ecx.images-amazon.com/images/I/51PmY7G7biL._SL160_.jpg" /></a>
+	  <br />
+	  <a href="http://www.amazon.com/Clash-Kings-Song-Fire-Book/dp/0553381695?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0553381695">A Clash of Kings (A Song of Ice and Fire, Book 2)</a> by
+	  George R.R. Martin
+	</p>
+      </li>
+    
+      <li class="post">
+	<p> 
+	  <a href="http://www.amazon.com/Game-Thrones-Song-Fire-Book/dp/0553386794?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0553386794"><img src="http://ecx.images-amazon.com/images/I/51Yl0b4CjWL._SL160_.jpg" /></a>
+	  <br />
+	  <a href="http://www.amazon.com/Game-Thrones-Song-Fire-Book/dp/0553386794?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0553386794">A Game of Thrones (A Song of Ice and Fire, Book 1)</a> by
+	  George R.R. Martin
+	</p>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/smountcastle?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Sean Mountcastle <br/>
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a>, customized with <a href="https://github.com/mjhea0/whiterspace">whiterspace</a>.</span>
+</p>
+
+</footer>
+  
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

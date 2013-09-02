@@ -1,0 +1,618 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Sean Mountcastle</title>
+  <meta name="author" content="Sean Mountcastle">
+
+  
+  <meta name="description" content="I was playing around with Digg this morning and
+noticed Digg Spy. At first I thought it was
+really cool and wondered how they did that. Then I &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://seanmountcastle.com/blog/page/14">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="http://feeds.feedburner.com/SeanMountcastle" rel="alternate" title="Sean Mountcastle" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-378484-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner">
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://feeds.feedburner.com/SeanMountcastle" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:seanmountcastle.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2006/04/14/ajax-spy-in-rails/">Ajax Spy in Rails</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2006-04-14T16:03:00-04:00" pubdate data-updated="true">Apr 14<span>th</span>, 2006</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I was playing around with <a href="http://www.digg.com">Digg</a> this morning and
+noticed <a href="http://www.digg.com/spy">Digg Spy</a>. At first I thought it was
+really cool and wondered how they did that. Then I realized it’s just a
+bit of Ajax and, as anyone who’s read <a href="http://pragmaticprogrammer.com/titles/ajax/index.html">Pragmatic
+Ajax</a> knows, Ajax
+is easy! So read on for how I implemented an Ajax spy in
+<a href="http://www.rubyonrails.org">Rails</a> and to download the code. The first
+thing I did was generate a controller and model using <a href="http://www.height1percent.com/">Rich White’s
+excellent</a><a href="http://ajaxscaffold.height1percent.com/">AjaxScaffold
+Generator</a>, called
+EntriesController and Entry, respectively. This gave me a nice way to
+create new entries easily. After that I added some basic login/signup
+support so that the entries could be associated with users. So far,
+nothing out of the ordinary. Next I created a new controller called
+SpyController, this is where all of the action happens. I added a basic
+list method which just returns all of the entries in the DB (sorry, no
+pagination), this is what we initially call when displaying the page.
+Then I added an update method which will be called periodically to
+retrieve new entries, it looks like this:</p>
+
+<p>~~~~ {lang=&ldquo;ruby&rdquo;}
+def update
+  last_update = Time.parse(params[:timestamp])
+  # locate all of the entries created since the last update
+  @entries = Entry.find(:all, :order => &lsquo;created_at ASC&rsquo;, :conditions => [ &lsquo;created_at > ?&rsquo;, last_update.to_s(:db) ]);
+  if !@entries.empty?</p>
+
+<pre><code>render :update do |page|
+  for entry in @entries
+    page.insert_html(:top, 'spy-list', :partial =&gt; 'entry', :object =&gt; entry)
+    page.visual_effect :highlight, "spy-item-#{entry.id}"
+  end
+end
+</code></pre>
+
+<p>  end
+end
+~~~~</p>
+
+<p>At this point I needed some JavaScript to call the update method, so put
+the following code in application.js:</p>
+
+<p>~~~~ {lang=&ldquo;ruby&rdquo;}
+var updateInterval = 5000; // update every 5 seconds
+var timestamp = new Date().toUTCString();
+var timer;</p>
+
+<p>function go() {
+  timer = setInterval(&lsquo;update()&rsquo;, updateInterval);
+}</p>
+
+<p>function update() {
+  url = &ldquo;/spy/update&rdquo;;
+  new Ajax.Request(url, {</p>
+
+<pre><code>           asynchronous: true,
+           method: "get",
+           parameters: "timestamp=" + timestamp,
+           onSuccess: function(request) {
+             timestamp = new Date().toUTCString();
+           }
+</code></pre>
+
+<p>  });
+}
+~~~~</p>
+
+<p>The JavaScript update method calls the SpyController’s update method and
+passes a timestamp as a parameter (this is the time when the page was
+loaded, initially, and later the timestamp is updated as new entries are
+retrieved). To bring it all together I had to add on onload to the
+list.rhtml view for the SpyController, like this:</p>
+
+<p>~~~~ {lang=&ldquo;html&rdquo;}
+This page updates automatically!</p>
+
+<p>  &lt;% if !@entries.empty? %></p>
+
+<pre><code>&lt;%= render :partial =&gt; 'entry', :collection =&gt; @entries, :locals =&gt; { :hidden =&gt; false } %&gt;
+</code></pre>
+
+<p>  &lt;% end %>
+~~~~</p>
+
+<p>That’s all there is to it. See, I told you it’s easy! You can download
+the code from
+<a href="http://seanmountcastle.com/wp-content/uploads/2007/05/spy.zip">here</a>
+<strong>(Updated for Rails 1.2.3)</strong>.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2006/04/12/im-in-rails-recipes/">I&#8217;m in Rails Recipes!</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2006-04-12T08:21:00-04:00" pubdate data-updated="true">Apr 12<span>th</span>, 2006</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://www.chadfowler.com/">Chad Fowler</a> has graciously accepted one of
+my recipes for inclusion in his new book, <a href="http://pragmaticprogrammer.com/titles/fr_rr/index.html">Rails
+Recipes</a>! Itâ€™s
+recipe #65, â€œEasy HTML Whitelistsâ€?, in the latest beta version of
+the book. If you havenâ€™t already pre-ordered your copy, I suggest you
+click over to the Pragmatic Programmers website and do so now. The other
+69 recipes are just as good (if not better).</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2006/04/08/putting-flickr-on-rails/">Putting Flickr on Rails</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2006-04-08T20:35:00-04:00" pubdate data-updated="true">Apr 8<span>th</span>, 2006</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>You know that really cool screencast at the <a href="http://www.rubyonrails.com">Ruby on
+Rails</a> website where Rails is used to create
+a <a href="http://media.rubyonrails.org/video/flickr-rails-ajax.mov">Flickr interface in 5
+minutes</a>?
+Well, I followed the screencast and built my own copy and then I
+enhanced it with some additional JavaScript (Lightbox style preview of
+the images and a blind-up on subsequent searches). Note that in the
+course of making my changes I found out the proper ordering of the
+JavaScript callbacks (see
+<a href="http://api.rubyonrails.com/classes/ActionView/Helpers/PrototypeHelper.html#M000412">this</a>)
+– even though you would think that :before would be called prior to a
+:complete, it doesn’t always happen that way (so sometimes the new
+results are blinded-up and not shown).</p>
+
+<p>I’ve been meaning to upload this for awhile, but just haven’t gotten
+around to it. So today I updated it to work with Rails 1.1.1 (though
+didn’t switch the Ajax-y goodness over to RJS). Hopefully other folks
+can benefit from the code. To run it all you have to do is first install
+the flickr ruby gem, like so:</p>
+
+<pre><code>sudo gem install flickr
+</code></pre>
+
+<p>and unzip and run this <a href="http://seanmountcastle.com/wp-content/uploads/2007/02/flickr.zip">Rails
+app</a>.
+Enjoy!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2006/04/01/the-use-of-superconducting-wire-in-ethernet-networks/">The Use of Superconducting Wire in Ethernet Networks</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2006-04-01T03:07:00-05:00" pubdate data-updated="true">Apr 1<span>st</span>, 2006</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I&rsquo;m curious why I can&rsquo;t find anyone experimenting with the use of
+<a href="http://en.wikipedia.org/wiki/Superconductivity">superconductors</a> (<a href="http://en.wikipedia.org/wiki/High-temperature_superconductor">high
+temperature
+superconducting</a>
+(HTS) wire, specifically) in networking applications. I realize that
+fiber is really cheap now and HTS wiring is not. But it would be nice to
+see the transmission distances, for example, for an HTS version of Cat 6
+with RJ-45 style connectors. I find it annoying that you have to
+clean/polish the ends of fiber and dealing with two connectors is a
+pain. Though I think the LC duplex connectors are an improvement over
+the SC/FC/ST connectors. Plus I&rsquo;ve seen what happens when you bend
+fibers too far and have to replace or splice it. Then again, I&rsquo;m not
+that familiar with HTS wire so it may have some of the same issues
+(though surely it can&rsquo;t be as brittle as glass). Since fiber supports
+DWDM, I don&rsquo;t think HTS cable will take off, but it would still be
+interesting to see the comparison. This would be core network/long haul
+usage &hellip; in the long run, I think that wireless will win out in the
+last mile since it doesn&rsquo;t require the expense of burying fiber. If
+anyone knows more about HTS wire being used in networking applications
+please send me an email or leave a comment here. Thanks.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2006/03/31/novarug-march-meeting/">NoVARUG March Meeting</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2006-03-31T08:38:00-05:00" pubdate data-updated="true">Mar 31<span>st</span>, 2006</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I&rsquo;m a bit late in posting about it (due to extreme busyness at home and
+at work), but Devin Mullins gave a nice overview of metaprogramming with
+Ruby at the March Northern VA Ruby Users Group meeting. Devin&rsquo;s talk,
+entitled &ldquo;The Tao of Metaprogramming&rdquo;, was more of an exploration of
+Ruby&rsquo;s metaprogramming support in an irb session than the standard
+PowerPoint/Keynote presentation. He covered the reflection support in
+Ruby to see which methods a class responds to as well as how to add
+methods dynamically to object instances and classes using
+define_method, instance_method, class_eval, method_missing and eval.
+Ostensibly, the talk was subtitled &ldquo;ActiveRecord&rsquo;s Not Black Magic&rdquo; but
+due to the number of questions/discussion we didn&rsquo;t get into
+ActiveRecord that much &mdash; Devin did start to discuss it but I felt that
+we only scratched the surface. Overall, I though it was a very good talk
+and cleared up some of my questions regarding metaprogramming in Ruby. I
+still wish that someone (preferably the <a href="http://pragmaticprogrammer.com/">Pragmatic
+Programmers</a>) would publish a book with
+a focus on metaprogramming in Ruby and writing domain specific
+languages. Why&rsquo;s discussion of writing a DSL in Ruby called <a href="http://poignantguide.net/ruby/chapter-6.html#section3">Dwemthy’s
+Array</a> is nice
+(and funny), but I&rsquo;d like to see something deeper. Perhaps, I&rsquo;m wrong
+and it&rsquo;s not enough for a full length book, but I&rsquo;d be willing to pay
+for a <a href="http://pragmaticprogrammer.com/fridays.html">Fridays</a> type of
+short PDF if it were available.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/15/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/13/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/08/14/iosdevcamp-dc-2012/">iOSDevCamp DC 2012</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/09/26/moved-to-github-pages-and-octopress/">Moved to GitHub Pages and Octopress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2010/01/21/skribit/">Skribit</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2008/11/25/invented-quality-metric-feltz-levels/">Invented Quality Metric: Feltz Levels</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2008/08/08/rubynation-2008/">RubyNation 2008</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/sean">@sean</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'sean',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section id="twitter">
+  <h1 class="tweets">Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("smountcastle", , );
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/smountcastle">@smountcastle</a></p>
+  
+</section>
+
+
+<section>
+  <h1>Currently Reading</h1>
+  <p> 
+    <a href="http://www.amazon.com/Steve-Jobs-Walter-Isaacson/dp/1451648537?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=1451648537"><img src="http://ecx.images-amazon.com/images/I/5127U12cE-L._SL160_.jpg" /></a>
+    <br />
+    <a href="http://www.amazon.com/Steve-Jobs-Walter-Isaacson/dp/1451648537?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=1451648537">Steve Jobs</a> by
+    Walter Isaacson
+  </p>
+  <h1>Recent Reads</h1>
+  <ul id="recent_reads">
+    
+      <li class="post">
+	<p> 
+	  <a href="http://www.amazon.com/Storm-Swords-Song-Fire-Book/dp/055357342X?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=055357342X"><img src="http://ecx.images-amazon.com/images/I/51JLfDOCDQL._SL160_.jpg" /></a>
+	  <br />
+	  <a href="http://www.amazon.com/Storm-Swords-Song-Fire-Book/dp/055357342X?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=055357342X">A Storm of Swords (A Song of Ice and Fire, Book 3)</a> by
+	  George R.R. Martin
+	</p>
+      </li>
+    
+      <li class="post">
+	<p> 
+	  <a href="http://www.amazon.com/Clash-Kings-Song-Fire-Book/dp/0553381695?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0553381695"><img src="http://ecx.images-amazon.com/images/I/51PmY7G7biL._SL160_.jpg" /></a>
+	  <br />
+	  <a href="http://www.amazon.com/Clash-Kings-Song-Fire-Book/dp/0553381695?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0553381695">A Clash of Kings (A Song of Ice and Fire, Book 2)</a> by
+	  George R.R. Martin
+	</p>
+      </li>
+    
+      <li class="post">
+	<p> 
+	  <a href="http://www.amazon.com/Game-Thrones-Song-Fire-Book/dp/0553386794?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0553386794"><img src="http://ecx.images-amazon.com/images/I/51Yl0b4CjWL._SL160_.jpg" /></a>
+	  <br />
+	  <a href="http://www.amazon.com/Game-Thrones-Song-Fire-Book/dp/0553386794?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0553386794">A Game of Thrones (A Song of Ice and Fire, Book 1)</a> by
+	  George R.R. Martin
+	</p>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/smountcastle?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Sean Mountcastle <br/>
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a>, customized with <a href="https://github.com/mjhea0/whiterspace">whiterspace</a>.</span>
+</p>
+
+</footer>
+  
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,979 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Sean Mountcastle</title>
+  <meta name="author" content="Sean Mountcastle">
+
+  
+  <meta name="description" content="Alex Russell gave an interesting talk this morning on Building
+Responsive Web UIs with
+DHTML. My
+notes are below. Updated Aug 6, 12:38: I fixed the &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://seanmountcastle.com/blog/page/18">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="http://feeds.feedburner.com/SeanMountcastle" rel="alternate" title="Sean Mountcastle" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-378484-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner">
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://feeds.feedburner.com/SeanMountcastle" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:seanmountcastle.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2005/08/05/oscon-building-responsive-web-uis-with-dhtml/">OSCON Building Responsive Web UIs With DHTML</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-08-05T09:37:00-04:00" pubdate data-updated="true">Aug 5<span>th</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Alex Russell gave an interesting talk this morning on <a href="http://conferences.oreillynet.com/cs/os2005/view/e_sess/6985">Building
+Responsive Web UIs with
+DHTML</a>. My
+notes are below. Updated Aug 6, 12:38: I fixed the errors in the post
+pointed out by Alex Russell. BTW, he&rsquo;s an excelllent speaker, if he ever
+gives a talk and you are able to go, I heartily recommend doing so.</p>
+
+<h2>Building Responsive Web UIs with DHTML</h2>
+
+<p><a href="http://www.dojotoolkit.org">Alex Russell</a> Namespaces</p>
+
+<ul>
+<li>you NOT are the only thing in the interpreter. deal</li>
+<li>do nothing in global namesapce</li>
+<li>declare the start of a namespace</li>
+<li>Object.prototype.foo = &ldquo;&rdquo;; is EVIL</li>
+<li>MyObject.prototype.foo = &ldquo;&rdquo;; is GOOD</li>
+</ul>
+
+
+<p>Events: The old way</p>
+
+<ul>
+<li>clients treated a dumb renderers</li>
+<li>iframes make some partial content workable</li>
+</ul>
+
+
+<p>Events the DHTML way</p>
+
+<ul>
+<li>multiple models</li>
+<li>onclick=&ldquo;foo()&rdquo;</li>
+<li>DOM2 style: attachEvent (or addEventListener for IE6)</li>
+</ul>
+
+
+<p>Events the Dojo way</p>
+
+<ul>
+<li>dojo.event.connect()</li>
+<li>transparently handles multiple listeners</li>
+<li>makes browser differences go away</li>
+<li>builds in memory leak protection for IE</li>
+<li>connects normal functions too, not just DOM nodes</li>
+<li>dojo.event.connect(fooNode, &ldquo;onclick&rdquo;, doFoo);</li>
+<li>dojo.event.topic.subscribe(&ldquo;/foo&rdquo;, bar, &ldquo;baz&rdquo;);</li>
+<li>dojo.event.topic.publish(&ldquo;/foo&rdquo;, &ldquo;arg1&rdquo;, &ldquo;arg2&rdquo;);</li>
+</ul>
+
+
+<p>AOP &hellip; Say What?</p>
+
+<ul>
+<li>Aspect oriented</li>
+<li>does name method interception</li>
+<li>advice types available past the default of after</li>
+</ul>
+
+
+<p>I/O: the old way</p>
+
+<ul>
+<li>full page refreshes</li>
+<li>iframes provided some partial page refresh capability</li>
+</ul>
+
+
+<p>I/O the DHTML way</p>
+
+<ul>
+<li><p>XMLHttp requests</p>
+
+<ul>
+<li>sync or async</li>
+<li>browser capability detection code</li>
+<li>no file upload</li>
+<li>usability problems</li>
+</ul>
+</li>
+<li><p>iframes</p>
+
+<ul>
+<li>ugly, gratuitous hacks</li>
+<li>plays nice with forms</li>
+</ul>
+</li>
+</ul>
+
+
+<p>I/O the Dojo way</p>
+
+<ul>
+<li>common interface to multiple &ldquo;transports&rdquo;, incl. XMLHttp</li>
+<li>single response and multi response API (ready for LivePage,
+mod_pubsub, etc).</li>
+</ul>
+
+
+<p>Packaging the old way</p>
+
+<ul>
+<li>tags</li>
+<li>absolute URLs
+
+<ul>
+<li>External CSS files and template systems</li>
+</ul>
+</li>
+<li></li>
+</ul>
+
+
+<p>Packaging the DHTML way</p>
+
+<ul>
+<li>tags</li>
+<li>no dependency tracking</li>
+<li>no load ordering</li>
+<li>no transparent optimization</li>
+</ul>
+
+
+<p>Packaging the Dojo way</p>
+
+<ul>
+<li><p>built in pkg system:</p>
+
+<ul>
+<li>integrates and is transparent with the build system</li>
+<li>yes, we make builds to optimize your code for you</li>
+</ul>
+</li>
+<li><p>dependency satisfaction at runtime or build time</p></li>
+<li>partial builds can call source versions of this that aren&rsquo;t baked in</li>
+<li>just use dojo.require()</li>
+</ul>
+
+
+<p>Widget Reuse the old way</p>
+
+<ul>
+<li>you build modularized PHP or *SP</li>
+<li>CSS moved to external files</li>
+<li>behavioral code always copied</li>
+<li>JS potentially moved to libraries/external files</li>
+<li>No re-use previously available for DHTML</li>
+</ul>
+
+
+<p>Widget Reuse the Dojo way</p>
+
+<ul>
+<li>build with HTML and CSS fragements</li>
+<li>amazingly fast to prototype</li>
+<li>look and feel can change w/o changing JS class</li>
+<li>automatic reuse:
+
+<ul>
+<li>previously everything had to have unique IDS that you managed</li>
+<li>Dojo does that counting work for you</li>
+</ul>
+</li>
+</ul>
+
+
+<p>Demos</p>
+
+<ul>
+<li>Corkboard (from JotSpot)</li>
+<li>Turbo DbAdmin</li>
+</ul>
+
+
+<p>Functional Testing</p>
+
+<ul>
+<li>LiveTest &mdash; testing the deployed application (part of the Neuvaux
+(sp?) project). Only in svn for neuvous (sp?)</li>
+</ul>
+
+
+<p>Slides available <a href="http://dojotoolkit.org/~alex/dhtml_webapps.pdf">here</a>.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2005/08/04/oscon-preventing-crisis-project-estimation-and-tracking-that-works/">OSCON Preventing Crisis: Project Estimation and Tracking That Works</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-08-04T18:46:00-04:00" pubdate data-updated="true">Aug 4<span>th</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>For the final session of the day I decided to take a lighter one (i.e.
+not programming intensive as my mind had been pickled in Ruby code
+throughout the day), so I attended Andy Lester&rsquo;s <a href="http://conferences.oreillynet.com/cs/os2005/view/e_sess/6826">Preventing Crisis:
+Project Estimation and Tracking That
+Works</a>. My
+notes are below (along with links to the slides/velocity chart). Andy
+was introduced by Damian Conway (who was complimenting him on his
+practical sensible advice). Everyone hates crisis, problems and the
+stress that goes with them. This is how Andy and his team do project
+tracking &mdash; it works for them, it may not work for everyone. Will we
+make it? How we doing? 190 hours short in example (10 week project). Is
+it a crisis or readjustment &mdash; don&rsquo;t realize that you&rsquo;re screwed until
+just before the end. Find out how things are going, early on so they can
+be addressed early on. Goals: &ndash; accurate schedules (they make customers
+happy) &ndash; bad news early (surprise makes customers happy) &ndash; fun for you
+(otherwise, why bother?) Tools &amp; Principles &ndash; honesty with everyone &ndash;
+changes &amp; mistakes happen &ndash; tasks are either done or not (no more 90%
+done) &ndash; nothing is free (get across to customers and self) Assumptions:
+&ndash; you have version control &ndash; backups &ndash; bug tracking How to do projects &ndash;
+Get a project &ndash; some sort of written doc (even if you have to write it)
+&ndash; does it have all of the info you need to do the project? &ndash; How
+complete? It&rsquo;s up to you (think leaflet, not phone book) &ndash; Nothing is
+set in stone &ndash; &ldquo;signed off&rdquo; on means &ldquo;as best we know now&rdquo; &ndash; changes
+will happen, don&rsquo;t pretend they won&rsquo;t &ndash; the requirements establish a
+baseline from which work can start &ndash; Do a swag &ndash; silly wild-assed guess
+(spend a day coming up with it, not weeks) &ndash; fast &amp; cheap &ndash; not a
+commitment &ndash; estimate in days or weeks &ndash; figure out confidence &ndash; those
+responsible for the work OK the swag &ndash; Swag Example: 12 weeks &ndash; DB set
+up &ndash; 1 week &ndash; User Screen 1 &ndash; 3 weeks &ndash; User Screen 2 &ndash; 1 week &ndash; User
+Screen 3 &ndash; 2 weeks &ndash; Reports &ndash; 2 weeks &ndash; Admin screens &ndash; 2 weeks &ndash;
+Status web page &ndash; 1 week &ndash; Do a task list/estimate/schedule &ndash; start
+breaking up swag &ndash; outline form is fine, but not necessary &ndash; put them in
+chronological order &ndash; tasks may not be longer than 4 hours (&frac12; day)
+Four hours??? &ndash; you can&rsquo;t estimate accurately above 4 hours &ndash;
+distributes risk (estimates are usually off by 100% not 10%) &ndash; requires
+rocks to be turned over &ndash; You&rsquo;re doing design as you go, so keep notes &ndash;
+Those responsible for the work OK the task list/schedule (otherwise the
+developers will resent mgmt, also serves as a sanity check/peer review
+on the task, in case something was missed) Task Breakdown Example &ndash; foo
+report &ndash; 4 days &ndash; bar report &ndash; 2 days &ndash; etc. Task Breakdown Further &ndash;
+Foo report &ndash; data input &ndash; 2 hrs &ndash; Foo report &ndash; data marshalling &ndash; 4 hrs
+&ndash; Foo report &ndash; web detail &ndash; 3 hrs &ndash; etc. &ldquo;I might as well write the
+thing&rdquo; &ndash; this is not programming! &ndash; the developer thinking about the
+tasks is more valuable As you write the code &ndash; plan for upcoming weeks &ndash;
+do one task and complete it &ndash; do the next task and complete it &ndash; don&rsquo;t
+jump more than necessary (too much jumping around is bad because you
+want chunks of functionality completed in case you need to ship a subset
+of the product, i.e. less features, early). Planning for the week &ndash;
+assign tasks so each person knows what they are doing each day of the
+week. &ndash; try to assign less than 8 hours of estimated work per person per
+day Track progress &ndash; keep track of how many hours the task actually took
+&ndash; don&rsquo;t check it off until it&rsquo;s actually done &ndash; keep track of how long
+bug resolution takes as well &ndash; re-evaluate remaining tasks if completed
+tasks were inaccurate (i.e. they took twice as long). &ndash; velocity only
+counts those tasks which were completed Tracking the weeks &ndash; keep track
+of total points (hours) of work remaining (the Sophos guys call this
+&ldquo;burn down&rdquo;) &ndash; if missing tasks are discovered, it increases the total
+amount of work (moving the &ldquo;finish line&rdquo; out) and thus the work
+remaining won&rsquo;t decrease as much &ndash; towards the end more bugs will pop-up
+and the team&rsquo;s velocity will be impacted. &ndash; all tasks are binary
+(done/not done) &ndash; track points completed on a velocity chart &ndash; no points
+for rework (bug fixes and rework are buying on credit) &ndash; don&rsquo;t bother
+going back and fixing the time estimate for completed tasks, but for
+future tasks you should re-evaluate the time estimates (maybe those
+tasks need to be broken down into smaller tasks). We want to know about
+these types of issues sooner, rather than later. You can&rsquo;t be a &ldquo;little
+pregnant&rdquo; &ndash; a task is done or not done &ndash; I&rsquo;m done with that code, I just
+need to clean it up &mdash; you&rsquo;re not done &ndash; I&rsquo;m about 90% done with these
+tasks &mdash; you&rsquo;re not done Adjust &ndash; reorder tasks if necessary &ndash;
+re-estimate and break up tasks if you need to Handle requests &ndash; Can do
+you X? Yes &ndash; How long will it take? I need a day to tell you &ndash; Can you
+just give me a ballpark? Yes, if I can take a day off of the project to
+estimate for you. A non-commital swag is ok here. Slides at <a href="http://petdance.com/perl/crisis.pdf">Preventing
+Crisis: Project Estimation And Tracking That
+Works</a> Related excel chart:
+<a href="http://petdance.com/perl/crisis-velocity.xls">Velocity chart for Preventing
+Crisis</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2005/08/04/oscon-dependency-injection-vitally-important-or-completely-irrelevant/">OSCON Dependency Injection: Vitally Important or Completely Irrelevant?</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-08-04T16:43:00-04:00" pubdate data-updated="true">Aug 4<span>th</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Jim Weirich gave an interesting presentation on dependency injection
+entitled, <a href="http://conferences.oreillynet.com/cs/os2005/view/e_sess/6473">Dependency Injection: Vitally Important or Completely
+Irrelevant?</a>
+Since the slides are available
+<a href="http://www.onestepback.org/articles/depinj/index.html">online</a> and my
+wrist is beginning to bother me, I&rsquo;ll sum it up quickly. Is dependency
+injection important in a dynamically typed language? No.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2005/08/04/oscon-a-starry-afternoon-a-sinking-symphony-and-the-polo-champ-who-gave-it-all-up-for-no-reason-whatsoever/">OSCON a Starry Afternoon, a Sinking Symphony, and the Polo Champ Who Gave It All Up for No Reason Whatsoever</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-08-04T15:31:00-04:00" pubdate data-updated="true">Aug 4<span>th</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Why the lucky stiff dazzled the audience with his performance art piece
+entitled, <a href="http://conferences.oreillynet.com/cs/os2005/view/e_sess/6948">A Starry Afternoon, a Sinking Symphony, and the Polo Champ
+Who Gave It All Up for No Reason
+Whatsoever</a>.
+My mind was blown and my gut busted. O&#8217;Reilly should hold a Monday Night
+Extravaganza at next year&rsquo;s OSCON and give the entire night to Why (and
+his band, The Thirsty Cups). My (very limited) notes are below. This was
+an incredible experience including about four different movies (two with
+shadow puppets &mdash; yay!) and two live performances by Why and the Thirsty
+Cups. First Why extolled the virtues of the future &mdash; such as the
+octagonal paper they were using (as seen on Battlestar Gallactica) &mdash;
+this octagonal paper has literally changed their lifes (when asked where
+one could purchase such fancy paper, Why simply replied, &ldquo;The future&rdquo;).
+After a storytelling session (movie with shadow puppets) and possibly a
+musical performance (sorry, so much happened my mind is a blur &mdash; I was
+too busy trying to capture it all on film to take accurate notes), Why
+noted the dearth of programming resources for children &mdash; claiming that
+the only books he could find at Amazon dated from the mid-80&rsquo;s (over 20
+years ago); unless he was doing the wrong search &mdash; when asked what
+&ldquo;kids&rdquo; are called now-a-days an audience member replied &ldquo;gangsters&rdquo; (or
+was that &ldquo;gangstas&rdquo;, it was difficult to tell) &mdash; a search for &ldquo;gangster
+programming&rdquo; turned up a single
+<a href="http://www.amazon.com/exec/obidos/tg/detail/-/0387001638/qid=1123213082/sr=8-1/ref=sr_8_xs_ap_i1_xgl14/104-8580297-7385514?v=glance&amp;s=books&amp;n=507846">book</a>
+on Amazon. After that it all become a blur with more movies and another
+musical performance. Snapshots from the (pre)-show at FOSCON are here:
+<a href="http://www.onestepback.org/articles/depinj/index.html">http://www.onestepback.org/articles/depinj/index.html</a> Once I get access
+to a proper USB cable, I&rsquo;ll post my photos to Flickr as well. Also, Why
+said that he would post torrents of the movies at his site:
+<a href="http://redhanded.hobix.com/">http://redhanded.hobix.com/</a> What I want to know is when we can purchase
+Why and the Thirsty Cups on iTunes &hellip;</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2005/08/04/oscon-metaprogramming-ruby/">OSCON Metaprogramming Ruby</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-08-04T10:16:00-04:00" pubdate data-updated="true">Aug 4<span>th</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Glenn Vanderburg presented on <a href="http://conferences.oreillynet.com/cs/os2005/view/e_sess/6816">Metaprogramming
+Ruby</a>. I
+thought it was quite interesting as I had only done this previously in
+ANSI Common Lisp. My notes from the talk are below.</p>
+
+<h2>Metaprogramming (MP)</h2>
+
+<ul>
+<li>programming your programming</li>
+<li>change the way you program in your programming lang</li>
+<li>transform your general-purpose lang</li>
+<li>make it domain specific</li>
+<li>program ing a lang designed for the problem you&rsquo;re solving</li>
+</ul>
+
+
+<p>Lisp</p>
+
+<ul>
+<li>origination of metaprog</li>
+</ul>
+
+
+<p>Ruby</p>
+
+<ul>
+<li>MP is rediscovered</li>
+<li>style and idioms are changing and adapting</li>
+<li>rails leverages mp heavily (to great effect)</li>
+<li>ruby is a natural for MP</li>
+</ul>
+
+
+<p>Why?</p>
+
+<ul>
+<li>Dynamic and reflective</li>
+<li>everything is open to change</li>
+<li>blocks allow writing new control structs (add continuations to get
+fancy)</li>
+<li>Most declarations are executable statements</li>
+<li>only slightly less malleable than Lisp (no macros)</li>
+<li>a fantastic syntax
+
+<ul>
+<li>neutral and unobtrusive</li>
+<li>enough to distinguish different kinds of constructs</li>
+<li>not enough to complicate straightforward statements</li>
+</ul>
+</li>
+</ul>
+
+
+<p>Built-in Examples</p>
+
+<ul>
+<li>declaring object properties: attr_reader :id, :age attr_writer
+:name attr_accessor :color</li>
+<li>These are just methods from Module (not syntax)</li>
+<li>How are they written? Unfortunately, in C. Still instructive but
+doesn&rsquo;t tell you how to do it in Ruby.</li>
+</ul>
+
+
+<p>Mathieu Bouchard&rsquo;s X11 Library</p>
+
+<ul>
+<li>Wrote a DSL which defined the X11 Protocol Spec in a way similar to
+the way in which the spec itself was written.</li>
+</ul>
+
+
+<p>Styles Have Changed</p>
+
+<ul>
+<li>A DSL was created in similar fashion for the Java Debug Wire
+Protocol.</li>
+<li>executable protocol spec which could be printed from source</li>
+</ul>
+
+
+<p>Dave Thomas&rsquo;s Summer Project</p>
+
+<ul>
+<li>RubyConf 2002 &ldquo;How I spent my summer vacation&rdquo;</li>
+<li>Created a DSL which would build objects based on the contents of a
+DB or generate the DDL for the database or generate the graph code
+for an ER diagram.</li>
+</ul>
+
+
+<p>How to think about metaprogramming</p>
+
+<ul>
+<li>Def new constructs for your programming lang</li>
+<li>Ok, but constructs to do what?</li>
+<li>Whatever your DSL needs to do.</li>
+</ul>
+
+
+<p>Another way to think about it</p>
+
+<ul>
+<li>a new bag of tricks for eliminating duplication (and other smells)
+from your code</li>
+<li>two ways to go about it: write your app and extract (Rails), layout
+design first (ActionStep).</li>
+</ul>
+
+
+<p>Conventional Constructs</p>
+
+<ul>
+<li>DSLs need: types, literals, declaration, expressions, operators,
+statements, control structs</li>
+</ul>
+
+
+<p>Most DSLs also deal with things you don&rsquo;t usually find in gp langs</p>
+
+<ul>
+<li>context-dependence</li>
+<li>commands and sentences</li>
+<li>units (unit conversion)</li>
+<li>large vocabularies ( sometimes unbounded)</li>
+<li>hierarchy</li>
+</ul>
+
+
+<p>Contexts</p>
+
+<ul>
+<li><p>Establish a context for a set of statements:</p>
+
+<ul>
+<li>constrain those statements to the context</li>
+<li>multiple, concise operations on the context</li>
+</ul>
+</li>
+<li><p>What&rsquo;s a context? A scope.</p></li>
+</ul>
+
+
+<p>Commands &amp; Sentences</p>
+
+<ul>
+<li>multipart, complex statements or declarations</li>
+</ul>
+
+
+<p>field(autoinc, :reg_id, pk)</p>
+
+<ul>
+<li>It&rsquo;s just a method call (optional parens are handy for sentences</li>
+<li>First param is a method call: restricts the arguments to predefined
+alternatives (prevent errors)</li>
+<li>Second param is a symbol: restrict syntax to goo name-like strings</li>
+<li>Additional params are method calls:
+
+<ul>
+<li>options, constraints</li>
+<li>methods return objects that encode constraints</li>
+</ul>
+</li>
+</ul>
+
+
+<p>Units</p>
+
+<ul>
+<li>general purpose langs deal with scalars</li>
+<li>most DSLs deal with quantities</li>
+</ul>
+
+
+<p>Impl Units</p>
+
+<ul>
+<li><p>Classes representing quantities</p>
+
+<ul>
+<li>don&rsquo;t forget to support math</li>
+<li>user operator overloading if it makes sense</li>
+<li>may require mixed-based arithmetic (time certainly does)</li>
+</ul>
+</li>
+<li><p>Next: natural expression</p></li>
+</ul>
+
+
+<p>Large Vocab</p>
+
+<ul>
+<li>Roman numerals (Roman.CCXX, Roman.XLII)</li>
+<li>Jim Weirich&rsquo;s XmlMarkup class (used in Rails):</li>
+</ul>
+
+
+<p>How do you impl large vocabularies?</p>
+
+<ul>
+<li>override method_missing</li>
+<li>Be careful! Bugs lurk here. Sometimes method missing intercepts
+something that really is a name in an outer scope &mdash; it&rsquo;s also hard
+to find bugs if you misspell a real method name.</li>
+</ul>
+
+
+<p>Hierarchy</p>
+
+<ul>
+<li>XmlMarkup again (see slides)</li>
+</ul>
+
+
+<p>How to implement?</p>
+
+<ul>
+<li>call from method_missing:</li>
+</ul>
+
+
+<p>You could use instance_eval to avoid typing xm. before every call. But
+don&rsquo;t. If you make a method call within the block and use
+instance_eval, the method is looked up in the wrong context and get a
+no such method error. Slides are available
+<a href="http://www.vanderburg.org/Speaking/Stuff/oscon05.pdf">here</a>.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/19/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/17/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/08/14/iosdevcamp-dc-2012/">iOSDevCamp DC 2012</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/09/26/moved-to-github-pages-and-octopress/">Moved to GitHub Pages and Octopress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2010/01/21/skribit/">Skribit</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2008/11/25/invented-quality-metric-feltz-levels/">Invented Quality Metric: Feltz Levels</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2008/08/08/rubynation-2008/">RubyNation 2008</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/sean">@sean</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'sean',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section id="twitter">
+  <h1 class="tweets">Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("smountcastle", , );
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/smountcastle">@smountcastle</a></p>
+  
+</section>
+
+
+<section>
+  <h1>Currently Reading</h1>
+  <p> 
+    <a href="http://www.amazon.com/Steve-Jobs-Walter-Isaacson/dp/1451648537?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=1451648537"><img src="http://ecx.images-amazon.com/images/I/5127U12cE-L._SL160_.jpg" /></a>
+    <br />
+    <a href="http://www.amazon.com/Steve-Jobs-Walter-Isaacson/dp/1451648537?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=1451648537">Steve Jobs</a> by
+    Walter Isaacson
+  </p>
+  <h1>Recent Reads</h1>
+  <ul id="recent_reads">
+    
+      <li class="post">
+	<p> 
+	  <a href="http://www.amazon.com/Storm-Swords-Song-Fire-Book/dp/055357342X?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=055357342X"><img src="http://ecx.images-amazon.com/images/I/51JLfDOCDQL._SL160_.jpg" /></a>
+	  <br />
+	  <a href="http://www.amazon.com/Storm-Swords-Song-Fire-Book/dp/055357342X?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=055357342X">A Storm of Swords (A Song of Ice and Fire, Book 3)</a> by
+	  George R.R. Martin
+	</p>
+      </li>
+    
+      <li class="post">
+	<p> 
+	  <a href="http://www.amazon.com/Clash-Kings-Song-Fire-Book/dp/0553381695?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0553381695"><img src="http://ecx.images-amazon.com/images/I/51PmY7G7biL._SL160_.jpg" /></a>
+	  <br />
+	  <a href="http://www.amazon.com/Clash-Kings-Song-Fire-Book/dp/0553381695?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0553381695">A Clash of Kings (A Song of Ice and Fire, Book 2)</a> by
+	  George R.R. Martin
+	</p>
+      </li>
+    
+      <li class="post">
+	<p> 
+	  <a href="http://www.amazon.com/Game-Thrones-Song-Fire-Book/dp/0553386794?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0553386794"><img src="http://ecx.images-amazon.com/images/I/51Yl0b4CjWL._SL160_.jpg" /></a>
+	  <br />
+	  <a href="http://www.amazon.com/Game-Thrones-Song-Fire-Book/dp/0553386794?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0553386794">A Game of Thrones (A Song of Ice and Fire, Book 1)</a> by
+	  George R.R. Martin
+	</p>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/smountcastle?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Sean Mountcastle <br/>
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a>, customized with <a href="https://github.com/mjhea0/whiterspace">whiterspace</a>.</span>
+</p>
+
+</footer>
+  
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

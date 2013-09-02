@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Entrepreneurship | Sean Mountcastle]]></title>
+  <link href="http://seanmountcastle.com/blog/categories/entrepreneurship/atom.xml" rel="self"/>
+  <link href="http://seanmountcastle.com/"/>
+  <updated>2013-09-01T22:16:59-04:00</updated>
+  <id>http://seanmountcastle.com/</id>
+  <author>
+    <name><![CDATA[Sean Mountcastle]]></name>
+    <email><![CDATA[smountcastle@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[LaunchBox Unleashes Its First Nine Startups]]></title>
+    <link href="http://seanmountcastle.com/blog/2008/08/06/launchbox-unleashes-its-first-nine-startups/"/>
+    <updated>2008-08-06T08:28:52-04:00</updated>
+    <id>http://seanmountcastle.com/blog/2008/08/06/launchbox-unleashes-its-first-nine-startups</id>
+    <content type="html"><![CDATA[<p>Over on TechCrunch they have a <a href="http://www.techcrunch.com/2008/08/05/launchbox-unleashes-its-first-nine-startups/">great overview of the first nine startups</a> to come out of <a href="http://www.launchboxdigital.com/">LaunchBox Digital</a>, a local early stage investment firm. One of the founders of <a href="http://sharememe.com/">ShareMeme</a>, <a href="http://www.linkedin.com/in/luccastera">Luc Castera</a>, from the Ruby Users' Group (and local conferences). I&rsquo;m excited to dig-in and start using these new services. Here&rsquo;s a brief overview:</p>
+
+<ul>
+<li><a href="http://www.buzzhubb.com/">BuzzHubb: A Better College Social Network</a>. Next generation group management for colleges and universities (it is similar to Facebook in that regard &amp;emdash only students can join).</li>
+<li><a href="http://www.heekya.com/">Heekya: The Wikipedia For Stories</a>. Social story telling using multiple forms of media (text, photos, video).</li>
+<li><a href="http://www.jamlegend.com/">JamLegend: Guitar Hero Goes Social</a>. A free online music gaming experience.</li>
+<li><a href="http://www.koofers.com/">Koofers: Crib Notes For Picking College Classes</a>. A tool to help students build their class schedules with insight into the classes, teachers, and styles as reported by other students. It also provides access to study guides, past exams, etc. to assist students.</li>
+<li><a href="http://www.mygamemug.com/">MyGameMug: Match.com For Gamers</a>. A personality test for gamers &amp;emdash find others who like the kinds of games that you do.</li>
+<li><a href="http://www.razume.com/">Razume: Resume 2.0</a>. A tool for young (21-35) job seekers. This looks really interesting to me because I had a similar idea several years ago but never executed on it. I&rsquo;m curious to see how its features overlap with my detailed plan.</li>
+<li><a href="http://www.sharememe.com/">ShareMeme: Evite Meets Twitter</a>. This service is addressing a real issue that is affecting me: being (inadvertently) spammed by my friends as they sign up for social networks and other services. If it succeeds it can be the go to point for distributing information out to your friends and family through the best channels.</li>
+<li><a href="http://www.zadby.com/">Zadby: Web Video Product Placement</a>. Zadby wants to be the market maker for product placement in web video, through its network of independent web video producers.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Startups 101]]></title>
+    <link href="http://seanmountcastle.com/blog/2008/04/23/startups-101/"/>
+    <updated>2008-04-23T23:58:26-04:00</updated>
+    <id>http://seanmountcastle.com/blog/2008/04/23/startups-101</id>
+    <content type="html"><![CDATA[<p><a href="http://refresh-dc.org/"><img src="http://seanmountcastle.com/wp-content/uploads/2008/04/refreshdc.png" alt="Refresh
+DC" /></a></p>
+
+<p>Tonight I had the opportunity to attend a special <a href="http://refresh-dc.org/">Refresh
+DC</a> meeting on the challenges of starting your
+own business. The format was a panel of folks from the DC startup scene
+moderated by <a href="http://www.viget.com/about/team/jwilkinson">Jackson
+Wilkinson</a> of <a href="http://www.viget.com">Viget
+Labs</a>. The panel consisted of <a href="http://www.viget.com/about/team/bwilliams">Brian
+Williams</a> of Viget Labs,
+<a href="http://andrewlee.com/">Andrew Lee</a> of <a href="http://publi.us/">Publi.us</a>,
+Eric Rupert from <a href="http://odeo.com/">Odeo</a>, <a href="http://blog.hungrymachine.com/">Eddie
+Frederick</a>of <a href="http://hungrymachine.com/">Hungry
+Machine</a>, and <a href="http://www.launchboxdigital.com/blog.html">Sean
+Greene</a> of <a href="http://www.launchboxdigital.com/">LaunchBox
+Digital</a>.</p>
+
+<p>These were the main points I took away:</p>
+
+<ol>
+<li><strong>Be passionate.</strong> The most important quality for startup founders
+is to be passionate about their product or service. Starting a
+company can be exhilarating but the setbacks can be really
+difficult. If you&rsquo;re not passionate about what you&rsquo;re doing each of
+these roadblocks will be an excuse for you to quit. Figure out what
+you&rsquo;re passionate about and work on that.</li>
+<li><strong>Focus on your product.</strong> Don&rsquo;t focus on the pie-in-the-sky
+potential valuations of your company or worry about leasing office
+space, hiring an attorney, finding an accountant, etc. Instead you
+should focus on the product or service you&rsquo;re going to sell. Get
+something out there quickly &mdash; pick the most important feature and
+get it out there in front of your customers quickly.</li>
+<li><strong>Have your customers influence your product.</strong> If you follow the
+previous advice and get your product out there quickly you can use
+customer feedback to iterate your product. You may not know all of
+the difference ways customers will use your product, so this
+feedback is critical in charting your product roadmap.</li>
+<li><strong>Equity is control, don&rsquo;t surrender it easily.</strong> One of the
+attendees asked about using equity to pay for services if money was
+tight. Brian said to avoid giving out equity as you make that person
+a partner in your business. While they may not have a controlling
+interest, they are still an owner and have some influence.</li>
+<li><strong>Don&rsquo;t overfund.</strong> All of the panelists warned of the dangers of
+taking too much money as it does more than dilute the founders'
+ownership. Venture capitalists are looking to make a large return o
+their capital for themselves and their limited partners. If you need
+to pay a vendor or contractor find another way &mdash; defer payment, use
+credit, etc.</li>
+<li><strong>Hire slow, fire fast.</strong> Early employees can make or break your
+company. You will be working long hours aside these folks so you
+must ensure they&rsquo;re a good fit. If you make a bad hire, you need to
+resolve the situation quickly, don&rsquo;t let emotion get in the way.</li>
+</ol>
+
+
+<p>Some of the books recommended were: <a href="http://www.amazon.com/Art-Start-Time-Tested-Battle-Hardened-Starting/dp/1591840562/ref=pd_bbs_sr_1?ie=UTF8&amp;s=books&amp;qid=1209008603&amp;sr=8-1">Art of the
+Start</a>,
+<a href="http://www.amazon.com/Getting-Yes-Negotiating-Agreement-Without/dp/0140157352/ref=pd_bbs_2?ie=UTF8&amp;s=books&amp;qid=1209008634&amp;sr=8-2">Getting to
+Yes</a>,
+and <a href="http://www.amazon.com/Founders-Work-Stories-Startups-Early/dp/1590597141/ref=pd_bbs_3?ie=UTF8&amp;s=books&amp;qid=1209008603&amp;sr=8-3">Founders at
+Work</a>.
+Andrew also recommended <a href="http://startupschool.org/">Startup School</a> run
+by <a href="http://ycombinator.com/">Y Combinator</a> (YC). I&rsquo;ve been reading <a href="http://www.paulgraham.com">Paul
+Graham</a>&rsquo;s essays for around seven years now
+and following YC&rsquo;s investments. I&rsquo;m glad to see an early stage investor
+like YC in the DC area (LaunchBox Digital) and hope that the startup
+scene in DC and suburbs becomes more vibrant.</p>
+
+<p>Thanks to <a href="http://www.sainc.com/">Strategic Analysis</a> for hosting this.
+It was a great venue and hope they&rsquo;ll offer to host Refresh DC again.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Startups in Northern VA]]></title>
+    <link href="http://seanmountcastle.com/blog/2006/11/22/startups-in-northern-va/"/>
+    <updated>2006-11-22T11:42:43-05:00</updated>
+    <id>http://seanmountcastle.com/blog/2006/11/22/startups-in-northern-va</id>
+    <content type="html"><![CDATA[<p>I compiled this list several months ago when I was looking for work. In
+the end, I decided to join an established company. I did not get a
+chance to interview with each of the companies in the attached
+spreadsheet, but I&rsquo;ll write separate posts about the ones that I did get
+a chance to speak with. As a little bonus, here are the companies that I
+know of in Northern Virginia working with the
+<a href="http://www.ruby-lang.org">Ruby</a> programming language. Note that not all
+of them are startups in the traditional sense:</p>
+
+<ul>
+<li>InfoEther (<a href="http://www.infoether.com">www.infoether.com</a>): This is
+<a href="http://richkilmer.blogs.com/ether/">Rich Kilmer&rsquo;s</a> current startup
+providing a secure and mobile digital vault on a USB drive. <a href="http://tomcopeland.blogs.com/">Tom
+Copeland</a> also works at InfoEther.</li>
+<li>CustomInk (<a href="http://www.customink.com">www.customink.com</a>): They have
+an innovative web app for desigining logos, etc that can then be
+printed on shirts, mugs, golf balls, pens, etc. They are currently
+hiring.</li>
+<li>Bosatsu Consulting (<a href="http://www.bosatsu.net/">www.bosatsu.net</a>):
+Brian is working on some Ruby (non-Rails) projects and was looking
+for someone to assist with Rails work&mdash;I don&rsquo;t know if he&rsquo;s found
+anyone yet.</li>
+<li>Digital Focus (<a href="http://www.digitalfocus.com">www.digitalfocus.com</a>):
+This is a consulting company, primarily focusing on Agile
+development (training, team insertion, etc). They are looking for
+Ruby developers as the majority of their consultants are J2EE and
+.Net folks.</li>
+<li>Revolution Health Group
+(<a href="http://www.revolution.com/health/default.asp">www.revolution.com</a>):
+The Revolution suite of companies was founded in Washington, DC by
+Steve Case (of AOL fame). The team at RHG is looking to tie together
+several different healthcare acquisitions into a Ruby on Rails
+portal. They&rsquo;ve been trying to hire Ruby developers for quite awhile
+now.</li>
+</ul>
+
+
+<p>If you know of any more companies with a focus on Ruby in the DC metro
+area, please let me know about it via the comments. Here&rsquo;s the link to
+the Excel spreadsheet containing the list of startups I found nearby. I
+know for a fact that a few of the companies listed have already been
+acquired. <a href="http://seanmountcastle.com/wp-content/uploads/2006/11/startups.xls">Startups in Northern
+VA</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Y Combinator: The Top Internet VC Firms]]></title>
+    <link href="http://seanmountcastle.com/blog/2006/11/21/y-combinator-the-top-internet-vc-firms/"/>
+    <updated>2006-11-21T22:48:59-05:00</updated>
+    <id>http://seanmountcastle.com/blog/2006/11/21/y-combinator-the-top-internet-vc-firms</id>
+    <content type="html"><![CDATA[<p>Paul Graham has an interesting piece up at Y Combinator entitled <a href="http://ycombinator.com/topvcs.html">The
+Top Internet VC Firms</a>. This
+provides a bit more insight into some of the VC&rsquo;s I mentioned in my
+<a href="http://seanmountcastle.com/2006/11/15/qualified-investors-in-northern-va/">previous
+post</a>
+(many are definitely <strong>not</strong> top tier VCs&mdash;though I think this was
+obvious before).</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Qualified Investors in Northern VA]]></title>
+    <link href="http://seanmountcastle.com/blog/2006/11/15/qualified-investors-in-northern-va/"/>
+    <updated>2006-11-15T21:59:33-05:00</updated>
+    <id>http://seanmountcastle.com/blog/2006/11/15/qualified-investors-in-northern-va</id>
+    <content type="html"><![CDATA[<p>I know, I know&mdash;this post has a really lame title. I had wanted to call
+it VC&rsquo;s which actively invest in the DC metro area but I&rsquo;ve included
+angels in this list as well. I&rsquo;ve tried to be as thorough as possible,
+but this research was done several months ago when I was looking for a
+new job and desperately wanted to work at a startup. Unfortunately, I
+was not willing to relocate and the number of startups in Northern VA
+whose domains overlap with my interests and skills is rather low. So,
+without any further ado, here&rsquo;s the list in no particular order:</p>
+
+<ul>
+<li><a href="http://www.in-q-tel.com/" title="In-Q-Tel">In-Q-Tel</a> (VC fund, funded by
+the intelligence community)</li>
+<li><a href="http://www.walkerventures.com/" title="Walker Ventures">Walker Ventures</a></li>
+<li><a href="http://www.anthemcapital.com/" title="Anthem Capital">Anthem Capital
+Management</a></li>
+<li><a href="http://www.nea.com/Home/" title="NEA">New Enterprise Associates</a></li>
+<li><a href="http://www.novakbiddle.com/" title="Novak Biddle">Novak Biddle</a></li>
+<li><a href="http://www.paladincapgroup.com/portal/index.php" title="Paladin Capital">Paladin Capital
+Group</a></li>
+<li><a href="http://www.tridentcap.com/" title="Trident Capital">Trident Capital</a></li>
+<li><a href="http://www.sasinvestors.com/home.html" title="SAS">SAS Investors</a></li>
+<li><a href="http://www.omidyar.net/" title="Omidyar Network">Omidyar Network</a> (Pierre
+&amp; Pam Omidyar of eBay)<a href="http://www.omidyar.net/" title="Omidyar Network"></a></li>
+<li><a href="http://www.redshiftventures.com/" title="RedShift Ventures">RedShift
+Ventures</a></li>
+<li><a href="http://www.longworth.com/index_content.html" title="Longworth Venture Partners">Longworth Venture
+Partners</a></li>
+<li><a href="http://www.core-capital.com/" title="Core Capital">Core Capital Partners</a></li>
+<li><a href="http://www.grotech.com/" title="Grotech Capital">Grotech Capital Group</a></li>
+<li><a href="http://www.bluewatercapital.com/" title="Blue Water Capital">Blue Water
+Capital</a></li>
+<li><a href="http://www.mavf.com/" title="MAVF">Mid-Atlantic Venture Funds</a></li>
+<li><a href="http://www.boulderventures.com/" title="Boulder Ventures">Boulder
+Ventures</a>
+(Primarily a Colorado investor, but also does deals in the
+mid-atlantic)</li>
+<li><a href="http://www.carlyle.com/eng/index.html" title="Carlyle Group">Carlyle
+Group</a></li>
+<li><a href="http://www.inflectpoint.com/" title="Inflection Point Ventures">Inflection Point
+Ventures</a></li>
+<li><a href="http://www.northhillventures.com/" title="North Hill Ventures">North Hill
+Ventures</a></li>
+<li><a href="http://www.abscapital.com/" title="ABS Capital">ABS Capital Partners</a></li>
+<li><a href="http://www.draperatlantic.com/" title="Draper Atlantic">Draper Atlantic</a></li>
+<li><a href="http://www.lazardtp.com/technologypartners/ltp_overview/ltp_overview.asp" title="Lazard Technology Partners">Lazard Technology
+Partners</a></li>
+<li><a href="http://www.intersouth.com/" title="Intersouth Partners">Intersouth
+Partners</a></li>
+<li><a href="http://www.mvpfunds.com/" title="MVP Funds">Monumental Venture Partners</a></li>
+<li><a href="http://www.tpgvc.com/index2.html" title="Texas Pacific Group">ACON
+Ventures</a>
+(an affiliate of Texas Pacific Group Ventures)</li>
+<li><a href="http://www.edisonventure.com/" title="Edison Ventures">Edison Venture
+Fund</a></li>
+<li><a href="http://www.ecenturycapital.com/" title="Ecentury">Ecentury Capital
+Partners</a></li>
+<li><a href="http://www.colcap.com/" title="Columbia Capital">Columbia Capital</a></li>
+<li><a href="http://www.tdfund.com/" title="Telecom Development Fund">Telecom Development
+Fund</a></li>
+<li><a href="http://www.grosvenorfund.com/" title="The Grosvenor Funds">Grosvenor
+Funds</a></li>
+<li><a href="http://www.friedlicorp.com/" title="Friedli Coporate Finance">Friedli Corporate
+Finance</a></li>
+<li><a href="http://www.liquidcapitalgroup.com/" title="Liquid Capital">Liquid Capital
+Group</a></li>
+<li><a href="http://www.valhallapartners.com/" title="Valhalla Partners">Valhalla
+Partners</a></li>
+<li><a href="http://www.crosshill.com/" title="CrossHill Financial">CrossHill Financial
+Group</a></li>
+<li><a href="http://www.washingtondinnerclub.com/" title="Washington Dinner Club">Washington Dinner
+Club</a>
+(angel investors)</li>
+<li><a href="http://www.newvantagegroup.com" title="New Vantage Group">New Vantage
+Group</a></li>
+<li><a href="http://www.brv.com/" title="Blue Run Ventures">BlueRun Ventures</a></li>
+<li><a href="http://www.aurorafunds.com/" title="Aurora Funds">Aurora Funds</a></li>
+<li><a href="http://www.avansis.com/" title="Avansis Ventures">Avansis Ventures</a></li>
+<li><a href="http://www.bcecapital.com/" title="BCE Capital">BCE Capital</a></li>
+<li><a href="http://www.opus8.com/" title="Opus8">Opus8</a></li>
+<li><a href="http://www.intel.com/capital/" title="Intel Capital">Intel Capital</a>
+(Intel&rsquo;s VC arm, usually providers later stage funding).</li>
+</ul>
+
+
+<p>If you know of any more VCs/Angels in our area, please leave comments.
+Also if you have opinions on any of these VCs, I&rsquo;d be interested to hear
+those as well. I&rsquo;ve only dealt indirectly with two of the VCs from this
+list.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Erlang | Sean Mountcastle]]></title>
+  <link href="http://seanmountcastle.com/blog/categories/erlang/atom.xml" rel="self"/>
+  <link href="http://seanmountcastle.com/"/>
+  <updated>2013-09-01T22:16:59-04:00</updated>
+  <id>http://seanmountcastle.com/</id>
+  <author>
+    <name><![CDATA[Sean Mountcastle]]></name>
+    <email><![CDATA[smountcastle@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Learn a New Programming Language]]></title>
+    <link href="http://seanmountcastle.com/blog/2008/06/04/learn-a-new-programming-language/"/>
+    <updated>2008-06-04T23:10:20-04:00</updated>
+    <id>http://seanmountcastle.com/blog/2008/06/04/learn-a-new-programming-language</id>
+    <content type="html"><![CDATA[<p>As <a href="http://www.chadfowler.com/">Chad Fowler</a> says, &ldquo;The best reason to
+learn a new programming language is to learn to think differently.&rdquo; Here
+in Northern VA, we have a new opportunity to think differently with the
+introduction of the <a href="http://groups.google.com/group/novalanguages">NoVA Languages
+group</a>. <a href="http://www.twitter.com/voodootikigod">Chris
+Williams</a> from <a href="http://www.iterativedesigns.com/">Iterative
+Designs</a> posted to the <a href="http://novarug.org/">NoVA
+RUG</a> mailing list this morning and received quite a
+bit of interest. Here&rsquo;s what he has to say about the new group:</p>
+
+<blockquote><p>Thoughts on the makeup of the group include obtaining (however you
+want) a book, working through the book 1 chapter per week on one night
+of that week with a group of like minded individuals.</p></blockquote>
+
+<p>To start, the group will work through Joe Armstrong&rsquo;s <a href="http://www.pragprog.com/titles/jaerlang/programming-erlang">Programming
+Erlang</a> book
+starting on Monday, June 16th (hopefully I&rsquo;ll be able to work out a
+schedule with my wife so I can attend). This is an excellent choice on
+several levels: every developer should know a functional programming
+language; single core processors are increasingly rare and the number of
+cores in commodity hardware should only increase in the coming years;
+and I already own the book.</p>
+
+<p>If <a href="http://www.erlang.org/">Erlang</a> doesn&rsquo;t pique your interest, the
+<a href="http://groups.google.com/group/nscodernightdc">NSCoderNight DC</a> group
+is going to work through the 3rd Edition of <a href="http://www.bignerdranch.com/">Aaron
+Hillegass&rsquo;s</a> <a href="http://www.amazon.com/Cocoa-Programming-Mac-OS-3rd/dp/0321503619">Cocoa Programming for Mac OS
+X</a>
+book on Tuesday nights. For several months now, I&rsquo;ve been playing around
+with Cocoa and while I&rsquo;m getting used to the syntax of Objective-C, the
+XCode IDE and Interface Builder still seem foreign to me (I never liked
+IDEs having been weened on Emacs).</p>
+
+<p>It&rsquo;s a great time to be a programmer in Northern Virginia!</p>
+
+<p><strong>Update:</strong> It turns out that there&rsquo;s another Cocoa group right around
+the corner from me in Reston:
+<a href="http://www.cocoaheads.org/us/RestonVirginia/index.html">CocoaHeads</a>.
+They meet the second Thursday of each month.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Sweet!]]></title>
+    <link href="http://seanmountcastle.com/blog/2007/03/02/sweet/"/>
+    <updated>2007-03-02T21:44:41-05:00</updated>
+    <id>http://seanmountcastle.com/blog/2007/03/02/sweet</id>
+    <content type="html"><![CDATA[<p><a href="http://pragmaticprogrammer.com/titles/jaerlang/index.html"><img src="http://seanmountcastle.com/wp-content/uploads/2007/03/jaerlang_medium.thumbnail.jpg" alt="image" /></a>
+I&rsquo;ve been looking for a good introductory book on
+<a href="http://www.erlang.org/">Erlang</a> for quite awhile now. Unfortunately,
+the Concurrent Programming in Erlang book just doesn&rsquo;t do it for me
+(plus only the first part is available online). Thankfully, it looks
+like the <a href="http://pragmaticprogrammer.com/">Pragmatic Programmers</a> have
+come through with <a href="http://pragmaticprogrammer.com/titles/jaerlang/index.html">Programming
+Erlang</a>.</p>
+]]></content>
+  </entry>
+  
+</feed>

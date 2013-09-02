@@ -1,0 +1,410 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>OSCON Extracting Rails from Basecamp - Sean Mountcastle</title>
+  <meta name="author" content="Sean Mountcastle">
+
+  
+  <meta name="description" content="Since I took quite a bit of notes at DHH&rsquo;s Extracting Rails from
+Basecamp
+session, I thought I&rsquo;d include them below. Note that these are &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://seanmountcastle.com/blog/2005/08/03/oscon-extracting-rails-from-basecamp">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="http://feeds.feedburner.com/SeanMountcastle" rel="alternate" title="Sean Mountcastle" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-378484-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner">
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://feeds.feedburner.com/SeanMountcastle" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:seanmountcastle.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+  
+    
+      <h1 class="entry-title">OSCON Extracting Rails From Basecamp</h1>
+    
+  
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-08-03T18:09:00-04:00" pubdate data-updated="true">Aug 3<span>rd</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Since I took quite a bit of notes at DHH&rsquo;s <a href="http://conferences.oreillynet.com/cs/os2005/view/e_sess/6837">Extracting Rails from
+Basecamp</a>
+session, I thought I&rsquo;d include them below. Note that these are just my
+raw notes, primarily for those who were unable to attend (and aren&rsquo;t in
+Portland, as apparently David is doing the talk again at
+<a href="http://www.news4neighbors.net/article.pl?sid=05/07/31/1519250&amp;mode=nested&amp;tid=1">&ldquo;FOSCON&rdquo;</a>
+(free-OSCON) for those who couldn&rsquo;t afford to attend). Update Aug 4,
+2005: I was misinformed about FOSCON, evidently David gave the Rails
+keynote which he is going to do this morning (I&rsquo;ll have a separate post
+on this later). Basecamp project management tool existed first. Embraced
+constraints: &ndash; less people, more power &ndash; less money, more value (funded
+via consulting) &ndash; less resources, better use &ndash; less time, better time
+Start small and grow only as needed (frugality) Basecamp was 2.5
+man/months, 4k lines of code, 2/3 designers, &frac14; programmer (10 hr/week)
+Built half a product instead of a half-ass product They had to develop
+less software due to these constraints. But, why yet another framework?
+Because the options were not appealing. Worked in PHP for 5 years. Had
+to step outside the sweet spot. Felt like he was cutting against the
+grain. Built almost half of Rails in PHP, but the language was pushing
+back &mdash; struggle all the time. Looked for inspiration. In the enterprise
+world, there was too much enterprise. Too much focus on 99.999&rsquo;s, not
+enough on the 98% &mdash; get something out there early and only once you
+have the users invest the time in scalability and reliability. Too much
+focus on 100 man shops, not enough on the &frac14; man shops. Platform works
+against you when you&rsquo;re not creating massive applications with massive
+teams. Liberate the good ideas. Great ideas are not tied to
+language/platform. &ndash; Change the language &ndash; Change the context &ndash; Retain
+the core insights of patterns/practices Call me shallow: &ndash; Aesthetics &ndash;
+want the code to be beautiful and easy to read/understand &ndash; Joy &ndash;
+happiness, motivation, joy of work &ndash; Less &ndash; less code, favorite part of
+programming is removing lines of code Laying out the framework up front
+doesn&rsquo;t work, you must extract it from a working application. There&rsquo;s no
+other way. I&rsquo;ll know it when I see it. You have to feel an API to make
+it fit. Pleasing to work with API cannot be designed up front. Design
+matters more than test in TDD. Guessing the future is for fortune
+tellers. Why open source? For entirely selfish reasons: &ndash; Make others do
+the work &ndash; Bask in the glow of being a giver &ndash; What&rsquo;s there to loose? It
+works! 1,000 patches in 9 months! Extract, pass, reap, rinse, repeat
+Getting traction for your open source project &mdash; if no one&rsquo;s looking it
+doesn&rsquo;t matter if it&rsquo;s open source or not. Many abandoned projects
+because they got no visibility/involvement. Fear obscurity. You need a
+network to reap the effects. Get rid of humbleness, take on a normal
+appreciation of the value you bring to the table. Passion is infectious
+The baseline of excitement needs to be set by you &mdash; you need to be the
+most excited person about your project. Self delusions work! A
+conversation of success, build on the positive emotion of others. Go
+looking for trouble Tout advantages over the known, say that the biggest
+thing out there &ldquo;sucks&rdquo; &ldquo;If it bleeds, it leads&rdquo;, everybody loves a good
+fight Point at someone else and say, &lsquo;you&rsquo;re stupid&rsquo; trouble is easy to
+find and easy to start &mdash; you created this because you were not happy
+with the status quo. Prison newbie mentality &mdash; attack the biggest
+looking opponent immediately to gain some respect. Dealing with traction
+Scaling a culture Early influx can bend you out of shape Release not so
+early, then often &mdash; releasing too early can cause an influx which will
+overtake your culture. Set a viral example of kindness &mdash; what you do as
+project lead influences others. (watch out for the looking for trouble
+part as your new members will do the same). Signal that there is already
+a course and new members need to be willing to go in that direction.
+Don&rsquo;t ever say RTFM! Overcome the sucky feeling of being a newbie. You
+need to care from the earliest stages of the project. In a response to
+the question, Why Ruby? Why not Python? David responded that ruby makes
+it easy to create domain specific languages. Notion of blocks is also
+important.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">admin</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-08-03T18:09:00-04:00" pubdate data-updated="true">Aug 3<span>rd</span>, 2005</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/conferences/'>Conferences</a>, <a class='category' href='/blog/categories/oscon/'>OSCON</a>, <a class='category' href='/blog/categories/programming/'>Programming</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://seanmountcastle.com/blog/2005/08/03/oscon-extracting-rails-from-basecamp/" data-via="smountcastle" data-counturl="http://seanmountcastle.com/blog/2005/08/03/oscon-extracting-rails-from-basecamp/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2005/08/03/oscon-wednesday-sessions/" title="Previous Post: OSCON Wednesday Sessions">&laquo; OSCON Wednesday Sessions</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2005/08/04/oscon-thursday-keynotes/" title="Next Post: OSCON Thursday Keynotes">OSCON Thursday Keynotes &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/08/14/iosdevcamp-dc-2012/">iOSDevCamp DC 2012</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/09/26/moved-to-github-pages-and-octopress/">Moved to GitHub Pages and Octopress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2010/01/21/skribit/">Skribit</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2008/11/25/invented-quality-metric-feltz-levels/">Invented Quality Metric: Feltz Levels</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2008/08/08/rubynation-2008/">RubyNation 2008</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/sean">@sean</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'sean',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section id="twitter">
+  <h1 class="tweets">Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("smountcastle", , );
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/smountcastle">@smountcastle</a></p>
+  
+</section>
+
+
+<section>
+  <h1>Currently Reading</h1>
+  <p> 
+    <a href="http://www.amazon.com/Steve-Jobs-Walter-Isaacson/dp/1451648537?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=1451648537"><img src="http://ecx.images-amazon.com/images/I/5127U12cE-L._SL160_.jpg" /></a>
+    <br />
+    <a href="http://www.amazon.com/Steve-Jobs-Walter-Isaacson/dp/1451648537?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=1451648537">Steve Jobs</a> by
+    Walter Isaacson
+  </p>
+  <h1>Recent Reads</h1>
+  <ul id="recent_reads">
+    
+      <li class="post">
+	<p> 
+	  <a href="http://www.amazon.com/Storm-Swords-Song-Fire-Book/dp/055357342X?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=055357342X"><img src="http://ecx.images-amazon.com/images/I/51JLfDOCDQL._SL160_.jpg" /></a>
+	  <br />
+	  <a href="http://www.amazon.com/Storm-Swords-Song-Fire-Book/dp/055357342X?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=055357342X">A Storm of Swords (A Song of Ice and Fire, Book 3)</a> by
+	  George R.R. Martin
+	</p>
+      </li>
+    
+      <li class="post">
+	<p> 
+	  <a href="http://www.amazon.com/Clash-Kings-Song-Fire-Book/dp/0553381695?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0553381695"><img src="http://ecx.images-amazon.com/images/I/51PmY7G7biL._SL160_.jpg" /></a>
+	  <br />
+	  <a href="http://www.amazon.com/Clash-Kings-Song-Fire-Book/dp/0553381695?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0553381695">A Clash of Kings (A Song of Ice and Fire, Book 2)</a> by
+	  George R.R. Martin
+	</p>
+      </li>
+    
+      <li class="post">
+	<p> 
+	  <a href="http://www.amazon.com/Game-Thrones-Song-Fire-Book/dp/0553386794?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0553386794"><img src="http://ecx.images-amazon.com/images/I/51Yl0b4CjWL._SL160_.jpg" /></a>
+	  <br />
+	  <a href="http://www.amazon.com/Game-Thrones-Song-Fire-Book/dp/0553386794?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0553386794">A Game of Thrones (A Song of Ice and Fire, Book 1)</a> by
+	  George R.R. Martin
+	</p>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/smountcastle?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Sean Mountcastle <br/>
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a>, customized with <a href="https://github.com/mjhea0/whiterspace">whiterspace</a>.</span>
+</p>
+
+</footer>
+  
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

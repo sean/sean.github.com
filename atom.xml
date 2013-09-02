@@ -1,0 +1,1408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Sean Mountcastle]]></title>
+  <link href="http://seanmountcastle.com/atom.xml" rel="self"/>
+  <link href="http://seanmountcastle.com/"/>
+  <updated>2013-09-01T22:16:59-04:00</updated>
+  <id>http://seanmountcastle.com/</id>
+  <author>
+    <name><![CDATA[Sean Mountcastle]]></name>
+    <email><![CDATA[smountcastle@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    
+    <title type="html"><![CDATA[iOSDevCamp DC 2012]]></title>
+    <link href="http://seanmountcastle.com/blog/2012/08/14/iosdevcamp-dc-2012/"/>
+    
+    <updated>2012-08-14T22:49:00-04:00</updated>
+    <id>http://seanmountcastle.com/blog/2012/08/14/iosdevcamp-dc-2012</id>
+    
+    <content type="html"><![CDATA[<p>This past weekend, <a href="http://www.luisdelarosa.com/">Luis de la Rosa</a> and I ran <a href="http://iosdevcampdc.com/">iOSDevCamp DC 2012</a>, hosted by <a href="http://www.verisigninc.com/">Verisign</a>. This year our sponsors were: <a href="http://getappsavvy.com/">Savvy Apps</a>, <a href="http://mmedia.com/">Millenial Media</a>, <a href="http://www.verisigninc.com">Verisign</a>, and <a href="http://happyapps.com/">Happy Apps</a>. All of the talks were very well received and it was a great opportunity to network with other iOS developers in the mid-Atlantic region. For those talks where the slides were made available, I&rsquo;ve linked to them below. I&rsquo;ll come back and update this post as more slides become available.</p>
+
+<ul>
+<li>10am &ndash; Ken Yarmosh Stop Pinching Me: Getting Gestures Right in Your Application</li>
+<li>11am &ndash; Jon Blocksom <a href="https://www.dropbox.com/s/dm01q9fg14vkjtg/iOSDevCamp2012%20iOS%20Concurrency.key">iOS Concurrency: NSOperationQueue and Grand Central Dispatch</a></li>
+<li>1pm  &ndash; Mark Gerl <a href="https://dl.dropbox.com/u/336260/POLITICO_DynamicContentDelivery_20120811.pdf">Recipe for Dynamic Content</a></li>
+<li>2pm  &ndash; Mark Pospesel <a href="https://dl.dropbox.com/u/1353697/iOSDevCampDC%202012/Enter%20The%20Matrix.pdf">Enter the Matrix</a></li>
+<li>3:30pm &ndash; Chris Brown Improving App Monetization Through Data</li>
+<li>4:30pm &ndash; James Norton Embedding Lua Script in iOS</li>
+</ul>
+
+
+<p>Mark Pospesel wrote up his thoughts on the conference <a href="http://markpospesel.com/2012/08/17/iosdevcampdc-wrap-up/">here</a>.</p>
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html"><![CDATA[Moved to GitHub Pages and Octopress]]></title>
+    <link href="http://seanmountcastle.com/blog/2011/09/26/moved-to-github-pages-and-octopress/"/>
+    
+    <updated>2011-09-26T17:10:00-04:00</updated>
+    <id>http://seanmountcastle.com/blog/2011/09/26/moved-to-github-pages-and-octopress</id>
+    
+    <content type="html"><![CDATA[<p>After letting this blog languish for almost two years, I&rsquo;ve decided to switch from <a href="http://www.wordpress.org">Wordpress</a> to <a href="http://octopress.org">Octopress</a> and <a href="http://pages.github.com/">GitHub Pages</a>. Hopefully I&rsquo;ll take advantage of this new workflow to write more.</p>
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html"><![CDATA[Skribit]]></title>
+    <link href="http://seanmountcastle.com/blog/2010/01/21/skribit/"/>
+    
+    <updated>2010-01-21T22:07:39-05:00</updated>
+    <id>http://seanmountcastle.com/blog/2010/01/21/skribit</id>
+    
+    <content type="html"><![CDATA[<p>Wow! It&rsquo;s been over a year since I last updated my blog. How sad. To
+help jump start my blogging again I&rsquo;ve signed up for
+<a href="http://skribit.com/blogs/sean-mountcastle">Skribit</a>. You can use the
+suggestions link on the right to propose blog posts you&rsquo;d like me to
+write. By the way, if you haven&rsquo;t been following <a href="http://paulstamatiou.com/">Paul Stamatiou&rsquo;s
+blog</a> which covers the development of
+Skribit, I recommend it.</p>
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html"><![CDATA[Invented Quality Metric: Feltz Levels]]></title>
+    <link href="http://seanmountcastle.com/blog/2008/11/25/invented-quality-metric-feltz-levels/"/>
+    
+    <updated>2008-11-25T23:39:22-05:00</updated>
+    <id>http://seanmountcastle.com/blog/2008/11/25/invented-quality-metric-feltz-levels</id>
+    
+    <content type="html"><![CDATA[<p>There&rsquo;s a meme that continues to amuse our development team. It originated at SRA long ago and was brought through several other companies before reaching my current employer. When I found it on our internal wiki, I assumed it was akin to the <a href="http://www.rfc-humor.com/">April Fools&#8217; Day RFCs</a>, so I Googled for &lsquo;Feltz&rsquo; and actually found a Fernand Feltz at the Centre de Recherche Public-Gabriel Lippmann in Luxembourg. Unfortunately, this is not the Feltz for which the software quality metrics below are named. These were invented in the nineties by an engineer at SRA whose last name was Feltz.</p>
+
+<p>Sometimes perfection seems too much to ask. Don&rsquo;t despair; rejoice at all the milestones you have already met. The following Feltz levels are defined:</p>
+
+<ol>
+<li>Sits in the editor without harm.</li>
+<li>Correctly syntax-highlighted</li>
+<li>Successfully saves to disk</li>
+<li>In CM</li>
+<li>Compiles</li>
+<li>Links</li>
+<li>Execution reaches main()</li>
+<li>Produces discernable output</li>
+<li>Does something arguably correct before crashing</li>
+<li>Runs to completion.</li>
+</ol>
+
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html"><![CDATA[RubyNation 2008]]></title>
+    <link href="http://seanmountcastle.com/blog/2008/08/08/rubynation-2008/"/>
+    
+    <updated>2008-08-08T08:11:35-04:00</updated>
+    <id>http://seanmountcastle.com/blog/2008/08/08/rubynation-2008</id>
+    
+    <content type="html"><![CDATA[<p><img class="left" src="http://www.rubynation.org/images/conference/badges/ruby_attendee.png"></p>
+
+<p>Last weekend (Friday and Saturday), I attended <a href="http://www.rubynation.org/">RubyNation</a> 2008, the first regional Ruby conference in my area. The speakers were excellent and it was great to meet up with folks from the Ruby community who I haven&rsquo;t seen in awhile. As always, I left feeling energized and excited about my Ruby projects.</p>
+
+<p>There were two main themes of the conference: the &lsquo;official&rsquo; one was <em>Ceremony vs. Essence</em>, while the &lsquo;unofficial&rsquo; one was <em>Test all the fucking time</em>. The first theme was the subject of the opening and closing keynotes. The second came from Bryan Liles lighting talk on the first day and kept coming up afterwards (audience &lsquo;hecklers&rsquo; would ask presenters how often they should test).</p>
+
+<h2>Agenda</h2>
+
+<hr />
+
+<table>
+<tr><td>Welcome to RubyNation</td><td>Gray Herter</td></tr>
+<tr><td>Opening Keynote: Ceremony vs. Essence</td><td>Neal Ford</td></tr>
+<tr><td>DSLs and Ruby: Blurring the Lines Between Programs And Data</td><td>Russ Olsen</td></tr>
+<tr><td>The Culture of Innovation in Ruby</td><td>Glenn Vanderburg</td></tr>
+<tr><td>Living on the Edge</td><td>Yehuda Katz</td></tr>
+<tr><td>Lightning Talks</td><td>Chris Bucherre, Bryan Liles</td></tr>
+<tr><td>Archaeopteryx: A Ruby MIDI Generator</td><td>Giles Bowkett</td></tr>
+<tr><td>Welcome, Day 2</td><td>David Keener</td></tr>
+<tr><td>Keynote: Ruby, A Retrospective</td><td>Rich Kilmer</td></tr>
+<tr><td>Ruby Puzzlers</td><td>Mike Furr</td></tr>
+<tr><td>Pratical JRuby</td><td>David Keener</td></tr>
+<tr><td>Tools for Your Ruby Toolbox</td><td>Dave Bock</td></tr>
+<tr><td>Lightning Talks</td><td>Soren Burkhart, Glenn West, Jesse Shock, Yehuda Katz, Bryan Liles</td></tr>
+<tr><td>Closing Keynote: Bad Ruby</td><td>Stuart Halloway</td></tr>
+</table>
+
+
+<hr />
+
+<p>Neal Ford&rsquo;s talk on <em>Ceremony vs Essence</em> was one of the best talks of the conference and a great way to kick it off. He criticized our industry for failing to look backwards and leveraging the lore of the past. Then he proceeded to look even further back discussing <a href="http://en.wikipedia.org/wiki/Plato">Plato&rsquo;s</a> doctrine of ideas, <a href="http://en.wikipedia.org/wiki/Aristotle">Aristotle&rsquo;s</a> essential properties vs accidental properties, <a href="http://en.wikipedia.org/wiki/Galileo">Galileo&rsquo;s</a> use of experimentation to verify ideas, and <a href="http://en.wikipedia.org/wiki/William_Occam">William Occam&rsquo;s</a> principle that the explanation of any phenomenon should make as few assumptions as possible (KISS). Don&rsquo;t confuse essential complexity (we have a hard problem to solve) vs accidental complexity (we&rsquo;ve made the problem hard to solve). Some of the new patterns he presented were:</p>
+
+<ul>
+<li>Chicken Cognition: no memory, can&rsquo;t learn from your mistakes</li>
+<li>Frozen Caveman: burned by something and was flash frozen at that point in time, everything revolves around that issue</li>
+<li>Rubik&rsquo;s Cubicle: love to solve puzzles, not real issues</li>
+</ul>
+
+
+<p>During his keynote, Neal suggested learning from the lore of our past by reading classics like <a href="http://www.amazon.com/The-Mythical-Man-Month-Engineering-Anniversary/dp/0201835959?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0201835959">The Mythical Man-Month: Essays on Software Engineering, Anniversary Edition (2nd Edition)</a>, <a href="http://www.amazon.com/Smalltalk-Best-Practice-Patterns-Kent/dp/013476904X?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=013476904X">Smalltalk Best Practice Patterns</a>, <a href="http://www.amazon.com/The-Pragmatic-Programmer-Journeyman-Master/dp/020161622X?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=020161622X">The Pragmatic Programmer: From Journeyman to Master</a>.</p>
+
+<p>Next up was Russ Olsen who gave a talk about DSLs, both external and internal. Domain specific languages continue to be a hot topic in Ruby and the developer community in general. Ruby is very well suited to both external DSLs (involving a parser) and internal DSLs (use the Ruby parser and build language infrastructure). Ruby is great for DSLs because it doesn&rsquo;t require parenthesis or semi-colons, it supports procs, the reflection capabilities (method_missing, instance_eval, etc), etc. Rich Kilmer called DSL building, syntax driven development.</p>
+
+<p>Glenn Vanderburg presented on the culture of innovation within the Ruby community. The Ruby community is seeing so much innovation because Rubyists are novelty junkies, the languages opens possibilities that deserve to be explored, the requirement to integrate with IDEs is hampering innovation in Java (Java developers won&rsquo;t use it until it&rsquo;s integrated within their IDE), and things are just easier to accomplish in Ruby (low ceremony). He said that sometimes its good to start over as being forced to reinvent can be an opportunity. To close out his talk he did have a warning: <strong>When learning new things costs are easier to spot than benefits, but when inventing new things benefits are easier to spot than costs.</strong></p>
+
+<p>Yehuda Katz from Engine Yard spoke about living on the edge. As an aside, it appears that <a href="http://engineyard.com/">Engine Yard</a> is trying to be a mini-Google in that they appear to have hired many of the top Rubyists as well as some very savvy operations folks. Yehuda said that we should expect <a href="http://merbivore.com/">Merb</a> 1.0 by the end of summer, introduced the <a href="http://datamapper.org/">DataMapper</a> ORM, <a href="http://www.infoq.com/news/2008/07/yard-documentation-generator">YARD</a> (a replacement for rdoc), and <a href="http://github.com/jbarnette/johnson/tree/master">Johnson</a> (a JavaScript/Ruby bridge). <strong>He urged those present to take the time to think things through and not rush an API (or software) out.</strong></p>
+
+<p>During the Lightning Talks we heard from Chris Bucchere about <a href="http://www.thebdgway.com/">BDG</a>&rsquo;s social network for conferences; David James of Community Goals about state machines, Simon Kaczar of Prognosoft about libncurses-ruby, and <a href="http://smartic.us/">Bryan Liles</a> about testing (where the meme <em>test all the fucking time</em> appeared). Bryan&rsquo;s was one of the best talks of the conference, I highly recommend seeing him present.</p>
+
+<p>The first day closed with <a href="http://gilesbowkett.blogspot.com/">Giles Bowkett&rsquo;s</a> presentation on Archaeopteryx (a Ruby MIDI generator). The music it generated (through <a href="http://www.propellerheads.se/products/reason/">Reason</a>) was pretty good. The software makes heavy use of lambda functions and so Giles has aliased lambda to L to reduce typing. His talk covered a wide range of topics and there&rsquo;s no way I can do it justice. Hopefully he&rsquo;ll have it recorded (since he&rsquo;s given the presentation a few times now) and post it on the &lsquo;net.</p>
+
+<p>The second day opened with Rich Kilmer of <a href="http://www.infoether.com/InfoEther/Home.html">InfoEther</a> who provided a look back at the early days of Ruby (from his involvement in 2001), the conferences, and all of the various projects he&rsquo;s worked on with Ruby. Rich always has fun stories to tell and I enjoyed his talk immensely. I won&rsquo;t go through the entire chronology, but he ended by stating that the community needs to develop tools to deal with the dynamic nature of Ruby in order for wider adoption of the language, though he did note that Ruby is becoming mainstream. He also announced <a href="http://www.macruby.org/trac/wiki/HotCocoa">HotCocoa</a>, a DSL for Cocoa application development.</p>
+
+<p>Mike Furr spoke about issues he encountered when writing a Ruby parser for his <a href="http://www.cs.umd.edu/~jfoster/ruby.pdf">DRuby</a> project. These were somewhat interesting traps, pitfals, and corner cases for where the language is ambiguous. His slides are available <a href="http://rubynation.nowgetsocial.com/images/material/11M5676.pdf">here</a> so you can see specific code examples.</p>
+
+<p>David Keener walked through installing, configuring and running JRuby. Unfortunately, I have no interest in JRuby. I started working with it at my previous job to add Ruby scripting to a Java application, but since I no longer program in Java nor have an operational environment that is setup to deploy Java, I just don&rsquo;t care.</p>
+
+<p>Tools for your Ruby toolbox by <a href="http://codesherpas.com/">David Bock</a> was an interesting tour of three Ruby projects: <a href="http://staticmatic.rubyforge.org/">StaticMatic</a>, <a href="http://sinatra.rubyforge.org/">Sinatra</a>, and <a href="http://www.ruby-doc.org/stdlib/libdoc/gserver/rdoc/index.html">GServer</a>. StaticMatic looked interested for static website development, but then Mike Clark <a href="http://clarkware.com/cgi/blosxom/2008/08/06#Webby">wrote</a> about <a href="http://webby.rubyforge.org/">Webby</a> and it looks even better. Sinatra appears to be a very light weight alternative to Rails and in combination with a static web site tool like StaticMatic or Webby could be extremely useful. GServer is a generic server which takes some of the pain out of setting them up. Dave&rsquo;s an engaging speaker and I always enjoy his presentations as well as speaking with him in the hallways at conferences.</p>
+
+<p>The second day of Lightning Talks was even better than the first. Soren Burkhard from <a href="http://hawaiibcllc.com/">Hawaii Business Consulting</a> had a great overview of starting your own business. <a href="http://mentalpagingspace.blogspot.com/">Glenn West</a> spoke about several Rails plugins that he uses on a regular basis: ActiveScaffold, Role Requirement, ActiveAuthentication, File_column, PDFtoRuby, DotR, and Tabnav. Jesse Shock from Engine Yard spoke about high availability planning: multiple sites, geographic diversity, data partitioning, sharding, etc. He said you need to establish costs up front so the customer knows which availability techniques they can afford. Yehuda Katz, also from Engine Yard, spoke about testing (in the context of Merb) and how you should use BDD for internal as well as external interfaces. The last of the lightning talks was by Bryan Liles on how to be a manager, his slides are available <a href="http://smartic.us/assets/2008/8/5/smarticus_guide_to_being_the_boss.pdf">here</a>.</p>
+
+<p>Finally, Stu closed out the conference with a talk on bad Ruby. Overall, Ruby is good but that there are some bad practices/decisions that could come back to bite us later as Ruby adoption grows. Some of the examples he provided were: constants (you can&rsquo;t change them so testing becomes difficult), class attributes (prefer instance attributes on the eigenclass), direct access of instance variables, and proc workarounds (e.g. passing more than one block to a method). The code examples from his talk are available <a href="http://github.com/stuarthalloway/bad-ruby/tree">here</a>.</p>
+
+<p><a href="http://www.luisdelarosa.com/">Luis de la Rosa</a> was kind enough keep track of all of the URLs that folks were throwing around and has posted them here:
+&ndash; delicious:
+  <a href="http://delicious.com/tag/rubynation">http://delicious.com/tag/rubynation</a>
+&ndash; magnolia:
+  <a href="http://ma.gnolia.com/tags/rubynation">http://ma.gnolia.com/tags/rubynation</a></p>
+
+<p>Overall, it was a great conference and I look forward to next year&rsquo;s RubyNation in June 2009.</p>
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html"><![CDATA[LaunchBox Unleashes Its First Nine Startups]]></title>
+    <link href="http://seanmountcastle.com/blog/2008/08/06/launchbox-unleashes-its-first-nine-startups/"/>
+    
+    <updated>2008-08-06T08:28:52-04:00</updated>
+    <id>http://seanmountcastle.com/blog/2008/08/06/launchbox-unleashes-its-first-nine-startups</id>
+    
+    <content type="html"><![CDATA[<p>Over on TechCrunch they have a <a href="http://www.techcrunch.com/2008/08/05/launchbox-unleashes-its-first-nine-startups/">great overview of the first nine startups</a> to come out of <a href="http://www.launchboxdigital.com/">LaunchBox Digital</a>, a local early stage investment firm. One of the founders of <a href="http://sharememe.com/">ShareMeme</a>, <a href="http://www.linkedin.com/in/luccastera">Luc Castera</a>, from the Ruby Users&#8217; Group (and local conferences). I&rsquo;m excited to dig-in and start using these new services. Here&rsquo;s a brief overview:</p>
+
+<ul>
+<li><a href="http://www.buzzhubb.com/">BuzzHubb: A Better College Social Network</a>. Next generation group management for colleges and universities (it is similar to Facebook in that regard &amp;emdash only students can join).</li>
+<li><a href="http://www.heekya.com/">Heekya: The Wikipedia For Stories</a>. Social story telling using multiple forms of media (text, photos, video).</li>
+<li><a href="http://www.jamlegend.com/">JamLegend: Guitar Hero Goes Social</a>. A free online music gaming experience.</li>
+<li><a href="http://www.koofers.com/">Koofers: Crib Notes For Picking College Classes</a>. A tool to help students build their class schedules with insight into the classes, teachers, and styles as reported by other students. It also provides access to study guides, past exams, etc. to assist students.</li>
+<li><a href="http://www.mygamemug.com/">MyGameMug: Match.com For Gamers</a>. A personality test for gamers &amp;emdash find others who like the kinds of games that you do.</li>
+<li><a href="http://www.razume.com/">Razume: Resume 2.0</a>. A tool for young (21-35) job seekers. This looks really interesting to me because I had a similar idea several years ago but never executed on it. I&rsquo;m curious to see how its features overlap with my detailed plan.</li>
+<li><a href="http://www.sharememe.com/">ShareMeme: Evite Meets Twitter</a>. This service is addressing a real issue that is affecting me: being (inadvertently) spammed by my friends as they sign up for social networks and other services. If it succeeds it can be the go to point for distributing information out to your friends and family through the best channels.</li>
+<li><a href="http://www.zadby.com/">Zadby: Web Video Product Placement</a>. Zadby wants to be the market maker for product placement in web video, through its network of independent web video producers.</li>
+</ul>
+
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html"><![CDATA[Dr. Horrible]]></title>
+    <link href="http://seanmountcastle.com/blog/2008/07/18/dr-horrible/"/>
+    
+    <updated>2008-07-18T19:23:51-04:00</updated>
+    <id>http://seanmountcastle.com/blog/2008/07/18/dr-horrible</id>
+    
+    <content type="html"><![CDATA[<p>NPR&rsquo;s <a href="http://wamu.org/programs/atc/">All Things Considered</a> had a <a href="http://www.npr.org/templates/story/story.php?storyId=92678153">nice
+story</a> on
+<a href="http://drhorrible.com/">Dr. Horrible</a> tonight. This enjoyable,
+currently web-only, musical was produced during the writers&#8217; strike last
+year by Joss Whedon. I highly recommend catching it while you still can.</p>
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html"><![CDATA[Hedge Your Fuel Costs Like Southwest Airlines]]></title>
+    <link href="http://seanmountcastle.com/blog/2008/07/11/hedge-your-fuel-costs-like-southwest-airlines/"/>
+    
+    <updated>2008-07-11T22:36:12-04:00</updated>
+    <id>http://seanmountcastle.com/blog/2008/07/11/hedge-your-fuel-costs-like-southwest-airlines</id>
+    
+    <content type="html"><![CDATA[<p><a href="http://www.autoweek.com/apps/pbcs.dll/article?AID=/20080702/FREE/173263555/1065">Autoweek</a>
+reports that a company called <a href="http://mygallons.com/">MyGallons</a> allows
+folks to pre-purchase gallons of gasoline at a predetermined average
+price for the area where they live. According to the article, the
+gallons are loaded onto a debit card that the company says is accepted
+at more than 95% of the nation&rsquo;s fueling stations. To take part in their
+service, MyGallons charges an annual fee starting at $29.95.</p>
+
+<blockquote><p>Miami-based MyGallons counts a membership of more than 4000 and has
+offices in Philadelphia and Columbus, Ohio. It launched a pilot
+program in April. Verona estimates that the testers paid about $3.10 a
+gallon for gas, saving roughly a dollar over today&rsquo;s prices. The debit
+card system measures consumers&#8217; accounts in gallons of regular
+unleaded fuel. Pumping premium fuel or diesel debits more gallons, but
+if you find a station with fuel that&rsquo;s cheaper than your purchased
+price, your account is credited with additional gallons. Still, there
+are some potential pitfalls, including the obvious question: What
+happens if gasoline prices go back down? MyGallons&#8217; suggestion is to
+stock up; buy low and use it later if prices increase, though it
+remains to be seen if consumers would adapt to that kind of purchasing
+behavior.</p></blockquote>
+
+<p>It seems like an interesting service to help defray higher energy
+prices.</p>
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html"><![CDATA[iPhone 2.0 Firmware is Like Getting a Whole New iPhone]]></title>
+    <link href="http://seanmountcastle.com/blog/2008/07/11/iphone-20-firmware-is-like-getting-a-whole-new-iphone/"/>
+    
+    <updated>2008-07-11T22:26:01-04:00</updated>
+    <id>http://seanmountcastle.com/blog/2008/07/11/iphone-20-firmware-is-like-getting-a-whole-new-iphone</id>
+    
+    <content type="html"><![CDATA[<p>After bricking my iPhone this morning by getting caught in the iTunes
+server onslaught, I was able to complete the upgrade successfully this
+evening. The upgrade breathes new life into the EDGE iPhone &mdash; when I&rsquo;m
+on a WiFi network it&rsquo;s almost equivalent to the iPhone 3G. So far I&rsquo;ve
+downloaded twelve free apps from the <a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewRoom?fcId=285119007&amp;id=25204&amp;mt=8">App
+Store</a>
+and paid for one (Bejeweled 2). Even though I balked at paying $9.99 for
+an iPhone game, my friend <a href="http://blacka.com/david/">Dave</a> convinced me
+that 1) it&rsquo;s a reasonable price and 2) it&rsquo;s a small price to pay for
+something that I&rsquo;ll use nearly every day. I can already tell that care
+must be taken with the lure of the App Store lest I go broke.</p>
+
+<p>In related news, I finally received approval from Apple for my <a href="http://developer.apple.com/iphone/program/">iPhone
+developer cert</a>, so now I
+can try out my audio application on my iPhone and potentially sell it
+via the App Store.</p>
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html"><![CDATA[Startup Mashup]]></title>
+    <link href="http://seanmountcastle.com/blog/2008/06/23/startup-mashup/"/>
+    
+    <updated>2008-06-23T18:53:30-04:00</updated>
+    <id>http://seanmountcastle.com/blog/2008/06/23/startup-mashup</id>
+    
+    <content type="html"><![CDATA[<p>If you&rsquo;re looking for startup companies in your area, there&rsquo;s a great new resource: <a href="http://www.startupwarrior.com/">Startup Warrior</a>. It&rsquo;s incredibly useful to drill-down into your region on the map and see all of the amazing work going on nearby.</p>
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html"><![CDATA[Inaugural CocoaHeads Reston Meeting]]></title>
+    <link href="http://seanmountcastle.com/blog/2008/06/12/inaugural-cocoaheads-reston-meeting/"/>
+    
+    <updated>2008-06-12T22:31:20-04:00</updated>
+    <id>http://seanmountcastle.com/blog/2008/06/12/inaugural-cocoaheads-reston-meeting</id>
+    
+    <content type="html"><![CDATA[<p>Tonight the first <a href="http://cocoaheads.org/us/RestonVirginia/index.html">CocoaHeads Reston</a> meeting was held at <a href="http://www.nearinfinity.com/index.html">Near Infinity Corporation</a>. <a href="http://pinepointsoftware.com/">Jason Harwig</a> gave an excellent presentation on <a href="http://webkit.org/">WebKit</a>, starting with a simple browser created completely in Interface Builder (it consisted of a text field linked to a web view). I&rsquo;ve recreated it and included a snapshot below.</p>
+
+<p><img class="left" src="http://seanmountcastle.com/assets/basicbrowser.png" title="An Extremely Basic Web Browser" ></p>
+
+<p>Next he demonstrated how to interact with the DOM and JavaScript. The JavaScript integration was in both directions, first he demonstrated calling JavaScript functions from Objective-C and then calling Objective-C from JavaScript. It should be noted that for JavaScript to call Objective-C you need to implement the <code>+ (BOOL)isSelectorExcludedFromWebScript:(SEL)aSelector;</code> method and return <code>NO</code> for each of the methods you wish to call.</p>
+
+<p>Finally, Jason walked through various uses of WebKit an demonstrated an application specific, full-screen browser he wrote for a game as well as a del.icio.us Cocoa application he wrote called <a href="http://pinepointsoftware.com/delish/site/">Delish</a>. Several other webkit based applications were also covered such as <a href="http://fluidapp.com/">Fluid</a> &ndash; a freely available site-specific browser creator, <a href="http://infinitenil.com/packrat/">PackRat</a> &ndash; a commercial site-specific browser for Backpack, and another application which I&rsquo;ve forgotten (I guess I should&rsquo;ve taken notes). As an aside, Jason brought up the interesting work that the <a href="http://280north.com/">280North</a> folks have done for their <a href="http://280slides.com/">280Slides</a> web-based presentation called <a href="http://objective-j.org/">Objective-J</a>. Objective-J (code named Cappuccino), is an Objective-C like language built on JavaScript.</p>
+
+<p>Matt Wizeman stepped up next to demo a WebKit application he&rsquo;s developing to wrap a troublesome time tracking web application. It was interesting the machinations he had to go through to know when the page had finished loading and to transition between pages since the application was JavaScript heavy, using tricks like clickable divs.</p>
+
+<p>I learned quite a bit about WebKit. As soon as I got home I was energized to play with it.</p>
+
+<p>Be sure to come to the next meeting on July 10th (day before iPhone 3G day)!</p>
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html"><![CDATA[Yesterday's Storm]]></title>
+    <link href="http://seanmountcastle.com/blog/2008/06/05/yesterdays-storm/"/>
+    
+    <updated>2008-06-05T10:56:42-04:00</updated>
+    <id>http://seanmountcastle.com/blog/2008/06/05/yesterdays-storm</id>
+    
+    <content type="html"><![CDATA[<p><a href="http://xiix.wordpress.com/">ErinGary</a> has <a href="http://eringary.com/storm/">NEXRAD images and commentary
+of yesterday&rsquo;s storm</a> here in Northern, VA.
+For about half-an-hour yestersay, the folks at work milled around in
+interior offices, hallways, and the stairwell while my family at home
+hid out in the basement. Thankfully there were not much damage in my
+neighborhood, though I saw several fallen trees on homes during my
+commute home.</p>
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html"><![CDATA[Learn a New Programming Language]]></title>
+    <link href="http://seanmountcastle.com/blog/2008/06/04/learn-a-new-programming-language/"/>
+    
+    <updated>2008-06-04T23:10:20-04:00</updated>
+    <id>http://seanmountcastle.com/blog/2008/06/04/learn-a-new-programming-language</id>
+    
+    <content type="html"><![CDATA[<p>As <a href="http://www.chadfowler.com/">Chad Fowler</a> says, &ldquo;The best reason to
+learn a new programming language is to learn to think differently.&rdquo; Here
+in Northern VA, we have a new opportunity to think differently with the
+introduction of the <a href="http://groups.google.com/group/novalanguages">NoVA Languages
+group</a>. <a href="http://www.twitter.com/voodootikigod">Chris
+Williams</a> from <a href="http://www.iterativedesigns.com/">Iterative
+Designs</a> posted to the <a href="http://novarug.org/">NoVA
+RUG</a> mailing list this morning and received quite a
+bit of interest. Here&rsquo;s what he has to say about the new group:</p>
+
+<blockquote><p>Thoughts on the makeup of the group include obtaining (however you
+want) a book, working through the book 1 chapter per week on one night
+of that week with a group of like minded individuals.</p></blockquote>
+
+<p>To start, the group will work through Joe Armstrong&rsquo;s <a href="http://www.pragprog.com/titles/jaerlang/programming-erlang">Programming
+Erlang</a> book
+starting on Monday, June 16th (hopefully I&rsquo;ll be able to work out a
+schedule with my wife so I can attend). This is an excellent choice on
+several levels: every developer should know a functional programming
+language; single core processors are increasingly rare and the number of
+cores in commodity hardware should only increase in the coming years;
+and I already own the book.</p>
+
+<p>If <a href="http://www.erlang.org/">Erlang</a> doesn&rsquo;t pique your interest, the
+<a href="http://groups.google.com/group/nscodernightdc">NSCoderNight DC</a> group
+is going to work through the 3rd Edition of <a href="http://www.bignerdranch.com/">Aaron
+Hillegass&rsquo;s</a> <a href="http://www.amazon.com/Cocoa-Programming-Mac-OS-3rd/dp/0321503619">Cocoa Programming for Mac OS
+X</a>
+book on Tuesday nights. For several months now, I&rsquo;ve been playing around
+with Cocoa and while I&rsquo;m getting used to the syntax of Objective-C, the
+XCode IDE and Interface Builder still seem foreign to me (I never liked
+IDEs having been weened on Emacs).</p>
+
+<p>It&rsquo;s a great time to be a programmer in Northern Virginia!</p>
+
+<p><strong>Update:</strong> It turns out that there&rsquo;s another Cocoa group right around
+the corner from me in Reston:
+<a href="http://www.cocoaheads.org/us/RestonVirginia/index.html">CocoaHeads</a>.
+They meet the second Thursday of each month.</p>
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html"><![CDATA[Startups 101]]></title>
+    <link href="http://seanmountcastle.com/blog/2008/04/23/startups-101/"/>
+    
+    <updated>2008-04-23T23:58:26-04:00</updated>
+    <id>http://seanmountcastle.com/blog/2008/04/23/startups-101</id>
+    
+    <content type="html"><![CDATA[<p><a href="http://refresh-dc.org/"><img src="http://seanmountcastle.com/wp-content/uploads/2008/04/refreshdc.png" alt="Refresh
+DC" /></a></p>
+
+<p>Tonight I had the opportunity to attend a special <a href="http://refresh-dc.org/">Refresh
+DC</a> meeting on the challenges of starting your
+own business. The format was a panel of folks from the DC startup scene
+moderated by <a href="http://www.viget.com/about/team/jwilkinson">Jackson
+Wilkinson</a> of <a href="http://www.viget.com">Viget
+Labs</a>. The panel consisted of <a href="http://www.viget.com/about/team/bwilliams">Brian
+Williams</a> of Viget Labs,
+<a href="http://andrewlee.com/">Andrew Lee</a> of <a href="http://publi.us/">Publi.us</a>,
+Eric Rupert from <a href="http://odeo.com/">Odeo</a>, <a href="http://blog.hungrymachine.com/">Eddie
+Frederick</a>of <a href="http://hungrymachine.com/">Hungry
+Machine</a>, and <a href="http://www.launchboxdigital.com/blog.html">Sean
+Greene</a> of <a href="http://www.launchboxdigital.com/">LaunchBox
+Digital</a>.</p>
+
+<p>These were the main points I took away:</p>
+
+<ol>
+<li><strong>Be passionate.</strong> The most important quality for startup founders
+is to be passionate about their product or service. Starting a
+company can be exhilarating but the setbacks can be really
+difficult. If you&rsquo;re not passionate about what you&rsquo;re doing each of
+these roadblocks will be an excuse for you to quit. Figure out what
+you&rsquo;re passionate about and work on that.</li>
+<li><strong>Focus on your product.</strong> Don&rsquo;t focus on the pie-in-the-sky
+potential valuations of your company or worry about leasing office
+space, hiring an attorney, finding an accountant, etc. Instead you
+should focus on the product or service you&rsquo;re going to sell. Get
+something out there quickly &mdash; pick the most important feature and
+get it out there in front of your customers quickly.</li>
+<li><strong>Have your customers influence your product.</strong> If you follow the
+previous advice and get your product out there quickly you can use
+customer feedback to iterate your product. You may not know all of
+the difference ways customers will use your product, so this
+feedback is critical in charting your product roadmap.</li>
+<li><strong>Equity is control, don&rsquo;t surrender it easily.</strong> One of the
+attendees asked about using equity to pay for services if money was
+tight. Brian said to avoid giving out equity as you make that person
+a partner in your business. While they may not have a controlling
+interest, they are still an owner and have some influence.</li>
+<li><strong>Don&rsquo;t overfund.</strong> All of the panelists warned of the dangers of
+taking too much money as it does more than dilute the founders&#8217;
+ownership. Venture capitalists are looking to make a large return o
+their capital for themselves and their limited partners. If you need
+to pay a vendor or contractor find another way &mdash; defer payment, use
+credit, etc.</li>
+<li><strong>Hire slow, fire fast.</strong> Early employees can make or break your
+company. You will be working long hours aside these folks so you
+must ensure they&rsquo;re a good fit. If you make a bad hire, you need to
+resolve the situation quickly, don&rsquo;t let emotion get in the way.</li>
+</ol>
+
+
+<p>Some of the books recommended were: <a href="http://www.amazon.com/Art-Start-Time-Tested-Battle-Hardened-Starting/dp/1591840562/ref=pd_bbs_sr_1?ie=UTF8&amp;s=books&amp;qid=1209008603&amp;sr=8-1">Art of the
+Start</a>,
+<a href="http://www.amazon.com/Getting-Yes-Negotiating-Agreement-Without/dp/0140157352/ref=pd_bbs_2?ie=UTF8&amp;s=books&amp;qid=1209008634&amp;sr=8-2">Getting to
+Yes</a>,
+and <a href="http://www.amazon.com/Founders-Work-Stories-Startups-Early/dp/1590597141/ref=pd_bbs_3?ie=UTF8&amp;s=books&amp;qid=1209008603&amp;sr=8-3">Founders at
+Work</a>.
+Andrew also recommended <a href="http://startupschool.org/">Startup School</a> run
+by <a href="http://ycombinator.com/">Y Combinator</a> (YC). I&rsquo;ve been reading <a href="http://www.paulgraham.com">Paul
+Graham</a>&rsquo;s essays for around seven years now
+and following YC&rsquo;s investments. I&rsquo;m glad to see an early stage investor
+like YC in the DC area (LaunchBox Digital) and hope that the startup
+scene in DC and suburbs becomes more vibrant.</p>
+
+<p>Thanks to <a href="http://www.sainc.com/">Strategic Analysis</a> for hosting this.
+It was a great venue and hope they&rsquo;ll offer to host Refresh DC again.</p>
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html"><![CDATA[Performance Tuning Network Applications]]></title>
+    <link href="http://seanmountcastle.com/blog/2008/03/20/performance-tuning-network-applications/"/>
+    
+    <updated>2008-03-20T23:09:57-04:00</updated>
+    <id>http://seanmountcastle.com/blog/2008/03/20/performance-tuning-network-applications</id>
+    
+    <content type="html"><![CDATA[<p>Recently at work I spent a few weeks tuning a network service across
+three platforms (Solaris, Linux, and AIX) to get within 10% of the
+theoretical maximum throughput. In this short article, I&rsquo;ll walk through
+the various tools I used to improve the performance of the application.</p>
+
+<p>This application is very specialized in that the two machines are
+connected directly through an ethernet switch. This means that the MTU
+could easily be determined from each end of the link and the extra work
+to determine the maximum segment size for the transit network (see <a href="http://tools.ietf.org/html/rfc1191">RFC
+1191</a>) was unnecessary. This also
+made it very easy to watch the traffic between the two hosts as well as
+the system calls they were using to transfer and receive the data.</p>
+
+<p>Before I get into the steps I took to tune the service, I&rsquo;d like to
+introduce the tools used:</p>
+
+<ul>
+<li>Truss: a tracing utility which displays system calls, dynamically
+loaded user level function calls, received signals, and incurred
+machine faults. This is available for many platforms, but I use it
+most on AIX.</li>
+<li>DTrace/DTruss: a dynamic tracing compiler and tracing utility. This
+is an amazingly powerful tool from Sun, originally for Solaris but
+slowly spreading to other platforms. See Sun&rsquo;s <a href="http://www.sun.com/software/solaris/howtoguides/dtracehowto.jsp">How To
+Guide</a>.</li>
+<li>strace: a dynamic tracing utility which displays systems calls and
+received signals under Linux.</li>
+<li>mpstat: collects and displays performance statistics for all logical
+CPUs in the system.</li>
+<li>prstat: iteratively examines all active processes on the system and
+reports statistics based on the selected output mode and sort order.</li>
+<li>tcpdump: a utility for capturing network traffic.</li>
+<li>Wireshark: a network protocol analyzer. It replaces the venerable
+Ethereal tool and allows you to either capture network traffic on
+demand or load a captured session for analysis. Find out more
+<a href="http://www.wireshark.org">here</a>.</li>
+<li>gprof: a tool for profiling your code to determine where the
+performance bottle-necks are. See the
+<a href="http://www.gnu.org/software/binutils/manual/gprof-2.9.1/html_mono/gprof.html">manual</a>
+for more information.</li>
+<li>c++filt: a tool for demangling C++ method names. It is part of the
+<a href="http://directory.fsf.org/project/binutils/">GNU binutils package</a>.</li>
+</ul>
+
+
+<p>Since I already had the service up and running, I simply ran the two
+components and captured the traffic between them using tcpdump. While
+the processes were running, I also used dtruss, truss, or strace
+(depending on the platform) to capture the system calls being made.
+Since this is a network service, I focused on calls to <code>select</code>, <code>send</code>,
+and <code>recv</code>.</p>
+
+<pre><code>13455/15:   2143177    2994      4 pollsys(0xFFFFFD7EBADDB910, 0x1, 0xFFFFFD7EBADDBA30) = 1 0
+13455/15:   2143180       5      0 pollsys(0xFFFFFD7EBADDB8D0, 0x1, 0xFFFFFD7EBADDB9F0) = 1 0
+13455/15:   2143185       8      4 recvfrom(0x11, 0xB384A0, 0x10000)                    = 1416 0
+13455/15:   2143253       5      0 pollsys(0xFFFFFD7EBADDB8D0, 0x1, 0xFFFFFD7EBADDB9F0) = 0 0
+13455/15:   2143262      12      8 send(0x11, 0xB084D0, 0x14B8)                         = 5304 0
+13455/15:   2143268     365      4 pollsys(0xFFFFFD7EBADDB910, 0x1, 0xFFFFFD7EBADDBA30) = 1 0
+13455/15:   2143270       4      0 pollsys(0xFFFFFD7EBADDB8D0, 0x1, 0xFFFFFD7EBADDB9F0) = 1 0
+13455/15:   2143275       8      4 recvfrom(0x11, 0xB384A0, 0x10000)                    = 1416 0
+13455/15:   2143343       5      0 pollsys(0xFFFFFD7EBADDB8D0, 0x1, 0xFFFFFD7EBADDB9F0) = 0 0
+13455/15:   2143348       9      4 send(0x11, 0xB084D0, 0x14B8)                         = 5304 0
+13455/15:   2143353    1000      4 pollsys(0xFFFFFD7EBADDB910, 0x1, 0xFFFFFD7EBADDBA30) = 1 0
+</code></pre>
+
+<p>Looking at the results above you can see that <code>select</code> (<code>pollsys</code>) is
+being called each time we need to send or receive data over the network.
+Since the socket is non-blocking we can rely on the immediate return
+when the outgoing socket buffer is full as well as when there is no data
+available to read. By <code>select</code>ing at the very top of the receive loop we
+can bundle multiple receive calls together, increasing the application&rsquo;s
+throughput. Now the output looks like this:</p>
+
+<pre><code>16712/9:     16202    1560      6 pollsys(0xFFFFFD7EBB9DB940, 0x1, 0xFFFFFD7EBB9DBA30) = 1 0
+16712/9:     16217      10      6 recv(0xB, 0x8A6450, 0x10000)                         = 1416 0
+16712/9:     16246       9      5 send(0xB, 0x876480, 0x540)                           = 1344 0
+16712/9:     16267       7      3 send(0xB, 0x876480, 0x540)                           = 1344 0
+16712/9:     16285       5      1 send(0xB, 0x876480, 0x540)                           = 1344 0
+16712/9:     16680      10      5 recv(0xB, 0x8A6450, 0x10000)                         = 1416 0
+16712/9:     16712      11      7 send(0xB, 0x876480, 0x540)                           = 1344 0
+16712/9:     16733       7      3 send(0xB, 0x876480, 0x540)                           = 1344 0
+16712/9:     16753       6      2 send(0xB, 0x876480, 0x540)                           = 1344 0
+16712/9:     16768       4      0 recv(0xB, 0x8A6450, 0x10000)                         = -1 Err#11
+</code></pre>
+
+<p>You&rsquo;ll notice that now we are able to process two requests and send out
+six responses in the time that it previously took to call select and
+receive a single request. When there is nothing left to read, the call
+to <code>recv</code> returns errno 11 (<code>EAGAIN</code>). This change made the single
+biggest performance impact on the code. I also changed the calls
+<code>recvfrom</code> to <code>recv</code> since the application did not make use of the
+foreign address.</p>
+
+<p>At this point the performance was much better but I noticed that under
+heavy load the sending socket would block as the ratio of requests to
+responses was 1:3. As this was a UDP application, having the sending
+buffers fill up seemed strange as we assumed that additional packets
+would simply be dropped on the floor.</p>
+
+<p>On the server, I checked the UDP socket buffer size using <code>ndd</code> (this
+was under Solaris. For AIX the command is <code>no</code> and for Linux the command
+is <code>sysctl</code>).</p>
+
+<p>The following code was added to the socket initialize (minus the error
+handling) to ensure that the socket buffers were large enough.</p>
+
+<pre><code>unsigned size = 1024 * 1024; // 1MB
+int ret = setsockopt(desc, SOL_SOCKET, SO_SNDBUF, &amp;size, sizeof(size));
+    ret = setsockopt(desc, SOL_SOCKET, SO_RCVBUF, &amp;size, sizeof(size));
+</code></pre>
+
+<p>Now that the application was performing acceptably I decided to run it
+under the profiler. This turned up the function which was adding
+responses to the in-memory packet. It turned out that as responses were
+being added to the packet, the headers were being recalculated each
+time. I removed this unnecessary work and only made the calculations
+right before the packet was sent. This improved performance a few
+percentage points more.</p>
+
+<p>By binding the network interrupts to a particular core and keeping the
+sending thread off of that core we were able to eek out additional
+performance from the application. To accomplish this, the application
+allows the operator to specify which core(s) it should bind to using
+<code>sched_setaffinity</code> (Linux) and <code>processor_bind</code> (Solaris). You can also
+accomplish this using <code>taskset</code> (Linux) and pbind (Solaris) if you don&rsquo;t
+wish to modify your application.</p>
+
+<p>Looking at the network traffic with tcpdump, I saw that I could fit an
+additional response in the response bundle packet if I reduced or
+removed some of the items in the packet header. At this point the
+analysis and tuning had gone on for a few weeks and we had a schedule to
+meet. Since the performance was where we needed it, the application was
+wrapped up and sent to quality assurance.</p>
+
+<p>The single most important lesson I learned from this exercise was to use
+non-blocking sockets to their fullest by continually calling
+<code>recv</code>/<code>send</code> until the call would block and then using <code>select</code> to idle
+the process until there is work to do.</p>
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html"><![CDATA[Advanced Rails Recipes]]></title>
+    <link href="http://seanmountcastle.com/blog/2008/02/23/advanced-rails-recipes/"/>
+    
+    <updated>2008-02-23T21:41:08-05:00</updated>
+    <id>http://seanmountcastle.com/blog/2008/02/23/advanced-rails-recipes</id>
+    
+    <content type="html"><![CDATA[<p>Almost a year ago, I submitted three recipes to <a href="http://pragprog.com/titles/fr_arr">Advanced Rails
+Recipes</a>. Unfortunately, one which
+was originally selected back in June has been dropped from the book as
+it&rsquo;s not really advanced. So I thought I&rsquo;d post it here for everyone to
+enjoy.</p>
+
+<h3>Using AJAX with REST</h3>
+
+<h4>Problem:</h4>
+
+<p>You have finally mastered REST (Representational State Transfer) and
+wish to enhance your application with JavaScript but don&rsquo;t know which of
+the resource URLs to call.</p>
+
+<h4>Ingredients:</h4>
+
+<p>This recipe requires Rails 1.2 or later as it relies on RJS for the Ajax
+portion and REST for the controller design.</p>
+
+<h4>Solution:</h4>
+
+<p>In this example we need users to be able to register (and unregister)
+for meetings so that we can properly report attendance. So we have three
+models: User, Meeting and Registration.</p>
+
+<p>Since Registrations are associated with a specific meeting, we&rsquo;ve
+created them as a nested resource, like so:</p>
+
+<p>~~~~ {lang=&ldquo;ruby&rdquo;}
+  map.resources :meetings do |meetings|</p>
+
+<pre><code>meetings.resources :registrations
+</code></pre>
+
+<p>  end
+~~~~</p>
+
+<p>To register for a meeting we want to create a new Registration instance
+tied to the Meeting and User. Unregistering from a meeting should
+destroy the Registration object. So our RegistrationsController looks
+like this:</p>
+
+<p>~~~~ {lang=&ldquo;ruby&rdquo;}
+  # POST /registrations
+  def create</p>
+
+<pre><code>@meeting = Meeting.find(params[:meeting_id])
+current_user.register_for(@meeting)
+respond_to do |format| 
+  format.html { redirect_to meetings_url }
+  format.js   # create.rjs
+  format.xml  { head :ok }
+end
+</code></pre>
+
+<p>  end</p>
+
+<p>  # DELETE /registrations/1
+  def destroy</p>
+
+<pre><code>@registration = Registration.find(params[:id])
+@registration.destroy
+respond_to do |format|
+  format.html { redirect_to meetings_url }
+  format.js   # destroy.rjs
+  format.xml  { head :ok }
+end
+</code></pre>
+
+<p>  end
+~~~~</p>
+
+<p>In the view we want to use Ajax to allow the user to modify their
+registration, so we need to use link_to_remote:</p>
+
+<p>~~~~ {lang=&ldquo;ruby&rdquo;}
+  &lt;% if !current_user.registered_for(meeting) &ndash;%></p>
+
+<pre><code>&lt;%= link_to_remote "Register!", :url =&gt; registrations_path(meeting), 
+                              :meeting_id =&gt; meeting.id, :method =&gt; :post %&gt;
+</code></pre>
+
+<p>  &lt;% else &ndash;%></p>
+
+<pre><code>&lt;%= link_to_remote "Unregister", 
+                              :url =&gt; registration_path(meeting, 
+                                         current_user.registration_for(meeting)),  
+                              :confirm =&gt; 'Are you sure?', :method =&gt; :delete %&gt;
+</code></pre>
+
+<p>  &lt;% end &ndash;%>
+~~~~</p>
+
+<p>The RJS to update the page looks like this:</p>
+
+<p>~~~~ {lang=&ldquo;ruby&rdquo;}
+page[&ldquo; meeting_#{@meeting.id}&rdquo;.to_sym].replace_html</p>
+
+<pre><code>   :partial =&gt; 'shared/meeting', :object =&gt; @meeting
+</code></pre>
+
+<p>page[&ldquo; meeting_#{@meeting.id}&rdquo;.to_sym].visual_effect :highlight, :duration => 5
+~~~~</p>
+
+<h4>Discussion:</h4>
+
+<p>The resource URLs provided by Rails are extremely useful, but they can
+be confusing. Tools like <a href="http://www.getfirebug.com/">FireBug</a> make it
+easy to see what is going on behind the scenes. When developing Rails
+applications, it is usually easier to develop without Ajax and then go
+back and add Ajax to those portions of the application where it would
+make sense. With this approach, you can gracefully degrade your service
+back to the original mode for those who don&rsquo;t have or don&rsquo;t enable
+JavaScript. It also allows you to click through your application with
+FireBug enabled and watch which URLs are hit and with which methods
+(GET, POST, PUT, or DELETE).</p>
+
+<p>The table below outlines which resource URLs to use with your remote
+helpers:</p>
+
+<p>  Intent                           Action    Resource URL                                                                  Method</p>
+
+<hr />
+
+<p>  Creating a new instance          create    plural form of model name (i.e. registrations_path)                          POST
+  Retrieving an instance           show      singular form of model name with id (i.e. registration_path(registration)    GET
+  Retrieving all instances         index     plural form of model name (i.e. registrations_path)                          GET
+  Modifying an existing instance   update    singular form of model name with id (i.e. registration_path(registration))   PUT
+  Deleting an existing instance    destroy   singular form of model name with id (i.e. registration_path(registration))   DELETE</p>
+
+<p>Once you are comfortable with the resource URLs, adding Ajax to your
+RESTful is much easier.</p>
+
+<h4>Further Reading:</h4>
+
+<p>If you are unfamiliar with REST, read Chapter 20 of <a href="http://pragprog.com/titles/rails2">Agile Web
+Development with Rails, 2nd Edition</a>
+by Dave Thomas and David Heinemeier Hansson (Pragmatic Programmers,
+2006). There is also a nice screencast on the subject from
+<a href="http://peepcode.com/articles/2006/10/08/restful-rails">PeepCode</a>.</p>
+
+<p>For more on Ajax in Rails, you can check out <a href="http://www.oreilly.com/catalog/9780596527440/index.html">Ajax on
+Rails</a> by Scott
+Raymond (O&#8217;Reilly &amp; Associates, 2007).</p>
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html"><![CDATA[NSCoderNight DC]]></title>
+    <link href="http://seanmountcastle.com/blog/2008/01/15/nscodernight-dc/"/>
+    
+    <updated>2008-01-15T23:05:57-05:00</updated>
+    <id>http://seanmountcastle.com/blog/2008/01/15/nscodernight-dc</id>
+    
+    <content type="html"><![CDATA[<p>Tonight I was able to attend <a href="http://nscodernight.com/?cat=6">NSCoderNight
+DC</a> in Tysons Corner, VA and finally met
+<a href="http://greenmango.org/">Jose Vazquez</a> in person. Unfortunately, turn
+out is pretty spotty, with Jose being the only continuous attendee.
+Despite it being just the two of us, I came away energized and started
+playing around with the new APIs we spoke about: <a href="http://developer.apple.com/documentation/MusicAudio/Conceptual/CoreAudioOverview/Introduction/chapter_1_section_1.html#//apple_ref/doc/uid/TP40003577-CH1-SW1">Core
+Audio</a>/<a href="http://developer.apple.com/documentation/MusicAudio/Conceptual/AudioQueueProgrammingGuide/Introduction/chapter_1_section_1.html#//apple_ref/doc/uid/TP40005343-CH1-SW1">AudioQueues</a>
+and <a href="http://developer.apple.com/graphicsimaging/quartzcomposer/">Quartz
+Composer</a>.</p>
+
+<p>I was shocked when Jose explained that the Core Audio and AudioQueues
+tools are all Carbon (i.e. plain C) instead of Cocoa. Mistakenly, I was
+under the impression that Carbon had been officially deprecated by Apple
+and that only Cocoa would be supported going forward. The
+AudioQueueTools
+(/Developer/Examples/CoreAudio/SimpleSDK/AudioQueueTools) example which
+comes with the Apple Developer Tools shows how to create command-line
+tools for recording and playing back sounds, but trying to integrate
+this with you Cocoa application is a different story. Luckily, we found
+this post on Mark Darlymple&rsquo;s blog which explains how to use <a href="http://borkwarellc.wordpress.com/2007/09/13/c-callbacks-in-objc/">C
+callbacks in
+Objective-C</a>.
+I&rsquo;m still playing around with this and also looking at the
+<a href="http://developer.apple.com/quicktime/">QuickTime</a> API support for
+recording sound.</p>
+
+<p>Quartz Composer is an amazingly cool app, that appears deceptively
+simply to throw something together with. I was blown away by Jose&rsquo;s demo
+of it, having never seen it before. The visual programming environment,
+<a href="http://developer.apple.com/graphicsimaging/quartz/quartzcomposer.html">Quartz Composer
+Editor</a>,
+has a fairly straight-forward GUI and allows you to easily &lsquo;compose&rsquo;
+multiple processing units (a.k.a. patches) together into composition
+while the view window displays what the composition will look like in
+real-time. I&rsquo;m definitely going to spend some time to go through the
+examples (/Developer/Examples/Quartz Composer/Applications).</p>
+
+<p>If you are free on a Tuesday night, be sure to stop by the <a href="http://maps.google.com/maps?f=q&amp;hl=en&amp;geocode=&amp;time=&amp;date=&amp;ttype=&amp;q=8365+Leesburg+Pike,+Vienna,+VA+22182+(Panera+Bread">Tysons
+Corner
+Panera</a>&amp;sll=38.878131,-77.278595&amp;sspn=0.009689,0.0156&amp;ie=UTF8&amp;om=1&amp;ll=38.931038,-77.230368&amp;spn=0.043267,0.079479&amp;z=14&amp;iwloc=addr&amp;source=embed)
+from 7pm-9pm. I&rsquo;m going to make every effort to attend regularly.</p>
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html"><![CDATA[What's Your Segment?]]></title>
+    <link href="http://seanmountcastle.com/blog/2008/01/01/whats-your-segment/"/>
+    
+    <updated>2008-01-01T17:34:22-05:00</updated>
+    <id>http://seanmountcastle.com/blog/2008/01/01/whats-your-segment</id>
+    
+    <content type="html"><![CDATA[<p>Whether you realize it or not, there are several companies gathering a
+tremendous amount of data about you. One such company is
+<a href="http://www.acxiom.com/">Acxiom</a> which maintains consumer information on
+nearly every household in the U.S. (and has branched out to other
+countries). Acxiom combines tax records and public census data with
+transactional data from its clients (the corporations you deal with on a
+daily basis). Using this data, Acxiom has created a product called
+<a href="http://www.acxiom.com/default.aspx?ID=1766&amp;DisplayID=18">PersonicX</a>
+which is a finely-grained household level segmentation system based on
+consumer and demographic characteristics.</p>
+
+<p>The idea of such a classification system both interests and appalls me
+quite a bit, so I&rsquo;ve done some research into the 70 segments and 21
+life-stage groups.</p>
+
+<p>Even though this data is proprietary, I&rsquo;ve found the following
+information through publicly available sources (ordered by cluster
+number):</p>
+
+<ol>
+<li><strong>Summit Estates</strong>: The wealthiest of all the clusters. In every
+sense, these families are enjoying the good life&mdash;luxury travel,
+entertainment and consumption of every kind are within easy reach.
+Middle-aged (36-56). (<em>Group 11B &ndash; Boomer Barons</em>)</li>
+<li><strong>Established Elite</strong>: Late middle-aged (46-65) married home owners
+with no children living with them. They are wealthy and live in
+suburban and urban locations. (<em>Group 15M &ndash; Mature Wealth</em>)</li>
+<li><strong>Corporate Clout</strong>: This exceedingly well educated group defines
+themselves as workaholics. Savvy investors who like to read Forbes
+and travel magazines, they are also heavy users of air travel and
+corporate credit cards. (<em>Group 15M &ndash; Mature Wealth</em>)</li>
+<li><strong>Skyboxes &amp; Suburbans</strong>: One of the best-educated and wealthiest
+clusters. They shop at upscale stores, spend time feathering their
+nest and adhere to regular fitness programs. Middle-aged (36-55).
+(<em>Group 11B &ndash; Boomer Barons</em>)</li>
+<li><strong>Sitting Pretty</strong>: Late middle-aged (46-65), married home owners
+with no children in the home. They are wealthy, living in the
+outer-suburbs and towns. (<em>Group 19M &ndash; Golden Years</em>)</li>
+<li><strong>Shooting Stars</strong>: Still relatively young at a mean age of 36, and
+with top rankings for income, college education, home value and net
+worth, these consumers have the world by the tail. (<em>Group 7X &ndash; Cash
+&amp; Careers</em>)</li>
+<li><strong>Leveraged Lifestyles</strong>: Middle-aged (36-55), married home owners
+with school-aged kids in the household. Primarily upper-middle
+income, living in the outer-suburbs and towns. (<em>Group 11B &ndash; Boomer
+Barons</em>)</li>
+<li><strong>Full Steaming</strong>: Late middle-aged (55-64), both single and married
+home owners with no kids in the household. Primarily upper-middle
+income, living in the outer-suburbs and towns. (<em>Group 19M &ndash; Golden
+Years</em>)</li>
+<li><strong>Platinum Oldies</strong>: Seniors (aged 66+), both single and married,
+who own their own homes with no kids in the household. They are
+wealthy, living in the outer-suburbs and towns. (<em>Group 19M &ndash; Golden
+Years</em>)</li>
+<li><strong>Hard Chargers</strong>: This affluent group of single men and women
+between the ages of 30 and 45 primarily own their own homes in the
+suburbs. (<em>Group 7X &ndash; Cash &amp; Careers</em>)</li>
+<li><strong>Kids &amp; Clout</strong>: Middle-aged (36-45) married home owners with
+school-aged children. They are affluent, living in the outer suburbs
+and towns. (<em>Group 8X &ndash; Jumbo Families</em>)</li>
+<li><strong>Tots &amp; Toys</strong>: Work and family consume these middle-aged (30-45)
+couples. They&rsquo;re putting their college degrees into action with
+lucrative careers, while saving for their children&rsquo;s education.
+(<em>Group 8X &ndash; Jumbo Families</em>)</li>
+<li><strong>Solid Single Parents</strong>: Middle-aged (36-54) single parents who own
+their own homes with school-aged children. They are affluent and
+live in urban and suburban areas. (<em>Group 12B &ndash; Flush Families</em>)</li>
+<li><strong>Career Centered Singles</strong>: The affluent members of this segment
+are late middle-aged (46-65) and single. They own their own homes in
+urban and suburban areas and have no kids. (<em>Group 16M &ndash; Aging
+Upscales</em>)</li>
+<li><strong>Country Ways</strong>: Late middle-aged (45-65), married home owners with
+no kids in the household. Primarily upper-middle income in a rural
+location. (<em>Group 16M &ndash; Aging Upscales</em>)</li>
+<li><strong>Country Single</strong>: Middle-aged (36-55) single home owners with no
+kids. They are upper-middle income, living in rural areas. (<em>Group
+14B &ndash; Our Turn</em>)</li>
+<li><strong>Apple Pie Families</strong>: Late middle-aged (46-55) married home owners
+with school-aged kids. Members of this group are upper-middle
+income, living in urban and suburban areas. (<em>Group 12B &ndash; Flush
+Families</em>)</li>
+<li><strong>Married Sophisticates</strong>: Recently married young couples who are
+well educated and enjoy health upper-middle range incomes. They are
+almost all homeowners in upscale suburban neighborhoods. (*[Group 2Y
+
+<ul>
+<li>Taking
+Hold](<a href="http://www.acxiom.com/subimages/1126200385918taking_hold_group_2y.pdf">http://www.acxiom.com/subimages/1126200385918taking_hold_group_2y.pdf</a>)*)</li>
+</ul>
+</li>
+<li><strong>Country Comfort</strong>: Middle-aged (36-55), married home-owners who
+have school-aged children in the household (big families,
+family-oriented) make up this group. Primarily upper-middle income
+in a rural location. (<em>Group 8X &ndash; Jumbo Families</em>)</li>
+<li><strong>Dynamic Duos</strong>: Made-up of upper-middle income married couples who
+own their own home but don&rsquo;t have children, the members of this
+cluster are between 36 and 45. (<em>Group 7X &ndash; Cash &amp; Careers</em>)</li>
+<li><strong>Children First</strong>: At a mean age of 25, they are already raising an
+average of 1.2 kids. Despite a nearly even split between married and
+single households, 100% show the presence of children. They earn
+upper-middle incomes and live in suburban areas. (<em><a href="http://www.acxiom.com/subimages/1126200385918taking_hold_group_2y.pdf">Group 2Y &ndash;
+Taking
+Hold</a></em>)</li>
+<li><strong>Fun &amp; Games</strong>: The upper-middle income members of this cluster are
+between the ages of 46 and 55, married with no kids, and own their
+own homes. (<em>Group 14B &ndash; Our Turn</em>)</li>
+<li><strong>Acred Couples</strong>: Late middle-aged (56-65) married home owners with
+no kids. These upper-middle income earners live in the outer suburbs
+and towns. (<em>Group 16M &ndash; Aging Upscales</em>)</li>
+<li><strong>Career Building</strong>: This cluster is made up of young, childless
+singles. They are a mix of mobile renters and first-time homeowners,
+living in condos and single-family houses. (<em><a href="http://www.acxiom.com/subimages/1126200385918taking_hold_group_2y.pdf">Group 2Y &ndash; Taking
+Hold</a></em>)</li>
+<li><strong>Clubs &amp; Causes</strong>: Consisting of both married and single
+upper-middle income folks, the members of this cluster are aged 66
+to 75 with no children who own their own homes. (<em>Group 20S &ndash; Active
+Elders</em>)</li>
+<li><strong>Savvy Singles</strong>: Young middle-aged (30-45) single renters and home
+owners with no kids. Primarily upper-middle income, living in urban
+and suburban areas. (<em>Group 7X &ndash; Cash &amp; Careers</em>)</li>
+<li><strong>Soccer &amp; SUVs</strong>: This cluster consists of upper-middle income
+married couples between the ages of 36 and 45 who own their own home
+and have school-age kids. (<em>Group 8X &ndash; Jumbo Families</em>)</li>
+<li><strong>Suburban Seniors</strong>: These aged seniors (76+) own their own homes
+and have no kids. They are a mix of single and married upper-middle
+income earners living in urban and suburban areas. (<em>Group 20S &ndash;
+Active Elders</em>)</li>
+<li><strong>City Mixers</strong>: Middle-aged (36-45) single renters and home owners
+with no kids. Primarily middle income, they live in downtown metro
+areas. (<em>Group 9B &ndash; Boomer Singles</em>)</li>
+<li><strong>Spouses &amp; Houses</strong>: This cluster is dominated by middle-income,
+childless couples in their mid-20s. They are mainly high school
+grads who own their homes and tend to live in smaller second cities
+around the country. (<em><a href="http://www.acxiom.com/subimages/1126200385918taking_hold_group_2y.pdf">Group 2Y &ndash; Taking
+Hold</a></em>)</li>
+<li><strong>Mid Americana</strong>: Married suburbanites. They are middle of the road
+in terms of education and income, although long tenure and high
+equity versus home values result in high net worth. (<em>Group 14B &ndash;
+Our Turn</em>)</li>
+<li><strong>Downtown Boomer Couples</strong>: Late middle-aged (46-65) married home
+owners with no kids. They are middle income and live in downtown
+metro areas. (<em>Group 14B &ndash; Our Turn</em>)</li>
+<li><strong>Urban Tenants</strong>: Late middle-aged (46-55), single renters with no
+kids. Located in downtown metro areas, they are middle income.
+(<em>Group 14B &ndash; Our Turn</em>)</li>
+<li><strong>Outward Bound</strong>: Middle-aged (30-45), married home owners with no
+kids. Primarily middle income, living in rural locations. (*Group 3X
+
+<ul>
+<li>Transition Blues*)</li>
+</ul>
+</li>
+<li><strong>Solo &amp; Stable</strong>: Middle-aged (36-45) single home owners with no
+kids. Primarily middle income, living in urban and suburban areas.
+(<em>Group 9B &ndash; Boomer Singles</em>)</li>
+<li><strong>Raisin&#8217; Grandkids</strong>: Seniors (aged 66+), both single and married
+home owners with kids of mixed ages in the household. Primarily
+middle income, living in suburband and urban areas. (<em>Group 20S &ndash;
+Active Elders</em>)</li>
+<li><strong>Cartoons &amp; Carpools</strong>: Middle-aged (30-45), married home owners
+with school-aged kids. Primarily middle income, living in urban and
+suburban areas. (<em>Group 5X &ndash; Gen X Parents</em>)</li>
+<li><strong>Blue Collar Bunch</strong>: Late middle-aged (46-65) married home owners
+with school-aged kids. Primarily lower-middle income, living in
+urban and suburban areas. (<em>Group 13B &ndash; True Blues</em>)</li>
+<li><strong>Early Parents</strong>: Young (18-29) single and married parents who
+either rent or own their residence with kids (mixed ages) at home.
+Primarily lower income, living in urban and suburban areas. (<em>Group
+1Y &ndash; Beginnings</em>)</li>
+<li><strong>The Great Outdoors</strong>: Late middle-aged (45-65), married home
+owners with no children in the household. Primarily lower-middle
+income in a rural location. (<em>Group 18M &ndash; Mature Rustics</em>)</li>
+<li><strong>Trucks &amp; Trailers</strong>: Middle-aged (30-45), both single and married
+renters and home owners with no kids. Primarily lower-middle income,
+living in rural areas. (<em>Group 3X &ndash; Transition Blues</em>)</li>
+<li><strong>First Mortgage</strong>: Young middle-aged (30-35), single home owners
+with no kids. Primarily lower-middle income, living in urban and
+suburban areas. (<em>Group 4X &ndash; Gen X Singles</em>)</li>
+<li><strong>Work &amp; Causes</strong>: These lower-middle income singles own their own
+homes. Living in urban and suburban areas, they are between 46 and
+55 and have no children. (<em>Group 17M &ndash; Modest Means</em>)</li>
+<li><strong>Community Singles</strong>: Late middle-aged (56-65) single home owners
+with no kids. With a lower-middle income, they live in urban and
+suburban areas. (<em>Group 17M &ndash; Modest Means</em>)</li>
+<li><strong>First Digs</strong>: This group consists of young (24-29) singles with no
+kids who either rent or own. Primarily lower-middle income, living
+in urban and suburban areas. (<em>Group 1Y &ndash; Beginnings</em>)</li>
+<li><strong>Home Cooking</strong>: Middle-aged (30-45) married home owners with no
+kids. Primarily lower-middle income, living in urban and suburban
+areas. (<em>Group 3X &ndash; Transition Blues</em>)</li>
+<li><strong>Rural Parents</strong>: This group consists of middle-aged (36-55) single
+parents who own their own homes and have children of mixed ages.
+Primarily lower-middle income in a rural location. (<em>Group 10B &ndash;
+Mixed Boomers</em>)</li>
+<li><strong>Farmland Families</strong>: Middle-aged (36-55), married home owners who
+have school-aged children in the household. Primarily lower-middle
+income in a rural location. (<em>Group 13B &ndash; True Blues</em>)</li>
+<li><strong>Sedentarians</strong>: These married seniors (76+) own their own homes
+and have no children. Living in urban and suburban areas, this group
+consists of lower-middle income earners. (<em>Group 21S &ndash; Leisure
+Buffs</em>)</li>
+<li><strong>The Greatest Generation</strong>: This group consists of married seniors
+(66+) who own their own homes where the kids have moved out.
+Primarily lower-middle income in a rural location. (<em>Group 18M &ndash;
+Mature Rustics</em>)</li>
+<li><strong>Family Matters</strong>: These seniors (66-75) are married home owners
+with no kids at home. Living in the outer suburbs and towns, they
+are in the lower-middle income bracket. (<em>Group 21S &ndash; Leisure
+Buffs</em>)</li>
+<li><strong>Still Landlorded</strong>: Middle-aged (36-45) singles renting their
+residence with no kids. Primarily lower-middle income, living in
+urban and suburban areas. (<em>Group 4X &ndash; Gen X Singles</em>)</li>
+<li><strong>Metro Parents</strong>: Middle-aged (36-55) single parents who own their
+own homes and have school-aged children. Primarily lower-middle
+income, living in urban and suburban locations. (<em>Group 10B &ndash; Mixed
+Boomers</em>)</li>
+<li><strong>Still Truckin&#8217;</strong>: This group consists of late middle-aged (46-65),
+single home owners with no kids in the household. Primarily
+lower-middle income in a rural location. (<em>Group 18M &ndash; Mature
+Rustics</em>)</li>
+<li><strong>Humble Homes</strong>: These married, late middle-aged (46-65) home
+owners don&rsquo;t have any kids. They live in the outer suburbs and towns
+and are lower income earners. (<em>Group 17M &ndash; Modest Means</em>)</li>
+<li><strong>Modest Wages</strong>: Middle-aged (36-45) single home owners with no
+kids. Primarily low income, living in urban and suburban areas.
+(<em>Group 9B &ndash; Boomer Singles</em>)</li>
+<li><strong>Collegiate Crowd</strong>: This group consists of young (18-23) singles
+with no kids who rent or own. Primarily lower income, living in
+urban and suburban areas. (<em>Group 1Y &ndash; Beginnings</em>)</li>
+<li><strong>Young Workboots</strong>: Young (18-29) singles with no kids who rent or
+own. Primarily blue-collar workers (low income), living in rural
+areas. (<em>Group 1Y &ndash; Beginnings</em>)</li>
+<li><strong>Low-Rent Digs</strong>: Young middle-aged (30-35) single renters with no
+kids. They are in the lowest income bracket, living in urban and
+suburban areas. (<em>Group 4X &ndash; Gen X Singles</em>)</li>
+<li><strong>Rural Rovers</strong>: Middle-aged (36-45) single renters with no kids,
+they live in rural areas and are lower-middle income. (<em>Group 10B &ndash;
+Mixed Boomers</em>)</li>
+<li><strong>Urban Scramble</strong>: Young (24-35) single renters with no kids.
+Primarily lower income, living in down town metro areas. (*Group 6X
+
+<ul>
+<li>Mixed Singles*)</li>
+</ul>
+</li>
+<li><strong>Kids &amp; Rent</strong>: Middle-aged (30-45) single and married renters with
+kids (mixed-ages). Primarily lower income, living in the outer
+suburbs and towns. (<em>Group 5X &ndash; Gen X Parents</em>)</li>
+<li><strong>Single City Struggles</strong>: These late middle-aged (46-65) single
+renters live in urban and suburban areas. They have no kids and are
+low income earners. (<em>Group 17M &ndash; Modest Means</em>)</li>
+<li><strong>Rural Antiques</strong>: This group consists of single renters and owners
+aged 76 and older with no children in their household. Primarily
+lower income in a rural location. (<em>Group 21S &ndash; Leisure Buffs</em>)</li>
+<li><strong>Thrifty Elders</strong>: These single seniors (66-75) own their own homes
+in the outer suburbs and towns. They are among the lowest income
+earners. (<em>Group 21S &ndash; Leisure Buffs</em>)</li>
+<li><strong>Timeless Elders</strong>: In the lowest income bracket, these single aged
+seniors (76+) own their own homes in urban and suburban areas.
+(<em>Group 21S &ndash; Leisure Buffs</em>)</li>
+<li><strong>Rolling Stones</strong>: This group consists of young (24-29) singles
+with no kids who rent or own. They are the in the lowest income
+bracket, living in urban and suburban areas. (<em>Group 1Y &ndash;
+Beginnings</em>)</li>
+<li><strong>Penny Pinchers</strong>: These late middle-aged (46-65) single home
+owners are among the lowest income earners. They live in urban and
+suburban areas with no children. (<em>Group 17M &ndash; Modest Means</em>)</li>
+<li><strong>Mortgage Woes</strong>: Middle-aged (30-45) single home owners with no
+kids. They are in the lowest income bracket, living in urban and
+suburban areas. (<em>Group 6X &ndash; Mixed Singles</em>)</li>
+<li><strong>On the Edge</strong>: Middle-aged (36-45) single renters with no kids.
+They are in the lowest income bracket, living in urban and suburban
+areas. (<em>Group 6X &ndash; Mixed Singles</em>)</li>
+</ol>
+
+
+<p>Some the cluster identifiers are funny while others are pretty
+disheartening&mdash;I&rsquo;m sure the intention was to make them memorable and in
+that Acxiom has succeeded. You&rsquo;ll notice that the majority of
+information available online focuses on the top thirty or so segments,
+as these are apparently the most lucrative (consisting of the upper and
+upper-middle classes).</p>
+
+<p>It&rsquo;s amazing how much data Acxiom collects and the detail of information
+they can extract from that data. For instance, for each segment they can
+give you an idea of what activities they enjoy, their opinions/beliefs,
+how they vote, where they shop, what they read, what they eat, what
+their finances look like, etc.</p>
+
+<p>Acxiom provides <a href="http://www.acxiom.com/subimages/4192004105508preemptive_mktg_wp.pdf">a
+document</a>
+on their website which shows how they can predict the migration of
+consumers from one segment to the next. They need to predict well as
+these segments are so specific that nearly one-third of Americans change
+their segment each year.</p>
+
+<p>If you can help me find more freely-available, detailed information
+(like
+<a href="http://www.acxiom.com/subimages/1126200385918taking_hold_group_2y.pdf">this</a>)
+for any of these segments, please leave a comment below or email me.</p>
+
+<h4>References</h4>
+
+<ul>
+<li><a href="http://www.acxiom.com/default.aspx?ID=1766&amp;DisplayID=18">http://www.acxiom.com/default.aspx?ID=1766&amp;DisplayID=18</a></li>
+<li><a href="http://www.wired.com/culture/lifestyle/news/2004/11/65640">http://www.wired.com/culture/lifestyle/news/2004/11/65640</a></li>
+<li><a href="http://www.informationweek.com/story/showArticle.jhtml?articleID=51000186">http://www.informationweek.com/story/showArticle.jhtml?articleID=51000186</a></li>
+<li><a href="http://www.acxiom.com/subimages/1126200385918taking_hold_group_2y.pdf">http://www.acxiom.com/subimages/1126200385918taking_hold_group_2y.pdf</a></li>
+<li><a href="http://www.acxiom.com/subimages/715200351943closer_look_-_america_s_wealthy.pdf">http://www.acxiom.com/subimages/715200351943closer_look_&ndash;_america_s_wealthy.pdf</a></li>
+<li><a href="http://www.relevance-x.com/images/Relevance-X.pdf">http://www.relevance-x.com/images/Relevance-X.pdf</a></li>
+<li><a href="http://www.hoythighland.com/presentation.pdf">http://www.hoythighland.com/presentation.pdf</a></li>
+<li><a href="http://www.astech-intermedia.com/resources/downloads/Roundtable_2007_Thornquist.ppt">http://www.astech-intermedia.com/resources/downloads/Roundtable_2007_Thornquist.ppt</a></li>
+<li><a href="http://sustainingfamilyforests.org/pdfs/report_intro.pdf">http://sustainingfamilyforests.org/pdfs/report_intro.pdf</a></li>
+<li><a href="http://www.acxiom.com/subimages/26200352112wp_meth_103.pdf">http://www.acxiom.com/subimages/26200352112wp_meth_103.pdf</a></li>
+</ul>
+
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html"><![CDATA[Finally Awarded a Patent!]]></title>
+    <link href="http://seanmountcastle.com/blog/2007/12/27/finally-awarded-a-patent/"/>
+    
+    <updated>2007-12-27T10:32:05-05:00</updated>
+    <id>http://seanmountcastle.com/blog/2007/12/27/finally-awarded-a-patent</id>
+    
+    <content type="html"><![CDATA[<p>After almost seven years, I was finally awarded a patent:
+<a href="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&amp;Sect2=HITOFF&amp;d=PALL&amp;p=1&amp;u=/netahtml/PTO/srchnum.htm&amp;r=1&amp;f=G&amp;l=50&amp;s1=7,170,862.PN.&amp;OS=PN/7,170,862&amp;RS=PN/7,170,862" title="Partitioning a network element into multiple virtual network elements"><strong>7,170,862</strong></a>.
+It&rsquo;s assigned to my previous employer, <a href="http://cisco.com/">Cisco Systems,
+Inc</a>. Until I started this process, I never imagined
+how long the <a href="http://www.uspto.gov/index.html">USP&amp;TO</a> could take to
+finally assign a patent. Now I&rsquo;m waiting to see if any of my other
+patents filed by Cisco will be awarded.</p>
+
+<p>This actually happened back in January, but since I was never notified,
+I researched it myself after the recent news of Cisco opening up IOS to
+3rd party developers.</p>
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html"><![CDATA[Protecting Your Ruby Source Code for End User Applications]]></title>
+    <link href="http://seanmountcastle.com/blog/2007/12/15/protecting-your-ruby-source-code-for-end-user-applications/"/>
+    
+    <updated>2007-12-15T17:54:41-05:00</updated>
+    <id>http://seanmountcastle.com/blog/2007/12/15/protecting-your-ruby-source-code-for-end-user-applications</id>
+    
+    <content type="html"><![CDATA[<p>If you want to distribute your Ruby applications while still protecting
+your intellectual property you could use an obfuscation tools such as
+<a href="http://blog.zenspider.com/archives/2006/07/zenobfuscate_no.html">ZenObfuscate</a>
+or try to write your own. But in this article, I&rsquo;m going to show a
+different approach that&rsquo;s been used by several different companies
+producing commercial products written in Ruby. The method is not
+specific to Ruby and should work for any interpreted language in which
+you need to distribute your source code with the application.</p>
+
+<p>The secret is to encrypt your Ruby source, store it in a database and
+then modify the Ruby interpreter to look for your code in the database
+and decrypt it on the fly. I should note that there is no way to
+completely protect a product which is distributed to your
+customers&mdash;with enough diligence any security measures can be broken.</p>
+
+<p>These instructions are for Unix operating systems (include MacOS X).
+Unfortunately (or fortunately, for me), I don&rsquo;t own a Windows machine.</p>
+
+<p>If you don&rsquo;t already have Berkeley DB (BDB) installed on your system you
+can download it
+<a href="http://www.oracle.com/technology/software/products/berkeley-db/index.html">here</a>.
+You will need to follow the instructions which come with BDB which
+explain how to build and install it. Originally, I was going to use
+<a href="http://openssl.org/">OpenSSL</a> to encrypt our Ruby source code before
+inserting it into the database and decrypt it after retrieving it from
+the database. Thankfully, the latest version of BDB includes
+<a href="http://en.wikipedia.org/wiki/Advanced_Encryption_Standard">AES</a> support
+which allows you to maintain an encrypted database very easily.</p>
+
+<p>You will also need to obtain a fresh copy of the <a href="http://www.ruby-lang.org/en">Ruby source
+code</a> so that we can build our own private
+version which knows how to pull classes out of our BDB instance. So
+let&rsquo;s start by creating a directory for us to work in:</p>
+
+<pre><code>mkdir -p ~/RubyProject/deploy
+</code></pre>
+
+<p>You should unpack the Ruby source in the <em>\~/RubyProject</em> directory
+(this should create directory which looks like
+<em>\~/RubyProject/ruby-1.8.6-p111</em>). Go into that directory and run the
+configure script as follows:</p>
+
+<pre><code>./configure --prefix=~/RubyProject/deploy --with-static-linked-ext
+</code></pre>
+
+<p>This will enable us to build a stand alone Ruby interpreter which has
+everything it needs statically linked in.</p>
+
+<p>To find out where we need to hook in our handler which loads missing
+classes from the database, you can <em>grep</em> through the source code
+looking for const_missing like this:</p>
+
+<pre><code>grep const_missing *.c
+</code></pre>
+
+<p>This turned up two files <em>object.c</em> and <em>variable.c</em>. Looking at the
+output, I could see that the <strong><em>const_missing</em></strong> function is actually
+defined in <em>variable.c</em>. Jumping in, I searched for the code executed
+when a constant cannot be found. This led me to the
+<strong><em>rb_const_get_0</em></strong> function which walks up the class hierarchy
+looking for the specified constant. If it cannot be found, it returns
+the result of the <strong><em>const_missing</em></strong> function. So right before that
+final return, I added the following hook:</p>
+
+<pre><code>    /* At this point we haven't found the class so we must look
+       inside of the BerkeleyDB for it, see dbloader.c */
+    value = load_from_db(id);
+    if (value != Qundef) return value;
+</code></pre>
+
+<p>Now I just had to implement the load_from_db function which should
+look inside of the encrypted BDB instance for the file. Looking at how
+the <strong><em>rb_const_get_0</em></strong> function works, I knew my new method had to
+return a Ruby <em>VALUE</em>:</p>
+
+<pre><code>VALUE
+load_from_db(id)
+     ID id;
+{
+    DBT k;
+    DBT d;
+
+    memset(&amp;k, 0, sizeof(DBT));
+    memset(&amp;d, 0, sizeof(DBT));
+
+    verify_database_state();
+
+    k.data = rb_id2name(id);
+    k.size = strlen(k.data);
+
+    d.flags = DB_DBT_MALLOC;
+
+    if (bdb-&gt;get(bdb, NULL, &amp;k, &amp;d, 0) == 0) {
+      rb_eval_string((const char *)d.data);
+      free(d.data);
+      return rb_eval_string(rb_id2name(id));
+    }
+    return Qundef;
+}
+</code></pre>
+
+<p>You&rsquo;ll note that if we find the class in the database, we first evaluate
+it using <strong><em>rb_eval_string</em></strong>. Since this returns <em>nil</em>, we need
+evaluate the class name so that we can pass back a Ruby <em>VALUE</em>. If the
+class doesn&rsquo;t exist in the database, we return <em>Qundef</em> and
+<strong><em>const_missing</em></strong> gets called as usual.</p>
+
+<p>The <strong><em>verify_database_state</em></strong> function ensures that the password for
+the BDB instance was passed and the database opened so that the
+<strong><em>get</em></strong> call can access it. It is implemented like so:</p>
+
+<pre><code>/* a simple way to obfuscate the password in memory */
+#define A(c)             (c) - 0x1d
+#define ENCRYPT_PWD(str) do { char * p = str; while (*p) *p++ -= 0x1d; } while (0)
+#define DECRYPT_PWD(str) do { char * p = str; while (*p) *p++ += 0x1d; } while (0)
+
+static void
+verify_database_state()
+{
+  /* don't forget to NULL terminate this array! */
+  static char info[] =
+    { A('1'), A('2'), A('3'), A('4'), A('5'),
+       A('6'), A('7'), A('8'), A('9'), A('0'),
+       0 };
+
+  const char * database_file = "data.db";
+
+  if (bdb == NULL) {
+    db_env_create(&amp;bdbenv, 0);
+    db_create(&amp;bdb, bdbenv, 0);
+
+    DECRYPT_PWD(info);
+    bdbenv-&gt;set_encrypt(bdbenv, info, DB_ENCRYPT_AES);
+    ENCRYPT_PWD(info);
+    bdbenv-&gt;open(bdbenv, ".", DB_INIT_MPOOL | DB_CREATE | DB_PRIVATE, 0600);
+    bdb-&gt;set_flags(bdb, DB_ENCRYPT);
+    bdb-&gt;open(bdb, NULL, database_file, NULL, DB_BTREE, 0, 0644);
+  }
+}
+</code></pre>
+
+<p>You&rsquo;ll notice that the password is hard coded into the binary along with
+the location of the BDB instance. If you are going use this code, you&rsquo;ll
+want to change the default password (which needs to match the password
+you used when storing your Ruby source in the database) and perhaps the
+location of the database. To deter those looking to decrypt our Ruby
+source, I&rsquo;ve written C macros which performs a transformation on the
+password. It is fairly simple to circumvent, so you should research
+other methods of securely storing passwords within applications.</p>
+
+<p>Finally, you&rsquo;ll need to remember to close the BDB instance before the
+Ruby interpreter exits. To do this we simply open up <em>main.c</em> and add
+the following line immediately following the call to <strong><em>ruby_run</em></strong>:</p>
+
+<pre><code>close_database();
+</code></pre>
+
+<p>The implementation of <strong><em>close_database</em></strong> is trivial, so you can just
+look in the patch I&rsquo;ve provided for it.</p>
+
+<p>The patch to the Ruby source code is included in <a href="http://seanmountcastle.com/wp-content/uploads/2007/12/ruby-load-db.zip">this zipped
+attachment</a>
+along with another utility I wrote to load all of your Ruby source into
+the encrypted BDB instance (along with its Makefile). Here is a
+transcript which shows how to use the tools and your new Ruby
+interpreter:</p>
+
+<pre><code>~RubyProject/tools&gt; ./rb_store data.db *.rb
+Enter database password:
+Stored Example (131) bytes
+
+~RubyProject/tools&gt; ./rb_load data.db
+Enter database password:
+Hit CTRL+C to quit.
+Enter a class name: Example
+Found: 
+
+class Example
+  def initialize
+    puts "Hello from the Example class"
+  end
+
+  def aMethod
+    puts "Called aMethod"
+  end
+end
+
+Enter a class name: Foo
+No such class
+Enter a class name: ^C
+
+~RubyProject/ruby-1.8.6-p111&gt; ./ruby -e "e = Example.new"
+Hello from the Example class
+
+~RubyProject/ruby-1.8.6-p111&gt; ./ruby -e "f = Foo.new"
+-e:1: uninitialized constant Foo (NameError)
+</code></pre>
+
+<p>This implementation doesn&rsquo;t deal with multiple classes of the same name
+residing in different directories. Also, the way in which the <em>rb_load</em>
+tool determines the name of the class is rather naive and can screw it
+up. I&rsquo;ve wanted to write this for over a year now after hearing <a href="http://richkilmer.blogs.com/">Rich
+Kilmer</a> talk about the way in which
+<a href="http://infoether.com/">InfoEther</a> distributes its Ruby applications. So
+this is more of a proof-of-concept for myself than anything else.
+Hopefully you learned from this tutorial and can put it to good use.</p>
+]]></content>
+    
+  </entry>
+  
+</feed>

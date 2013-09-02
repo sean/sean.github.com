@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: iOS | Sean Mountcastle]]></title>
+  <link href="http://seanmountcastle.com/blog/categories/ios/atom.xml" rel="self"/>
+  <link href="http://seanmountcastle.com/"/>
+  <updated>2013-09-01T22:16:59-04:00</updated>
+  <id>http://seanmountcastle.com/</id>
+  <author>
+    <name><![CDATA[Sean Mountcastle]]></name>
+    <email><![CDATA[smountcastle@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[iOSDevCamp DC 2012]]></title>
+    <link href="http://seanmountcastle.com/blog/2012/08/14/iosdevcamp-dc-2012/"/>
+    <updated>2012-08-14T22:49:00-04:00</updated>
+    <id>http://seanmountcastle.com/blog/2012/08/14/iosdevcamp-dc-2012</id>
+    <content type="html"><![CDATA[<p>This past weekend, <a href="http://www.luisdelarosa.com/">Luis de la Rosa</a> and I ran <a href="http://iosdevcampdc.com/">iOSDevCamp DC 2012</a>, hosted by <a href="http://www.verisigninc.com/">Verisign</a>. This year our sponsors were: <a href="http://getappsavvy.com/">Savvy Apps</a>, <a href="http://mmedia.com/">Millenial Media</a>, <a href="http://www.verisigninc.com">Verisign</a>, and <a href="http://happyapps.com/">Happy Apps</a>. All of the talks were very well received and it was a great opportunity to network with other iOS developers in the mid-Atlantic region. For those talks where the slides were made available, I&rsquo;ve linked to them below. I&rsquo;ll come back and update this post as more slides become available.</p>
+
+<ul>
+<li>10am &ndash; Ken Yarmosh Stop Pinching Me: Getting Gestures Right in Your Application</li>
+<li>11am &ndash; Jon Blocksom <a href="https://www.dropbox.com/s/dm01q9fg14vkjtg/iOSDevCamp2012%20iOS%20Concurrency.key">iOS Concurrency: NSOperationQueue and Grand Central Dispatch</a></li>
+<li>1pm  &ndash; Mark Gerl <a href="https://dl.dropbox.com/u/336260/POLITICO_DynamicContentDelivery_20120811.pdf">Recipe for Dynamic Content</a></li>
+<li>2pm  &ndash; Mark Pospesel <a href="https://dl.dropbox.com/u/1353697/iOSDevCampDC%202012/Enter%20The%20Matrix.pdf">Enter the Matrix</a></li>
+<li>3:30pm &ndash; Chris Brown Improving App Monetization Through Data</li>
+<li>4:30pm &ndash; James Norton Embedding Lua Script in iOS</li>
+</ul>
+
+
+<p>Mark Pospesel wrote up his thoughts on the conference <a href="http://markpospesel.com/2012/08/17/iosdevcampdc-wrap-up/">here</a>.</p>
+]]></content>
+  </entry>
+  
+</feed>

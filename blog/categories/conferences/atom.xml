@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Conferences | Sean Mountcastle]]></title>
+  <link href="http://seanmountcastle.com/blog/categories/conferences/atom.xml" rel="self"/>
+  <link href="http://seanmountcastle.com/"/>
+  <updated>2013-09-01T22:16:59-04:00</updated>
+  <id>http://seanmountcastle.com/</id>
+  <author>
+    <name><![CDATA[Sean Mountcastle]]></name>
+    <email><![CDATA[smountcastle@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[iOSDevCamp DC 2012]]></title>
+    <link href="http://seanmountcastle.com/blog/2012/08/14/iosdevcamp-dc-2012/"/>
+    <updated>2012-08-14T22:49:00-04:00</updated>
+    <id>http://seanmountcastle.com/blog/2012/08/14/iosdevcamp-dc-2012</id>
+    <content type="html"><![CDATA[<p>This past weekend, <a href="http://www.luisdelarosa.com/">Luis de la Rosa</a> and I ran <a href="http://iosdevcampdc.com/">iOSDevCamp DC 2012</a>, hosted by <a href="http://www.verisigninc.com/">Verisign</a>. This year our sponsors were: <a href="http://getappsavvy.com/">Savvy Apps</a>, <a href="http://mmedia.com/">Millenial Media</a>, <a href="http://www.verisigninc.com">Verisign</a>, and <a href="http://happyapps.com/">Happy Apps</a>. All of the talks were very well received and it was a great opportunity to network with other iOS developers in the mid-Atlantic region. For those talks where the slides were made available, I&rsquo;ve linked to them below. I&rsquo;ll come back and update this post as more slides become available.</p>
+
+<ul>
+<li>10am &ndash; Ken Yarmosh Stop Pinching Me: Getting Gestures Right in Your Application</li>
+<li>11am &ndash; Jon Blocksom <a href="https://www.dropbox.com/s/dm01q9fg14vkjtg/iOSDevCamp2012%20iOS%20Concurrency.key">iOS Concurrency: NSOperationQueue and Grand Central Dispatch</a></li>
+<li>1pm  &ndash; Mark Gerl <a href="https://dl.dropbox.com/u/336260/POLITICO_DynamicContentDelivery_20120811.pdf">Recipe for Dynamic Content</a></li>
+<li>2pm  &ndash; Mark Pospesel <a href="https://dl.dropbox.com/u/1353697/iOSDevCampDC%202012/Enter%20The%20Matrix.pdf">Enter the Matrix</a></li>
+<li>3:30pm &ndash; Chris Brown Improving App Monetization Through Data</li>
+<li>4:30pm &ndash; James Norton Embedding Lua Script in iOS</li>
+</ul>
+
+
+<p>Mark Pospesel wrote up his thoughts on the conference <a href="http://markpospesel.com/2012/08/17/iosdevcampdc-wrap-up/">here</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[RubyNation 2008]]></title>
+    <link href="http://seanmountcastle.com/blog/2008/08/08/rubynation-2008/"/>
+    <updated>2008-08-08T08:11:35-04:00</updated>
+    <id>http://seanmountcastle.com/blog/2008/08/08/rubynation-2008</id>
+    <content type="html"><![CDATA[<p><img class="left <a" src="href="http://www.rubynation.org/images/conference/badges/ruby_attendee.png">http://www.rubynation.org/images/conference/badges/ruby_attendee.png</a>"></p>
+
+<p>Last weekend (Friday and Saturday), I attended <a href="http://www.rubynation.org/">RubyNation</a> 2008, the first regional Ruby conference in my area. The speakers were excellent and it was great to meet up with folks from the Ruby community who I haven&rsquo;t seen in awhile. As always, I left feeling energized and excited about my Ruby projects.</p>
+
+<p>There were two main themes of the conference: the &lsquo;official&rsquo; one was <em>Ceremony vs. Essence</em>, while the &lsquo;unofficial&rsquo; one was <em>Test all the fucking time</em>. The first theme was the subject of the opening and closing keynotes. The second came from Bryan Liles lighting talk on the first day and kept coming up afterwards (audience &lsquo;hecklers&rsquo; would ask presenters how often they should test).</p>
+
+<h2>Agenda</h2>
+
+<hr />
+
+<table>
+<tr><td>Welcome to RubyNation</td><td>Gray Herter</td></tr>
+<tr><td>Opening Keynote: Ceremony vs. Essence</td><td>Neal Ford</td></tr>
+<tr><td>DSLs and Ruby: Blurring the Lines Between Programs And Data</td><td>Russ Olsen</td></tr>
+<tr><td>The Culture of Innovation in Ruby</td><td>Glenn Vanderburg</td></tr>
+<tr><td>Living on the Edge</td><td>Yehuda Katz</td></tr>
+<tr><td>Lightning Talks</td><td>Chris Bucherre, Bryan Liles</td></tr>
+<tr><td>Archaeopteryx: A Ruby MIDI Generator</td><td>Giles Bowkett</td></tr>
+<tr><td>Welcome, Day 2</td><td>David Keener</td></tr>
+<tr><td>Keynote: Ruby, A Retrospective</td><td>Rich Kilmer</td></tr>
+<tr><td>Ruby Puzzlers</td><td>Mike Furr</td></tr>
+<tr><td>Pratical JRuby</td><td>David Keener</td></tr>
+<tr><td>Tools for Your Ruby Toolbox</td><td>Dave Bock</td></tr>
+<tr><td>Lightning Talks</td><td>Soren Burkhart, Glenn West, Jesse Shock, Yehuda Katz, Bryan Liles</td></tr>
+<tr><td>Closing Keynote: Bad Ruby</td><td>Stuart Halloway</td></tr>
+</table>
+
+
+<hr />
+
+<p>Neal Ford&rsquo;s talk on <em>Ceremony vs Essence</em> was one of the best talks of the conference and a great way to kick it off. He criticized our industry for failing to look backwards and leveraging the lore of the past. Then he proceeded to look even further back discussing <a href="http://en.wikipedia.org/wiki/Plato">Plato&rsquo;s</a> doctrine of ideas, <a href="http://en.wikipedia.org/wiki/Aristotle">Aristotle&rsquo;s</a> essential properties vs accidental properties, <a href="http://en.wikipedia.org/wiki/Galileo">Galileo&rsquo;s</a> use of experimentation to verify ideas, and <a href="http://en.wikipedia.org/wiki/William_Occam">William Occam&rsquo;s</a> principle that the explanation of any phenomenon should make as few assumptions as possible (KISS). Don&rsquo;t confuse essential complexity (we have a hard problem to solve) vs accidental complexity (we&rsquo;ve made the problem hard to solve). Some of the new patterns he presented were:</p>
+
+<ul>
+<li>Chicken Cognition: no memory, can&rsquo;t learn from your mistakes</li>
+<li>Frozen Caveman: burned by something and was flash frozen at that point in time, everything revolves around that issue</li>
+<li>Rubik&rsquo;s Cubicle: love to solve puzzles, not real issues</li>
+</ul>
+
+
+<p>During his keynote, Neal suggested learning from the lore of our past by reading classics like , , .</p>
+
+<p>Next up was Russ Olsen who gave a talk about DSLs, both external and internal. Domain specific languages continue to be a hot topic in Ruby and the developer community in general. Ruby is very well suited to both external DSLs (involving a parser) and internal DSLs (use the Ruby parser and build language infrastructure). Ruby is great for DSLs because it doesn&rsquo;t require parenthesis or semi-colons, it supports procs, the reflection capabilities (method_missing, instance_eval, etc), etc. Rich Kilmer called DSL building, syntax driven development.</p>
+
+<p>Glenn Vanderburg presented on the culture of innovation within the Ruby community. The Ruby community is seeing so much innovation because Rubyists are novelty junkies, the languages opens possibilities that deserve to be explored, the requirement to integrate with IDEs is hampering innovation in Java (Java developers won&rsquo;t use it until it&rsquo;s integrated within their IDE), and things are just easier to accomplish in Ruby (low ceremony). He said that sometimes its good to start over as being forced to reinvent can be an opportunity. To close out his talk he did have a warning: <strong>When learning new things costs are easier to spot than benefits, but when inventing new things benefits are easier to spot than costs.</strong></p>
+
+<p>Yehuda Katz from Engine Yard spoke about living on the edge. As an aside, it appears that <a href="http://engineyard.com/">Engine Yard</a> is trying to be a mini-Google in that they appear to have hired many of the top Rubyists as well as some very savvy operations folks. Yehuda said that we should expect <a href="http://merbivore.com/">Merb</a> 1.0 by the end of summer, introduced the <a href="http://datamapper.org/">DataMapper</a> ORM, <a href="http://www.infoq.com/news/2008/07/yard-documentation-generator">YARD</a> (a replacement for rdoc), and <a href="http://github.com/jbarnette/johnson/tree/master">Johnson</a> (a JavaScript/Ruby bridge). <strong>He urged those present to take the time to think things through and not rush an API (or software) out.</strong></p>
+
+<p>During the Lightning Talks we heard from Chris Bucchere about <a href="http://www.thebdgway.com/">BDG</a>&rsquo;s social network for conferences; David James of Community Goals about state machines, Simon Kaczar of Prognosoft about libncurses-ruby, and <a href="http://smartic.us/">Bryan Liles</a> about testing (where the meme <em>test all the fucking time</em> appeared). Bryan&rsquo;s was one of the best talks of the conference, I highly recommend seeing him present.</p>
+
+<p>The first day closed with <a href="http://gilesbowkett.blogspot.com/">Giles Bowkett&rsquo;s</a> presentation on Archaeopteryx (a Ruby MIDI generator). The music it generated (through <a href="http://www.propellerheads.se/products/reason/">Reason</a>) was pretty good. The software makes heavy use of lambda functions and so Giles has aliased lambda to L to reduce typing. His talk covered a wide range of topics and there&rsquo;s no way I can do it justice. Hopefully he&rsquo;ll have it recorded (since he&rsquo;s given the presentation a few times now) and post it on the &lsquo;net.</p>
+
+<p>The second day opened with Rich Kilmer of <a href="http://www.infoether.com/InfoEther/Home.html">InfoEther</a> who provided a look back at the early days of Ruby (from his involvement in 2001), the conferences, and all of the various projects he&rsquo;s worked on with Ruby. Rich always has fun stories to tell and I enjoyed his talk immensely. I won&rsquo;t go through the entire chronology, but he ended by stating that the community needs to develop tools to deal with the dynamic nature of Ruby in order for wider adoption of the language, though he did note that Ruby is becoming mainstream. He also announced <a href="http://www.macruby.org/trac/wiki/HotCocoa">HotCocoa</a>, a DSL for Cocoa application development.</p>
+
+<p>Mike Furr spoke about issues he encountered when writing a Ruby parser for his <a href="http://www.cs.umd.edu/~jfoster/ruby.pdf">DRuby</a> project. These were somewhat interesting traps, pitfals, and corner cases for where the language is ambiguous. His slides are available <a href="http://rubynation.nowgetsocial.com/images/material/11M5676.pdf">here</a> so you can see specific code examples.</p>
+
+<p>David Keener walked through installing, configuring and running JRuby. Unfortunately, I have no interest in JRuby. I started working with it at my previous job to add Ruby scripting to a Java application, but since I no longer program in Java nor have an operational environment that is setup to deploy Java, I just don&rsquo;t care.</p>
+
+<p>Tools for your Ruby toolbox by <a href="http://codesherpas.com/">David Bock</a> was an interesting tour of three Ruby projects: <a href="http://staticmatic.rubyforge.org/">StaticMatic</a>, <a href="http://sinatra.rubyforge.org/">Sinatra</a>, and <a href="http://www.ruby-doc.org/stdlib/libdoc/gserver/rdoc/index.html">GServer</a>. StaticMatic looked interested for static website development, but then Mike Clark <a href="http://clarkware.com/cgi/blosxom/2008/08/06#Webby">wrote</a> about <a href="http://webby.rubyforge.org/">Webby</a> and it looks even better. Sinatra appears to be a very light weight alternative to Rails and in combination with a static web site tool like StaticMatic or Webby could be extremely useful. GServer is a generic server which takes some of the pain out of setting them up. Dave&rsquo;s an engaging speaker and I always enjoy his presentations as well as speaking with him in the hallways at conferences.</p>
+
+<p>The second day of Lightning Talks was even better than the first. Soren Burkhard from <a href="http://hawaiibcllc.com/">Hawaii Business Consulting</a> had a great overview of starting your own business. <a href="http://mentalpagingspace.blogspot.com/">Glenn West</a> spoke about several Rails plugins that he uses on a regular basis: ActiveScaffold, Role Requirement, ActiveAuthentication, File_column, PDFtoRuby, DotR, and Tabnav. Jesse Shock from Engine Yard spoke about high availability planning: multiple sites, geographic diversity, data partitioning, sharding, etc. He said you need to establish costs up front so the customer knows which availability techniques they can afford. Yehuda Katz, also from Engine Yard, spoke about testing (in the context of Merb) and how you should use BDD for internal as well as external interfaces. The last of the lightning talks was by Bryan Liles on how to be a manager, his slides are available <a href="http://smartic.us/assets/2008/8/5/smarticus_guide_to_being_the_boss.pdf">here</a>.</p>
+
+<p>Finally, Stu closed out the conference with a talk on bad Ruby. Overall, Ruby is good but that there are some bad practices/decisions that could come back to bite us later as Ruby adoption grows. Some of the examples he provided were: constants (you can&rsquo;t change them so testing becomes difficult), class attributes (prefer instance attributes on the eigenclass), direct access of instance variables, and proc workarounds (e.g. passing more than one block to a method). The code examples from his talk are available <a href="http://github.com/stuarthalloway/bad-ruby/tree">here</a>.</p>
+
+<p><a href="http://www.luisdelarosa.com/">Luis de la Rosa</a> was kind enough keep track of all of the URLs that folks were throwing around and has posted them here:
+&ndash; delicious:
+  <a href="http://delicious.com/tag/rubynation">http://delicious.com/tag/rubynation</a>
+&ndash; magnolia:
+  <a href="http://ma.gnolia.com/tags/rubynation">http://ma.gnolia.com/tags/rubynation</a></p>
+
+<p>Overall, it was a great conference and I look forward to next year&rsquo;s RubyNation in June 2009.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[OSCON 2006 Wrap-up]]></title>
+    <link href="http://seanmountcastle.com/blog/2006/07/30/oscon-2006-wrap-up/"/>
+    <updated>2006-07-30T00:59:00-04:00</updated>
+    <id>http://seanmountcastle.com/blog/2006/07/30/oscon-2006-wrap-up</id>
+    <content type="html"><![CDATA[<p>Now that <a href="http://conferences.oreillynet.com/os2006/">OSCON</a> is over, I
+like to make an attempt at distilling my thoughts on the conference.
+Last year I wrote a lengthy
+<a href="http://seanmountcastle.com/articles/2005/08/07/oscon-observations">post</a>
+on my observations; this year it’s going to be short. I was a bit
+disappointed by this year’s OSCON – not that I didn’t have a good time
+and learn a bit – but the mood seemed more subdued, there wasn’t the
+excitement that was felt last year. In fact, many of the attendees I
+spoke to in the halls felt the difference too and several said that this
+would be their last OSCON. I can’t pin it down to a single change in the
+conference – in fact, prior to the conference I had expected it to be
+even better than last year as I had so many conflicting sessions that I
+wanted to attend. The absence of <a href="http://www.paulgraham.com/">Paul
+Graham</a> at the Tuesday night keynotes was
+disappointing but <a href="http://headrush.typepad.com/">Kathy Sierra</a> gave an
+excellent talk. The quality of speakers was roughly the same as last
+year and the topics were similar (lots of Perl, Python, Ruby, Ajax,
+etc). The variety of keynotes was good, though last year I left many of
+the keynotes feeling inspired and excited, this year I really didn’t
+feel that. So on the surface, this year’s OSCON should’ve been just as
+good as last year’s – but in some intangible way it wasn’t – if I didn’t
+receive agreement on this from others, I would simply chock it up to my
+imagination or melancholy. So 2006 might be the last year I attend OSCON
+as well … I guess we’ll see what happens next year.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[OSCON: Sessions Day Three]]></title>
+    <link href="http://seanmountcastle.com/blog/2006/07/28/oscon-sessions-day-three/"/>
+    <updated>2006-07-28T00:53:00-04:00</updated>
+    <id>http://seanmountcastle.com/blog/2006/07/28/oscon-sessions-day-three</id>
+    <content type="html"><![CDATA[<p>Below are my notes from the third and final day of sessions here at
+<a href="http://conferences.oreillynet.com/os2006/">OSCON</a>. The talks I attended
+were:</p>
+
+<ul>
+<li>Practical OpenID</li>
+<li>Highly-technical Management of Software Development</li>
+</ul>
+
+
+<p>After the morning keynotes, I attended Practical OpenID, presented by
+<a href="http://seanmountcastle.com/davidrecordon.com">David Recordon</a> and
+<a href="http://brianellin.com">Brian Ellin</a>. They gave a quick overview of
+authentication and then discussed how OpenID works:</p>
+
+<ul>
+<li>You obtain an OpenID from someplace like MyOpenID (linked below).</li>
+<li>You add two lines of HTML to your site header â€“ to prove you own
+that URL.</li>
+<li>You then go to an OpenID enabled site and enter your URL.</li>
+<li>The site goes to the URL you entered and determines the OpenID
+server from the information in the page header</li>
+<li>The web app then redirects you to the login page on the OpenID
+server.</li>
+<li>Once youâ€™ve authenticated yourself with your password, the browser
+is redirected back to the web app with your credentials.</li>
+</ul>
+
+
+<p>Then Brian ran the Rails demo and showed how his Rails app was able to
+authenticate through <a href="http://www.myopenid.com">MyOpenID</a> and redirect
+back to his Rails app with additional registration information.</p>
+
+<p>David also mentioned that there is a $5,000 bounty for open source apps
+which integrate OpenID:
+<a href="http://iwantmyopenid.org/bounty">iwantmyopenid.org</a>.</p>
+
+<p>Next up was <a href="http://conferences.oreillynet.com/cs/os2006/view/e_sess/8694">Highly-technical Management of Software
+Development</a>
+by <a href="http://www.aleax.it">Alex Martelli</a> of Google. He started out by
+listing the three legs of the software development stool:</p>
+
+<ul>
+<li>Right intention => strategic leadership</li>
+<li>Right action => excellent developers</li>
+<li>Right endeavor => effective highly-technical management</li>
+</ul>
+
+
+<p>He then asked a series of questions regarding these three pillars:</p>
+
+<ul>
+<li>What is great strategic leadership?
+
+<ul>
+<li>a strong vision of the business model</li>
+<li>mutual trust, interaction and respect</li>
+<li>courage, integrity, humility, etc</li>
+</ul>
+
+
+<p>They do their job well and <em>let</em> me to do mine.</p></li>
+<li>What makes developers excellent?
+
+<ul>
+<li>great at design, coding, developing, testing, debugging, user
+interface design, etc.</li>
+<li>mutual trust, interaction and respect</li>
+<li>courage, integrity, humility, etc.</li>
+</ul>
+
+
+<p>They do their job well and <em>enable</em> me to do mine.\
+ Aside: How do you get excellent developers? Luck, choice or grow
+them.</p></li>
+<li>What is effective highly-technical management?
+
+<ul>
+<li>start with a manager whoâ€™s a technical peer of the developers</li>
+<li>develop mutual trust, interaction and respect with the
+developers</li>
+<li>the manager deployes themself as a â€œwildcardâ€? technical
+resource â€“ not for the â€œfunâ€? tasks, for the urgent ones
+needing extra resourcesThere are usually three objections to
+this:
+
+<ul>
+<li><p>What about Brooksâ€™ Law?</p>
+
+<ul>
+<li>â€œAdding resources to a late project makes it laterâ€?</li>
+<li>Yes, but in that case itâ€™s due to the fact that the
+new developer must get up to speed on the project</li>
+<li>The highly-technical manager should already be up to
+speed on the project â€“ no extra overhead, so Brooksâ€™
+law doesnâ€™t apply</li>
+</ul>
+</li>
+<li><p>Where does one find the time?</p>
+
+<ul>
+<li><strong>NOT</strong> in working long hours (aim for 40 a week).</li>
+<li><strong>NOT</strong> by telecommuting (communication is the most
+critical task and face-to-face communication is best)</li>
+<li>Time management works (recommended <a href="http://www.amazon.com/gp/product/0596007833/sr=8-2/qid=1154131620/ref=pd_bbs_2/104-0491953-9680738?ie=UTF8">Time Management for
+System
+Administrators</a>
+â€“ schedule 50% of your time each week for emergency
+tasks or with filler that can easily be post-poned</li>
+</ul>
+</li>
+<li><p>Shouldnâ€™t a manager always delegate?</p>
+
+<ul>
+<li>Yes, but delegation doesnâ€™t remove your responsibility
+â€“ you need to stay up to speed on all of your projects</li>
+<li>You should trust your people to do whatâ€™s right, but
+you have to enable them to do it</li>
+<li>Once they see your technical contributions are useful,
+they will want you involved â€“ as long as youâ€™ll
+<strong>never</strong> steal the credit</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<p>At the end of his presentation he mentioned that Joel Spolsky got it
+right about scheduling â€“ a spreadsheet is all you need (Gantt/Pert
+charts usually donâ€™t work). Use agile methodologies (agile planning,
+TDD, refactoring/DRY, 40-hour week, ego-less programming, frequent
+releases).</p>
+
+<p>Alexâ€™s final message was to <strong>control your dependencies</strong> or they will
+control you!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[OSCON: Sessions Day Two]]></title>
+    <link href="http://seanmountcastle.com/blog/2006/07/27/oscon-sessions-day-two/"/>
+    <updated>2006-07-27T23:08:00-04:00</updated>
+    <id>http://seanmountcastle.com/blog/2006/07/27/oscon-sessions-day-two</id>
+    <content type="html"><![CDATA[<p>Below are my notes from the second day of sessions here at
+<a href="http://conferences.oreillynet.com/os2006/">OSCON</a>. The talks I attended
+were:</p>
+
+<ul>
+<li>Subversion Best Practices</li>
+<li>haXe: A Cross-platform Web Language</li>
+<li>Building DSLs in Ruby</li>
+<li>Testing Rails Apps</li>
+<li>When Interface Design Attacks!</li>
+<li>Web Heresies: The Seaside Framework</li>
+</ul>
+
+
+<p>In the morning, I attended <a href="http://conferences.oreillynet.com/cs/os2006/view/e_sess/8671">Subversion Best
+Practices</a>
+by Ben Collins-Sussman and Brian Fitzpatrick. I donâ€™t see the slides
+up yet at the <a href="http://subversion.tigris.org/">Subversion</a> site, but they
+said that the slides would be posted. Several of the best practices they
+covered were:</p>
+
+<ul>
+<li><p>Server Best Practices</p>
+
+<ul>
+<li>svnserve: good for simple setups</li>
+<li>svn+ssh: great if you already depend on sshd</li>
+<li>Apache: more points of integration, repos web browsing, network
+share, etc.</li>
+<li>Always use a single repository when you have shared users,
+shared code, etc; except when you have radically different
+access policies, radically different data types, etc.</li>
+<li>Some nice repos browsing tools are:
+<a href="http://www.viewvc.org/">ViewVC</a> and
+<a href="http://trac.edgewall.org/">Trac</a></li>
+<li><p>Hook scripts:</p>
+
+<ul>
+<li>pre-commit: donâ€™t try to modify the transaction, just fail
+it if you need the code to be formatted, for example.
+Mentioned case-insensitive.py.</li>
+<li>post-commit: run it in the background so it doesnâ€™t hold
+up the user. Mentioned mailer.py and CIA bot.</li>
+</ul>
+</li>
+<li><p>Repos Maintenance:</p>
+
+<ul>
+<li>dump: slow, not for backups</li>
+<li>hotcopy: does a cp -R, can be used for backups and then you
+can rsync the copy, if needed</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Client Best Practices</p>
+
+<ul>
+<li>commit often</li>
+<li>commit small, discreet chunks (but <strong>donâ€™t</strong> commit individual
+files)</li>
+<li>have a consistent log message policy</li>
+</ul>
+</li>
+<li><p>Misc Best Practices</p>
+
+<ul>
+<li>Use branches: you can have task branches, feature branches,
+release branches, etc.</li>
+<li>Merge tracking: must be done by humans currently, but in 1.5
+there is real merge tracking.</li>
+<li>Autoprops: take advantage of these, some examples are:
+svn:mime-type, svn:eol-style, svn:needs-lock</li>
+</ul>
+</li>
+</ul>
+
+
+<p>Thankfully Nicolas Cannasseâ€™s talk entitled <a href="http://conferences.oreillynet.com/cs/os2006/view/e_sess/8600">haXe: A cross-platform
+web
+language</a>
+was moved earlier (prior to this I had a triple-conflict this
+afternoon). Nico appears to be an amazingly smart fellow and
+<a href="http://www.haxe.org">haXe</a> along with the <a href="http://nekovm.org/">NekoVM</a>
+(only 220KB!) look like very interesting technologies. He started with a
+simple â€˜Hellow Worldâ€™ example in haXe which was then generated into
+JavaScript, Flash and Neko â€“ that is the same source code can be
+easily re-targeted to different â€˜platformsâ€™. At the end he showed
+off <a href="http://en.dinoparc.com">Dinoparc</a> and Hammerfell, two Flash games
+that were written using haXe. Nico also mentioned that someone is
+writing a Ruby compiler which targets the NekoVM.</p>
+
+<p>After lunch I attended <a href="http://www.nealford.com">Neal Fordâ€™s</a> Building
+DSLs in Ruby. He showed off a simple calendaring DSL. His slides are
+here and he followed them very closely so I donâ€™t have much
+commentary. I guess the only way to get comfortable designing and
+implementing DSLs in Ruby is to actually write them â€¦ Iâ€™m going to
+have to pick some domain and just start.</p>
+
+<p>Then <a href="http://www.pragmaticstudio.com/">Mike Clark</a> was up with <a href="http://conferences.oreillynet.com/cs/os2006/view/e_sess/8395">Testing
+Rails
+Apps</a> â€“
+much of this was review for me, but I was looking forward to his
+tips/tricks to make testing easier. Iâ€™m really trying hard to be a
+â€œtest-firstâ€? developer but I get so excited writing new features
+that I leave the tests for last (of course, this usually means that I
+end-up refactoring the code I wrote based on the tests, which is a good
+thing). Since his slides arenâ€™t up yet, Iâ€™ll post some of my notes.
+Mikeâ€™s keypoint was that tests are insurance â€“ they ensure that
+programming your app remains fun, so youâ€™re not scared of making
+changes because you have a nice test suite which can quickly find out if
+youâ€™ve broken something else with your change. Some of his tips are
+below:</p>
+
+<pre><code># if the product isn't valid, print out the errors
+assert product.valid?, product.errors.full_messages
+
+# checking uniqueness
+assert_equal ActiveRecord::Errors.default_error_message[:taken],
+product.errors.on(:title)
+
+# for integration testing create a user object with method
+# names that are in plain English
+def regular_user
+open_session do |user|
+def goes_to_store
+get :index
+assert_response :success
+end
+
+def is_viewing_index
+assert_template "index"
+end
+
+def buys_book
+post :add_to_cart, :item =&gt; { :id =&gt; 1234 }
+end
+
+def checks_out
+post :checkout, :payment_info =&gt; { ... }
+end
+end
+end
+</code></pre>
+
+<p>Following the break, I attended <a href="http://conferences.oreillynet.com/cs/os2006/view/e_sess/8924">When Interface Design
+Attacks!</a>
+by <a href="http://www.slash7.com">Amy Hoy</a>. Her slides should be up on her
+website soon but some of the key points were that interface involves:</p>
+
+<ul>
+<li>expectations (baggage)</li>
+<li>interaction (usability)</li>
+<li>behavior (your appâ€™s personality)</li>
+</ul>
+
+
+<p>Some of the principles she mentioned were:</p>
+
+<ul>
+<li>usersâ€™ brains are affected by literacy; they scan in predictable
+patterns (reading right to left, top to bottom)</li>
+<li>users adapt to web design (ignoring headers, sidebars, stuff below
+the fold)</li>
+<li>if it looks like an ad, itâ€™s ignored (or if itâ€™s a small bit of
+content surrounded by ads, itâ€™s ignored)</li>
+<li>users â€˜satisficeâ€™ or give up (they pick the closest thing to
+what they were looking for)</li>
+<li>30-40% of users have low literacy (reading blocks of text is
+difficult for them â€“ the changes you make for these users also pay
+off for those who donâ€™t have literacy issues)</li>
+<li>There should be twice as many pixels above an object than below it</li>
+<li>Labels should be above their input and labels should have the same
+name/id as their corresponding input fields</li>
+</ul>
+
+
+<p>Amy then went through several examples from popular websites.</p>
+
+<p>The last talk of the day was <a href="http://conferences.oreillynet.com/cs/os2006/view/e_sess/8942">Web Heresies: The Seaside
+Framework</a>
+by <a href="http://smallthought.com/avi/">Avi Bryant</a> â€“ basically it was
+<a href="http://www.apple.com/webobjects/">WebObjects</a> meets
+<a href="http://www.paulgraham.com/vwfaq.html">ViaWeb</a> (in
+<a href="http://www.squeak.org/">Smalltalk</a>). The ideas behind
+<a href="http://www.seaside.st/">Seaside</a> are quite cool, but having never used
+Smalltalk and hating every IDE Iâ€™ve ever tried it just didnâ€™t appeal
+to me. Technically, the continuation usage is incredible â€“ every time
+you click a link a continuation is generated (complete call stack) so if
+you go back youâ€™re old call stack is still there and you can then have
+the function return a different value taking you some place else within
+the web app. Avi doesnâ€™t like templates, he wants HTML to be back in
+the domain of the developer and it should be generated from within the
+web app â€“ the designer only gets to touch the CSS (see <a href="http://www.csszengarden.com/">CSS Zen
+Garden</a> for examples of how this works).
+To handle form fields, Seaside simply uses callbacks â€“ you place the
+block of code in a callback right where the text field is generated,
+this is what the code looks like:</p>
+
+<pre><code>html form:
+[html text: 'Name: '.
+html textInputWithValue: person name callback: [:val | person name: val].
+html break.
+html submitButton]
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>

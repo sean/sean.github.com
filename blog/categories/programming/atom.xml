@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Programming | Sean Mountcastle]]></title>
+  <link href="http://seanmountcastle.com/blog/categories/programming/atom.xml" rel="self"/>
+  <link href="http://seanmountcastle.com/"/>
+  <updated>2013-09-01T22:16:59-04:00</updated>
+  <id>http://seanmountcastle.com/</id>
+  <author>
+    <name><![CDATA[Sean Mountcastle]]></name>
+    <email><![CDATA[smountcastle@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Inaugural CocoaHeads Reston Meeting]]></title>
+    <link href="http://seanmountcastle.com/blog/2008/06/12/inaugural-cocoaheads-reston-meeting/"/>
+    <updated>2008-06-12T22:31:20-04:00</updated>
+    <id>http://seanmountcastle.com/blog/2008/06/12/inaugural-cocoaheads-reston-meeting</id>
+    <content type="html"><![CDATA[<p>Tonight the first <a href="http://cocoaheads.org/us/RestonVirginia/index.html">CocoaHeads Reston</a> meeting was held at <a href="http://www.nearinfinity.com/index.html">Near Infinity Corporation</a>. <a href="http://pinepointsoftware.com/">Jason Harwig</a> gave an excellent presentation on <a href="http://webkit.org/">WebKit</a>, starting with a simple browser created completely in Interface Builder (it consisted of a text field linked to a web view). I&rsquo;ve recreated it and included a snapshot below.</p>
+
+<p><img class="left" src="/assets/basicbrowser.png" title="An Extremely Basic Web Browser" ></p>
+
+<p>Next he demonstrated how to interact with the DOM and JavaScript. The JavaScript integration was in both directions, first he demonstrated calling JavaScript functions from Objective-C and then calling Objective-C from JavaScript. It should be noted that for JavaScript to call Objective-C you need to implement the <code>+ (BOOL)isSelectorExcludedFromWebScript:(SEL)aSelector;</code> method and return <code>NO</code> for each of the methods you wish to call.</p>
+
+<p>Finally, Jason walked through various uses of WebKit an demonstrated an application specific, full-screen browser he wrote for a game as well as a del.icio.us Cocoa application he wrote called <a href="http://pinepointsoftware.com/delish/site/">Delish</a>. Several other webkit based applications were also covered such as <a href="http://fluidapp.com/">Fluid</a> &ndash; a freely available site-specific browser creator, <a href="http://infinitenil.com/packrat/">PackRat</a> &ndash; a commercial site-specific browser for Backpack, and another application which I&rsquo;ve forgotten (I guess I should&rsquo;ve taken notes). As an aside, Jason brought up the interesting work that the <a href="http://280north.com/">280North</a> folks have done for their <a href="http://280slides.com/">280Slides</a> web-based presentation called <a href="http://objective-j.org/">Objective-J</a>. Objective-J (code named Cappuccino), is an Objective-C like language built on JavaScript.</p>
+
+<p>Matt Wizeman stepped up next to demo a WebKit application he&rsquo;s developing to wrap a troublesome time tracking web application. It was interesting the machinations he had to go through to know when the page had finished loading and to transition between pages since the application was JavaScript heavy, using tricks like clickable divs.</p>
+
+<p>I learned quite a bit about WebKit. As soon as I got home I was energized to play with it.</p>
+
+<p>Be sure to come to the next meeting on July 10th (day before iPhone 3G day)!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Learn a New Programming Language]]></title>
+    <link href="http://seanmountcastle.com/blog/2008/06/04/learn-a-new-programming-language/"/>
+    <updated>2008-06-04T23:10:20-04:00</updated>
+    <id>http://seanmountcastle.com/blog/2008/06/04/learn-a-new-programming-language</id>
+    <content type="html"><![CDATA[<p>As <a href="http://www.chadfowler.com/">Chad Fowler</a> says, &ldquo;The best reason to
+learn a new programming language is to learn to think differently.&rdquo; Here
+in Northern VA, we have a new opportunity to think differently with the
+introduction of the <a href="http://groups.google.com/group/novalanguages">NoVA Languages
+group</a>. <a href="http://www.twitter.com/voodootikigod">Chris
+Williams</a> from <a href="http://www.iterativedesigns.com/">Iterative
+Designs</a> posted to the <a href="http://novarug.org/">NoVA
+RUG</a> mailing list this morning and received quite a
+bit of interest. Here&rsquo;s what he has to say about the new group:</p>
+
+<blockquote><p>Thoughts on the makeup of the group include obtaining (however you
+want) a book, working through the book 1 chapter per week on one night
+of that week with a group of like minded individuals.</p></blockquote>
+
+<p>To start, the group will work through Joe Armstrong&rsquo;s <a href="http://www.pragprog.com/titles/jaerlang/programming-erlang">Programming
+Erlang</a> book
+starting on Monday, June 16th (hopefully I&rsquo;ll be able to work out a
+schedule with my wife so I can attend). This is an excellent choice on
+several levels: every developer should know a functional programming
+language; single core processors are increasingly rare and the number of
+cores in commodity hardware should only increase in the coming years;
+and I already own the book.</p>
+
+<p>If <a href="http://www.erlang.org/">Erlang</a> doesn&rsquo;t pique your interest, the
+<a href="http://groups.google.com/group/nscodernightdc">NSCoderNight DC</a> group
+is going to work through the 3rd Edition of <a href="http://www.bignerdranch.com/">Aaron
+Hillegass&rsquo;s</a> <a href="http://www.amazon.com/Cocoa-Programming-Mac-OS-3rd/dp/0321503619">Cocoa Programming for Mac OS
+X</a>
+book on Tuesday nights. For several months now, I&rsquo;ve been playing around
+with Cocoa and while I&rsquo;m getting used to the syntax of Objective-C, the
+XCode IDE and Interface Builder still seem foreign to me (I never liked
+IDEs having been weened on Emacs).</p>
+
+<p>It&rsquo;s a great time to be a programmer in Northern Virginia!</p>
+
+<p><strong>Update:</strong> It turns out that there&rsquo;s another Cocoa group right around
+the corner from me in Reston:
+<a href="http://www.cocoaheads.org/us/RestonVirginia/index.html">CocoaHeads</a>.
+They meet the second Thursday of each month.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Performance Tuning Network Applications]]></title>
+    <link href="http://seanmountcastle.com/blog/2008/03/20/performance-tuning-network-applications/"/>
+    <updated>2008-03-20T23:09:57-04:00</updated>
+    <id>http://seanmountcastle.com/blog/2008/03/20/performance-tuning-network-applications</id>
+    <content type="html"><![CDATA[<p>Recently at work I spent a few weeks tuning a network service across
+three platforms (Solaris, Linux, and AIX) to get within 10% of the
+theoretical maximum throughput. In this short article, I&rsquo;ll walk through
+the various tools I used to improve the performance of the application.</p>
+
+<p>This application is very specialized in that the two machines are
+connected directly through an ethernet switch. This means that the MTU
+could easily be determined from each end of the link and the extra work
+to determine the maximum segment size for the transit network (see <a href="http://tools.ietf.org/html/rfc1191">RFC
+1191</a>) was unnecessary. This also
+made it very easy to watch the traffic between the two hosts as well as
+the system calls they were using to transfer and receive the data.</p>
+
+<p>Before I get into the steps I took to tune the service, I&rsquo;d like to
+introduce the tools used:</p>
+
+<ul>
+<li>Truss: a tracing utility which displays system calls, dynamically
+loaded user level function calls, received signals, and incurred
+machine faults. This is available for many platforms, but I use it
+most on AIX.</li>
+<li>DTrace/DTruss: a dynamic tracing compiler and tracing utility. This
+is an amazingly powerful tool from Sun, originally for Solaris but
+slowly spreading to other platforms. See Sun&rsquo;s <a href="http://www.sun.com/software/solaris/howtoguides/dtracehowto.jsp">How To
+Guide</a>.</li>
+<li>strace: a dynamic tracing utility which displays systems calls and
+received signals under Linux.</li>
+<li>mpstat: collects and displays performance statistics for all logical
+CPUs in the system.</li>
+<li>prstat: iteratively examines all active processes on the system and
+reports statistics based on the selected output mode and sort order.</li>
+<li>tcpdump: a utility for capturing network traffic.</li>
+<li>Wireshark: a network protocol analyzer. It replaces the venerable
+Ethereal tool and allows you to either capture network traffic on
+demand or load a captured session for analysis. Find out more
+<a href="http://www.wireshark.org">here</a>.</li>
+<li>gprof: a tool for profiling your code to determine where the
+performance bottle-necks are. See the
+<a href="http://www.gnu.org/software/binutils/manual/gprof-2.9.1/html_mono/gprof.html">manual</a>
+for more information.</li>
+<li>c++filt: a tool for demangling C++ method names. It is part of the
+<a href="http://directory.fsf.org/project/binutils/">GNU binutils package</a>.</li>
+</ul>
+
+
+<p>Since I already had the service up and running, I simply ran the two
+components and captured the traffic between them using tcpdump. While
+the processes were running, I also used dtruss, truss, or strace
+(depending on the platform) to capture the system calls being made.
+Since this is a network service, I focused on calls to <code>select</code>, <code>send</code>,
+and <code>recv</code>.</p>
+
+<pre><code>13455/15:   2143177    2994      4 pollsys(0xFFFFFD7EBADDB910, 0x1, 0xFFFFFD7EBADDBA30) = 1 0
+13455/15:   2143180       5      0 pollsys(0xFFFFFD7EBADDB8D0, 0x1, 0xFFFFFD7EBADDB9F0) = 1 0
+13455/15:   2143185       8      4 recvfrom(0x11, 0xB384A0, 0x10000)                    = 1416 0
+13455/15:   2143253       5      0 pollsys(0xFFFFFD7EBADDB8D0, 0x1, 0xFFFFFD7EBADDB9F0) = 0 0
+13455/15:   2143262      12      8 send(0x11, 0xB084D0, 0x14B8)                         = 5304 0
+13455/15:   2143268     365      4 pollsys(0xFFFFFD7EBADDB910, 0x1, 0xFFFFFD7EBADDBA30) = 1 0
+13455/15:   2143270       4      0 pollsys(0xFFFFFD7EBADDB8D0, 0x1, 0xFFFFFD7EBADDB9F0) = 1 0
+13455/15:   2143275       8      4 recvfrom(0x11, 0xB384A0, 0x10000)                    = 1416 0
+13455/15:   2143343       5      0 pollsys(0xFFFFFD7EBADDB8D0, 0x1, 0xFFFFFD7EBADDB9F0) = 0 0
+13455/15:   2143348       9      4 send(0x11, 0xB084D0, 0x14B8)                         = 5304 0
+13455/15:   2143353    1000      4 pollsys(0xFFFFFD7EBADDB910, 0x1, 0xFFFFFD7EBADDBA30) = 1 0
+</code></pre>
+
+<p>Looking at the results above you can see that <code>select</code> (<code>pollsys</code>) is
+being called each time we need to send or receive data over the network.
+Since the socket is non-blocking we can rely on the immediate return
+when the outgoing socket buffer is full as well as when there is no data
+available to read. By <code>select</code>ing at the very top of the receive loop we
+can bundle multiple receive calls together, increasing the application&rsquo;s
+throughput. Now the output looks like this:</p>
+
+<pre><code>16712/9:     16202    1560      6 pollsys(0xFFFFFD7EBB9DB940, 0x1, 0xFFFFFD7EBB9DBA30) = 1 0
+16712/9:     16217      10      6 recv(0xB, 0x8A6450, 0x10000)                         = 1416 0
+16712/9:     16246       9      5 send(0xB, 0x876480, 0x540)                           = 1344 0
+16712/9:     16267       7      3 send(0xB, 0x876480, 0x540)                           = 1344 0
+16712/9:     16285       5      1 send(0xB, 0x876480, 0x540)                           = 1344 0
+16712/9:     16680      10      5 recv(0xB, 0x8A6450, 0x10000)                         = 1416 0
+16712/9:     16712      11      7 send(0xB, 0x876480, 0x540)                           = 1344 0
+16712/9:     16733       7      3 send(0xB, 0x876480, 0x540)                           = 1344 0
+16712/9:     16753       6      2 send(0xB, 0x876480, 0x540)                           = 1344 0
+16712/9:     16768       4      0 recv(0xB, 0x8A6450, 0x10000)                         = -1 Err#11
+</code></pre>
+
+<p>You&rsquo;ll notice that now we are able to process two requests and send out
+six responses in the time that it previously took to call select and
+receive a single request. When there is nothing left to read, the call
+to <code>recv</code> returns errno 11 (<code>EAGAIN</code>). This change made the single
+biggest performance impact on the code. I also changed the calls
+<code>recvfrom</code> to <code>recv</code> since the application did not make use of the
+foreign address.</p>
+
+<p>At this point the performance was much better but I noticed that under
+heavy load the sending socket would block as the ratio of requests to
+responses was 1:3. As this was a UDP application, having the sending
+buffers fill up seemed strange as we assumed that additional packets
+would simply be dropped on the floor.</p>
+
+<p>On the server, I checked the UDP socket buffer size using <code>ndd</code> (this
+was under Solaris. For AIX the command is <code>no</code> and for Linux the command
+is <code>sysctl</code>).</p>
+
+<p>The following code was added to the socket initialize (minus the error
+handling) to ensure that the socket buffers were large enough.</p>
+
+<pre><code>unsigned size = 1024 * 1024; // 1MB
+int ret = setsockopt(desc, SOL_SOCKET, SO_SNDBUF, &amp;size, sizeof(size));
+    ret = setsockopt(desc, SOL_SOCKET, SO_RCVBUF, &amp;size, sizeof(size));
+</code></pre>
+
+<p>Now that the application was performing acceptably I decided to run it
+under the profiler. This turned up the function which was adding
+responses to the in-memory packet. It turned out that as responses were
+being added to the packet, the headers were being recalculated each
+time. I removed this unnecessary work and only made the calculations
+right before the packet was sent. This improved performance a few
+percentage points more.</p>
+
+<p>By binding the network interrupts to a particular core and keeping the
+sending thread off of that core we were able to eek out additional
+performance from the application. To accomplish this, the application
+allows the operator to specify which core(s) it should bind to using
+<code>sched_setaffinity</code> (Linux) and <code>processor_bind</code> (Solaris). You can also
+accomplish this using <code>taskset</code> (Linux) and pbind (Solaris) if you don&rsquo;t
+wish to modify your application.</p>
+
+<p>Looking at the network traffic with tcpdump, I saw that I could fit an
+additional response in the response bundle packet if I reduced or
+removed some of the items in the packet header. At this point the
+analysis and tuning had gone on for a few weeks and we had a schedule to
+meet. Since the performance was where we needed it, the application was
+wrapped up and sent to quality assurance.</p>
+
+<p>The single most important lesson I learned from this exercise was to use
+non-blocking sockets to their fullest by continually calling
+<code>recv</code>/<code>send</code> until the call would block and then using <code>select</code> to idle
+the process until there is work to do.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[NSCoderNight DC]]></title>
+    <link href="http://seanmountcastle.com/blog/2008/01/15/nscodernight-dc/"/>
+    <updated>2008-01-15T23:05:57-05:00</updated>
+    <id>http://seanmountcastle.com/blog/2008/01/15/nscodernight-dc</id>
+    <content type="html"><![CDATA[<p>Tonight I was able to attend <a href="http://nscodernight.com/?cat=6">NSCoderNight
+DC</a> in Tysons Corner, VA and finally met
+<a href="http://greenmango.org/">Jose Vazquez</a> in person. Unfortunately, turn
+out is pretty spotty, with Jose being the only continuous attendee.
+Despite it being just the two of us, I came away energized and started
+playing around with the new APIs we spoke about: <a href="http://developer.apple.com/documentation/MusicAudio/Conceptual/CoreAudioOverview/Introduction/chapter_1_section_1.html#//apple_ref/doc/uid/TP40003577-CH1-SW1">Core
+Audio</a>/<a href="http://developer.apple.com/documentation/MusicAudio/Conceptual/AudioQueueProgrammingGuide/Introduction/chapter_1_section_1.html#//apple_ref/doc/uid/TP40005343-CH1-SW1">AudioQueues</a>
+and <a href="http://developer.apple.com/graphicsimaging/quartzcomposer/">Quartz
+Composer</a>.</p>
+
+<p>I was shocked when Jose explained that the Core Audio and AudioQueues
+tools are all Carbon (i.e. plain C) instead of Cocoa. Mistakenly, I was
+under the impression that Carbon had been officially deprecated by Apple
+and that only Cocoa would be supported going forward. The
+AudioQueueTools
+(/Developer/Examples/CoreAudio/SimpleSDK/AudioQueueTools) example which
+comes with the Apple Developer Tools shows how to create command-line
+tools for recording and playing back sounds, but trying to integrate
+this with you Cocoa application is a different story. Luckily, we found
+this post on Mark Darlymple&rsquo;s blog which explains how to use <a href="http://borkwarellc.wordpress.com/2007/09/13/c-callbacks-in-objc/">C
+callbacks in
+Objective-C</a>.
+I&rsquo;m still playing around with this and also looking at the
+<a href="http://developer.apple.com/quicktime/">QuickTime</a> API support for
+recording sound.</p>
+
+<p>Quartz Composer is an amazingly cool app, that appears deceptively
+simply to throw something together with. I was blown away by Jose&rsquo;s demo
+of it, having never seen it before. The visual programming environment,
+<a href="http://developer.apple.com/graphicsimaging/quartz/quartzcomposer.html">Quartz Composer
+Editor</a>,
+has a fairly straight-forward GUI and allows you to easily &lsquo;compose&rsquo;
+multiple processing units (a.k.a. patches) together into composition
+while the view window displays what the composition will look like in
+real-time. I&rsquo;m definitely going to spend some time to go through the
+examples (/Developer/Examples/Quartz Composer/Applications).</p>
+
+<p>If you are free on a Tuesday night, be sure to stop by the <a href="http://maps.google.com/maps?f=q&amp;hl=en&amp;geocode=&amp;time=&amp;date=&amp;ttype=&amp;q=8365+Leesburg+Pike,+Vienna,+VA+22182+(Panera+Bread">Tysons
+Corner
+Panera</a>&amp;sll=38.878131,-77.278595&amp;sspn=0.009689,0.0156&amp;ie=UTF8&amp;om=1&amp;ll=38.931038,-77.230368&amp;spn=0.043267,0.079479&amp;z=14&amp;iwloc=addr&amp;source=embed)
+from 7pm-9pm. I&rsquo;m going to make every effort to attend regularly.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Protecting Your Ruby Source Code for End User Applications]]></title>
+    <link href="http://seanmountcastle.com/blog/2007/12/15/protecting-your-ruby-source-code-for-end-user-applications/"/>
+    <updated>2007-12-15T17:54:41-05:00</updated>
+    <id>http://seanmountcastle.com/blog/2007/12/15/protecting-your-ruby-source-code-for-end-user-applications</id>
+    <content type="html"><![CDATA[<p>If you want to distribute your Ruby applications while still protecting
+your intellectual property you could use an obfuscation tools such as
+<a href="http://blog.zenspider.com/archives/2006/07/zenobfuscate_no.html">ZenObfuscate</a>
+or try to write your own. But in this article, I&rsquo;m going to show a
+different approach that&rsquo;s been used by several different companies
+producing commercial products written in Ruby. The method is not
+specific to Ruby and should work for any interpreted language in which
+you need to distribute your source code with the application.</p>
+
+<p>The secret is to encrypt your Ruby source, store it in a database and
+then modify the Ruby interpreter to look for your code in the database
+and decrypt it on the fly. I should note that there is no way to
+completely protect a product which is distributed to your
+customers&mdash;with enough diligence any security measures can be broken.</p>
+
+<p>These instructions are for Unix operating systems (include MacOS X).
+Unfortunately (or fortunately, for me), I don&rsquo;t own a Windows machine.</p>
+
+<p>If you don&rsquo;t already have Berkeley DB (BDB) installed on your system you
+can download it
+<a href="http://www.oracle.com/technology/software/products/berkeley-db/index.html">here</a>.
+You will need to follow the instructions which come with BDB which
+explain how to build and install it. Originally, I was going to use
+<a href="http://openssl.org/">OpenSSL</a> to encrypt our Ruby source code before
+inserting it into the database and decrypt it after retrieving it from
+the database. Thankfully, the latest version of BDB includes
+<a href="http://en.wikipedia.org/wiki/Advanced_Encryption_Standard">AES</a> support
+which allows you to maintain an encrypted database very easily.</p>
+
+<p>You will also need to obtain a fresh copy of the <a href="http://www.ruby-lang.org/en">Ruby source
+code</a> so that we can build our own private
+version which knows how to pull classes out of our BDB instance. So
+let&rsquo;s start by creating a directory for us to work in:</p>
+
+<pre><code>mkdir -p ~/RubyProject/deploy
+</code></pre>
+
+<p>You should unpack the Ruby source in the <em>\~/RubyProject</em> directory
+(this should create directory which looks like
+<em>\~/RubyProject/ruby-1.8.6-p111</em>). Go into that directory and run the
+configure script as follows:</p>
+
+<pre><code>./configure --prefix=~/RubyProject/deploy --with-static-linked-ext
+</code></pre>
+
+<p>This will enable us to build a stand alone Ruby interpreter which has
+everything it needs statically linked in.</p>
+
+<p>To find out where we need to hook in our handler which loads missing
+classes from the database, you can <em>grep</em> through the source code
+looking for const_missing like this:</p>
+
+<pre><code>grep const_missing *.c
+</code></pre>
+
+<p>This turned up two files <em>object.c</em> and <em>variable.c</em>. Looking at the
+output, I could see that the <strong><em>const_missing</em></strong> function is actually
+defined in <em>variable.c</em>. Jumping in, I searched for the code executed
+when a constant cannot be found. This led me to the
+<strong><em>rb_const_get_0</em></strong> function which walks up the class hierarchy
+looking for the specified constant. If it cannot be found, it returns
+the result of the <strong><em>const_missing</em></strong> function. So right before that
+final return, I added the following hook:</p>
+
+<pre><code>    /* At this point we haven't found the class so we must look
+       inside of the BerkeleyDB for it, see dbloader.c */
+    value = load_from_db(id);
+    if (value != Qundef) return value;
+</code></pre>
+
+<p>Now I just had to implement the load_from_db function which should
+look inside of the encrypted BDB instance for the file. Looking at how
+the <strong><em>rb_const_get_0</em></strong> function works, I knew my new method had to
+return a Ruby <em>VALUE</em>:</p>
+
+<pre><code>VALUE
+load_from_db(id)
+     ID id;
+{
+    DBT k;
+    DBT d;
+
+    memset(&amp;k, 0, sizeof(DBT));
+    memset(&amp;d, 0, sizeof(DBT));
+
+    verify_database_state();
+
+    k.data = rb_id2name(id);
+    k.size = strlen(k.data);
+
+    d.flags = DB_DBT_MALLOC;
+
+    if (bdb-&gt;get(bdb, NULL, &amp;k, &amp;d, 0) == 0) {
+      rb_eval_string((const char *)d.data);
+      free(d.data);
+      return rb_eval_string(rb_id2name(id));
+    }
+    return Qundef;
+}
+</code></pre>
+
+<p>You&rsquo;ll note that if we find the class in the database, we first evaluate
+it using <strong><em>rb_eval_string</em></strong>. Since this returns <em>nil</em>, we need
+evaluate the class name so that we can pass back a Ruby <em>VALUE</em>. If the
+class doesn&rsquo;t exist in the database, we return <em>Qundef</em> and
+<strong><em>const_missing</em></strong> gets called as usual.</p>
+
+<p>The <strong><em>verify_database_state</em></strong> function ensures that the password for
+the BDB instance was passed and the database opened so that the
+<strong><em>get</em></strong> call can access it. It is implemented like so:</p>
+
+<pre><code>/* a simple way to obfuscate the password in memory */
+#define A(c)             (c) - 0x1d
+#define ENCRYPT_PWD(str) do { char * p = str; while (*p) *p++ -= 0x1d; } while (0)
+#define DECRYPT_PWD(str) do { char * p = str; while (*p) *p++ += 0x1d; } while (0)
+
+static void
+verify_database_state()
+{
+  /* don't forget to NULL terminate this array! */
+  static char info[] =
+    { A('1'), A('2'), A('3'), A('4'), A('5'),
+       A('6'), A('7'), A('8'), A('9'), A('0'),
+       0 };
+
+  const char * database_file = "data.db";
+
+  if (bdb == NULL) {
+    db_env_create(&amp;bdbenv, 0);
+    db_create(&amp;bdb, bdbenv, 0);
+
+    DECRYPT_PWD(info);
+    bdbenv-&gt;set_encrypt(bdbenv, info, DB_ENCRYPT_AES);
+    ENCRYPT_PWD(info);
+    bdbenv-&gt;open(bdbenv, ".", DB_INIT_MPOOL | DB_CREATE | DB_PRIVATE, 0600);
+    bdb-&gt;set_flags(bdb, DB_ENCRYPT);
+    bdb-&gt;open(bdb, NULL, database_file, NULL, DB_BTREE, 0, 0644);
+  }
+}
+</code></pre>
+
+<p>You&rsquo;ll notice that the password is hard coded into the binary along with
+the location of the BDB instance. If you are going use this code, you&rsquo;ll
+want to change the default password (which needs to match the password
+you used when storing your Ruby source in the database) and perhaps the
+location of the database. To deter those looking to decrypt our Ruby
+source, I&rsquo;ve written C macros which performs a transformation on the
+password. It is fairly simple to circumvent, so you should research
+other methods of securely storing passwords within applications.</p>
+
+<p>Finally, you&rsquo;ll need to remember to close the BDB instance before the
+Ruby interpreter exits. To do this we simply open up <em>main.c</em> and add
+the following line immediately following the call to <strong><em>ruby_run</em></strong>:</p>
+
+<pre><code>close_database();
+</code></pre>
+
+<p>The implementation of <strong><em>close_database</em></strong> is trivial, so you can just
+look in the patch I&rsquo;ve provided for it.</p>
+
+<p>The patch to the Ruby source code is included in <a href="http://seanmountcastle.com/wp-content/uploads/2007/12/ruby-load-db.zip">this zipped
+attachment</a>
+along with another utility I wrote to load all of your Ruby source into
+the encrypted BDB instance (along with its Makefile). Here is a
+transcript which shows how to use the tools and your new Ruby
+interpreter:</p>
+
+<pre><code>~RubyProject/tools&gt; ./rb_store data.db *.rb
+Enter database password:
+Stored Example (131) bytes
+
+~RubyProject/tools&gt; ./rb_load data.db
+Enter database password:
+Hit CTRL+C to quit.
+Enter a class name: Example
+Found: 
+
+class Example
+  def initialize
+    puts "Hello from the Example class"
+  end
+
+  def aMethod
+    puts "Called aMethod"
+  end
+end
+
+Enter a class name: Foo
+No such class
+Enter a class name: ^C
+
+~RubyProject/ruby-1.8.6-p111&gt; ./ruby -e "e = Example.new"
+Hello from the Example class
+
+~RubyProject/ruby-1.8.6-p111&gt; ./ruby -e "f = Foo.new"
+-e:1: uninitialized constant Foo (NameError)
+</code></pre>
+
+<p>This implementation doesn&rsquo;t deal with multiple classes of the same name
+residing in different directories. Also, the way in which the <em>rb_load</em>
+tool determines the name of the class is rather naive and can screw it
+up. I&rsquo;ve wanted to write this for over a year now after hearing <a href="http://richkilmer.blogs.com/">Rich
+Kilmer</a> talk about the way in which
+<a href="http://infoether.com/">InfoEther</a> distributes its Ruby applications. So
+this is more of a proof-of-concept for myself than anything else.
+Hopefully you learned from this tutorial and can put it to good use.</p>
+]]></content>
+  </entry>
+  
+</feed>

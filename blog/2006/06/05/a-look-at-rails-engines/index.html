@@ -1,0 +1,477 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>A Look at Rails Engines - Sean Mountcastle</title>
+  <meta name="author" content="Sean Mountcastle">
+
+  
+  <meta name="description" content="A few months ago I heard about the
+’controversy’
+surrounding Rails Engines and meant to
+check them out, though work/life intervened and I never got &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://seanmountcastle.com/blog/2006/06/05/a-look-at-rails-engines">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="http://feeds.feedburner.com/SeanMountcastle" rel="alternate" title="Sean Mountcastle" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-378484-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner">
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://feeds.feedburner.com/SeanMountcastle" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:seanmountcastle.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+  
+    
+      <h1 class="entry-title">A Look at Rails Engines</h1>
+    
+  
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2006-06-05T17:25:00-04:00" pubdate data-updated="true">Jun 5<span>th</span>, 2006</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>A few months ago I heard about the
+’<a href="http://weblog.rubyonrails.org/articles/2005/11/11/why-engines-and-components-are-not-evil-but-distracting">controversy</a>’
+surrounding <a href="http://www.railsengines.org/">Rails Engines</a> and meant to
+check them out, though work/life intervened and I never got around to it
+until now. So last week I setup a <a href="http://www.rubyforge.org">RubyForge</a>
+project (thanks <a href="http://richkilmer.blogs.com/">Rich</a> and
+<a href="http://tomcopeland.blogs.com/">Tom</a>!) called
+<a href="http://rubyforge.org/projects/blogengine/">BlogEngine</a> to learn the ins
+and outs of creating a Rails Engine. At first blush, Rails Engines seem
+to be plugins on steroids, incredibly powerful but somewhat dangerous.
+For those who haven’t yet visited the Rails Engines website:</p>
+
+<blockquote><p>Engines are a way of dropping in whole chunks of functionality into
+your existing application without affecting any of your existing code.
+Engines are like a slice of an application from top (views/helpers) to
+bottom (models) which can be dropped into an existing application and
+appear as if they always existed in the normal /app directory.
+Developers can selectively override parts of Engines as they need to
+handle their application (such as changing the user/home view to
+display a silly name, without affecting the rest of the Engine).
+Engines can be as lightweight as the simplest plugin, or as
+full-featured as your your (<em>sic</em>) imagination can conceive.</p></blockquote>
+
+<p><a href="http://www.railsengines.org/wiki/pages/James+Adam">James Adam</a> has done
+an excellent job documenting the Rails Engine plugin and the Wiki with
+how to create your own Rails Engines. That said, while I found the
+development of my BlogEngine to be relatively painless (as it was
+developed like any other Rails apps), once it was converted to a Rails
+Engine it was difficult to integrate into another project and get the
+interaction with the
+<a href="http://www.railsengines.org/login_engine">LoginEngine</a> working
+smoothly. The Rails Engines plugin does make it dead simple to add a lot
+of functionality into your application with very little work. But due to
+the wholesale inclusion of models, views and controllers it does take a
+bit of work to get the engine tweaked to your liking (at least so that
+it integrates into your existing Rails app nicely). To create your own
+Rails Engine you would create a new Rails project, write your tests and
+app code as normal and then perform the following steps:</p>
+
+<ol>
+<li><p>Install the Rails Engine plugin:</p>
+
+<pre><code>./script/plugin install engines
+</code></pre></li>
+<li><p>Generate the directory structure for your new engine and choose a
+license:</p>
+
+<pre><code>./script/generate engine MyNewEngine
+</code></pre></li>
+<li><p>Move your engine files from the main app directory into the
+vendor/plugins/my_new_engine directory:</p>
+
+<pre><code>mv app/models/my_model.rb vendor/plugins/my_new_engine/app/models/
+mv db/migrate/001_initial.rb vendor/plugins/my_new_engine/db/migrate/
+mv app/controllers/my_controller.rb vendor/plugins/my_new_engine/app/controllers/
+mv app/views/my vendor/plugins/my_new_engine/app/views/
+</code></pre></li>
+<li><p>Modify config/environment.rb to start your engine:</p>
+
+<pre><code>Engines.start :my_new_engine
+</code></pre></li>
+<li><p>Include your new engine in ApplicationController/Helper:</p>
+
+<pre><code>class ApplicationController &lt; ActionController::Base
+include MyNewEngine
+end
+module ApplicationHelper
+include UploadEngine
+end
+</code></pre></li>
+<li><p>Modify vendor/plugins/my_new_engine/lib/my_new_engine.rb with
+any configuration options you require and add any modules you need
+to vendor/plugins/my_new_engine/lib/my_new_engine/</p></li>
+<li>Read and then update the README in vendor/plugins/my_new_engine so
+that you and others can figure out how to use your new engine.</li>
+</ol>
+
+
+<p>Some of the issues I had with Rails Engines were:</p>
+
+<ul>
+<li><strong>Model handling</strong>. For the BlogEngine, I relied upon the
+LoginEngine, unfortunately I had to enhance the User model with
+relationships to blogs, articles, etc – thankfully the LoginEngine
+was designed such that I could simply include the
+LoginEngine::AuthenticatedUser module. Thus you must take great care
+when developing an engine so that the models are setup properly.</li>
+<li><p><strong>Migration handling</strong>. Migrations with engines can be very
+dangerous as you must trust the source of the engine (though this is
+true for all code you incorporate into your application). That said,
+it would be nice if running</p>
+
+<pre><code>rake migrate
+</code></pre>
+
+<p>also ran the migrations for each of the installed engines. Note that
+the order in which the migrations is run is very important if the
+engines have dependencies on on another. Which brings me to the next
+item …</p></li>
+<li><p><strong>Engine dependencies</strong>. The init_engine.rb should allow you to
+require any pre-requisite engines. Then Engine.start wouldn’t care
+in which order the engines were started since they would be
+self-ordering.</p></li>
+<li><p><strong>Referencing image assets</strong>. The engines plugin provides support
+for accessing your CSS stylesheets and Javascript files via</p>
+
+<pre><code>&lt;%= engine_stylesheet "" %&gt;
+</code></pre>
+
+<p>and</p>
+
+<pre><code>&lt;%= engine_javascript "" %&gt;
+</code></pre></li>
+<li><p><strong>Referencing CSS and Javascript</strong>. In the above case you had to use
+the engine name as your .css and .js filenames or provide the
+additional filenames on the same line after the engine name. Since
+the engine should know where the view file came from it should look
+in that engine’s public directory for the stylesheet/Javascript
+files.</p></li>
+<li><strong>Testing Engines with fixtures</strong>. As long as you don’t allow the
+users of your engine to change your table names the fixtures you’ve
+written for your tests will work fine. Unfortunately, once the table
+names have changed it is up to the user to rename the fixture files.</li>
+</ul>
+
+
+<p>In theory, Rails Engines appear to be quite nice, but in my limited
+amount of time using them I prefer to reuse plugins, write my own code
+from scratch or reuse other classes in lib.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">admin</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2006-06-05T17:25:00-04:00" pubdate data-updated="true">Jun 5<span>th</span>, 2006</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/programming/'>Programming</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/telecom/'>Telecom</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://seanmountcastle.com/blog/2006/06/05/a-look-at-rails-engines/" data-via="smountcastle" data-counturl="http://seanmountcastle.com/blog/2006/06/05/a-look-at-rails-engines/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2006/05/17/may-novarug-meeting/" title="Previous Post: May NovaRUG Meeting">&laquo; May NovaRUG Meeting</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2006/06/28/june-novarug-meeting/" title="Next Post: June NovaRUG Meeting">June NovaRUG Meeting &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/08/14/iosdevcamp-dc-2012/">iOSDevCamp DC 2012</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/09/26/moved-to-github-pages-and-octopress/">Moved to GitHub Pages and Octopress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2010/01/21/skribit/">Skribit</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2008/11/25/invented-quality-metric-feltz-levels/">Invented Quality Metric: Feltz Levels</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2008/08/08/rubynation-2008/">RubyNation 2008</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/sean">@sean</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'sean',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section id="twitter">
+  <h1 class="tweets">Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("smountcastle", , );
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/smountcastle">@smountcastle</a></p>
+  
+</section>
+
+
+<section>
+  <h1>Currently Reading</h1>
+  <p> 
+    <a href="http://www.amazon.com/Steve-Jobs-Walter-Isaacson/dp/1451648537?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=1451648537"><img src="http://ecx.images-amazon.com/images/I/5127U12cE-L._SL160_.jpg" /></a>
+    <br />
+    <a href="http://www.amazon.com/Steve-Jobs-Walter-Isaacson/dp/1451648537?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=1451648537">Steve Jobs</a> by
+    Walter Isaacson
+  </p>
+  <h1>Recent Reads</h1>
+  <ul id="recent_reads">
+    
+      <li class="post">
+	<p> 
+	  <a href="http://www.amazon.com/Storm-Swords-Song-Fire-Book/dp/055357342X?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=055357342X"><img src="http://ecx.images-amazon.com/images/I/51JLfDOCDQL._SL160_.jpg" /></a>
+	  <br />
+	  <a href="http://www.amazon.com/Storm-Swords-Song-Fire-Book/dp/055357342X?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=055357342X">A Storm of Swords (A Song of Ice and Fire, Book 3)</a> by
+	  George R.R. Martin
+	</p>
+      </li>
+    
+      <li class="post">
+	<p> 
+	  <a href="http://www.amazon.com/Clash-Kings-Song-Fire-Book/dp/0553381695?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0553381695"><img src="http://ecx.images-amazon.com/images/I/51PmY7G7biL._SL160_.jpg" /></a>
+	  <br />
+	  <a href="http://www.amazon.com/Clash-Kings-Song-Fire-Book/dp/0553381695?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0553381695">A Clash of Kings (A Song of Ice and Fire, Book 2)</a> by
+	  George R.R. Martin
+	</p>
+      </li>
+    
+      <li class="post">
+	<p> 
+	  <a href="http://www.amazon.com/Game-Thrones-Song-Fire-Book/dp/0553386794?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0553386794"><img src="http://ecx.images-amazon.com/images/I/51Yl0b4CjWL._SL160_.jpg" /></a>
+	  <br />
+	  <a href="http://www.amazon.com/Game-Thrones-Song-Fire-Book/dp/0553386794?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0553386794">A Game of Thrones (A Song of Ice and Fire, Book 1)</a> by
+	  George R.R. Martin
+	</p>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/smountcastle?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Sean Mountcastle <br/>
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a>, customized with <a href="https://github.com/mjhea0/whiterspace">whiterspace</a>.</span>
+</p>
+
+</footer>
+  
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

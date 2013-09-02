@@ -1,0 +1,1172 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Sean Mountcastle</title>
+  <meta name="author" content="Sean Mountcastle">
+
+  
+  <meta name="description" content="Almost a year ago, I submitted three recipes to Advanced Rails
+Recipes. Unfortunately, one which
+was originally selected back in June has been &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://seanmountcastle.com/blog/page/4">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="http://feeds.feedburner.com/SeanMountcastle" rel="alternate" title="Sean Mountcastle" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-378484-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner">
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://feeds.feedburner.com/SeanMountcastle" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:seanmountcastle.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2008/02/23/advanced-rails-recipes/">Advanced Rails Recipes</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-02-23T21:41:08-05:00" pubdate data-updated="true">Feb 23<span>rd</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Almost a year ago, I submitted three recipes to <a href="http://pragprog.com/titles/fr_arr">Advanced Rails
+Recipes</a>. Unfortunately, one which
+was originally selected back in June has been dropped from the book as
+it&rsquo;s not really advanced. So I thought I&rsquo;d post it here for everyone to
+enjoy.</p>
+
+<h3>Using AJAX with REST</h3>
+
+<h4>Problem:</h4>
+
+<p>You have finally mastered REST (Representational State Transfer) and
+wish to enhance your application with JavaScript but don&rsquo;t know which of
+the resource URLs to call.</p>
+
+<h4>Ingredients:</h4>
+
+<p>This recipe requires Rails 1.2 or later as it relies on RJS for the Ajax
+portion and REST for the controller design.</p>
+
+<h4>Solution:</h4>
+
+<p>In this example we need users to be able to register (and unregister)
+for meetings so that we can properly report attendance. So we have three
+models: User, Meeting and Registration.</p>
+
+<p>Since Registrations are associated with a specific meeting, we&rsquo;ve
+created them as a nested resource, like so:</p>
+
+<p>~~~~ {lang=&ldquo;ruby&rdquo;}
+  map.resources :meetings do |meetings|</p>
+
+<pre><code>meetings.resources :registrations
+</code></pre>
+
+<p>  end
+~~~~</p>
+
+<p>To register for a meeting we want to create a new Registration instance
+tied to the Meeting and User. Unregistering from a meeting should
+destroy the Registration object. So our RegistrationsController looks
+like this:</p>
+
+<p>~~~~ {lang=&ldquo;ruby&rdquo;}
+  # POST /registrations
+  def create</p>
+
+<pre><code>@meeting = Meeting.find(params[:meeting_id])
+current_user.register_for(@meeting)
+respond_to do |format| 
+  format.html { redirect_to meetings_url }
+  format.js   # create.rjs
+  format.xml  { head :ok }
+end
+</code></pre>
+
+<p>  end</p>
+
+<p>  # DELETE /registrations/1
+  def destroy</p>
+
+<pre><code>@registration = Registration.find(params[:id])
+@registration.destroy
+respond_to do |format|
+  format.html { redirect_to meetings_url }
+  format.js   # destroy.rjs
+  format.xml  { head :ok }
+end
+</code></pre>
+
+<p>  end
+~~~~</p>
+
+<p>In the view we want to use Ajax to allow the user to modify their
+registration, so we need to use link_to_remote:</p>
+
+<p>~~~~ {lang=&ldquo;ruby&rdquo;}
+  &lt;% if !current_user.registered_for(meeting) &ndash;%></p>
+
+<pre><code>&lt;%= link_to_remote "Register!", :url =&gt; registrations_path(meeting), 
+                              :meeting_id =&gt; meeting.id, :method =&gt; :post %&gt;
+</code></pre>
+
+<p>  &lt;% else &ndash;%></p>
+
+<pre><code>&lt;%= link_to_remote "Unregister", 
+                              :url =&gt; registration_path(meeting, 
+                                         current_user.registration_for(meeting)),  
+                              :confirm =&gt; 'Are you sure?', :method =&gt; :delete %&gt;
+</code></pre>
+
+<p>  &lt;% end &ndash;%>
+~~~~</p>
+
+<p>The RJS to update the page looks like this:</p>
+
+<p>~~~~ {lang=&ldquo;ruby&rdquo;}
+page[&ldquo; meeting_#{@meeting.id}&rdquo;.to_sym].replace_html</p>
+
+<pre><code>   :partial =&gt; 'shared/meeting', :object =&gt; @meeting
+</code></pre>
+
+<p>page[&ldquo; meeting_#{@meeting.id}&rdquo;.to_sym].visual_effect :highlight, :duration => 5
+~~~~</p>
+
+<h4>Discussion:</h4>
+
+<p>The resource URLs provided by Rails are extremely useful, but they can
+be confusing. Tools like <a href="http://www.getfirebug.com/">FireBug</a> make it
+easy to see what is going on behind the scenes. When developing Rails
+applications, it is usually easier to develop without Ajax and then go
+back and add Ajax to those portions of the application where it would
+make sense. With this approach, you can gracefully degrade your service
+back to the original mode for those who don&rsquo;t have or don&rsquo;t enable
+JavaScript. It also allows you to click through your application with
+FireBug enabled and watch which URLs are hit and with which methods
+(GET, POST, PUT, or DELETE).</p>
+
+<p>The table below outlines which resource URLs to use with your remote
+helpers:</p>
+
+<p>  Intent                           Action    Resource URL                                                                  Method</p>
+
+<hr />
+
+<p>  Creating a new instance          create    plural form of model name (i.e. registrations_path)                          POST
+  Retrieving an instance           show      singular form of model name with id (i.e. registration_path(registration)    GET
+  Retrieving all instances         index     plural form of model name (i.e. registrations_path)                          GET
+  Modifying an existing instance   update    singular form of model name with id (i.e. registration_path(registration))   PUT
+  Deleting an existing instance    destroy   singular form of model name with id (i.e. registration_path(registration))   DELETE</p>
+
+<p>Once you are comfortable with the resource URLs, adding Ajax to your
+RESTful is much easier.</p>
+
+<h4>Further Reading:</h4>
+
+<p>If you are unfamiliar with REST, read Chapter 20 of <a href="http://pragprog.com/titles/rails2">Agile Web
+Development with Rails, 2nd Edition</a>
+by Dave Thomas and David Heinemeier Hansson (Pragmatic Programmers,
+2006). There is also a nice screencast on the subject from
+<a href="http://peepcode.com/articles/2006/10/08/restful-rails">PeepCode</a>.</p>
+
+<p>For more on Ajax in Rails, you can check out <a href="http://www.oreilly.com/catalog/9780596527440/index.html">Ajax on
+Rails</a> by Scott
+Raymond (O&#8217;Reilly &amp; Associates, 2007).</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2008/01/15/nscodernight-dc/">NSCoderNight DC</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-01-15T23:05:57-05:00" pubdate data-updated="true">Jan 15<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Tonight I was able to attend <a href="http://nscodernight.com/?cat=6">NSCoderNight
+DC</a> in Tysons Corner, VA and finally met
+<a href="http://greenmango.org/">Jose Vazquez</a> in person. Unfortunately, turn
+out is pretty spotty, with Jose being the only continuous attendee.
+Despite it being just the two of us, I came away energized and started
+playing around with the new APIs we spoke about: <a href="http://developer.apple.com/documentation/MusicAudio/Conceptual/CoreAudioOverview/Introduction/chapter_1_section_1.html#//apple_ref/doc/uid/TP40003577-CH1-SW1">Core
+Audio</a>/<a href="http://developer.apple.com/documentation/MusicAudio/Conceptual/AudioQueueProgrammingGuide/Introduction/chapter_1_section_1.html#//apple_ref/doc/uid/TP40005343-CH1-SW1">AudioQueues</a>
+and <a href="http://developer.apple.com/graphicsimaging/quartzcomposer/">Quartz
+Composer</a>.</p>
+
+<p>I was shocked when Jose explained that the Core Audio and AudioQueues
+tools are all Carbon (i.e. plain C) instead of Cocoa. Mistakenly, I was
+under the impression that Carbon had been officially deprecated by Apple
+and that only Cocoa would be supported going forward. The
+AudioQueueTools
+(/Developer/Examples/CoreAudio/SimpleSDK/AudioQueueTools) example which
+comes with the Apple Developer Tools shows how to create command-line
+tools for recording and playing back sounds, but trying to integrate
+this with you Cocoa application is a different story. Luckily, we found
+this post on Mark Darlymple&rsquo;s blog which explains how to use <a href="http://borkwarellc.wordpress.com/2007/09/13/c-callbacks-in-objc/">C
+callbacks in
+Objective-C</a>.
+I&rsquo;m still playing around with this and also looking at the
+<a href="http://developer.apple.com/quicktime/">QuickTime</a> API support for
+recording sound.</p>
+
+<p>Quartz Composer is an amazingly cool app, that appears deceptively
+simply to throw something together with. I was blown away by Jose&rsquo;s demo
+of it, having never seen it before. The visual programming environment,
+<a href="http://developer.apple.com/graphicsimaging/quartz/quartzcomposer.html">Quartz Composer
+Editor</a>,
+has a fairly straight-forward GUI and allows you to easily &lsquo;compose&rsquo;
+multiple processing units (a.k.a. patches) together into composition
+while the view window displays what the composition will look like in
+real-time. I&rsquo;m definitely going to spend some time to go through the
+examples (/Developer/Examples/Quartz Composer/Applications).</p>
+
+<p>If you are free on a Tuesday night, be sure to stop by the <a href="http://maps.google.com/maps?f=q&amp;hl=en&amp;geocode=&amp;time=&amp;date=&amp;ttype=&amp;q=8365+Leesburg+Pike,+Vienna,+VA+22182+(Panera+Bread">Tysons
+Corner
+Panera</a>&amp;sll=38.878131,-77.278595&amp;sspn=0.009689,0.0156&amp;ie=UTF8&amp;om=1&amp;ll=38.931038,-77.230368&amp;spn=0.043267,0.079479&amp;z=14&amp;iwloc=addr&amp;source=embed)
+from 7pm-9pm. I&rsquo;m going to make every effort to attend regularly.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2008/01/01/whats-your-segment/">What&#8217;s Your Segment?</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-01-01T17:34:22-05:00" pubdate data-updated="true">Jan 1<span>st</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Whether you realize it or not, there are several companies gathering a
+tremendous amount of data about you. One such company is
+<a href="http://www.acxiom.com/">Acxiom</a> which maintains consumer information on
+nearly every household in the U.S. (and has branched out to other
+countries). Acxiom combines tax records and public census data with
+transactional data from its clients (the corporations you deal with on a
+daily basis). Using this data, Acxiom has created a product called
+<a href="http://www.acxiom.com/default.aspx?ID=1766&amp;DisplayID=18">PersonicX</a>
+which is a finely-grained household level segmentation system based on
+consumer and demographic characteristics.</p>
+
+<p>The idea of such a classification system both interests and appalls me
+quite a bit, so I&rsquo;ve done some research into the 70 segments and 21
+life-stage groups.</p>
+
+<p>Even though this data is proprietary, I&rsquo;ve found the following
+information through publicly available sources (ordered by cluster
+number):</p>
+
+<ol>
+<li><strong>Summit Estates</strong>: The wealthiest of all the clusters. In every
+sense, these families are enjoying the good life&mdash;luxury travel,
+entertainment and consumption of every kind are within easy reach.
+Middle-aged (36-56). (<em>Group 11B &ndash; Boomer Barons</em>)</li>
+<li><strong>Established Elite</strong>: Late middle-aged (46-65) married home owners
+with no children living with them. They are wealthy and live in
+suburban and urban locations. (<em>Group 15M &ndash; Mature Wealth</em>)</li>
+<li><strong>Corporate Clout</strong>: This exceedingly well educated group defines
+themselves as workaholics. Savvy investors who like to read Forbes
+and travel magazines, they are also heavy users of air travel and
+corporate credit cards. (<em>Group 15M &ndash; Mature Wealth</em>)</li>
+<li><strong>Skyboxes &amp; Suburbans</strong>: One of the best-educated and wealthiest
+clusters. They shop at upscale stores, spend time feathering their
+nest and adhere to regular fitness programs. Middle-aged (36-55).
+(<em>Group 11B &ndash; Boomer Barons</em>)</li>
+<li><strong>Sitting Pretty</strong>: Late middle-aged (46-65), married home owners
+with no children in the home. They are wealthy, living in the
+outer-suburbs and towns. (<em>Group 19M &ndash; Golden Years</em>)</li>
+<li><strong>Shooting Stars</strong>: Still relatively young at a mean age of 36, and
+with top rankings for income, college education, home value and net
+worth, these consumers have the world by the tail. (<em>Group 7X &ndash; Cash
+&amp; Careers</em>)</li>
+<li><strong>Leveraged Lifestyles</strong>: Middle-aged (36-55), married home owners
+with school-aged kids in the household. Primarily upper-middle
+income, living in the outer-suburbs and towns. (<em>Group 11B &ndash; Boomer
+Barons</em>)</li>
+<li><strong>Full Steaming</strong>: Late middle-aged (55-64), both single and married
+home owners with no kids in the household. Primarily upper-middle
+income, living in the outer-suburbs and towns. (<em>Group 19M &ndash; Golden
+Years</em>)</li>
+<li><strong>Platinum Oldies</strong>: Seniors (aged 66+), both single and married,
+who own their own homes with no kids in the household. They are
+wealthy, living in the outer-suburbs and towns. (<em>Group 19M &ndash; Golden
+Years</em>)</li>
+<li><strong>Hard Chargers</strong>: This affluent group of single men and women
+between the ages of 30 and 45 primarily own their own homes in the
+suburbs. (<em>Group 7X &ndash; Cash &amp; Careers</em>)</li>
+<li><strong>Kids &amp; Clout</strong>: Middle-aged (36-45) married home owners with
+school-aged children. They are affluent, living in the outer suburbs
+and towns. (<em>Group 8X &ndash; Jumbo Families</em>)</li>
+<li><strong>Tots &amp; Toys</strong>: Work and family consume these middle-aged (30-45)
+couples. They&rsquo;re putting their college degrees into action with
+lucrative careers, while saving for their children&rsquo;s education.
+(<em>Group 8X &ndash; Jumbo Families</em>)</li>
+<li><strong>Solid Single Parents</strong>: Middle-aged (36-54) single parents who own
+their own homes with school-aged children. They are affluent and
+live in urban and suburban areas. (<em>Group 12B &ndash; Flush Families</em>)</li>
+<li><strong>Career Centered Singles</strong>: The affluent members of this segment
+are late middle-aged (46-65) and single. They own their own homes in
+urban and suburban areas and have no kids. (<em>Group 16M &ndash; Aging
+Upscales</em>)</li>
+<li><strong>Country Ways</strong>: Late middle-aged (45-65), married home owners with
+no kids in the household. Primarily upper-middle income in a rural
+location. (<em>Group 16M &ndash; Aging Upscales</em>)</li>
+<li><strong>Country Single</strong>: Middle-aged (36-55) single home owners with no
+kids. They are upper-middle income, living in rural areas. (<em>Group
+14B &ndash; Our Turn</em>)</li>
+<li><strong>Apple Pie Families</strong>: Late middle-aged (46-55) married home owners
+with school-aged kids. Members of this group are upper-middle
+income, living in urban and suburban areas. (<em>Group 12B &ndash; Flush
+Families</em>)</li>
+<li><strong>Married Sophisticates</strong>: Recently married young couples who are
+well educated and enjoy health upper-middle range incomes. They are
+almost all homeowners in upscale suburban neighborhoods. (*[Group 2Y
+
+<ul>
+<li>Taking
+Hold](<a href="http://www.acxiom.com/subimages/1126200385918taking_hold_group_2y.pdf">http://www.acxiom.com/subimages/1126200385918taking_hold_group_2y.pdf</a>)*)</li>
+</ul>
+</li>
+<li><strong>Country Comfort</strong>: Middle-aged (36-55), married home-owners who
+have school-aged children in the household (big families,
+family-oriented) make up this group. Primarily upper-middle income
+in a rural location. (<em>Group 8X &ndash; Jumbo Families</em>)</li>
+<li><strong>Dynamic Duos</strong>: Made-up of upper-middle income married couples who
+own their own home but don&rsquo;t have children, the members of this
+cluster are between 36 and 45. (<em>Group 7X &ndash; Cash &amp; Careers</em>)</li>
+<li><strong>Children First</strong>: At a mean age of 25, they are already raising an
+average of 1.2 kids. Despite a nearly even split between married and
+single households, 100% show the presence of children. They earn
+upper-middle incomes and live in suburban areas. (<em><a href="http://www.acxiom.com/subimages/1126200385918taking_hold_group_2y.pdf">Group 2Y &ndash;
+Taking
+Hold</a></em>)</li>
+<li><strong>Fun &amp; Games</strong>: The upper-middle income members of this cluster are
+between the ages of 46 and 55, married with no kids, and own their
+own homes. (<em>Group 14B &ndash; Our Turn</em>)</li>
+<li><strong>Acred Couples</strong>: Late middle-aged (56-65) married home owners with
+no kids. These upper-middle income earners live in the outer suburbs
+and towns. (<em>Group 16M &ndash; Aging Upscales</em>)</li>
+<li><strong>Career Building</strong>: This cluster is made up of young, childless
+singles. They are a mix of mobile renters and first-time homeowners,
+living in condos and single-family houses. (<em><a href="http://www.acxiom.com/subimages/1126200385918taking_hold_group_2y.pdf">Group 2Y &ndash; Taking
+Hold</a></em>)</li>
+<li><strong>Clubs &amp; Causes</strong>: Consisting of both married and single
+upper-middle income folks, the members of this cluster are aged 66
+to 75 with no children who own their own homes. (<em>Group 20S &ndash; Active
+Elders</em>)</li>
+<li><strong>Savvy Singles</strong>: Young middle-aged (30-45) single renters and home
+owners with no kids. Primarily upper-middle income, living in urban
+and suburban areas. (<em>Group 7X &ndash; Cash &amp; Careers</em>)</li>
+<li><strong>Soccer &amp; SUVs</strong>: This cluster consists of upper-middle income
+married couples between the ages of 36 and 45 who own their own home
+and have school-age kids. (<em>Group 8X &ndash; Jumbo Families</em>)</li>
+<li><strong>Suburban Seniors</strong>: These aged seniors (76+) own their own homes
+and have no kids. They are a mix of single and married upper-middle
+income earners living in urban and suburban areas. (<em>Group 20S &ndash;
+Active Elders</em>)</li>
+<li><strong>City Mixers</strong>: Middle-aged (36-45) single renters and home owners
+with no kids. Primarily middle income, they live in downtown metro
+areas. (<em>Group 9B &ndash; Boomer Singles</em>)</li>
+<li><strong>Spouses &amp; Houses</strong>: This cluster is dominated by middle-income,
+childless couples in their mid-20s. They are mainly high school
+grads who own their homes and tend to live in smaller second cities
+around the country. (<em><a href="http://www.acxiom.com/subimages/1126200385918taking_hold_group_2y.pdf">Group 2Y &ndash; Taking
+Hold</a></em>)</li>
+<li><strong>Mid Americana</strong>: Married suburbanites. They are middle of the road
+in terms of education and income, although long tenure and high
+equity versus home values result in high net worth. (<em>Group 14B &ndash;
+Our Turn</em>)</li>
+<li><strong>Downtown Boomer Couples</strong>: Late middle-aged (46-65) married home
+owners with no kids. They are middle income and live in downtown
+metro areas. (<em>Group 14B &ndash; Our Turn</em>)</li>
+<li><strong>Urban Tenants</strong>: Late middle-aged (46-55), single renters with no
+kids. Located in downtown metro areas, they are middle income.
+(<em>Group 14B &ndash; Our Turn</em>)</li>
+<li><strong>Outward Bound</strong>: Middle-aged (30-45), married home owners with no
+kids. Primarily middle income, living in rural locations. (*Group 3X
+
+<ul>
+<li>Transition Blues*)</li>
+</ul>
+</li>
+<li><strong>Solo &amp; Stable</strong>: Middle-aged (36-45) single home owners with no
+kids. Primarily middle income, living in urban and suburban areas.
+(<em>Group 9B &ndash; Boomer Singles</em>)</li>
+<li><strong>Raisin&#8217; Grandkids</strong>: Seniors (aged 66+), both single and married
+home owners with kids of mixed ages in the household. Primarily
+middle income, living in suburband and urban areas. (<em>Group 20S &ndash;
+Active Elders</em>)</li>
+<li><strong>Cartoons &amp; Carpools</strong>: Middle-aged (30-45), married home owners
+with school-aged kids. Primarily middle income, living in urban and
+suburban areas. (<em>Group 5X &ndash; Gen X Parents</em>)</li>
+<li><strong>Blue Collar Bunch</strong>: Late middle-aged (46-65) married home owners
+with school-aged kids. Primarily lower-middle income, living in
+urban and suburban areas. (<em>Group 13B &ndash; True Blues</em>)</li>
+<li><strong>Early Parents</strong>: Young (18-29) single and married parents who
+either rent or own their residence with kids (mixed ages) at home.
+Primarily lower income, living in urban and suburban areas. (<em>Group
+1Y &ndash; Beginnings</em>)</li>
+<li><strong>The Great Outdoors</strong>: Late middle-aged (45-65), married home
+owners with no children in the household. Primarily lower-middle
+income in a rural location. (<em>Group 18M &ndash; Mature Rustics</em>)</li>
+<li><strong>Trucks &amp; Trailers</strong>: Middle-aged (30-45), both single and married
+renters and home owners with no kids. Primarily lower-middle income,
+living in rural areas. (<em>Group 3X &ndash; Transition Blues</em>)</li>
+<li><strong>First Mortgage</strong>: Young middle-aged (30-35), single home owners
+with no kids. Primarily lower-middle income, living in urban and
+suburban areas. (<em>Group 4X &ndash; Gen X Singles</em>)</li>
+<li><strong>Work &amp; Causes</strong>: These lower-middle income singles own their own
+homes. Living in urban and suburban areas, they are between 46 and
+55 and have no children. (<em>Group 17M &ndash; Modest Means</em>)</li>
+<li><strong>Community Singles</strong>: Late middle-aged (56-65) single home owners
+with no kids. With a lower-middle income, they live in urban and
+suburban areas. (<em>Group 17M &ndash; Modest Means</em>)</li>
+<li><strong>First Digs</strong>: This group consists of young (24-29) singles with no
+kids who either rent or own. Primarily lower-middle income, living
+in urban and suburban areas. (<em>Group 1Y &ndash; Beginnings</em>)</li>
+<li><strong>Home Cooking</strong>: Middle-aged (30-45) married home owners with no
+kids. Primarily lower-middle income, living in urban and suburban
+areas. (<em>Group 3X &ndash; Transition Blues</em>)</li>
+<li><strong>Rural Parents</strong>: This group consists of middle-aged (36-55) single
+parents who own their own homes and have children of mixed ages.
+Primarily lower-middle income in a rural location. (<em>Group 10B &ndash;
+Mixed Boomers</em>)</li>
+<li><strong>Farmland Families</strong>: Middle-aged (36-55), married home owners who
+have school-aged children in the household. Primarily lower-middle
+income in a rural location. (<em>Group 13B &ndash; True Blues</em>)</li>
+<li><strong>Sedentarians</strong>: These married seniors (76+) own their own homes
+and have no children. Living in urban and suburban areas, this group
+consists of lower-middle income earners. (<em>Group 21S &ndash; Leisure
+Buffs</em>)</li>
+<li><strong>The Greatest Generation</strong>: This group consists of married seniors
+(66+) who own their own homes where the kids have moved out.
+Primarily lower-middle income in a rural location. (<em>Group 18M &ndash;
+Mature Rustics</em>)</li>
+<li><strong>Family Matters</strong>: These seniors (66-75) are married home owners
+with no kids at home. Living in the outer suburbs and towns, they
+are in the lower-middle income bracket. (<em>Group 21S &ndash; Leisure
+Buffs</em>)</li>
+<li><strong>Still Landlorded</strong>: Middle-aged (36-45) singles renting their
+residence with no kids. Primarily lower-middle income, living in
+urban and suburban areas. (<em>Group 4X &ndash; Gen X Singles</em>)</li>
+<li><strong>Metro Parents</strong>: Middle-aged (36-55) single parents who own their
+own homes and have school-aged children. Primarily lower-middle
+income, living in urban and suburban locations. (<em>Group 10B &ndash; Mixed
+Boomers</em>)</li>
+<li><strong>Still Truckin&#8217;</strong>: This group consists of late middle-aged (46-65),
+single home owners with no kids in the household. Primarily
+lower-middle income in a rural location. (<em>Group 18M &ndash; Mature
+Rustics</em>)</li>
+<li><strong>Humble Homes</strong>: These married, late middle-aged (46-65) home
+owners don&rsquo;t have any kids. They live in the outer suburbs and towns
+and are lower income earners. (<em>Group 17M &ndash; Modest Means</em>)</li>
+<li><strong>Modest Wages</strong>: Middle-aged (36-45) single home owners with no
+kids. Primarily low income, living in urban and suburban areas.
+(<em>Group 9B &ndash; Boomer Singles</em>)</li>
+<li><strong>Collegiate Crowd</strong>: This group consists of young (18-23) singles
+with no kids who rent or own. Primarily lower income, living in
+urban and suburban areas. (<em>Group 1Y &ndash; Beginnings</em>)</li>
+<li><strong>Young Workboots</strong>: Young (18-29) singles with no kids who rent or
+own. Primarily blue-collar workers (low income), living in rural
+areas. (<em>Group 1Y &ndash; Beginnings</em>)</li>
+<li><strong>Low-Rent Digs</strong>: Young middle-aged (30-35) single renters with no
+kids. They are in the lowest income bracket, living in urban and
+suburban areas. (<em>Group 4X &ndash; Gen X Singles</em>)</li>
+<li><strong>Rural Rovers</strong>: Middle-aged (36-45) single renters with no kids,
+they live in rural areas and are lower-middle income. (<em>Group 10B &ndash;
+Mixed Boomers</em>)</li>
+<li><strong>Urban Scramble</strong>: Young (24-35) single renters with no kids.
+Primarily lower income, living in down town metro areas. (*Group 6X
+
+<ul>
+<li>Mixed Singles*)</li>
+</ul>
+</li>
+<li><strong>Kids &amp; Rent</strong>: Middle-aged (30-45) single and married renters with
+kids (mixed-ages). Primarily lower income, living in the outer
+suburbs and towns. (<em>Group 5X &ndash; Gen X Parents</em>)</li>
+<li><strong>Single City Struggles</strong>: These late middle-aged (46-65) single
+renters live in urban and suburban areas. They have no kids and are
+low income earners. (<em>Group 17M &ndash; Modest Means</em>)</li>
+<li><strong>Rural Antiques</strong>: This group consists of single renters and owners
+aged 76 and older with no children in their household. Primarily
+lower income in a rural location. (<em>Group 21S &ndash; Leisure Buffs</em>)</li>
+<li><strong>Thrifty Elders</strong>: These single seniors (66-75) own their own homes
+in the outer suburbs and towns. They are among the lowest income
+earners. (<em>Group 21S &ndash; Leisure Buffs</em>)</li>
+<li><strong>Timeless Elders</strong>: In the lowest income bracket, these single aged
+seniors (76+) own their own homes in urban and suburban areas.
+(<em>Group 21S &ndash; Leisure Buffs</em>)</li>
+<li><strong>Rolling Stones</strong>: This group consists of young (24-29) singles
+with no kids who rent or own. They are the in the lowest income
+bracket, living in urban and suburban areas. (<em>Group 1Y &ndash;
+Beginnings</em>)</li>
+<li><strong>Penny Pinchers</strong>: These late middle-aged (46-65) single home
+owners are among the lowest income earners. They live in urban and
+suburban areas with no children. (<em>Group 17M &ndash; Modest Means</em>)</li>
+<li><strong>Mortgage Woes</strong>: Middle-aged (30-45) single home owners with no
+kids. They are in the lowest income bracket, living in urban and
+suburban areas. (<em>Group 6X &ndash; Mixed Singles</em>)</li>
+<li><strong>On the Edge</strong>: Middle-aged (36-45) single renters with no kids.
+They are in the lowest income bracket, living in urban and suburban
+areas. (<em>Group 6X &ndash; Mixed Singles</em>)</li>
+</ol>
+
+
+<p>Some the cluster identifiers are funny while others are pretty
+disheartening&mdash;I&rsquo;m sure the intention was to make them memorable and in
+that Acxiom has succeeded. You&rsquo;ll notice that the majority of
+information available online focuses on the top thirty or so segments,
+as these are apparently the most lucrative (consisting of the upper and
+upper-middle classes).</p>
+
+<p>It&rsquo;s amazing how much data Acxiom collects and the detail of information
+they can extract from that data. For instance, for each segment they can
+give you an idea of what activities they enjoy, their opinions/beliefs,
+how they vote, where they shop, what they read, what they eat, what
+their finances look like, etc.</p>
+
+<p>Acxiom provides <a href="http://www.acxiom.com/subimages/4192004105508preemptive_mktg_wp.pdf">a
+document</a>
+on their website which shows how they can predict the migration of
+consumers from one segment to the next. They need to predict well as
+these segments are so specific that nearly one-third of Americans change
+their segment each year.</p>
+
+<p>If you can help me find more freely-available, detailed information
+(like
+<a href="http://www.acxiom.com/subimages/1126200385918taking_hold_group_2y.pdf">this</a>)
+for any of these segments, please leave a comment below or email me.</p>
+
+<h4>References</h4>
+
+<ul>
+<li><a href="http://www.acxiom.com/default.aspx?ID=1766&amp;DisplayID=18">http://www.acxiom.com/default.aspx?ID=1766&amp;DisplayID=18</a></li>
+<li><a href="http://www.wired.com/culture/lifestyle/news/2004/11/65640">http://www.wired.com/culture/lifestyle/news/2004/11/65640</a></li>
+<li><a href="http://www.informationweek.com/story/showArticle.jhtml?articleID=51000186">http://www.informationweek.com/story/showArticle.jhtml?articleID=51000186</a></li>
+<li><a href="http://www.acxiom.com/subimages/1126200385918taking_hold_group_2y.pdf">http://www.acxiom.com/subimages/1126200385918taking_hold_group_2y.pdf</a></li>
+<li><a href="http://www.acxiom.com/subimages/715200351943closer_look_-_america_s_wealthy.pdf">http://www.acxiom.com/subimages/715200351943closer_look_&ndash;_america_s_wealthy.pdf</a></li>
+<li><a href="http://www.relevance-x.com/images/Relevance-X.pdf">http://www.relevance-x.com/images/Relevance-X.pdf</a></li>
+<li><a href="http://www.hoythighland.com/presentation.pdf">http://www.hoythighland.com/presentation.pdf</a></li>
+<li><a href="http://www.astech-intermedia.com/resources/downloads/Roundtable_2007_Thornquist.ppt">http://www.astech-intermedia.com/resources/downloads/Roundtable_2007_Thornquist.ppt</a></li>
+<li><a href="http://sustainingfamilyforests.org/pdfs/report_intro.pdf">http://sustainingfamilyforests.org/pdfs/report_intro.pdf</a></li>
+<li><a href="http://www.acxiom.com/subimages/26200352112wp_meth_103.pdf">http://www.acxiom.com/subimages/26200352112wp_meth_103.pdf</a></li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2007/12/27/finally-awarded-a-patent/">Finally Awarded a Patent!</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-12-27T10:32:05-05:00" pubdate data-updated="true">Dec 27<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>After almost seven years, I was finally awarded a patent:
+<a href="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&amp;Sect2=HITOFF&amp;d=PALL&amp;p=1&amp;u=/netahtml/PTO/srchnum.htm&amp;r=1&amp;f=G&amp;l=50&amp;s1=7,170,862.PN.&amp;OS=PN/7,170,862&amp;RS=PN/7,170,862" title="Partitioning a network element into multiple virtual network elements"><strong>7,170,862</strong></a>.
+It&rsquo;s assigned to my previous employer, <a href="http://cisco.com/">Cisco Systems,
+Inc</a>. Until I started this process, I never imagined
+how long the <a href="http://www.uspto.gov/index.html">USP&amp;TO</a> could take to
+finally assign a patent. Now I&rsquo;m waiting to see if any of my other
+patents filed by Cisco will be awarded.</p>
+
+<p>This actually happened back in January, but since I was never notified,
+I researched it myself after the recent news of Cisco opening up IOS to
+3rd party developers.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2007/12/15/protecting-your-ruby-source-code-for-end-user-applications/">Protecting Your Ruby Source Code for End User Applications</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-12-15T17:54:41-05:00" pubdate data-updated="true">Dec 15<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>If you want to distribute your Ruby applications while still protecting
+your intellectual property you could use an obfuscation tools such as
+<a href="http://blog.zenspider.com/archives/2006/07/zenobfuscate_no.html">ZenObfuscate</a>
+or try to write your own. But in this article, I&rsquo;m going to show a
+different approach that&rsquo;s been used by several different companies
+producing commercial products written in Ruby. The method is not
+specific to Ruby and should work for any interpreted language in which
+you need to distribute your source code with the application.</p>
+
+<p>The secret is to encrypt your Ruby source, store it in a database and
+then modify the Ruby interpreter to look for your code in the database
+and decrypt it on the fly. I should note that there is no way to
+completely protect a product which is distributed to your
+customers&mdash;with enough diligence any security measures can be broken.</p>
+
+<p>These instructions are for Unix operating systems (include MacOS X).
+Unfortunately (or fortunately, for me), I don&rsquo;t own a Windows machine.</p>
+
+<p>If you don&rsquo;t already have Berkeley DB (BDB) installed on your system you
+can download it
+<a href="http://www.oracle.com/technology/software/products/berkeley-db/index.html">here</a>.
+You will need to follow the instructions which come with BDB which
+explain how to build and install it. Originally, I was going to use
+<a href="http://openssl.org/">OpenSSL</a> to encrypt our Ruby source code before
+inserting it into the database and decrypt it after retrieving it from
+the database. Thankfully, the latest version of BDB includes
+<a href="http://en.wikipedia.org/wiki/Advanced_Encryption_Standard">AES</a> support
+which allows you to maintain an encrypted database very easily.</p>
+
+<p>You will also need to obtain a fresh copy of the <a href="http://www.ruby-lang.org/en">Ruby source
+code</a> so that we can build our own private
+version which knows how to pull classes out of our BDB instance. So
+let&rsquo;s start by creating a directory for us to work in:</p>
+
+<pre><code>mkdir -p ~/RubyProject/deploy
+</code></pre>
+
+<p>You should unpack the Ruby source in the <em>\~/RubyProject</em> directory
+(this should create directory which looks like
+<em>\~/RubyProject/ruby-1.8.6-p111</em>). Go into that directory and run the
+configure script as follows:</p>
+
+<pre><code>./configure --prefix=~/RubyProject/deploy --with-static-linked-ext
+</code></pre>
+
+<p>This will enable us to build a stand alone Ruby interpreter which has
+everything it needs statically linked in.</p>
+
+<p>To find out where we need to hook in our handler which loads missing
+classes from the database, you can <em>grep</em> through the source code
+looking for const_missing like this:</p>
+
+<pre><code>grep const_missing *.c
+</code></pre>
+
+<p>This turned up two files <em>object.c</em> and <em>variable.c</em>. Looking at the
+output, I could see that the <strong><em>const_missing</em></strong> function is actually
+defined in <em>variable.c</em>. Jumping in, I searched for the code executed
+when a constant cannot be found. This led me to the
+<strong><em>rb_const_get_0</em></strong> function which walks up the class hierarchy
+looking for the specified constant. If it cannot be found, it returns
+the result of the <strong><em>const_missing</em></strong> function. So right before that
+final return, I added the following hook:</p>
+
+<pre><code>    /* At this point we haven't found the class so we must look
+       inside of the BerkeleyDB for it, see dbloader.c */
+    value = load_from_db(id);
+    if (value != Qundef) return value;
+</code></pre>
+
+<p>Now I just had to implement the load_from_db function which should
+look inside of the encrypted BDB instance for the file. Looking at how
+the <strong><em>rb_const_get_0</em></strong> function works, I knew my new method had to
+return a Ruby <em>VALUE</em>:</p>
+
+<pre><code>VALUE
+load_from_db(id)
+     ID id;
+{
+    DBT k;
+    DBT d;
+
+    memset(&amp;k, 0, sizeof(DBT));
+    memset(&amp;d, 0, sizeof(DBT));
+
+    verify_database_state();
+
+    k.data = rb_id2name(id);
+    k.size = strlen(k.data);
+
+    d.flags = DB_DBT_MALLOC;
+
+    if (bdb-&gt;get(bdb, NULL, &amp;k, &amp;d, 0) == 0) {
+      rb_eval_string((const char *)d.data);
+      free(d.data);
+      return rb_eval_string(rb_id2name(id));
+    }
+    return Qundef;
+}
+</code></pre>
+
+<p>You&rsquo;ll note that if we find the class in the database, we first evaluate
+it using <strong><em>rb_eval_string</em></strong>. Since this returns <em>nil</em>, we need
+evaluate the class name so that we can pass back a Ruby <em>VALUE</em>. If the
+class doesn&rsquo;t exist in the database, we return <em>Qundef</em> and
+<strong><em>const_missing</em></strong> gets called as usual.</p>
+
+<p>The <strong><em>verify_database_state</em></strong> function ensures that the password for
+the BDB instance was passed and the database opened so that the
+<strong><em>get</em></strong> call can access it. It is implemented like so:</p>
+
+<pre><code>/* a simple way to obfuscate the password in memory */
+#define A(c)             (c) - 0x1d
+#define ENCRYPT_PWD(str) do { char * p = str; while (*p) *p++ -= 0x1d; } while (0)
+#define DECRYPT_PWD(str) do { char * p = str; while (*p) *p++ += 0x1d; } while (0)
+
+static void
+verify_database_state()
+{
+  /* don't forget to NULL terminate this array! */
+  static char info[] =
+    { A('1'), A('2'), A('3'), A('4'), A('5'),
+       A('6'), A('7'), A('8'), A('9'), A('0'),
+       0 };
+
+  const char * database_file = "data.db";
+
+  if (bdb == NULL) {
+    db_env_create(&amp;bdbenv, 0);
+    db_create(&amp;bdb, bdbenv, 0);
+
+    DECRYPT_PWD(info);
+    bdbenv-&gt;set_encrypt(bdbenv, info, DB_ENCRYPT_AES);
+    ENCRYPT_PWD(info);
+    bdbenv-&gt;open(bdbenv, ".", DB_INIT_MPOOL | DB_CREATE | DB_PRIVATE, 0600);
+    bdb-&gt;set_flags(bdb, DB_ENCRYPT);
+    bdb-&gt;open(bdb, NULL, database_file, NULL, DB_BTREE, 0, 0644);
+  }
+}
+</code></pre>
+
+<p>You&rsquo;ll notice that the password is hard coded into the binary along with
+the location of the BDB instance. If you are going use this code, you&rsquo;ll
+want to change the default password (which needs to match the password
+you used when storing your Ruby source in the database) and perhaps the
+location of the database. To deter those looking to decrypt our Ruby
+source, I&rsquo;ve written C macros which performs a transformation on the
+password. It is fairly simple to circumvent, so you should research
+other methods of securely storing passwords within applications.</p>
+
+<p>Finally, you&rsquo;ll need to remember to close the BDB instance before the
+Ruby interpreter exits. To do this we simply open up <em>main.c</em> and add
+the following line immediately following the call to <strong><em>ruby_run</em></strong>:</p>
+
+<pre><code>close_database();
+</code></pre>
+
+<p>The implementation of <strong><em>close_database</em></strong> is trivial, so you can just
+look in the patch I&rsquo;ve provided for it.</p>
+
+<p>The patch to the Ruby source code is included in <a href="http://seanmountcastle.com/wp-content/uploads/2007/12/ruby-load-db.zip">this zipped
+attachment</a>
+along with another utility I wrote to load all of your Ruby source into
+the encrypted BDB instance (along with its Makefile). Here is a
+transcript which shows how to use the tools and your new Ruby
+interpreter:</p>
+
+<pre><code>~RubyProject/tools&gt; ./rb_store data.db *.rb
+Enter database password:
+Stored Example (131) bytes
+
+~RubyProject/tools&gt; ./rb_load data.db
+Enter database password:
+Hit CTRL+C to quit.
+Enter a class name: Example
+Found: 
+
+class Example
+  def initialize
+    puts "Hello from the Example class"
+  end
+
+  def aMethod
+    puts "Called aMethod"
+  end
+end
+
+Enter a class name: Foo
+No such class
+Enter a class name: ^C
+
+~RubyProject/ruby-1.8.6-p111&gt; ./ruby -e "e = Example.new"
+Hello from the Example class
+
+~RubyProject/ruby-1.8.6-p111&gt; ./ruby -e "f = Foo.new"
+-e:1: uninitialized constant Foo (NameError)
+</code></pre>
+
+<p>This implementation doesn&rsquo;t deal with multiple classes of the same name
+residing in different directories. Also, the way in which the <em>rb_load</em>
+tool determines the name of the class is rather naive and can screw it
+up. I&rsquo;ve wanted to write this for over a year now after hearing <a href="http://richkilmer.blogs.com/">Rich
+Kilmer</a> talk about the way in which
+<a href="http://infoether.com/">InfoEther</a> distributes its Ruby applications. So
+this is more of a proof-of-concept for myself than anything else.
+Hopefully you learned from this tutorial and can put it to good use.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/5/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/3/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/08/14/iosdevcamp-dc-2012/">iOSDevCamp DC 2012</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/09/26/moved-to-github-pages-and-octopress/">Moved to GitHub Pages and Octopress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2010/01/21/skribit/">Skribit</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2008/11/25/invented-quality-metric-feltz-levels/">Invented Quality Metric: Feltz Levels</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2008/08/08/rubynation-2008/">RubyNation 2008</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/sean">@sean</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'sean',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section id="twitter">
+  <h1 class="tweets">Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("smountcastle", , );
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/smountcastle">@smountcastle</a></p>
+  
+</section>
+
+
+<section>
+  <h1>Currently Reading</h1>
+  <p> 
+    <a href="http://www.amazon.com/Steve-Jobs-Walter-Isaacson/dp/1451648537?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=1451648537"><img src="http://ecx.images-amazon.com/images/I/5127U12cE-L._SL160_.jpg" /></a>
+    <br />
+    <a href="http://www.amazon.com/Steve-Jobs-Walter-Isaacson/dp/1451648537?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=1451648537">Steve Jobs</a> by
+    Walter Isaacson
+  </p>
+  <h1>Recent Reads</h1>
+  <ul id="recent_reads">
+    
+      <li class="post">
+	<p> 
+	  <a href="http://www.amazon.com/Storm-Swords-Song-Fire-Book/dp/055357342X?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=055357342X"><img src="http://ecx.images-amazon.com/images/I/51JLfDOCDQL._SL160_.jpg" /></a>
+	  <br />
+	  <a href="http://www.amazon.com/Storm-Swords-Song-Fire-Book/dp/055357342X?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=055357342X">A Storm of Swords (A Song of Ice and Fire, Book 3)</a> by
+	  George R.R. Martin
+	</p>
+      </li>
+    
+      <li class="post">
+	<p> 
+	  <a href="http://www.amazon.com/Clash-Kings-Song-Fire-Book/dp/0553381695?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0553381695"><img src="http://ecx.images-amazon.com/images/I/51PmY7G7biL._SL160_.jpg" /></a>
+	  <br />
+	  <a href="http://www.amazon.com/Clash-Kings-Song-Fire-Book/dp/0553381695?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0553381695">A Clash of Kings (A Song of Ice and Fire, Book 2)</a> by
+	  George R.R. Martin
+	</p>
+      </li>
+    
+      <li class="post">
+	<p> 
+	  <a href="http://www.amazon.com/Game-Thrones-Song-Fire-Book/dp/0553386794?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0553386794"><img src="http://ecx.images-amazon.com/images/I/51Yl0b4CjWL._SL160_.jpg" /></a>
+	  <br />
+	  <a href="http://www.amazon.com/Game-Thrones-Song-Fire-Book/dp/0553386794?SubscriptionId=AKIAIX74RBXV4IXGBJMQ&tag=seanmount-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0553386794">A Game of Thrones (A Song of Ice and Fire, Book 1)</a> by
+	  George R.R. Martin
+	</p>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/smountcastle?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Sean Mountcastle <br/>
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a>, customized with <a href="https://github.com/mjhea0/whiterspace">whiterspace</a>.</span>
+</p>
+
+</footer>
+  
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: JavaScript | Sean Mountcastle]]></title>
+  <link href="http://seanmountcastle.com/blog/categories/javascript/atom.xml" rel="self"/>
+  <link href="http://seanmountcastle.com/"/>
+  <updated>2013-09-01T22:16:59-04:00</updated>
+  <id>http://seanmountcastle.com/</id>
+  <author>
+    <name><![CDATA[Sean Mountcastle]]></name>
+    <email><![CDATA[smountcastle@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[OSCON: Ajax on Rails]]></title>
+    <link href="http://seanmountcastle.com/blog/2006/07/25/oscon-ajax-on-rails/"/>
+    <updated>2006-07-25T17:11:00-04:00</updated>
+    <id>http://seanmountcastle.com/blog/2006/07/25/oscon-ajax-on-rails</id>
+    <content type="html"><![CDATA[<p>This morning I attended <a href="http://www.relevancellc.com/">Stuart
+Halloway’s</a> <a href="http://conferences.oreillynet.com/cs/os2006/view/e_sess/8520">Ajax on
+Rails</a>
+tutorial. The slides from his presentation are available
+<a href="http://www.codecite.com/presentation/ruby/rails/ajax_rails">here</a>,
+<a href="http://www.codecite.com/presentation/ruby/rails/rjs">here</a> and
+<a href="http://www.codecite.com/presentation/ajax/prototype">here</a>. This was
+the first time I’d attended one of Stuart’s presentations and I was
+impressed by his relaxed presentation style. He also seems to be a
+genuinely nice fellow – during the break, I spoke briefly with him to
+see if he would be interested in speaking about
+<a href="http://streamlined.relevancellc.com">Streamlined</a> to the <a href="http://www.novarug.org">NoVA
+RUG</a>. Stuart started off by asking us what the
+really successful (and big) companies of the past few years have in
+common – the answer was their use of open source. Yahoo!, Google,
+Amazon, etc didn’t go out and purchase an enterprise solution from
+Microsoft or Sun, they built it themselves using freely available open
+source tools. So he positioned Ruby on Rails and Ajax as enablers to
+help you build the next great company. After a brief introduction to
+Prototype, Stuart went into several examples using Ajax with Rails: Ajax
+Search, Degradable Ajax, Autocomplete, and Drag and Drop. After that he
+went into RJS discussing RJS templates, inline RJS, detecting AJAX on
+the server-side, element and collection proxies, and testing RJS using
+<a href="http://glu.ttono.us/articles/2006/05/29/guide-test-driven-rjs-with-arts">ARTS</a>.
+He also gave a brief demo of
+<a href="http://streamlined.relevancellc.com">Streamlined</a>, which he’ll expand
+upon at his session tomorrow. Finally, he wrapped up with a look at
+Prototype and it’s spin on JavaScript – making it friendly for Ruby
+developers. He’ll cover more on Prototype in his session tomorrow.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[OSCON: JavaScript Boot Camp]]></title>
+    <link href="http://seanmountcastle.com/blog/2006/07/24/oscon-javascript-boot-camp/"/>
+    <updated>2006-07-24T20:11:00-04:00</updated>
+    <id>http://seanmountcastle.com/blog/2006/07/24/oscon-javascript-boot-camp</id>
+    <content type="html"><![CDATA[<p>This morning I attended <a href="http://www.slash7.com/">Amy Hoy’s</a> <a href="http://conferences.oreillynet.com/cs/os2006/view/e_sess/8933">JavaScript
+Boot Camp</a>
+tutorial. The slides should be available online shortly at Amy’s website
+– I’ll update this post once she publishes them. She provided a good
+overview of JavaScript as a language, some of the issues with the
+various implementations, how to debug it and some of the libraries
+available for use. <strong>Updated</strong>: The slides are located
+<a href="http://www.slash7.com/articles/2006/07/26/javascript-boot-camp-tutorial">here</a>.
+Unfortunately, the material was a little too introductory for me, I
+thought she’d spend less time on the JavaScript basics and more on the
+intermediate/advanced techniques of the language and libraries. I guess
+I misunderstood what I had signed-up for. Anyway, she started out with
+the history of the JavaScript language (briefly mentioning the
+LiveScript name … which Rich Kilmer quizzed me on at <a href="http://seanmountcastle.com/articles/2006/07/20/july-novarug-meeting">my RJS
+talk</a>)
+and the ECMAScript process which spawned several different releases of
+JavaScript – basically most browsers implement JavaScript 1.5 with the
+exception of <a href="http://www.mozilla.com/firefox/">Firefox</a> which gives us
+JavaScript 1.6. At this point we lost power to everything but the
+projector, but Amy took it in stride and continued her presentation. She
+went through the syntax of the JavaScript language, keywords, etc. After
+getting through the language quirks, she discussed how to use
+<a href="http://www.joehewitt.com/software/firebug/">FireBug</a> and the
+<a href="http://www.squarefree.com/shell/">JavaScript shell</a> to test and debug
+your JavaScript code. Some of the libraries which were mentioned
+include: <a href="http://www.json.org">JSON</a>, <a href="http://mochikit.com/">MochiKit</a>,
+<a href="http://script.aculo.us/">Script.aculo.us</a>,
+<a href="http://moofx.mad4milk.net/">moo.fx</a>,
+<a href="http://bennolan.com/behaviour/">Behavior</a>, and
+<a href="http://prototype.conio.net/">Prototype</a>. When asked for her favorite
+JavaScript related sites she gave her top three:</p>
+
+<ul>
+<li><a href="http://www.quirksmode.org/">QuirksMode</a></li>
+<li><a href="http://www.mozilla.org/">Mozilla</a></li>
+<li><a href="http://www.ajaxian.com/">Ajaxian</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ajax Spy in Rails]]></title>
+    <link href="http://seanmountcastle.com/blog/2006/04/14/ajax-spy-in-rails/"/>
+    <updated>2006-04-14T16:03:00-04:00</updated>
+    <id>http://seanmountcastle.com/blog/2006/04/14/ajax-spy-in-rails</id>
+    <content type="html"><![CDATA[<p>I was playing around with <a href="http://www.digg.com">Digg</a> this morning and
+noticed <a href="http://www.digg.com/spy">Digg Spy</a>. At first I thought it was
+really cool and wondered how they did that. Then I realized it’s just a
+bit of Ajax and, as anyone who’s read <a href="http://pragmaticprogrammer.com/titles/ajax/index.html">Pragmatic
+Ajax</a> knows, Ajax
+is easy! So read on for how I implemented an Ajax spy in
+<a href="http://www.rubyonrails.org">Rails</a> and to download the code. The first
+thing I did was generate a controller and model using <a href="http://www.height1percent.com/">Rich White’s
+excellent</a><a href="http://ajaxscaffold.height1percent.com/">AjaxScaffold
+Generator</a>, called
+EntriesController and Entry, respectively. This gave me a nice way to
+create new entries easily. After that I added some basic login/signup
+support so that the entries could be associated with users. So far,
+nothing out of the ordinary. Next I created a new controller called
+SpyController, this is where all of the action happens. I added a basic
+list method which just returns all of the entries in the DB (sorry, no
+pagination), this is what we initially call when displaying the page.
+Then I added an update method which will be called periodically to
+retrieve new entries, it looks like this:</p>
+
+<p>~~~~ {lang=&ldquo;ruby&rdquo;}
+def update
+  last_update = Time.parse(params[:timestamp])
+  # locate all of the entries created since the last update
+  @entries = Entry.find(:all, :order => &lsquo;created_at ASC&rsquo;, :conditions => [ &lsquo;created_at > ?&rsquo;, last_update.to_s(:db) ]);
+  if !@entries.empty?</p>
+
+<pre><code>render :update do |page|
+  for entry in @entries
+    page.insert_html(:top, 'spy-list', :partial =&gt; 'entry', :object =&gt; entry)
+    page.visual_effect :highlight, "spy-item-#{entry.id}"
+  end
+end
+</code></pre>
+
+<p>  end
+end
+~~~~</p>
+
+<p>At this point I needed some JavaScript to call the update method, so put
+the following code in application.js:</p>
+
+<p>~~~~ {lang=&ldquo;ruby&rdquo;}
+var updateInterval = 5000; // update every 5 seconds
+var timestamp = new Date().toUTCString();
+var timer;</p>
+
+<p>function go() {
+  timer = setInterval(&lsquo;update()&rsquo;, updateInterval);
+}</p>
+
+<p>function update() {
+  url = &ldquo;/spy/update&rdquo;;
+  new Ajax.Request(url, {</p>
+
+<pre><code>           asynchronous: true,
+           method: "get",
+           parameters: "timestamp=" + timestamp,
+           onSuccess: function(request) {
+             timestamp = new Date().toUTCString();
+           }
+</code></pre>
+
+<p>  });
+}
+~~~~</p>
+
+<p>The JavaScript update method calls the SpyController’s update method and
+passes a timestamp as a parameter (this is the time when the page was
+loaded, initially, and later the timestamp is updated as new entries are
+retrieved). To bring it all together I had to add on onload to the
+list.rhtml view for the SpyController, like this:</p>
+
+<p>~~~~ {lang=&ldquo;html&rdquo;}
+This page updates automatically!</p>
+
+<p>  &lt;% if !@entries.empty? %></p>
+
+<pre><code>&lt;%= render :partial =&gt; 'entry', :collection =&gt; @entries, :locals =&gt; { :hidden =&gt; false } %&gt;
+</code></pre>
+
+<p>  &lt;% end %>
+~~~~</p>
+
+<p>That’s all there is to it. See, I told you it’s easy! You can download
+the code from
+<a href="http://seanmountcastle.com/wp-content/uploads/2007/05/spy.zip">here</a>
+<strong>(Updated for Rails 1.2.3)</strong>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Putting Flickr on Rails]]></title>
+    <link href="http://seanmountcastle.com/blog/2006/04/08/putting-flickr-on-rails/"/>
+    <updated>2006-04-08T20:35:00-04:00</updated>
+    <id>http://seanmountcastle.com/blog/2006/04/08/putting-flickr-on-rails</id>
+    <content type="html"><![CDATA[<p>You know that really cool screencast at the <a href="http://www.rubyonrails.com">Ruby on
+Rails</a> website where Rails is used to create
+a <a href="http://media.rubyonrails.org/video/flickr-rails-ajax.mov">Flickr interface in 5
+minutes</a>?
+Well, I followed the screencast and built my own copy and then I
+enhanced it with some additional JavaScript (Lightbox style preview of
+the images and a blind-up on subsequent searches). Note that in the
+course of making my changes I found out the proper ordering of the
+JavaScript callbacks (see
+<a href="http://api.rubyonrails.com/classes/ActionView/Helpers/PrototypeHelper.html#M000412">this</a>)
+– even though you would think that :before would be called prior to a
+:complete, it doesn’t always happen that way (so sometimes the new
+results are blinded-up and not shown).</p>
+
+<p>I’ve been meaning to upload this for awhile, but just haven’t gotten
+around to it. So today I updated it to work with Rails 1.1.1 (though
+didn’t switch the Ajax-y goodness over to RJS). Hopefully other folks
+can benefit from the code. To run it all you have to do is first install
+the flickr ruby gem, like so:</p>
+
+<pre><code>sudo gem install flickr
+</code></pre>
+
+<p>and unzip and run this <a href="http://seanmountcastle.com/wp-content/uploads/2007/02/flickr.zip">Rails
+app</a>.
+Enjoy!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[AjaxScaffold with Graceful JS Degredation Released]]></title>
+    <link href="http://seanmountcastle.com/blog/2006/03/06/ajaxscaffold-with-graceful-js-degredation-released/"/>
+    <updated>2006-03-06T08:39:00-05:00</updated>
+    <id>http://seanmountcastle.com/blog/2006/03/06/ajaxscaffold-with-graceful-js-degredation-released</id>
+    <content type="html"><![CDATA[<p><a href="http://www.height1percent.com/">Rich White</a> has accepted my patch to
+add graceful JavaScript degredation to his excellent AjaxScaffold for
+Rails. You can read about it
+<a href="http://www.height1percent.com/articles/2006/03/04/ajaxscaffold-2-2-0-released-with-graceful-js-degredation">here</a>.
+I’m also trying to get drag-and-drop sorting working in the
+AjaxScaffold, though I’ve run into some issues. See <a href="http://script.aculo.us/">Thomas
+Fuchs</a>’
+<a href="http://wrath.rubyonrails.org/pipermail/rails-spinoffs/2006-March/002986.html">answer</a>
+to my issue.</p>
+]]></content>
+  </entry>
+  
+</feed>
